@@ -12,7 +12,9 @@
 
 **小柱 Sam**
 
-**Email：** gsam6238@gmail.com samhsiao6238@gmail.com
+**Email 1：** gsam6238@gmail.com
+
+**Email 2：** samhsiao6238@gmail.com
 
 **Line ID：** sam6238
 
