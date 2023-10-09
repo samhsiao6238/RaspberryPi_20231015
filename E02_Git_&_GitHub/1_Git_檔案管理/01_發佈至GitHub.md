@@ -97,6 +97,12 @@
 
 15. 完成後，可在 GitHub 上開啟並查看新建立的 Repo 以及 README.md。
 
+   ![](images/img_22.png)
+
+
+16. 在終端機中可以透過指令到 .git 檔案
+
+   ![](images/img_23.png)
 
 **結束：成功在 GitHub 上建立新的 Repo。**
 
