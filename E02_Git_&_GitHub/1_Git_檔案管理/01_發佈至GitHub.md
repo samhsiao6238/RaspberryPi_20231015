@@ -16,6 +16,7 @@
 1. 連線後先進入 `Documents` 目錄
 
    ![img](images/img_11.png)
+   
 2. 使用終端機或直接使用圖標建立資料夾
 
    ```bash
@@ -39,6 +40,7 @@
 ### 先登入 GitHub 帳號密碼
 
 5. 進入 VSCode 之後先啟動一個終端機
+   
    ![](images/img_21.png)
 
 6. 以 Git 指令設定用戶名稱和郵箱
