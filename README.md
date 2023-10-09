@@ -1,6 +1,8 @@
 # 樹莓派課程 2023
 
-[課程廣播 Googoe Meet](https://meet.google.com/vyp-wsmx-ssp)
+[課程 Googoe Meet](https://meet.google.com/vyp-wsmx-ssp)
+
+教室代碼 [vyp-wsmx-ssp](https://meet.google.com/vyp-wsmx-ssp)
 
 [課程白板 Miro](https://miro.com/app/board/uXjVPY6mQO4=/?share_link_id=905311425005)
 
