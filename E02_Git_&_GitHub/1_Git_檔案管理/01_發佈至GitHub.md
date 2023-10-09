@@ -104,9 +104,14 @@
 
    ![](images/img_23.png)
 
-**結束：成功在 GitHub 上建立新的 Repo。**
+
+17. 可手動建立 .gitignore 檔案
+    
+    ![](images/img_24.png)
 
 </br>
+
+**結束：成功在 GitHub 上建立新的 Repo。**
 
 ---
 
