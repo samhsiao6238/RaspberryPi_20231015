@@ -60,7 +60,7 @@
 
    - 建議選擇 `Use English language` 作為語言，但因為勾選可能會增加當機的風險，可以先不要勾。
 
-   ![Alt text](../../images/image_11.png)
+      ![Alt text](../../images/image_11.png)
 
    - 若選擇英文，建議將 `下載` 和 `文件` 文件夾名稱修改為英文 `Downloads` 和 `Documents` 以便於管理。
 
