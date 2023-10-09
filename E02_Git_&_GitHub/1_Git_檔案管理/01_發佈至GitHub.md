@@ -76,22 +76,22 @@
 
 10. 選擇 `README.md` 檔案後，點擊 OK。
    
-   ![](images/img_17.png)
+      ![](images/img_17.png)
   
 
 11. 給該提交一個版本命名後 `提交` 。
 
-   ![](images/img_18.png)
+      ![](images/img_18.png)
 
-12. 需要輸入 GitHub 的帳號密碼。
+12. 假如前面沒設定帳號密碼，這裡會跳出提示。
    
-   ![](images/img_19.png)
+      ![](images/img_19.png)
 
 </br>
 
 13. 再次提交，點擊 `發佈到分支`（若需要，可不輸入訊息）。
     
-   ![](images/img_20.png)
+      ![](images/img_20.png)
 
 14. 同前述，自定義一個倉庫名稱，或使用預設。
     
@@ -99,12 +99,12 @@
 
 15. 完成後，可在 GitHub 上開啟並查看新建立的 Repo 以及 README.md。
 
-   ![](images/img_22.png)
+      ![](images/img_22.png)
 
 
 16. 在終端機中可以透過指令到 .git 檔案
 
-   ![](images/img_23.png)
+      ![](images/img_23.png)
 
 
 17. 可手動建立 .gitignore 檔案
