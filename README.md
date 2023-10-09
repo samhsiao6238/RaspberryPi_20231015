@@ -16,7 +16,7 @@
 
 **Line ID：** sam6238
 
-[**課程 GitHub**](https://github.com/sam6238/RaspberryPi_20231015.git)
+[**課程 GitHub**](https://github.com/samhsiao6238/RaspberryPi_20231015.git)
 
 
 *在本次課程期間，非常歡迎同學將您期望了解的項目讓我知道，我會盡力融入在本課綱中，若時間不允許，或與課綱偏離，那我們再研究看看能否以其他方式進行介紹，總之～衷心希望給您一段開心的學習時光～*
