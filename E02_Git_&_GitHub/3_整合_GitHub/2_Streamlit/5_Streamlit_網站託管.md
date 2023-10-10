@@ -103,36 +103,25 @@
    
    ![](images/img_25.png)
 
-</br>
-
 2. 選取倉庫
    
    ![](images/img_26.png)
-
-</br>
 
 3. 前一個步驟也可以手動貼上超連結
    
    ![](images/img_27.png)
 
-</br>
-
 4. 選擇儲存網站內容的倉庫
    
    ![](images/img_28.png)
 
-</br>
-
 5. 設定網站主檔案路徑
    
    ![](images/img_29.png)
-
-</br>
-
+   
 6. 可自訂網址前綴
    
    ![](images/img_31.png)
-
 
 </br>
 
