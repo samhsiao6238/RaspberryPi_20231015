@@ -6,6 +6,10 @@
 
 - 上課 & 廣播工具
 
+### [VNC Viwer](https://www.realvnc.com/en/connect/download/viewer/)
+
+- 遠端連線工具
+  
 ### [Miro](https://miro.com/)
 
 - 上課白板
@@ -30,6 +34,10 @@
 - 登入 Meet
 - 登入 GitHub
 - 註冊 Miro
+
+### [VNＣ Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+
+- 遠端連線
 
 ### [AWS*](https://aws.amazon.com/tw/)
 

@@ -1,6 +1,6 @@
 # 樹莓派課程 2023
 
-[課程 Googoe Meet](https://meet.google.com/dej-skyd-trv)
+[課程 Googoe Meet 連結](https://meet.google.com/dej-skyd-trv)
 
 教室代碼 
 
@@ -8,7 +8,7 @@
 dej-skyd-trv
 ```
 
-[課程白板 Miro](https://miro.com/app/board/uXjVPY6mQO4=/?share_link_id=905311425005)
+[課程白板 Miro 連結](https://miro.com/app/board/uXjVPY6mQO4=/?share_link_id=905311425005)
 
 [官方課綱連結](https://ojt.wda.gov.tw/ClassSearch/Detail?OCID=151975&plantype=1)
 
