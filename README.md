@@ -2,7 +2,11 @@
 
 [課程 Googoe Meet](https://meet.google.com/dej-skyd-trv)
 
-教室代碼 [dej-skyd-trv](https://meet.google.com/dej-skyd-trv)
+教室代碼 
+
+```bash
+dej-skyd-trv
+```
 
 [課程白板 Miro](https://miro.com/app/board/uXjVPY6mQO4=/?share_link_id=905311425005)
 
