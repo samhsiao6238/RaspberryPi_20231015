@@ -1,5 +1,7 @@
 # 課程輔助工具簡介
 
+</br>
+
 ## 課程會使用的相關工具列表
 
 ### Google Meet
@@ -22,20 +24,24 @@
 
 - 版本控制桌面應用
 
----
+</br>
+
+
 
 ## 所需相關服務帳號
 
-> *1. 建議先完成帳號申請供上課使用*
-> *2. 以下若有星號者代表可有可無*
+*1. 建議可先完成帳號申請供上課使用*；
+*2. 以下標註 `星號 * ` 者代表可有可無*；
+*3. 以下標註 `驚嘆號 ! ` 者代表需要信用卡*。
+
 
 ### Google
 
-- 登入 Meet
-- 登入 GitHub
-- 註冊 Miro
+- 登入 Meet；
+- 登入 GitHub；
+- 註冊 Miro 等。
 
-### [VNＣ Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+### [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
 
 - 遠端連線
 
@@ -96,7 +102,9 @@
 - 發送 Line Notify 通知使用
 - ChatBot 使用
 
----
+
+
+</br>
 
 ## 建議準備硬體
 
@@ -106,3 +114,9 @@
 2. 記憶卡與讀卡機，便於練習燒錄過程。
 
    ![](images/img_01.png)
+
+</br>
+
+---
+
+_END：以上說明所需準備的帳號_
