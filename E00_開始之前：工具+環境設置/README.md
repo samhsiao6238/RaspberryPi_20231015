@@ -37,7 +37,7 @@
 - *3. 以下標註 `驚嘆號 ! ` 者代表需要信用卡*。
 
 
-### Google
+### [Google](https://google.com)
 
 - 登入 Meet；
 - 登入 GitHub；
