@@ -141,10 +141,14 @@
    [Unit]
    Description=Send LINE Notify on Startup
    After=network-online.target
+   Wants=network-online.target
 
    [Service]
+   ExecStartPre=/bin/sleep 30
    ExecStart=/usr/bin/python /home/sam6238/Documents/send_line_notify.py
    User=sam6238
+   Restart=on-failure
+   RestartSec=5
 
    [Install]
    WantedBy=multi-user.target   
@@ -158,7 +162,22 @@
    sudo systemctl enable line_notify.service
    ```
 
-7. 完成以上步驟後重新開機
+7. 假如修改設定檔案
+
+   ```bash
+   sudo systemctl daemon-reload
+   sudo systemctl restart line_notify.service
+   ```
+
+
+8. 查看服務狀態
+
+   ```bash
+   sudo systemctl status line_notify.service
+   ```
+
+9.  完成以上步驟後重新開機
+
    ```bash
    sudo reboot now
    ```
