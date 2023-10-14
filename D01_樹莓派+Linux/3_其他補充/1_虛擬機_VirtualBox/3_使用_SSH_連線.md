@@ -132,6 +132,9 @@ _若要檢查是否成功設定，可先重新啟動後透過 SSH 指令檢查_
 ## C. 編輯 Windows 設定檔 `hosts`
 
 - 這需要管理員權限
+- 添加 IP 與 Hostname 映射
+
+</br>
 
 1. 添加 IP 與主機名稱的映射
 
@@ -139,7 +142,7 @@ _若要檢查是否成功設定，可先重新啟動後透過 SSH 指令檢查_
    C:\Windows\System32\drivers\etc\hosts
    ```
 
-   ![](images/img_17.png)
+   ![img](images/img_17.png)
 
 </br>
 
@@ -203,7 +206,6 @@ _若要檢查是否成功設定，可先重新啟動後透過 SSH 指令檢查_
 1. 通道打開，並詢問所要連線機器的作業系統類型。
 
    ![](images/img_901.png)
-   
 2. 雖然通道有打開，但顯示連線失敗❗️
 
    ![](images/img_24.png)
