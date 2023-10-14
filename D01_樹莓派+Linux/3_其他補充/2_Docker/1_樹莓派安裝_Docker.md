@@ -71,6 +71,12 @@ _上課實作_
    ```bash
    docker run hello-world
    ```
+
+   _第一次執行會通知並下拉_
+   
+   ![](images/img_10.png)
+
+
 9. **檢查安裝的 Docker 版本**:
 
    ```bash
