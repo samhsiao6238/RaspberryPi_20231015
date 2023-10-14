@@ -20,7 +20,7 @@ _上課實作_
    curl -fsSL https://get.docker.com -o get-docker.sh
    ```
 
-   🔈 說明
+   🔈 參數說明
    1. curl：命令行工具，用於從 URL 獲取或發送數據。
    2. -f (或 --fail): 表示在 HTTP 錯誤時如 404 頁面未找到的錯誤，使 curl 失敗。
    3. -s (或 --silent): 表示靜默模式，不顯示進度信息或錯誤消息。
@@ -52,7 +52,9 @@ _上課實作_
    sudo reboot now
    ```
 
-   _稍等一下重新登入_
+<br>
+   
+   _稍等一下_
 
 <br>
 
