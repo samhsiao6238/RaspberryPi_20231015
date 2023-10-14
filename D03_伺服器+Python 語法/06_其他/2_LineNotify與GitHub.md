@@ -1,4 +1,5 @@
-# 簡易操作
+# 連動 Line Notify 與 GitHub 倉庫
+- 即時發送事件通知
 
 </br>
 
@@ -10,15 +11,20 @@
 
    ![](images/img_10.png)
 
-3. 授權
+3. 可注意一下，這時的網址是在 `notify-bot.line.me` 之內，而非 `GitHub` 。
+   - 不同於 `IFTTT` 是轉入 `IFTTT` 完成設定。
+
+   ![](images/img_14.png)
+
+4. 授權
 
    ![](images/img_01.png)
 
-4. 驗證：務必建立雙重驗證
+5. 驗證：務必建立雙重驗證
 
    ![](images/img_02.png)
 
-5. 可參考官網 [說明文件](https://docs.github.com/en/webhooks)
+6. 可參考官網 [說明文件](https://docs.github.com/en/webhooks)
 
    ![](images/img_03.png)
 
