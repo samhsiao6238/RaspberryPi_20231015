@@ -78,7 +78,7 @@
    sudo nano send_line_notify.py
    ```
    貼上
-   ```python
+     ```python
      import requests
      import os
      from dotenv import load_dotenv
@@ -101,7 +101,7 @@
 
      if __name__ == "__main__":
           send_line_notify("\n 樹莓派已開機")   
-   ```
+     ```
 
 9.  收到通知
      
