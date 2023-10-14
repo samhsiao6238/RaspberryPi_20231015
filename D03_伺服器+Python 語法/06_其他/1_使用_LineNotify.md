@@ -22,8 +22,7 @@
 
 5. 複製權杖
 
-  
-  ![](images/img_28.png)
+     ![](images/img_28.png)
 
 </br>
 
@@ -141,7 +140,7 @@
 ```ini
 [Unit]
 Description=Send LINE Notify on Startup
-After=network.target
+After=network-online.target
 
 [Service]
 ExecStart=/usr/bin/python /home/sam6238/Documents/send_line_notify.py
