@@ -83,6 +83,9 @@ _上課實作_
    docker --version
    ```
 
+   ![](images/img_11.png)
+
+
 </br>
 
 ## Docker 基本指令
@@ -107,4 +110,4 @@ _上課實作_
 
 ---
 
-_END：以上在樹莓派安裝 Docker_
+_END：以上完成在樹莓派安裝 Docker_

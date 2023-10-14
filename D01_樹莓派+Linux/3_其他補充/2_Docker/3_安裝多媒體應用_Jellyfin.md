@@ -15,6 +15,10 @@
 2. 查詢用戶身份資訊
 
    ```bash
+   id <使用者帳號>
+   ```
+   如
+   ```bash
    id sam6238
    ```
    
@@ -25,7 +29,7 @@
     2. GID：主群組ID，是用戶的主群組的唯一編號。
     3. groups：這個用戶是其成員的所有群組的列表。
 
-3. 建立目錄
+3. 建立鏡像使用的目錄
 
    ```bash
    sudo mkdir /home/sam6238/jellyfin_config
@@ -39,6 +43,9 @@
 
    ```bash
    sudo chmod 755 /home/sam6238/jellyfin_config
+   ```
+   ```bash
+   sudo chmod 755 /home/sam6238/media
    ```
 
 
@@ -61,6 +68,10 @@
 
 6. 訪問
 
+   ```bash
+   <樹莓派 IP>:8096
+   ```
+   如
    ```bash
    192.168.1.217:8096
    ```
