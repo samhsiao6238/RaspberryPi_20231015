@@ -24,6 +24,11 @@ _上課實作_
    ```bash
    sudo sh get-docker.sh
    ```
+   
+   _會通知等待 20 秒_   
+   
+   ![](images/img_08.png)
+
 5. **添加用戶到 Docker 群組**（可避免每次使用 Docker 都需要使用 sudo）:
 
    ```bash
