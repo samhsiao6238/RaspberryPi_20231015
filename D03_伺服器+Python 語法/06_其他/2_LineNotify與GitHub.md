@@ -47,6 +47,10 @@
 
     ![](images/img_12.png)
 
+12. 同步 Repo 時觸發
+
+    ![](images/img_13.png)
+
 </br>
 
 ---
