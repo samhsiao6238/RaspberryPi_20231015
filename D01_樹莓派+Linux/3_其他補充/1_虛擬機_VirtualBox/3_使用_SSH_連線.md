@@ -19,7 +19,7 @@
 
 </br>
 
-1. 設定完成重新開機
+3. 設定完成重新開機
 
     ![](images/img_03.png)
 
@@ -135,30 +135,31 @@
 
 14. 編輯 Windows 設定檔 `hosts` ，這需要管理員權限。
 
-- 添加 IP 與主機名稱的映射
+    1. 添加 IP 與主機名稱的映射
 
     ```shell
     C:\Windows\System32\drivers\etc\hosts
     ```
  
-  ![](images/img_17.png)
+    ![](images/img_17.png)
 
 </br>
 
-- 可使用任意編輯器
+    2. 可使用任意編輯器
   
-  ![](images/img_18.png)
+    ![](images/img_18.png)
 
 </br>
 
-- 在設定檔的最後加入
-  *這裡是示意的截圖，注意要使用當前的 IP*
+    3. 在設定檔的最後加入
+  
+    - 這裡是示意的截圖，注意要使用當前的 IP*
 
-  ![](images/img_19.png)
+    ![](images/img_19.png)
 
 </br>
 
-15. 完成後可從本地電腦用 SSH 連線虛擬機
+1.  完成後可從本地電腦用 SSH 連線虛擬機
 
     ```bash
     ssh sam6238@192.168.242.1
