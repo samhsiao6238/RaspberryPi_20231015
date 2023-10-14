@@ -6,8 +6,7 @@ _上課實作_
 
 1. **更新系統**:
    ```bash
-   sudo apt update
-   sudo apt upgrade
+   sudo apt update && sudo apt upgrade -y
     ```
 
 2. **進入目錄**:
