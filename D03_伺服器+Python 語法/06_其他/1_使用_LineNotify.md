@@ -69,8 +69,9 @@
    ```
    貼上
    ```bash
-   _TOKEN = Q1yoEAgiLrqGviBeXXXXXXXXXXXXXFoHcehwa1OmNxv2dU
+   _TOKEN=<替換自己的 LineNotify 權杖>
    ```
+   
 
 8. 創建一個新的 Python 腳本，例如 `send_line_notify.py`
 
@@ -129,22 +130,27 @@
    sudo nano line_notify.service
    ```
 
-4. 內容如下
-   ```ini
-     [Unit]
-     Description=Send LINE Notify on Startup
-     After=network.target
+4. 先去腳本所在資料夾查詢絕對路徑
 
-     [Service]
-     ExecStart=/usr/bin/python3 /path/to/send_line_notify.py
-     User=pi
-
-     [Install]
-     WantedBy=multi-user.target   
+   ```bash
+   pwd
    ```
 
+5. 內容如下：務必記住替換自己的路徑、帳號
+   
+```ini
+[Unit]
+Description=Send LINE Notify on Startup
+After=network.target
 
-5. 確保 `/path/to/` 是你 Python 腳本的正確路徑。
+[Service]
+ExecStart=/usr/bin/python /home/sam6238/Documents/send_line_notify.py
+User=sam6238
+
+[Install]
+WantedBy=multi-user.target   
+```
+
 
 6. 啟動並啟用系統服務
 
@@ -153,7 +159,10 @@
    sudo systemctl enable line_notify.service
    ```
 
-7. 完成以上步驟後，每次樹莓派開機時，你都會在 LINE 群組中收到通知。
+7. 完成以上步驟後重新開機
+   ```bash
+   sudo reboot now
+   ```
 
 </br>
 

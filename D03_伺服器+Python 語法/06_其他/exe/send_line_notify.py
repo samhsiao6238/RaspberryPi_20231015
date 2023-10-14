@@ -8,7 +8,6 @@ load_dotenv()
 def send_line_notify(msg):
     # 用自己的 token 替換
     TOKEN = os.getenv("_TOKEN")
-    # TOKEN = 'Q1yoEAgiLrqGviBeASDOVGmUYpFoHcehwa1OmNxv2dU'
     LINE_ENDPOINT = "https://notify-api.line.me/api/notify"
     message = msg
     headers = {
