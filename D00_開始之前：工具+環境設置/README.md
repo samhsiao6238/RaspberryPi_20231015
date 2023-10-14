@@ -4,13 +4,13 @@
 
 ## 課程會使用的相關工具列表
 
-### Google Meet
+### [Google Meet](https://meet.google.com/)
 
 - 上課 & 廣播工具
 
 ### [VNC Viwer](https://www.realvnc.com/en/connect/download/viewer/)
 
-- 遠端連線工具
+- 遠端連線樹莓派工具
   
 ### [Miro](https://miro.com/)
 
@@ -18,7 +18,8 @@
 
 ### [VSCode](https://code.visualstudio.com/)
 
-- 開發工具
+- 程式碼編輯器
+- 可整合為一個 `IDE` 整合開發環境
 
 ### [GitHub Desktop](https://desktop.github.com/)
 
@@ -45,7 +46,7 @@
 
 ### [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
 
-- 遠端連線
+- 遠端連線樹莓派
 
 ### [AWS*](https://aws.amazon.com/tw/)
 
@@ -55,11 +56,14 @@
 ### [GitHub](https://github.com/)
 
 - 檔案同步備份
-- 版本控制
+- 版本控制平台
+- 代碼儲存與託管倉庫
+- 集成開發工具 Codespace 等
 
 ### [Ngrok](https://ngrok.com/)
 
-- 網路伺服器
+- 隧道 Tunel、臨時公網服務
+- 反向代理工具
 
 ### [Streamlit](https://streamlit.io/)
 
