@@ -40,13 +40,21 @@ _上課實作_
    
    ![](images/img_08.png)
 
+5. 執行腳本時會出現警告
 
-5. **添加用戶到 Docker 群組**（可避免每次使用 Docker 都需要使用 sudo）:
+- 警告若使用特權訪問 Docker daemon 上的遠程 API，等同在主機上的 root 訪問。
+- 也就是說若能夠訪問 Docker API，如同以最高權限在主機上做任何事情。
+- 這裡只是基本教學所以了解一下即可。
+
+   ![](images/img_09.png)
+
+
+6. **添加用戶到 Docker 群組**（可避免每次使用 Docker 都需要使用 sudo）:
 
    ```bash
    sudo usermod -aG docker $USER
    ```
-6. **重新啟動樹莓派**或登出再登入:
+7. **重新啟動樹莓派**或登出再登入:
 
    ```bash
    sudo reboot now
@@ -58,12 +66,12 @@ _上課實作_
 
 <br>
 
-7. **驗證 Docker 安裝**:
+8. **驗證 Docker 安裝**:
 
    ```bash
    docker run hello-world
    ```
-8. **檢查安裝的 Docker 版本**:
+9. **檢查安裝的 Docker 版本**:
 
    ```bash
    docker --version
