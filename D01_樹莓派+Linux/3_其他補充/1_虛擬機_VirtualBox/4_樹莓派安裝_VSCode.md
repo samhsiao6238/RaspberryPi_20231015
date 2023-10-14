@@ -1,18 +1,19 @@
 # 樹莓派安裝 VSCode
 
-- 安裝的主要目的是要透過 VSCode 的SSH 可以連線虛擬機中的樹梅派
+- 安裝的主要目的是要透過 VSCode 的 SSH 連線虛擬機中的樹梅派
 - 因為安裝 VSCode 才有 code-server
 
 </br>
 
 ## 安裝前準備
 - 因為先前是使用中文，所以目錄也會是中文
+- 假如還沒改過的話，這裡可以改一下
   
   ![](images/img_25.png)
 
 </br>
 
-- 將其中的「下載」「文件」更名
+- 將其中的 `下載`、`文件` 更名
 
     ```bash
     mv 下載 Downloads && mv 文件 Documents
@@ -62,7 +63,7 @@
 
 </br>
 
-- 完成安裝可看到應用
+- 完成安裝可看到應用 `Visual Studio Code`
   
   ![](images/img_27.png)
 
@@ -77,4 +78,4 @@
 
 ---
 
-END
+_END：以上說明樹莓派安裝 VSCode_
