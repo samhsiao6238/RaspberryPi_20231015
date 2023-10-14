@@ -151,14 +151,14 @@
    Wants=network-online.target
 
    [Service]
-   ExecStartPre=/bin/sleep 30
+   Type=oneshot
+   ExecStartPre=/bin/sleep 10
    ExecStart=/usr/bin/python /home/sam6238/Documents/send_line_notify.py
    User=sam6238
-   Restart=on-failure
-   RestartSec=5
+   TimeoutStartSec=0
 
    [Install]
-   WantedBy=multi-user.target   
+   WantedBy=multi-user.target  
    ```
 
 
@@ -169,7 +169,7 @@
    sudo systemctl enable line_notify.service
    ```
 
-7. 假如修改設定檔案
+7. 假如修改設定檔案，要重新加載配置
 
    ```bash
    sudo systemctl daemon-reload
@@ -185,9 +185,9 @@
 
 9.  完成以上步驟後重新開機
 
-   ```bash
-   sudo reboot now
-   ```
+    ```bash
+    sudo reboot now
+    ```
 
 10. 賦予服務執行腳本的權限
 
