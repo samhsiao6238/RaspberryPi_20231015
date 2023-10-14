@@ -38,9 +38,11 @@
    ![](images/img_29.png)
 
 3. 編輯環境參數
+   - 避免使用 sudo 直接編輯 .bashrc 或 .env。
+   - 使用 sudo 可能會導致這些文件的所有權或權限更改 
 
    ```bash
-   sudo nano ~/.bashrc
+   nano ~/.bashrc
    ```
 
 4. 在最後加入一行
@@ -64,7 +66,7 @@
 7. 建立 .env 環境參數，字串部分有無引號皆可
 
    ```bash
-   sudo nano .env
+   nano .env
    ```
    貼上
    ```bash
@@ -105,8 +107,13 @@
      ```
 
 9.  在終端機內執行一下測試收到通知
+
+    ```bash
+    /usr/bin/python /home/sam6238/Documents/send_line_notify.py
+    ```
      
      ![](images/img_27.png)
+
 
 </br>
 
@@ -181,6 +188,35 @@
    ```bash
    sudo reboot now
    ```
+
+10. 賦予服務執行腳本的權限
+
+    ```bash
+    sudo chmod +x /home/sam6238/Documents/send_line_notify.py
+    sudo chmod 600 /home/sam6238/Documents/.env
+    ```
+
+   
+11. 確保文件擁有者
+
+    ```bash
+    sudo chown sam6238:sam6238 /home/sam6238/Documents/send_line_notify.py
+    sudo chown sam6238:sam6238 /home/sam6238/Documents/.env
+    ```
+
+12. 查看日誌
+
+    ```bash
+    sudo journalctl -u line_notify.service
+    ```
+    或僅查看最新的
+    ```bash
+    sudo journalctl -u line_notify.service -n 50
+    ```
+    或動態查看
+    ```bash
+    sudo journalctl -u line_notify.service -n 50 -f
+    ```
 
 </br>
 
