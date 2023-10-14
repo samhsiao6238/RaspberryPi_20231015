@@ -133,47 +133,48 @@
 
 </br>
 
-14. 編輯 Windows 設定檔 `hosts` ，這需要管理員權限。
+## 編輯 Windows 設定檔 `hosts`
 
-    1. 添加 IP 與主機名稱的映射
+- 這需要管理員權限
 
-    ```shell
-    C:\Windows\System32\drivers\etc\hosts
-    ```
+1. 添加 IP 與主機名稱的映射
+
+  ```shell
+  C:\Windows\System32\drivers\etc\hosts
+  ```
  
-    ![](images/img_17.png)
+  ![](images/img_17.png)
 
 </br>
 
-    2. 可使用任意編輯器
+2. 可使用任意編輯器
   
-    ![](images/img_18.png)
+  ![](images/img_18.png)
 
 </br>
 
-    3. 在設定檔的最後加入
+3. 在設定檔的最後加入
   
-    - 這裡是示意的截圖，注意要使用當前的 IP*
+- 這裡是示意的截圖，注意要使用當前的 IP*
 
     ![](images/img_19.png)
 
 </br>
 
-1.  完成後可從本地電腦用 SSH 連線虛擬機
-
-    ```bash
-    ssh sam6238@192.168.242.1
-    ```
-
-</br>
-
-- 完成登入
-
-  ![](images/img_20.png)
+4. 完成後可從本地電腦用 SSH 連線虛擬機
+  ```bash
+  ssh sam6238@192.168.242.1
+  ```
 
 </br>
 
-16. 退出
+5. 完成登入
+
+    ![](images/img_20.png)
+
+</br>
+
+6. 退出
 
     ```bash
     exit
@@ -183,7 +184,9 @@
 
 </br>
 
-17. 退出後可以嘗試使用 `主機名稱` 進行連線
+## 使用主機名稱連線
+
+1. 嘗試使用 `主機名稱` 進行連線
     
     ```bash
     ssh <樹莓派帳號>@<樹莓派主機名稱>
@@ -193,7 +196,7 @@
 
 </br>
 
-18. 在 VSCode 中建立 SSH 設定檔案
+1. 在 VSCode 中編輯 SSH 設定檔案
   
   ![](images/img_23.png)
 
