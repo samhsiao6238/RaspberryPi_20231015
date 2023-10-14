@@ -137,18 +137,18 @@
 
 5. 內容如下：務必記住替換自己的路徑、帳號
    
-```ini
-[Unit]
-Description=Send LINE Notify on Startup
-After=network-online.target
+   ```ini
+   [Unit]
+   Description=Send LINE Notify on Startup
+   After=network-online.target
 
-[Service]
-ExecStart=/usr/bin/python /home/sam6238/Documents/send_line_notify.py
-User=sam6238
+   [Service]
+   ExecStart=/usr/bin/python /home/sam6238/Documents/send_line_notify.py
+   User=sam6238
 
-[Install]
-WantedBy=multi-user.target   
-```
+   [Install]
+   WantedBy=multi-user.target   
+   ```
 
 
 6. 啟動並啟用系統服務
