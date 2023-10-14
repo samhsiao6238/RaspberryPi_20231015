@@ -113,8 +113,6 @@
 
 </br>
 
-**結束：成功在 GitHub 上建立新的 Repo。**
-
 ---
 
-END
+_END：以上成功在 GitHub 上建立新的 Repo_
