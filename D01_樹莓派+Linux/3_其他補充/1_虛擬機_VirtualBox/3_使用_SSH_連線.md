@@ -138,16 +138,15 @@
 - 這需要管理員權限
 
 1. 添加 IP 與主機名稱的映射
-
-  ```shell
-  C:\Windows\System32\drivers\etc\hosts
-  ```
- 
-  ![](images/img_17.png)
+   ```bash
+   C:\Windows\System32\drivers\etc\hosts
+   ```
+    
+    ![](images/img_17.png)
 
 </br>
 
-2. 可使用任意編輯器
+1. 可使用任意編輯器
   
   ![](images/img_18.png)
 
