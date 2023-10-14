@@ -1,6 +1,8 @@
 
 # 在樹莓派上安裝 Docker 的步驟
 
+</br>
+
 1. **更新系統**:
    ```bash
    sudo apt update
@@ -48,6 +50,8 @@
    docker --version
    ```
 
+</br>
+
 ## Docker 基本指令
 
 | 指令              | 功能                   | 說明                                            |
@@ -61,9 +65,13 @@
 | `docker images` | 列出本地的 Docker 映像 | 顯示在本地機器上儲存的所有Docker映像的列表      |
 | `docker rmi`    | 刪除 Docker 映像       | 使用映像ID或名稱來刪除指定的Docker映像          |
 
+</br>
+
 ## 注意事項
 
 樹莓派使用的是 **ARM 架構** 的處理器，而大部分的 Docker 映像是為 **x86 架構** 的處理器設計的，所以在選擇 Docker 映像時，必須確保它支援 ARM 架構。
+</br>
 
 ---
-END
+
+_END：以上在樹莓派安裝 Docker_
