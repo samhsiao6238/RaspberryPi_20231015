@@ -42,7 +42,7 @@
 
 6. 瀏覽自訂的站台網址，正確顯示了寫在 `Secrets` 內的各項設定值。
 
-    ![](images/img_50.png)
+    ![](images/img_51.png)
 
 </br>
 
