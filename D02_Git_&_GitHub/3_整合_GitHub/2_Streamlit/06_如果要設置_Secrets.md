@@ -14,7 +14,7 @@
  
     ![](images/img_36.png)
 
-3. 使用 [TOML](https://toml.io/en/v1.0.0) 格式
+3. 依照官方說明使用 [TOML](https://toml.io/en/v1.0.0) 格式
     ```toml
     db_username = 'Sam Hsiao'
     db_password = 'PASSWORD'

@@ -20,56 +20,56 @@ _實作_
 
 ## 步驟說明 
 
-1. 準備好從 Firebase 下載的專案憑證。
+1. 先從 Firebase 下載專案的憑證。
 
    ![](images/img_54.png)
    
-2. 因為格式為 JSON 檔案，需轉換為文字檔案再貼到 Streamlit 服務器，所以製作一個工具腳本讀取個人從 Firebase 專案取得的密鑰。
+2. 因為憑證格式為 JSON 檔案，需轉換為 [TOML](https://toml.io/en/v1.0.0) 格式再貼到 Streamlit 服務器的 `Secrets` ，所以製作一個工具腳本 `key-to-toml.ipynb` 讀取個人從 Firebase 專案取得的密鑰進行轉換。
 
     ```python
-    # 導入 json
-    import json
-
-    # 權杖檔案路徑
-    _PATH_ = '.json 憑證的相對路徑'
-    # 讀取
-    with open(_PATH_) as f:
-        firebase_config = json.load(f)
-    # 輸出    
-    firebase_config_str = json.dumps(firebase_config)
-    # 儲存到 .txt 文件，並加上指定的格式
-    formatted_str = f'FIREBASE_CONFIG_STR="""{firebase_config_str}"""'
-    with open('output.txt', 'w') as out_file:
-        out_file.write(formatted_str)
-    #
-    print("已將輸出保存到 output.txt 文件中。")
+    # 載入 toml
+    import toml
+    # 設定轉換後輸出檔案的路徑
+    output_file = ".streamlit/secrets.toml"
+    # 讀取權證檔案
+    with open("myproject01-be1b7-firebase-adminsdk-1mh85-36f2d814a2.json") as f:
+        # 先讀取這個 JSON 檔案
+        json_text = f.read()
+    # 給這個檔案一個 key：「FIREBASE_CONFIG_STR」
+    config = {"FIREBASE_CONFIG_STR": json_text}
+    # 透過 toml 進行轉換
+    toml_config = toml.dumps(config)
+    # 寫入指定的目標檔案
+    with open(output_file, "w") as target:
+        target.write(toml_config)
     ```
 
-4. 上一個步驟中，要自定義一個環境參數名稱如 `FIREBASE_CONFIG_STR` ，將前一個步驟輸出的字典頭尾處以三個引號 `"""` 包覆。
+3. 上一個步驟中，自定義一個 `key` 作為環境參數的名稱 `FIREBASE_CONFIG_STR` ，將前一個步驟輸出的字典頭尾處以雙引號 `" "` 包覆，這是一個單行格式的字串。
 
-   ![](images/img_55.png)
+   ![](images/img_63.png)
 
-5. 進入 Streamlit 服務器官網，點擊所要設定的專案
+4. 進入 Streamlit 服務器官網，點擊所要設定的專案
 
    ![](images/img_56.png)
 
-6. 選取 `Secrets` 並貼上後儲存 `Save`
+5. 選取 `Secrets` 並貼上後儲存 `Save`
 
-    ![](images/img_57.png)
+    ![](images/img_64.png)
 
-7. 貼在任意處即可，與其他資料無排序問題。
+6. 貼在任意處即可，與其他資料無排序問題。
 
-   ![](images/img_58.png)
 
-8. 因為使用了 `firebase_admin` ，所以要修改 `requirements.txt` 。
+   ![](images/img_65.png)
+
+7. 因為使用了 `firebase_admin` ，所以要修改 `requirements.txt` 。
 
    ![](images/img_59.png)
 
-9. 修改了設定要將服務器重新開機 `Reboot` 。
+8. 修改了設定要將服務器重新開機 `Reboot` 。
 
     ![](images/img_60.png)
 
-10. 記得開啟訪問權限。
+9.  記得開啟訪問權限。
 
     ![](images/img_61.png)
 
@@ -77,4 +77,4 @@ _實作_
 
 ---
 
-_END_
+_END：以上說明關於轉換 JSON 權證到 Streamlit 服務器的 Secrets_
