@@ -9,6 +9,15 @@ _實作_
 
 </br>
 
+## 設定 Firebase
+1. 安裝套件
+
+    ```bash
+    pip install firebase_admin
+    ```
+
+</br>
+
 ## 步驟說明 
 
 1. 準備好從 Firebase 下載的專案憑證。
