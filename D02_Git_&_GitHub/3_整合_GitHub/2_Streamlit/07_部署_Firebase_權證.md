@@ -38,7 +38,7 @@ _實作_
     # 輸出    
     firebase_config_str = json.dumps(firebase_config)
     # 儲存到 .txt 文件，並加上指定的格式
-    formatted_str = f'FIREBASE_CONFIG_STR = """\n{firebase_config_str}\n"""'
+    formatted_str = f'FIREBASE_CONFIG_STR="""{firebase_config_str}"""'
     with open('output.txt', 'w') as out_file:
         out_file.write(formatted_str)
     #
