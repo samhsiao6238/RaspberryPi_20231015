@@ -4,8 +4,17 @@
 
 ## 成果
 
-![](images/img_07.png)
+- 驗證成功進入簽到系統
 
+![](images/img_11.png)
+
+- 選擇座號簽到，成功進入上課系統
+
+![](images/img_12.png)
+
+- 離開教室
+
+![](images/img_13.png)
 
 </br>
 
