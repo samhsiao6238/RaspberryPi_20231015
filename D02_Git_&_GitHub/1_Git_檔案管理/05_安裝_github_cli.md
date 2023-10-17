@@ -75,7 +75,7 @@
    
    ![](images/img_53.png)
 
-7. 重新更新與安裝
+7. 再次進行更新後安裝
 
     ```bash
     sudo apt update
