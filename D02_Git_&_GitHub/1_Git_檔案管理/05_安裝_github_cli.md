@@ -4,7 +4,7 @@
 
 </br>
 
-## git 與 GitHub CLI 有何不同 ❓
+## A. git 與 GitHub CLI 有何不同 ❓
 
 - 說明：
     1. `git` 和 `GitHub CLI` 是兩個不同的工具，雖然兩者都是對 GitHub 操作的工具，但功能和用途有差異。
@@ -15,13 +15,14 @@
 
 </br>
 
-## 安裝步驟
+## B. 安裝步驟
 
 1. 訪問 [GitHub CLI 官網](https://cli.github.com/).
 2. 點擊 `Manual` 並進入 `Installation` 下的 `README`.
 3. 在 `Linux & BSD` 部分，選擇 `Linux & BSD installation`.
-4. 複製提供的安裝指令。
+4. 複製提供的安裝指令 `如下` 。
 
+## C. 安裝與確認指令
 - 在樹莓派終端機中，執行以下指令：
 
     ```bash
@@ -41,7 +42,8 @@
 
 </br>
 
-## 登入
+## D. 登入
+- 安裝好之後可透過指令進行登入
 
 1. 使用 `gh auth login` 進行登入。
 2. 選擇 `GitHub.com`.
