@@ -22,6 +22,8 @@
 3. 在 `Linux & BSD` 部分，選擇 `Linux & BSD installation`.
 4. 複製提供的安裝指令 `如下` 。
 
+</br>
+
 ## C. 安裝與確認指令
 - 在樹莓派終端機中，執行以下指令：
 
@@ -39,6 +41,8 @@
     ```bash
     gh --version
     ```
+
+</br>
 
 ## D. 錯誤排除
 1. 安裝過程若出現 `Hash Sum mismatch` 錯誤，這是一個常見的更新問題 `APT（Advanced Package Tool）` 。
