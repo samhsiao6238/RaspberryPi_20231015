@@ -46,12 +46,13 @@
 6. 以 Git 指令設定用戶名稱和郵箱
 
    ```bash
-   git config --global user.name samhsiao6238
-   git config --global user.email samhsiao6238@gmail.com
+   git config --global user.name <輸入 github 名稱>
+   git config --global user.email <輸入電子郵件>
    ```
 
-   **注意**：
-   _如果用戶名是由多個單詞組成的，例如「John Doe」，則必須使用引號包裹。_
+   **注意**
+   
+   _如果用戶名是由多個單詞組成的，例如 `John Doe`，則必須使用引號包裹。_
 
 
 </br>
