@@ -86,11 +86,43 @@
 ## D. 登入
 - 安裝好之後可透過指令進行登入
 
-1. 使用 `gh auth login` 進行登入。
+1. 使用 gh 進行登入。
+
+    ```bash
+    gh auth login
+    ```
+
 2. 選擇 `GitHub.com`.
-3. 您將得到一串代碼，將此代碼輸入到網頁瀏覽器中。
-4. 跟隨網頁上的指示完成授權。
-5. 若需要，完成手機驗證。
+
+    ![](images/img_54.png)
+
+3. 選擇 `HTTPS`
+
+    ![](images/img_55.png)
+
+4. 授權 `y`
+
+   ![](images/img_56.png)
+
+5. 透過瀏覽器
+
+   ![](images/img_57.png)
+
+6. 複製這串代碼，點擊 `ENTER` 開啟瀏覽器。
+
+   ![](images/img_58.png)
+
+7. 將此代碼輸入到網頁瀏覽器中
+
+   ![](images/img_59.png)
+
+8. 跟隨網頁上的指示完成授權。
+
+   ![](images/img_60.png)
+
+9.  完成手機驗證後完成登入 GitHub CLI。
+
+    ![](images/img_61.png)
 
 </br>
 
