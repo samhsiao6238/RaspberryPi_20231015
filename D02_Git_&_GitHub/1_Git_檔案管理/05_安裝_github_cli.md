@@ -40,6 +40,47 @@
     gh --version
     ```
 
+## D. 錯誤排除
+1. 安裝過程若出現 `Hash Sum mismatch` 錯誤，這是一個常見的更新問題 `APT（Advanced Package Tool）` 。
+- 先將錯誤的儲存庫網址記錄下來
+
+  ![](images/img_50.png)
+
+
+2. 查看 sources.list.d 目錄下所有文件
+
+    ```bash
+    ls /etc/apt/sources.list.d/
+    ```
+
+3. 會出現幾個檔案
+
+   ![](images/img_51.png)
+
+4. 逐一查看內容
+
+    ```bash
+    cat /etc/apt/sources.list.d/<文件名>
+    ```
+
+    ![](images/img_52.png)
+
+5. 對有疑問的儲存庫進行編輯
+
+    ```bash
+    sudo nano /etc/apt/sources.list.d/<疑似錯誤的儲存庫>
+    ```
+
+6. 將引發錯誤的儲存庫標註排除
+   
+   ![](images/img_53.png)
+
+7. 重新更新與安裝
+
+    ```bash
+    sudo apt update
+    ```
+
 </br>
 
 ## D. 登入
