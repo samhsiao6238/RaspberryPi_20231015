@@ -26,7 +26,19 @@
 
    ![](images/img_49.png)
 
-5. 編輯網頁來觀察 `Secrets` 的設定
+5. 若在 Codespace 或本地運行需建立 `secrets.toml` 檔案
+
+    ```bash
+    code .streamlit/secrets.toml
+    ```
+
+6. 切記將私鑰檔案加入 `.gitignore` 檔案內
+
+    ```text
+    secrets.toml
+    ```
+
+7. 編輯網頁來觀察 `Secrets` 的設定
     ```python
     import streamlit as st
     import os
@@ -40,7 +52,7 @@
     st.write("這部分是觀察 os 設定值與 st 設定值是否一致", os.environ["db_username"] == st.secrets["db_username"])
     ```
 
-6. 瀏覽自訂的站台網址，正確顯示了寫在 `Secrets` 內的各項設定值。
+8. 瀏覽自訂的站台網址，正確顯示了寫在 `Secrets` 內的各項設定值。
 
     ![](images/img_51.png)
 
