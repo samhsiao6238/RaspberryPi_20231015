@@ -19,9 +19,11 @@ touch app.py
 ```python
 from flask import Flask, render_template
 app = Flask(__name__)
+
 @app.route('/')
 def home():
     return render_template('index.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 ```
@@ -71,8 +73,7 @@ mkdir -p templates && touch index.html
 
 8. 在套件管理檔案 `requirements.txt` 中加入基本所需的模組
 ```txt
-Flask==2.0.2
-gunicorn==20.1.0
+Flask
 ```
 
 9. 建立一個 Vercel 管理的 JSON 檔案 `vercel.json`
@@ -96,6 +97,12 @@ touch vercel.json
     
     ![](images/img_17.png)
 
-12. 訪問
+
+
+12. 進入 Vercel 官網，會看到專案，點擊進入
+    
+    ![](images/img_19.png)
+
+13. 訪問
     
     ![](images/img_18.png)
