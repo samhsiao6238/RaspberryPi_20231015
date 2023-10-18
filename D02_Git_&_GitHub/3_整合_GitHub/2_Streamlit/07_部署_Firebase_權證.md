@@ -1,4 +1,4 @@
-_實作_
+_這部分在說明 Firebase 資料庫時再回來實作_
 
 # Firebase
 - 專案在本機（電腦或樹莓派）運行時讀取 Firebase 的憑證檔案（JSON）沒有困難，但憑證無法上傳到 Streamlit 服務器上。
