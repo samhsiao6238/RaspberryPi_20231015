@@ -54,6 +54,10 @@
    
    ![](images/img_12.png)
 
+4. 點擊 `以瀏覽器開啟`
+
+   ![](images/img_81.png)
+
 
 <br>
 
