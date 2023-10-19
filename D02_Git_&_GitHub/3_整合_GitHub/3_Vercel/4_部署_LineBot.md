@@ -1,4 +1,4 @@
-_實作_
+_實作：這部分主要是在介紹 Vercel 與 GitHub 整合_
 
 # 在 Vercel 部署 LineBot
 
