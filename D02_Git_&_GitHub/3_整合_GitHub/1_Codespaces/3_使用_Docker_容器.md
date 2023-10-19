@@ -55,6 +55,7 @@
 ## 檢查與觀察
 
 1. 在這個容器中執行指令查詢 Python 安裝版本
+
    ```bash
    python --version
    ```
@@ -63,17 +64,18 @@
    ![](images/img_44.png)
 
 2. 自訂 `.json` 內容，指定使用 python:3.9-slim-buster 映像，並在容器建立後升級 pip。
-```json
-{
-    "name": "Python 3.9 Development",
-    "image": "python:3.9-slim-buster",
-    "postCreateCommand": "pip install --upgrade pip",
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    "extensions": ["ms-python.python"]
-}
-```
+
+   ```json
+   {
+      "name": "Python 3.9 Development",
+      "image": "python:3.9-slim-buster",
+      "postCreateCommand": "pip install --upgrade pip",
+      "settings": {
+         "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": ["ms-python.python"]
+   }
+   ```
 
 3. 切記要先提交
 
@@ -186,7 +188,7 @@ _⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予
 
 </br>
 
-### 補充說明一點
+### 補充說明
 
 1. 在用戶資訊部分所顯示的 `codespaces-b55d3d` 是目前所在的 Codespaces 環境識別符號。
 
