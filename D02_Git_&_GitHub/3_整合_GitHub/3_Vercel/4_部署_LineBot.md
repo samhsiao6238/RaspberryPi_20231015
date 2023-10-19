@@ -2,6 +2,7 @@ _實作：這部分主要是在介紹 Vercel 與 GitHub 整合_
 
 # 在 Vercel 部署 LineBot
 
+
 </br>
 
 ## A. 在樹莓派上
@@ -327,6 +328,12 @@ _🔺 以上完成第一階段的 Line Developers 設定_
 3. 也可以透過驗證 Webhook 確認是否完成部署
 
    ![](images/img_94.png)
+
+</br>
+
+## I. 其他補充
+
+    _介紹完伺服器後，再使用 `Ngrok` 將 LineBot 部署在樹莓派上_
 
 </br>
 
