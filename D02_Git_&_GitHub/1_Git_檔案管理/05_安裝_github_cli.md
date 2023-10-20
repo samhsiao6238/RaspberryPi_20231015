@@ -4,6 +4,10 @@
 
 </br>
 
+_懶得看這些說明可以直接跳到 C. 安裝與確認指令_
+
+<br>
+
 ## A. git 與 GitHub CLI 有何不同 ❓
 
 - 說明：
@@ -89,7 +93,33 @@
 
 </br>
 
-## D. 登入
+## D. 使用 VSCode 對以上問題進行修正
+
+1. 切換到指定資料夾
+
+    ```bash
+    cd /etc/apt/sources.list.d
+    ```
+
+2. 授權
+
+    ```bash
+    sudo chmod 666 /etc/apt/sources.list.d
+    ```
+
+3. 開啟資料夾逐一進行檢查與修改
+
+    ```bash
+    code .
+    ```
+
+4. 完成後可恢復原本授權
+
+    ```bash
+    sudo chmod 644 /etc/apt/sources.list.d
+    ```
+
+## E. 登入
 - 安裝好之後可透過指令進行登入
 
 1. 使用 gh 進行登入。
