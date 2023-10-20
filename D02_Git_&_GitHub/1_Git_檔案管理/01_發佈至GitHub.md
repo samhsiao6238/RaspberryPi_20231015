@@ -118,17 +118,20 @@ _注意_
 ### 📌 E. 進行查看
 
 
-1.  完成後，可在 GitHub 上開啟並查看新建立的 Repo 以及 README.md。
+1. 完成後，可在 GitHub 上開啟並查看新建立的儲存倉庫以及 README.md。
 
       ![](images/img_22.png)
 
 
-2. 在終端機中可以透過指令到 .git 檔案
+2. 在終端機中可看到 .git 資料夾，
 
       ![](images/img_23.png)
 
+3. 資料夾內記錄各種版本控制的資訊與設定。
 
-3. 可手動建立 .gitignore 檔案
+   ![](images/img_64.png)
+
+4. 可以在儲存倉庫的根目錄內手動建立 .gitignore 檔案，用於設定儲存倉庫內要 `取消追蹤` 的項目。
     
     ![](images/img_24.png)
 
