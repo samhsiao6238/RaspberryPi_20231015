@@ -29,6 +29,13 @@
    ![](images/img_03.png)
 
 5. 重新啟動
+
     ```bash
     sudo reboot now
     ```
+
+</br>
+
+---
+
+_END_
