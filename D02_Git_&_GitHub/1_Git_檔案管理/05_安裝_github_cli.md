@@ -101,19 +101,32 @@ _懶得看這些說明可以直接跳到 C. 安裝與確認指令_
     cd /etc/apt/sources.list.d
     ```
 
-2. 授權
+2. 查詢有哪些檔案
+    
+    ```bash
+    ls
+    ```
+   
+   ![](images/img_67.png)
+
+3. 可先查看再對要修改的檔案進行授權，查看部分參考前一小段說明。
 
     ```bash
-    sudo chmod 666 /etc/apt/sources.list.d
+    sudo chmod 777 /etc/apt/sources.list.d/raspi.list
     ```
 
-3. 開啟資料夾逐一進行檢查與修改
+4. 開啟資料夾逐一進行檢查與修改
 
     ```bash
     code .
     ```
 
-4. 完成後可恢復原本授權
+
+4. 某個來源有問題就把它註解
+
+   ![](images/img_66.png)
+
+5. 完成後可恢復原本授權
 
     ```bash
     sudo chmod 644 /etc/apt/sources.list.d
