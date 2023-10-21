@@ -4,7 +4,13 @@
 
 ## A. Git 檔案管理
 
-1. 建議下載 APP 用於雙重認證
+1. 請先安裝 [GitHub Desktop](https://desktop.github.com/)
+   
+   ![](images/img_06.png)
+
+<br>
+
+2. 建議下載 APP 用於雙重認證
    
    ![](images/img_01.png)
 
