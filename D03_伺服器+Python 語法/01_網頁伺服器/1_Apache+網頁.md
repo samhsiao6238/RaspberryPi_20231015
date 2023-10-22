@@ -105,8 +105,8 @@
     sudo nano /etc/apache2/apache2.conf
     ```
 
-    _內容如下_
-
+3. 滑動到程式碼中以下區塊進行編輯，其餘部分可以不用變動。
+    
     ```html
     <Directory />
         Options FollowSymLinks
@@ -130,7 +130,7 @@
     </Directory>        
     ```
 
-3. 修改 `個別` 網站配置
+4. 修改 `個別` 網站配置
 
     ```bash
     sudo nano /etc/apache2/sites-available/000-default.conf
