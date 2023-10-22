@@ -197,7 +197,7 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
     ```
     如
     ```bash
-    sudo chmod -R 755 /home/sam6238/Documents/00_RaspberryPi_2023_V1/01_Webs/02_Apache
+    sudo chmod -R 755 /home/sam6238/Documents/my_web
     ```
 	
 	
@@ -208,7 +208,7 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
     ```	
     如
     ```bash
-    sudo chown -R www-data:www-data  /home/sam6238/Documents/00_RaspberryPi_2023_V1/01_Webs/02_Apache
+    sudo chown -R www-data:www-data  /home/sam6238/Documents/my_web
     ```
 
 3. 要添加超文本，所以先授權自己擁有添加文檔的權限
@@ -218,7 +218,7 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
     ```
     如
     ```bash
-    sudo chown -R sam6238:sam6238 /home/sam6238/Documents/00_RaspberryPi_2023_V1/01_Webs/02_Apache
+    sudo chown -R sam6238:sam6238 /home/sam6238/Documents/my_web
     ```
 
 
