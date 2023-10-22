@@ -226,13 +226,26 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
 
 ## F. 建議任意文本來測試
 
-1. 使用 VSCode 透過快速鍵 `!` 建立文本。 
+1. 進入超文本目錄，建立一個 `index.html` 檔案。
+   ```bash
+   sudo touch index.html
+   ```
+   ![](images/img_07.png)
 
-2. 修改完成要重新啟動。
-```bash
-sudo systemctl reload apache2
-```
+2. 開啟 `index.html` 使用 VSCode 透過快速鍵 `!` 建立文本。 
+   
+   ![](images/img_08.png)
 
-3. 在樹莓派上瀏覽 `http://localhost` 。
+3. 任意修改
+   
+   ![](images/img_09.png)
 
-4. 在區網內訪問樹莓派網址。
+4. 完成要重新啟動。
+
+    ```bash
+    sudo systemctl reload apache2
+    ```
+
+1. 在樹莓派上瀏覽 `http://localhost` 。
+
+2. 在區網內訪問樹莓派網址。
