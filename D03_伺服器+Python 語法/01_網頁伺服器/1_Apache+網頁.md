@@ -130,12 +130,17 @@
     </Directory>        
     ```
 
-4. 修改 `個別` 網站配置
+4. 超文本所在目錄就是前面自己建立的那個路徑，比如說 `/home/sam6238/Documents/my_web` 。
+   
+   ![](images/img_06.png)
+
+5. 修改 `個別` 網站配置
 
     ```bash
     sudo nano /etc/apache2/sites-available/000-default.conf
     ```
-    _內容如下_
+
+6. 添加內容 `# 添加這個`，其餘部分可以不用變動，註解內容可以拿掉看比較清楚。
 
     ```html
     <VirtualHost *:80>
