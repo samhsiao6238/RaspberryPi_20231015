@@ -146,7 +146,8 @@
     <VirtualHost *:80>
         ServerAdmin webmaster@localhost
         DocumentRoot <超文本所在目錄>
-    # 添加這段
+        
+        # 添加這段
         <Directory <超文本所在目錄>>
             Options Indexes FollowSymLinks
             AllowOverride All
@@ -161,6 +162,10 @@
 <br>
 
 ## D. 是否使用預設的設定檔案
+
+_因為我們將使用預設值，所以這裡不用做任何變動，理解即可。_
+
+<br>
 
 1. 禁用（關閉）預設的設定檔 `000-default.conf`
     - `a2dissite` 是 `Apache 2 Disable Site` 的縮寫
