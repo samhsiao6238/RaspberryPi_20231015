@@ -99,7 +99,7 @@
     sudo mkdir /home/sam6238/Documents/my_web
     ```
 
-2. 修改 `全局` 配置，特別注意 `縮排` 要手動調整跟其他文本一樣
+2. 修改 `全局` 配置，特別注意 `縮排` 要手動調整跟其他文本一樣，到這裡同學應該發現檔案內容很多，使用 `nano` 編輯不太友善，這也就是為何前面要授權讓我們可以在此使用 VSCode 編輯的原因，假如已經設定好權限，可以使用 VSCode 編輯。
 
     ```bash
     sudo nano /etc/apache2/apache2.conf
