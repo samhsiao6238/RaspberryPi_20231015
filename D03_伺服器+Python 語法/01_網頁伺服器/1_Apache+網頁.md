@@ -93,7 +93,13 @@
 
 ## C. 修改設定檔案
 
-1. 修改 `全局` 配置，特別注意 `縮排` 要手動調整跟其他文本一樣
+1. 修改設定檔案之前，因為設定檔案中會使用到超文本所在資料夾，所以先在指定目錄中建立，這裡舉例建立在 `/home/sam6238/Documents` ，這裡使用絕對路徑。
+
+    ```bash
+    sudo mkdir /home/sam6238/Documents/my_web
+    ```
+
+2. 修改 `全局` 配置，特別注意 `縮排` 要手動調整跟其他文本一樣
 
     ```bash
     sudo nano /etc/apache2/apache2.conf
@@ -124,7 +130,7 @@
     </Directory>        
     ```
 
-2. 修改 `個別` 網站配置
+3. 修改 `個別` 網站配置
 
     ```bash
     sudo nano /etc/apache2/sites-available/000-default.conf
