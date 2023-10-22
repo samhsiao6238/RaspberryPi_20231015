@@ -238,7 +238,7 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
 
 3. 任意修改
    
-   ![](images/img_09.png)
+   ![](images/img_10.png)
 
 4. 完成要重新啟動。
 
@@ -246,6 +246,12 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
     sudo systemctl reload apache2
     ```
 
-1. 在樹莓派上瀏覽 `http://localhost` 。
+5. 在樹莓派上瀏覽 `http://localhost` 或在區網內訪問樹莓派網址。
+   
+   ![](images/img_11.png)
 
-2. 在區網內訪問樹莓派網址。
+<br>
+
+---
+
+_END_
