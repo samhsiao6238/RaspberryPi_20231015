@@ -46,9 +46,11 @@
     sudo systemctl enable apache2
     ```
 
+    ![](images/img_05.png)
+
 <br>
 
-## B. 設定說明
+## B. 設定文件說明
 - Apache 的配置檔案有兩個
    
 1. 全局配置設定檔路徑
@@ -74,6 +76,19 @@
     sudo chown $USER /etc/apache2/sites-available/000-default.conf
     ```
 
+4. 補充說明前項 `文件授權`，因為 VSCode 無法執行 `sudo` 權限，所以必須修改檔案權限或是擁有者來賦予編輯的權限，在只有單人的開發環境中，使用授權或是變更擁有者的效果並無差異。
+
+5. 在多人共用的環境中，因為 `/etc` 文件屬於全域的設定檔案，將檔案擁有者改為特定為有一定的不方便，在終端機中進行編輯可使用 `nano` 因應，而在 VSCode 中可建立特定群組如 `如 apacheadmin`，透過更改文件群組並加入各用戶來配置權限。
+
+    _建立群組並加入文件_
+    ```bash
+    sudo chgrp apacheadmin /etc/apache2/apache2.conf /etc/apache2/sites-available/000-default.conf
+    ```
+    _修改群組權限_
+    ```bash
+    sudo chmod 660 /etc/apache2/apache2.conf /etc/apache2/sites-available/000-default.conf
+    ```
+   
 <br>
 
 ## C. 修改設定檔案
