@@ -35,24 +35,32 @@ _這裡不重複步驟指引，僅說明 Webhook 設置，其他請參考前週�
 
 3. 使用 [官網腳本](https://github.com/line/line-bot-sdk-python#synopsis)
 
-4. 替換自己的 `Token`、 `Secret`。
+4. 用自己的 `Token`、 `Secret` 替換範例中的。
 
     ![](images/img_75.png)
 
-5. 安裝 `dotenv` 套件來隔離私密資訊。
-   
+<br>
+
+## 使用 `dotenv` 隔離敏感檔案
+
+_加強安全性，這個範例將安裝 `dotenv` 套件來隔離私密資訊。_
+
+<br>
+
+1. 在樹莓派安裝套件   
+
     ```bash
     pip install python-dotenv
     ```
 
-6. 在專案內建立 `.env` 檔案。
+2. 在專案內根目錄自建立一格隱藏檔案 `.env` 並編輯內容。
 
     ```bash
     _CHANNEL_ACCESS_TOKEN_ = <貼上 TKOKEN>
     _CHANNEL_SECRET_ = <貼上 SECRET>
     ```
 
-7. 導入
+7. 在主腳本 `app.py` 導入 dotenv。
 
     ```python
     import os
@@ -60,28 +68,32 @@ _這裡不重複步驟指引，僅說明 Webhook 設置，其他請參考前週�
     load_dotenv()
     ```
 
-8. 使用
+8. 在程序中使用 `os` 來取得 Token 及 Secret，分開寫只是讓程式碼易讀性提高。
 
-    _建立_
+    _取得_
     ```python
     CHANNEL_ACCESS_TOKEN = os.getenv("_CHANNEL_ACCESS_TOKEN_")
     CHANNEL_SECRET = os.getenv("_CHANNEL_SECRET_")
     ```
-    _代入_
+    _使用_
     ```
     configuration = Configuration(access_token=CHANNEL_ACCESS_TOKEN)
     handler = WebhookHandler(CHANNEL_SECRET)
     ```
 
-9. 在 `5000` 端口啟動 Ngrok
+<br>
+
+## 啟動 Flask 應用
+
+1. 先在 `5000` 端口啟動 Ngrok，這是 Flask 預設的端口。
     
     ![](images/img_76.png)
 
-10. 將 `https` 的 URL 貼到 LineBot 的 Webhook 中
+2. 將 `https` 的 URL 貼到 LineBot 的 Webhook 中
     
     ![](images/img_77.png)
 
-11. 加上 `/callback` ，特別注意所使用的路由名稱是否正確，有些腳本會使用 `webhook` 。
+11. 使用 `https` 並加上 `/callback` ，特別注意所使用的路由名稱是否正確，有些腳本會使用 `webhook` 。
     
     ![](images/img_78.png)
 
