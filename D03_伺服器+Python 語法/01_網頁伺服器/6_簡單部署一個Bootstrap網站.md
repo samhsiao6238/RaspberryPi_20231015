@@ -14,7 +14,7 @@
 3. 後拖曳複製＆覆蓋原本 Apache 的檔案
     ![](images/img_44.png)
 
-4. 完成，包還 `.ico`
+4. 完成，包含 `.ico`
 
     ![](images/img_46.png)
 
