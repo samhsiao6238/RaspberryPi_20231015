@@ -2,7 +2,7 @@
 
 [課程 Googoe Meet 連結](https://meet.google.com/dej-skyd-trv)
 
-教室代碼 
+教室代碼
 
 ```bash
 dej-skyd-trv

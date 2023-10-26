@@ -267,7 +267,7 @@ print('Hello, World!')
     | `json`       | JSON        |
     | `xml`        | XML         |
     | `yaml`       | YAML        |
-
+    | `plaintext`  | 純文本       |
 
   [官方文檔](https://www.markdownguide.org/getting-started/)
 
