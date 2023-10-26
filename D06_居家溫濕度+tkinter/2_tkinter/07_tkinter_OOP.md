@@ -2,7 +2,7 @@
 
 ## 7_tkinter 的物件導向 OOP
 
-**tkinter** 非常適合物件導向的 Pattern。
+**tkinter** 非常適合物件導向的 Paragiam。
 
 ### 以黑白棋盤範例來說明
 
@@ -32,10 +32,10 @@ class ChessBoard(tk.Tk):
         super().__init__()
         self.title("5x5 棋盤")
         self.geometry("250x250")
-      
+    
         # 不可調整大小
         self.resizable(False, False)
-      
+    
         # 建立 5x5 黑白棋盤
         for row in range(5):
             for col in range(5):
@@ -46,7 +46,7 @@ class ChessBoard(tk.Tk):
                 frame.grid(row=row, column=col)
                 # 防止框架調整大小
                 frame.grid_propagate(False)
-              
+            
                 # 以下是在黑白棋盤中加入黑白棋子
                 # 白色放黑棋子、黑色放白棋子
                 piece = WhitePiece() if color == 'black' else BlackPiece()
