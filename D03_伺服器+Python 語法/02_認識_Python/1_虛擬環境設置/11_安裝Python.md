@@ -81,6 +81,40 @@ _查詢當前環境安裝與版本_
 
 <br>
 
+## 半自動安裝
+1. 下載
+
+    ```bash
+    wget https://www.python.org/ftp/python/3.9.12/Python-3.9.12.tgz
+    ```
+
+2. 解壓縮且進入目錄   
+
+    ```bash
+    tar -xf Python-3.9.12.tgz && cd Python-3.9.12
+    ```
+
+3. 優化
+
+    ```bash
+    ./configure --enable-optimizations
+    ```
+
+4. 編譯
+
+    ```bash
+    make -j$(nproc)
+    ```
+
+5. 安裝
+
+    ```bash
+    sudo make altinstall
+    ```
+
+
+<br>
+
 ## 手動安裝
 
 1. 從官網的 [Python Source Releases](https://www.python.org/downloads/source/) 下載壓縮檔案
