@@ -5,6 +5,8 @@ _上課講述_
 _自訂快速鍵，這裡以 Flask 網站為例_
 
 
+<br>
+
 ## 開始
 
 1. 打開 `命令選擇區 Command Palette`
@@ -205,6 +207,8 @@ _這是比較進階的技巧_
     ```bash
     mv FastFlask.code-snippets /Users/samhsiao/Library/Application\ Support/Code/User/snippets
     ```
+
+<br>
 
 ## 測試
 
