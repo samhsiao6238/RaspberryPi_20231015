@@ -189,7 +189,7 @@ _查詢當前環境安裝與版本_
 
 ## 建立虛擬環境
 
-1. 指定用新安裝的 Python 版本安裝虛擬環境
+1. 指定用新安裝的 Python 版本建立虛擬環境
 
     ```bash
     /usr/local/bin/python3 -m venv env3918
