@@ -1,0 +1,7 @@
+setup.py
+tosnippets.py
+tosnippets.egg-info/PKG-INFO
+tosnippets.egg-info/SOURCES.txt
+tosnippets.egg-info/dependency_links.txt
+tosnippets.egg-info/entry_points.txt
+tosnippets.egg-info/top_level.txt

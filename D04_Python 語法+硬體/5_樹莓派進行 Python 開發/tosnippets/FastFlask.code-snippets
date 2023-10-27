@@ -1,0 +1,24 @@
+{
+    "!FastFlask": {
+        "scope": "python",
+        "prefix": "!FastFlask",
+        "body": [
+            "import tkinter as tk\n",
+            "\n",
+            "def on_button_click():\n",
+            "    label.config(text=\"Hello, Tkinter!\")\n",
+            "\n",
+            "app = tk.Tk()\n",
+            "app.title(\"Tkinter Example\")\n",
+            "\n",
+            "button = tk.Button(app, text=\"Click Me!\", command=on_button_click)\n",
+            "button.pack(pady=20)\n",
+            "\n",
+            "label = tk.Label(app, text=\"Welcome to Tkinter!\")\n",
+            "label.pack(pady=20)\n",
+            "\n",
+            "app.mainloop()\n"
+        ],
+        "description": "!FastFlask snippet"
+    }
+}
