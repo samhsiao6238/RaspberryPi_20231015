@@ -13,10 +13,20 @@ _查詢當前環境安裝與版本_
     ```bash
     which python
     ```
+
     _通常只會顯示在 `/usr/bin` 內的版本_
+
     ![](images/img_13.png)
 
-2. 使用 `whereis` 查詢
+2. 加入參數 `-a` 查詢當前活動的 Python 版本及其來源
+   
+   ```bash
+   which -a python
+   ```
+
+    ![](images/img_32.png)
+
+3. 使用 `whereis` 查詢
 
     ```bash
     whereis python
@@ -29,7 +39,7 @@ _查詢當前環境安裝與版本_
 
     ![](images/img_14.png)
 
-3. 透過 sys 模組查詢
+4. 透過 sys 模組查詢
 
     ```bash
     python -c "import sys; print(sys.prefix)"
@@ -38,7 +48,19 @@ _查詢當前環境安裝與版本_
 
     ![](images/img_15.png)
 
-4. 查詢版本
+5. 透過 `echo` 查詢路徑配置
+   
+    ```bash
+    echo $PATH
+    ```
+
+    ![](images/img_33.png)
+
+<br>
+
+## 查詢版本
+
+1. 指令查詢
    
    ```bash
    python --version
@@ -47,6 +69,15 @@ _查詢當前環境安裝與版本_
    _顯示為 3.9.2_
 
    ![](images/img_16.png)
+
+
+2. 透過開發環境查詢
+
+    ```bash
+    python
+    ```
+
+    ![](images/img_31.png)
 
 <br>
 
