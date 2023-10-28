@@ -19,7 +19,7 @@
     ```
 
 
-3. 更新系統
+3. 更新＆升級
 
     ```bash
     sudo apt update && sudo apt upgrade -y
@@ -75,6 +75,10 @@ _啟動前檢查預設的 80 與 443 端口是否佔用_
     ```bash
     /etc/nginx/sites-available/default
     ```
+    _可切換至資料夾並開啟 code，不過這個檔案比較簡單，建議使用 `nano`_
+    ```bash
+    cd /etc/nginx/sites-available/ && code .
+    ```
 
 
 2. 編輯設定文件
@@ -99,7 +103,7 @@ _啟動前檢查預設的 80 與 443 端口是否佔用_
     ![](images/img_20.png)
 
 
-5. 設定完成立即啟動
+5. 設定完成，啟動服務
 
     ```bash
     sudo systemctl start nginx
@@ -113,7 +117,13 @@ _啟動前檢查預設的 80 與 443 端口是否佔用_
 
     ![](images/img_21.png)
 
-7. 再度開啟設定檔案，進一步設定網頁所在位置案。
+7. 查看服務狀態
+   
+   ```bash
+   sudo systemctl status nginx
+   ```
+
+8. 再度開啟設定檔案，進一步設定網頁所在位置案。
 
     ```bash
     sudo nano /etc/nginx/sites-available/default
@@ -168,6 +178,14 @@ _啟動前檢查預設的 80 與 443 端口是否佔用_
 2. 透過 `樹莓派網址:8080` 在指定端口上訪問網站
 
     ![](images/img_26.png)
+
+<br>
+
+## 為何不需授權 www-data 用戶 ？
+
+1. Nginx 不需要額外授權即可存取內容的主要原因是在安裝的過程中，安裝腳本通常會自動為 Nginx 用戶 `www-data` 設定必要的權限，確保 Nginx 能夠存取其默認的文檔根目錄和其他必要的目錄。
+
+2. 換句話說，我們在前面設定時因為使用了預設的安裝和設定，所以 Nginx 已經有了存取所需的權限。 當然，如果更改了相關預設值，或者有需要特定的權限設置，那再手動調整權限 `chmod` 或 所有權 `chown` 即可。
 
 <br>
 
