@@ -49,7 +49,7 @@ _使用 zenity 來搭建_
    sudo apt install zenity
    ```
 
-2. 建立腳本
+2. 在 `~/Documents/NgrokApp` 資料夾內建立腳本
 
    ```bash
    sudo nano start_ngrok.sh
@@ -109,13 +109,35 @@ _使用 zenity 來搭建_
     sudo chmod +x start_ngrok.desktop
     ```
 
-9. 進階版腳本
+9. 在樹莓派桌面點擊運行
+    
+    ![](images/img_98.png)
+
+
+10. 點擊 `Execute`
+    
+    ![](images/img_99.png)
+
+11. 輸入指定的端口，接著去訪問網頁看看。
+    
+    ![](images/img_100.png)
+
+<br>
+
+## 優化自動化腳本
+
+_添加輸入 Token 的對話框_
+
+1. 修改原本的腳本
 
     ```bash
     sudo nano ~/Documents/NgrokApp/start_ngrok.sh
     ```
+   _技巧提示：在編輯器中以 CTRL+K 可以快速刪除一整行_
 
-10. 編輯內容
+<br>
+
+2.  編輯內容
 
     ```bash
     #!/bin/bash
@@ -143,30 +165,34 @@ _使用 zenity 來搭建_
 
 <br>
 
-## 完成
-
-1. 雙擊啟動桌面腳本
+3. 雙擊啟動桌面腳本
 
    ![img](images/img_35.png)
-2. 點擊 `執行`
+
+4. 點擊 `執行`
 
    ![img](images/img_36.png)
-3. 輸入端口
+
+5. 輸入端口
 
    ![img](images/img_37.png)
-4. 可輸入 `Authtoken` ，假如已經存過可以按下 `ENTER` 即可，假如要切換帳號就要輸入該帳號的 `Authtoken` 。
+
+6. 可輸入 `Authtoken` ，假如已經存過可以按下 `ENTER` 以預設值運行，假如要切換帳號就要輸入該帳號的 `Authtoken` 。
 
    ![img](images/img_38.png)
-5. 複製這個網址即可
+
+7. 複製這個網址即可
 
    ![img](images/img_39.png)
-6. 在任意瀏覽器瀏覽，點擊 `Visit Site`
+
+8. 在任意瀏覽器瀏覽，點擊 `Visit Site`
 
    ![img](images/img_40.png)
-7. 就會看到在指定端口的網站，比如說是 `80`，等價於終端機執行以下指令
+
+9. 就會看到在指定端口的網站，比如說是 `80`，等價於終端機執行以下指令
    
    ```bash
-   ./ngrok http 80
+   ./ngrok http <端口號>
    ```
 
    ![img](images/img_42.png)
