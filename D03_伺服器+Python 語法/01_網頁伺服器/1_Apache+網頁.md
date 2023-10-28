@@ -4,11 +4,21 @@
 
 ## A. 安裝與檢查
 
-1. 安裝 apache2
+1. 更新套件索引＆升級套件
+   
+   ```bash
+   sudo apt update && sudo apt upgrade -y
+   ```
+
+2. 安裝 apache2
+   
+   ```bash
+   sudo apt install apache2 -y
+   ```
 
     ![](images/img_01.png)
 
-2. 透過指令查詢 apache2 安裝狀態
+3. 透過指令查詢 apache2 安裝狀態
    - 使用 `dpkg -l` 命令列出與 `apache2` 相關的套件列表
 
     ```bash
