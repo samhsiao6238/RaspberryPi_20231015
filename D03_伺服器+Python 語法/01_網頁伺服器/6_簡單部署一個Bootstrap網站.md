@@ -3,28 +3,37 @@
 <br>
 
 ## 步驟
+
 1. 下載一個 Bootstrap [範例](https://startbootstrap.com/theme/freelancer)
 
-    ![](images/img_43.png)
-
+   ![img](images/img_43.png)
 2. 解壓縮
 
-    ![](images/img_45.png)
+   ![img](images/img_45.png)
+3. 拖曳複製＆覆蓋原本 Apache 的檔案
 
-3. 後拖曳複製＆覆蓋原本 Apache 的檔案
-    ![](images/img_44.png)
+   ![img](images/img_44.png)
+4. 假如遇到權限問題，可能是因為原本的資料夾限制了權限如 `www-data`，可透過指令查詢。
 
-4. 完成，包含 `.ico`
+   ```bash
+   ls -ld
+   ```
 
-    ![](images/img_46.png)
+   ![img](images/img_101.png)
+5. 先進行授權，把自己加入 `www-data` 群組。
 
-5. 運行 Ngrok 在端口 `80`
+   ```bash
+   sudo usermod -aG www-data $USER
+   ```
+6. 假如有強迫症，可以加入任意 `.ico` 檔案，或是使用假的檔案 `favicon.ico` ，因為等一下會顯示找不到 `.ico `。
 
-    ![img](images/img_47.png)
+   ![img](images/img_46.png)
+7. 運行 Ngrok 在端口 `80`
 
-6. 完成
-    
-    ![](images/img_48.png)
+   ![img](images/img_47.png)
+8. 完成
+
+   ![img](images/img_48.png)
 
 <br>
 
