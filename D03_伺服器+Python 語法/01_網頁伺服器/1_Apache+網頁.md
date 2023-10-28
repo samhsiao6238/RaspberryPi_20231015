@@ -125,7 +125,7 @@ _因為使用終端機編輯器查看這類文件很吃力，以下設定權限�
 
 ## D. 修改設定檔案
 
-1. 修改設定檔案之前，因為設定檔案中會使用到超文本所在資料夾，所以先在指定目錄中建立，這裡舉例建立在 `/home/sam6238/Documents` ，這裡使用絕對路徑。
+1. 首先，在設定文件中將會指定 `超文本所在路徑`，所以可將這個指定目錄先進行建立，這個範例是將目錄建立在 `/home/sam6238/Documents` 。
 
    ```bash
    sudo mkdir /home/sam6238/Documents/my_web
@@ -167,7 +167,7 @@ _因為使用終端機編輯器查看這類文件很吃力，以下設定權限�
    ```bash
    sudo nano /etc/apache2/sites-available/000-default.conf
    ```
-6. 添加內容 `# 添加這個`，其餘部分可以不用變動，註解內容可以拿掉看比較清楚。
+6. 添加內容 `# 添加這個`，並且些修改 `超文本所在目錄` ，其餘部分可以不用變動，也可以把已經註解的內容都刪除，這樣會看得比較清楚。
 
    ```html
    <VirtualHost *:80>
@@ -240,7 +240,8 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
    ```bash
    sudo chown -R www-data:www-data  /home/sam6238/Documents/my_web
    ```
-3. 要添加超文本，所以先授權自己擁有添加文檔的權限
+
+3. 後續會添加超文本，所以可先授權自己擁有添加文檔的權限，前面若有執行過可免。
 
    ```bash
    sudo chown -R <使用者名稱>:<使用者同名群組名稱> <Apache 超文本所在目錄>
@@ -250,6 +251,11 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
 
    ```bash
    sudo chown -R sam6238:sam6238 /home/sam6238/Documents/my_web
+   ```
+    或
+
+   ```bash
+   sudo chown -R $USER:$USER /home/sam6238/Documents/my_web
    ```
 
 <br>
