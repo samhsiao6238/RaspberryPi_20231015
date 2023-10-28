@@ -2,6 +2,8 @@ _課後補充_
 
 # Flask 教學
 
+_關於 Flask 在 Vercel 中的部署請參考 `D02` 講義的 `3_Vercel`_
+
 <br>
 
 ## 建立 Flask 網頁伺服器

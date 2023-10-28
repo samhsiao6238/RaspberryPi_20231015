@@ -6,7 +6,7 @@ _Templates in Flask_
 
 ## 說明
 
-在 Flask 中，我們可以使用 Jinja2 模板引擎來動態生成 HTML 頁面。以下是一個基於你提供的筆記，進行加強和補充的指南。
+在 Flask 中，可以使用 `Jinja2` 模板引擎來動態生成 `HTML` 頁面。
 
 <br>
 
