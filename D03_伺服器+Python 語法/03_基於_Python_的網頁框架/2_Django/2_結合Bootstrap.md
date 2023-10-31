@@ -8,7 +8,9 @@ _Django 結合 Bootstrap 是一個挺複雜的程序_
 
 1. 安裝
 
+```bash
 pip install django-bootstrap-v5
+```
 
 2. 進入 `settings.py`
 
