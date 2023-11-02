@@ -13,7 +13,10 @@ _將 Dash 應用部署在 Heroku 上_
 
 ## 安裝 Heroku
 
-參考[官網](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+參考 [官網](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) 說明安裝即可。
+
+
+![](images/img_27.png)
 
 <br>
 
