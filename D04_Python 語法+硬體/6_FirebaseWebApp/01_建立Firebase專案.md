@@ -22,7 +22,7 @@ _這是在 Firebase 主控台建立的 Google Cloud 專案，可在 [GC](https:/
    
    ![](images/img_04.png)
 
-5. 主控台中很多功能，這裡先從 `網頁` 開始
+5. 專案的主控台中很多應用，這裡先從 `網頁應用` 開始
    
    ![](images/img_05.png)
 
