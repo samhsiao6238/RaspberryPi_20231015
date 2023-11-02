@@ -1,6 +1,10 @@
-# 前情回顧
+# 建立 Firebase 專案
 
-## 速覽
+_這是在 Firebase 主控台建立的 Google Cloud 專案，可在 [GC](https://cloud.google.com/free?utm_source=google&utm_medium=cpc&utm_campaign=japac-TW-all-zh-dr-BKWS-all-core-trial-EXA-dr-1605216&utm_content=text-ad-none-none-DEV_c-CRE_644095273672-ADGP_Hybrid%20%7C%20BKWS%20-%20EXA%20%7C%20Txt%20~%20GCP_General_core%20brand_main-KWID_43700074766895895-aud-970366092687%3Akwd-6458750523&userloc_9040379-network_g&utm_term=KW_google%20cloud&gad_source=1&gclid=CjwKCAjw7oeqBhBwEiwALyHLM6yxfxy1e1fy44bdmMAbPSBu1sJLtWigFGMS-Ye12HF5FwfpLtxOgBoCfAUQAvD_BwE&gclsrc=aw.ds&hl=zh-tw) 直接查詢_
+
+<br>
+
+## 步驟
 
 1. 登入 Firebase 並建立專案
 
