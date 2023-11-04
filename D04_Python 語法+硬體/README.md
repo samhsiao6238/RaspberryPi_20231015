@@ -18,7 +18,7 @@ _與同學一起使用 Meet 中的 Jamboard 白板_
 
 ## 觀念梳理
 
-- 程式設計的範式 paradigm vs. 風格 pattern
+- 程式設計的風格：範式 paradigm vs. 模式 pattern
 - 程式語言中的三個 Over：overload、override 與 overwrite
 - 實例化 instantiate vs. 初始化 initiate
 - 呼叫 call vs. 調用 invoke
