@@ -9,11 +9,19 @@ _與同學一起使用 Meet 中的 Jamboard 白板_
 <br>
 
 ## 基礎語法介紹
-- 概念介紹
-- 常用內建函數與模組
+  
+- 常用的內建函數與模組
 - `裝飾器 @` 
 - `類 Class`
-- 程式語言的設計風格
+
+<br>
+
+## 觀念梳理
+
+- 程式設計的範式 paradigm vs. 風格 pattern
+- 程式語言中的三個 Over：overload、override 與 overwrite
+- 實例化 instantiate vs. 初始化 initiate
+- 呼叫 call vs. 調用 invoke
 
 <br>
 
@@ -26,6 +34,8 @@ _與同學一起使用 Meet 中的 Jamboard 白板_
 
 ## 實作範例
 
-- Dash App & 部署到 Heroku
 - Firebase Web App
-  
+- Dash App & 部署到 Heroku (_註冊需信用卡_)
+
+_END_
+
