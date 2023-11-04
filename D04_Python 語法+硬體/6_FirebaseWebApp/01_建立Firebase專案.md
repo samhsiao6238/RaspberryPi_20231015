@@ -4,6 +4,12 @@ _這是在 Firebase 主控台建立的 Google Cloud 專案，可在 [GC](https:/
 
 <br>
 
+## 完成展示
+
+    ![](images/img_34.png)
+
+<br>
+
 ## 步驟
 
 1. 登入 Firebase，點擊進入 `主控台 Console`
