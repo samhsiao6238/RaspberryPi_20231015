@@ -4,6 +4,8 @@ _上課講述_
 
 _自訂快速鍵，這裡以 Flask 網站為例_
 
+_特別補充，因為 `!` 在 `Python` 中是一個運算子，所以無法像 `HTML` 文件使用它作為啟動前綴，所以 `Python` 的部分我都使用 `Fast`_
+
 
 <br>
 
@@ -13,23 +15,40 @@ _自訂快速鍵，這裡以 Flask 網站為例_
 
     ![](images/img_01.png)
 
+<br>
+
 2. 輸入關鍵字搜尋 `Snippets`
    
    ![](images/img_02.png)
+
+<br>
 
 3. 選取 `新增全域程式碼片段檔案`
    
    ![](images/img_03.png)
 
+<br>
+
 4. 輸入`檔案名稱`如 `FastStresamlit`，會開啟一個全名為 `FastStresamlit.code-snippets` 的檔案
    
    ![](images/img_04.png)
 
+<br>
+
 5. 這個檔案在本機電腦上是一個隱藏檔案，路徑如下，要特別注意路徑 `有空格` 。
 
-    ```bash
-    /Users/samhsiao/Library/Application Support/Code/User/snippets
+    _特別注意，若路徑有空格，要添加 `\` 來表示這是一個空格_
+    
+    _作為一個文件時，路徑如下_
+    ```txt
+    /Users/samhsiao/Library/Application\ Support/Code/User/snippets
     ```
+    _作為一個指令時，要加入轉義符號_
+    ```bash
+    cd /Users/samhsiao/Library/Application\ Support/Code/User/snippets
+    ```
+
+<br>
 
 6. 這個設定文件採用的格式是 `JavaScript Object Notation`，用於定義代碼片段，轉換需要一點技巧，以下進一步教學如何撰寫腳本來快速轉換。
 
@@ -51,11 +70,15 @@ _這是比較進階的技巧_
     mkdir tosnippets && cd tosnippets
     ```
 
+<br>
+
 2. 在這個資料夾內建立轉換腳本，任意命名即可，如 `tosnippets.py` 。
 
     ```bash
     touch tosnippets.py
     ```
+
+<br>
 
 3. 編輯 `tosnippets.py`
 
@@ -107,11 +130,15 @@ _這是比較進階的技巧_
         main()
     ```
 
+<br>
+
 4. 在資料夾內再新增一個 `setup.py` 檔案。
 
     ```bash
     touch setup.py
     ```
+
+<br>
 
 5. 編輯 `setup.py` 內容。
 
@@ -130,15 +157,21 @@ _這是比較進階的技巧_
     )
     ```
 
+<br>
+
 6. 在資料夾內執行安裝指令，這會將 `tosnippets` 安裝為一個可執行的 `全局` 命令。
 
     ```bash
     pip install .
     ```
 
+<br>
+
 7. 可透過 `pip show` 查詢自訂套件安裝資訊
    
    ![](images/img_05.png)
+
+<br>
 
 8. 先新增一個腳本，撰寫簡單的 `Flask` 網站內容，並命名為 `FastFlask.py`，這個檔案名稱中的 `FastFlask` 將被用做 `.code-snippets` 的檔案名稱。
 
@@ -160,19 +193,27 @@ _這是比較進階的技巧_
     app.mainloop()
     ```
 
+<br>
+
 9. 執行轉換命令
 
     ```bash
     tosnippets run FastFlask.py
     ```
 
+<br>
+
 10. 終端機會輸出訊息。
     
     ![](images/img_06.png)
 
+<br>
+
 11. 資料夾內會建立幾個新的文件與文件夾。
     
     ![](images/img_07.png)
+
+<br>
 
 12. 可以看一下這個腳本的內容，這裡特別說明一下換行符號，因為無法判斷腳本內容，所以預設都多隔一行，所以可手動修改這個腳本，或是以快速鍵建立 Flask 文本之後再修改。
 
@@ -202,6 +243,8 @@ _這是比較進階的技巧_
     }
     ```
 
+<br>
+
 13. 使用指令將這個腳本移動到 VSCode 的資料夾內。
 
     ```bash
@@ -216,11 +259,15 @@ _這是比較進階的技巧_
    
    ![](images/img_08.png)
 
+<br>
+
 2. 會建立一個可執行的 Tkinter 腳本，終端機啟動觀察腳本是否正確。
 
     ```bash
     python <腳本名稱.py>
     ```
+
+<br>
 
 3. 確實建立了一個 Tkinter 視窗應用。
    
