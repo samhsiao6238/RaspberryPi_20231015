@@ -161,7 +161,7 @@
 
 <br>
 
-14. 選取手動設定。
+14. 選取手動設定 `Manual configuration`。
 
     ![img](images/img_18.png)
 
@@ -185,7 +185,7 @@
 
 <br>
 
-18. 點擊 `Source code` 右方。
+18. 點擊 `Source code` 右方輸入路徑的紅色文字。
 
     ![img](images/img_22.png)
 
@@ -202,20 +202,20 @@
 
 <br>
 
-20. 若輸入完整檔案名稱也是可以，但之後會出現提示。
+20. 提示一下，若輸入完整檔案名稱也是可以，雖之後會出現提示說這不是資料夾，但仍可正常運行。
 
 
     ![img](images/img_25.png)
 
 <br>
 
-21. 接著設置虛擬環境。
+21. 接著設置虛擬環境，點擊紅色文字輸入路徑。
 
     ![img](images/img_26.png)
 
 <br>
 
-22. 填入。
+22. 填入然後打勾。
 
     ```bash
     <工作目錄>/<虛擬環境名稱>/
@@ -243,7 +243,7 @@
 
 <br>
 
-26. 前面提過假如輸入完整路徑會出現提示，但不影響結果。
+26. 這裡展示的是前面提到過，假如輸入完整路徑會出現的提示，但不影響結果。
 
     ![img](images/img_30.png)
 
@@ -253,9 +253,11 @@
 
     ![img](images/img_31.png)
 
+    _WSGI 是 Web Server Gateway Interface 的縮寫，這是一種規範，描述如何使用 Python 寫的 web 應用程序與 web 服務器進行通信的標準接口。_
+
 <br>
 
-28. 添加內容在最後面。
+28. 滑動到最後面，加入以下內容。
 
     ```python
     import sys
@@ -265,7 +267,7 @@
     application = app.server
     ```
 
-    _如下_
+    _記得替換自己的設置資訊，如下_
     ![img](images/img_32.png)
 
 <br>
