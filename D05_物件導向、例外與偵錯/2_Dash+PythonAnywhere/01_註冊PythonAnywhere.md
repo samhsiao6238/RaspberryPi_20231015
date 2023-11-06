@@ -36,11 +36,13 @@
 
 ## 範例
 
-_這僅是一個簡單的範例，編輯後存放在電腦用以示範如何部署到 `PythonAnywhere` 。_
+1. 這僅是一個簡單的範例，編輯後存放在電腦用以示範如何部署到 `PythonAnywhere` 。
 
-_任意命名即可，之後會在雲端進行相關設置，這裡的範例命名為 `DashApp_01.py`。_
+2. 任意命名即可，之後會在雲端進行相關設置，這裡的範例命名為 `DashApp_01.py`。
 
-   ```python
+3. 程式碼如下。
+
+    ```python
    import dash
    from dash import dcc
    from dash import html
