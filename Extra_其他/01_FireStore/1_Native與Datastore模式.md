@@ -38,6 +38,23 @@ _特別注意，一旦轉換到 Native 模式，就不能再回到 Datastore 模
 
 <br>
 
+
+## 切換方式
+
+1. 進入 Firebase 專案
+
+    ![](images/img_01.png)
+
+2. 進入 Cloud 轉換
+
+    ![](images/img_02.png)
+
+3. 確認
+
+    ![](images/img_03.png)
+
+<br>
+
 ---
 
 _END_
