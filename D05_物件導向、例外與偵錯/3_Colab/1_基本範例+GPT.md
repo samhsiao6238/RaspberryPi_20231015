@@ -8,41 +8,61 @@
 
     ![](images/img_01.png)
 
+<br>
+
 2. 點擊右上角的 `連線` 。
 
     ![](images/img_02.png)
+
+<br>
 
 3. 選擇 `變更執行階段類型`。
 
     ![](images/img_03.png)
 
+<br>
+
 4. 加速器選取 `T4 GPU` ，然後儲存。
 
     ![](images/img_04.png)
+
+<br>
 
 5. 要再點擊一次 `連線` 。
 
     ![](images/img_05.png)
 
+<br>
+
 6. 展開便可查看虛擬機的配置。
 
     ![](images/img_06.png)
+
+<br>
 
 7. 以介面操作掛載雲端硬碟。
 
     ![](images/img_07.png)
 
+<br>
+
 8. 點選 `連線至 Google 雲端硬碟`
 
     ![](images/img_08.png)
+
+<br>
 
 9. 選擇帳號
 
     ![](images/img_09.png)
 
+<br>
+
 10. 清單內會顯示雲端硬碟
 
     ![](images/img_10.png)
+
+<br>
 
 11. 直接點擊命名
 
@@ -56,10 +76,14 @@
 
     ![](images/img_13.png)
 
+<br>
+
 2. 別急著複製貼上，稍作瀏覽內容。因為即便聰明如 GPT 也是會犯上一些低級錯誤，這裡 GPT 在訓練前已經將圖片進行了 `扁平化`，這將導致模型訓練時的圖片讀取錯誤。
 
     ![](images/img_12.png)
 
+
+<br>
 
 3. 第一部分程式碼。
 
@@ -107,21 +131,31 @@
     print("Model saved to mnist_model.h5")
     ```
 
+<br>
+
 4. 完成第一部分後會儲存訓練模型，可進行刷新查看。
 
     ![](images/img_14.png)
+
+<br>
 
 5. 刷新後便會出現 `.h5` 格式的模型檔案。
    
     ![](images/img_15.png)
 
+<br>
+
 6. 接著要提供圖片給模型辨識，透過 Google 搜尋並下載。
 
     ![](images/img_16.png)
 
+<br>
+
 7. 下載後將圖片拖曳到左側資料夾中。
 
     ![](images/img_17.png)
+
+<br>
 
 8. 貼上第二部分程式碼。
 
@@ -165,41 +199,61 @@
     plt.show()
     ```
 
+<br>
+
 9.  在圖片上點擊右側三個小點展開。
 
     ![](images/img_18.png)
+
+<br>
 
 10. 複製圖片檔案在雲端的路徑。
 
     ![](images/img_19.png)
 
+<br>
+
 11. 替換程式碼中路徑的設置。
 
     ![](images/img_20.png)
+
+<br>
 
 12. 切記，模型的路徑也要重複一次這個步驟來更改。
 
     ![](images/img_21.png)
 
+<br>
+
 13. 運行第二區塊程式碼。
 
     ![](images/img_22.png)
+
+<br>
 
 14. 在第二部分也出現了低級錯誤
 
     ![](images/img_23.png)
 
+<br>
+
 15. 進行必要修改，確保圖片在預測時具有正確的四維形狀（樣本數，高度，寬度，顏色通道數）
 
     ![](images/img_24.png)
+
+<br>
 
 16. 進行預測的結果是 `5`，不過這不代表腳本錯誤，可能原因很多，包含模型訓練量與模型配置等等。
 
     ![](images/img_25.png)
 
+<br>
+
 17. 嘗試調整 `epochs`，在原本的模型架構提高 `epochs` 到 `20` 試試看。
 
     ![](images/img_26.png)
+
+<br>
 
 18. 雖然損失（loss）與準確率（accuracy）表現很好，但結果似乎沒變化，依舊判讀為 `5`。
 
