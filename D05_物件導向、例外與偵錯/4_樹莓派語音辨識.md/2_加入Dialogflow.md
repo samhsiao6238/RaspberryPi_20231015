@@ -1,40 +1,64 @@
 # 加入 Dialogflow
 
+<br>
+
 ## Google Cloud
 
 1. 加入 `Dialogflow API`
 
-![](images/img_21.png)
+    ![](images/img_21.png)
+
+<br>
 
 2. 啟用
 
-![](images/img_22.png)
+    ![](images/img_22.png)
+
+<br>
 
 3. 進入 [Dialogflow Essentials](https://dialogflow.cloud.google.com/#/getStarted) 並建立新的代理 `CREATE AGENT`
 
-![](images/img_23.png)
+    ![](images/img_23.png)
+
+<br>
 
 4. 輸入對應內容，最重要是選擇正確的專案
 
-![](images/img_24.png)
+    ![](images/img_24.png)
+
+<br>
 
 5. 在 `Intents` 中選取 `Default Fallback Intent` 後點選 `CREATE INTENT`
 
-![](images/img_25.png)
+    ![](images/img_25.png)
+
+<br>
 
 6. 向下滑到 `Responses` 可查看預設的回答
 
-![](images/img_26.png)
+    ![](images/img_26.png)
+
+<br>
 
 7. 可在右側 `try it now` 方框內輸入文字進行測試
 
-![](images/img_27.png)
+    ![](images/img_27.png)
+
+<br>
 
 8. 添加 `Intents`
 
-![](images/img_28.png)
+    ![](images/img_28.png)
+
+<br>
 
 9. 記得打勾
 
-![](images/img_29.png)
+    ![](images/img_29.png)
    
+
+<br>
+
+---
+
+_END：這個講義之後會再補充_
