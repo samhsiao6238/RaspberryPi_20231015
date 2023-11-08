@@ -81,8 +81,8 @@ _課後概念性參考，故腳本未做優化_
     from google.cloud import speech_v1p1beta1 as speech
     from google.cloud import texttospeech
 
-    # OpenWeather API配置
-    API_KEY = "07978967c803aa11f18cc1255d4b7275"
+    # OpenWeather API 配置
+    API_KEY = "輸入自己的 OpenWeather API Key"
     BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
 
     # 城市名稱映射字典
@@ -96,7 +96,6 @@ _課後概念性參考，故腳本未做優化_
 
     # 取得 OpenWeather API 的氣候資訊
     def get_weather(city):
-        """獲取城市的天氣數據"""
         # 
         url = f"{BASE_URL}appid={API_KEY}&q={city}&lang=zh_tw&units=metric"
         response = requests.get(url)
