@@ -6,64 +6,7 @@ _語音輸入透過辨識後轉為文字輸出_
 
 <br>
 
-## 硬體
 
-1. 將 USB 設備如喇叭、攝像頭等插入樹莓派後，可透過指令查詢設備狀態，這裡主要觀察的是麥克風是否接好了。
-
-   ```bash
-   lsusb
-   ```
-
-   _列出所有的 USB 設備_
-   ![img](images/img_30.png)
-
-<br>
-
-2. 要確定 Audio 設備有麥克風功能，可再透過錄音設備的查詢指令檢查，並確定卡片編號。
-
-   ```bash
-   arecord -l
-   ```
-    
-    _卡片 3、設備 0_
-   
-   ![img](images/img_01.png)
-
-<br>
-
-3. 確認設備在 card 3，可使用以下指令進行錄音測試。
-
-   ```bash
-   arecord -D plughw:3,0 -d 3 voice.wav
-   ```
-
-   - `arecord`：是一個錄音程式，用於Linux系統中。
-   - `-D plughw:3,0`：指定聲音錄製時使用的硬體設備。這裡表示使用卡片3，設備0。
-   - `-d 3`：錄音的持續時間為3秒。
-   - `voice.wav`：錄音儲存的檔案名稱，格式為WAV。
-
-<br>
-
-4. 這是腳本中正式使用的指令。
-
-   ```bash
-   arecord -D plughw:3,0 -d 3 -f S16_LE -r 8000 voice.wav
-   ```
-
-   - -f S16_LE	指定音訊的格式。 S16_LE 表示16位元取樣深度的有符號線性PCM數據，LE 代表小端格式（Little-Endian）。
-   - -r 8000	設定音訊的取樣率為每秒8000次。
-
-<br>
-
-5. 查詢當前播放設備
-
-   ```bash
-   aplay -l
-   ```
-
-   ![](images/img_31.png)
-
-<br>
 
 ## 建立 Firebase 專案
 
