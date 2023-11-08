@@ -4,67 +4,67 @@
 
 ## Google Cloud
 
-1. 加入 `Dialogflow API`
+1. 加入 `Dialogflow API` 。
 
     ![](images/img_21.png)
 
 <br>
 
-2. 啟用
+2. 啟用服務。
 
     ![](images/img_22.png)
 
 <br>
 
-3. 進入 [Dialogflow Essentials](https://dialogflow.cloud.google.com/#/getStarted) 並建立新的代理 `CREATE AGENT`
+3. 進入 [Dialogflow Essentials](https://dialogflow.cloud.google.com/#/getStarted) 並建立新的代理 `CREATE AGENT` 。
 
     ![](images/img_23.png)
 
 <br>
 
-4. 輸入對應內容，最重要是選擇正確的專案
+4. 輸入對應內容，最重要是選擇正確的專案。
 
     ![](images/img_24.png)
 
 <br>
 
-5. 在 `Intents` 中選取 `Default Fallback Intent` 後點選 `CREATE INTENT`
+5. 在 `Intents` 中選取 `Default Fallback Intent` 後點選 `CREATE INTENT` 。
 
     ![](images/img_25.png)
 
 <br>
 
-6. 向下滑到 `Responses` 可查看預設的回答
+6. 向下滑到 `Responses` 可查看預設的回答。
 
     ![](images/img_26.png)
 
 <br>
 
-7. 可在右側 `try it now` 方框內輸入文字進行測試
+7. 可在右側 `try it now` 方框內輸入文字進行測試。
 
     ![](images/img_27.png)
 
 <br>
 
-8. 添加 `Intents`
+8. 添加 `Intents` 。
 
     ![](images/img_40.png)
 
 <br>
 
-9. 輸入 Intent 名稱
+9. 輸入 Intent 名稱。
 
     ![](images/img_41.png)
 
 <br>
    
-10. 在訓練語句輸入自訂的對話如 `今天是星期幾？`
+10. 在訓練語句輸入自訂的對話如 `今天是星期幾？` 。
 
     ![](images/img_42.png)
 
 <br>
 
-11. 第一步，先選取關鍵字 `今天`
+11. 第一步，先選取關鍵字 `今天` 。
 
     ![](images/img_43.png)
 
@@ -94,7 +94,7 @@
 
 <br>
 
-16. 自訂並輸入 `weekday` 這個實體的各種可能
+16. 自訂並輸入 `weekday` 這個實體的各種可能。
 
     ![](images/img_48.png)
 
@@ -148,7 +148,7 @@
 
 <br>
 
-25. 勾選
+25. 勾選。
 
     ![](images/img_57.png)
 
