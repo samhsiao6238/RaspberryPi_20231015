@@ -8,9 +8,21 @@
 
 1. 新建一個簡單的應用，編輯後存放在電腦用以示範如何部署到 `PythonAnywhere` 。
 
+<br>
+
 2. 任意命名即可，之後會在雲端進行相關設置，這裡的範例命名為 `DashApp_01.py`。
 
-3. 程式碼如下。
+<br>
+
+3. 安裝 `Dash` 所需套件，`Dash` 的安裝與應用可參考 [官網](https://dash.plotly.com/installation) 。
+
+    ```bash
+    pip install dash
+    ```
+
+<br>
+
+4. 程式碼如下。
 
     ```python
    import dash
