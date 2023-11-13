@@ -32,7 +32,9 @@ _tkinter 非常適合物件導向的 Paragiam。_
 
 <br>
 
-2. 以物件導向方式建構 5x5 黑白棋盤範例。
+2. 以物件導向方式建構 5x5 黑白棋盤附帶文字範例。
+
+    ![](images/img_02.png)
 
     ```python
     import tkinter as tk
