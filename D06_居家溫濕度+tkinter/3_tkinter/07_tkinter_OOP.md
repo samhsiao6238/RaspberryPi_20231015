@@ -1,6 +1,6 @@
 # Tkinter  的物件導向 OOP
 
-_tkinter 非常適合物件導向的 Paragiam。_
+_tkinter 非常適合物件導向的 Paragiam，以下範例要在樹莓派上運行才能正常顯示。_
 
 <br>
 
