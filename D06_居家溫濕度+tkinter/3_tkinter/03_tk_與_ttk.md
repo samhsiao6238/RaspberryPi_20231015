@@ -6,12 +6,12 @@
 
 1. 一般在腳本中看到的 `tk` 其實是 `tkinter` 自定義的縮寫
 
-   ```python
+   ```
    import tkinter as tk
    ```
 2. `ttk` 是 Tk 8.5 之後加入的模塊（Module）
 
-   ```python
+   ```
    import tkinter.ttk as ttk
    ```
 3. 簡單說，`tkinter` 是一個模組（Module），包含很多的 Class 如 `Tk`、`Label`、`Button` 等都是 `tkinter` 的 Class，而 `ttk` 則是 `tkinter` 的一個子模組（Submodule），對 `tkinter` 這個模組進行了優化。
