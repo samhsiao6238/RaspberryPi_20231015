@@ -22,7 +22,7 @@
 | `highlightcolor`      | 取得焦點時的顏色                 | 系統 | `highlightcolor='blue'`        |
 | `highlighthickness`   | 取得焦點的厚度                   | 1    | `highlighthickness=3`          |
 | `relief`              | 框架型式                         | FLAT | `relief='sunken'`              |
-| `pack_propagate`      | Frame 是否自動適應內部部件的大小 | True |  pack_propagate(0)  |        
+| `pack_propagate`      | Frame 是否自動適應內部部件的大小 | True |  `pack_propagate(0)`  |        
 
 <br>
 
@@ -41,7 +41,7 @@
 
 2. relief
 
-   _它還有許多設定值，可用於控制 Frame 的三維外觀。_
+   _它還有許多設定值，可用於控制 Frame 的外觀，讓邊界看起來是凸起或凹陷等效果。_
 
    - SUNKEN
    - RAISED
