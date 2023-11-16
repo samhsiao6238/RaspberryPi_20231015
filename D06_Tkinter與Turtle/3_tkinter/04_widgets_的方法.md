@@ -2,16 +2,18 @@
 
 <br>
 
-1. `select()`
+## 1. `select()`
+
+1. 功能：選取或取消選擇控制元件。
+2. 可調用物件：Checkbutton, Radiobutton。
+3. 調用方式。
 
     ```python
     # Checkbutton 實例 checkbutton
     checkbutton.select()
     ```
-   - 功能：選取或取消選擇控制元件。
-   - 可調用物件：Checkbutton, Radiobutton。
     
-    _詳細範例_
+4. 詳細範例
 
     ```python
     import tkinter as tk
@@ -47,16 +49,18 @@
 
 <br>
 
-2. `deselect()`
+## 2. `deselect()`
+
+1. 功能：取消選取已選取的控制元件。
+2. 可調用物件：Checkbutton, Radiobutton。
+3. 調用方式。
 
     ```python
     # Checkbutton 實例 checkbutton
     checkbutton.deselect()
     ```
-   - 功能：取消選取已選取的控制元件。
-   - 可調用物件：Checkbutton, Radiobutton。
 
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -92,16 +96,19 @@
 
 <br>
 
-3. `flash()`
+## 3. `flash()`
+
+1. 功能：使按鈕快速變化其正常和活動狀態。
+2. 可調用物件：Button。
+
+3. 調用方式。
 
     ```python
     # Button 實例 button
     button.flash()
     ```
-   - 功能：使按鈕快速變化其正常和活動狀態。
-   - 可調用物件：Button。
 
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -136,14 +143,19 @@
 
 <br>
 
-4. `invoke()`
+## 4. `invoke()`
 
+1. 功能：手動觸發控制元件的命令。
+2. 可調用物件：Button, Menu。
+
+3. 調用方式。
+   
     ```python
     # Button 實例 button
     button.invoke()
     ```
-   - 功能：手動觸發控制元件的命令。
-   - 可調用物件：Button, Menu。
+   - 
+   - 
 
     _詳細範例_
 
@@ -187,16 +199,20 @@
 
 <br>
 
-5. `toggle()`
+## 5. `toggle()`
+
+1. 功能：切換控制元件的狀態。
+2. 可調用物件：Checkbutton。
+
+3. 調用方式。
 
     ```python
     # Checkbutton 實例 checkbutton
     checkbutton.toggle()
     ```
-   - 功能：切換控制元件的狀態。
-   - 可調用物件：Checkbutton。
 
-    _詳細範例_
+
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -233,16 +249,20 @@
 
 <br>
 
-6. `get()`
+## 6. `get()`
+
+1. 功能：獲取控制元件的當前值。
+2. 可調用物件：Entry, Spinbox。
+
+3. 調用方式。
 
     ```python
     # Entry 實例 entry
     value = entry.get()
     ```
-   - 功能：獲取控制元件的當前值。
-   - 可調用物件：Entry, Spinbox。
 
-    _詳細範例_
+
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -275,16 +295,18 @@
 
 <br>
 
-7. `set()`
+## 7. `set()`
+
+1. 功能：設置控制元件的值。
+2. 可調用物件：StringVar, IntVar。
+3. 調用方式。
 
     ```python
     # StringVar 實例 string_var
     string_var.set('Hello World')
     ```
-   - 功能：設置控制元件的值。
-   - 可調用物件：StringVar, IntVar。
 
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -334,16 +356,18 @@
 
 <br>
 
-8. `delete()`
+## 8. `delete()`
+
+1. 功能：刪除文本框或文字控件中的內容。
+2. 可調用物件：Entry, Text。
+3. 調用方式。
 
     ```python
     # Entry 實例 entry
     entry.delete(0, 'end')
     ```
-   - 功能：刪除文本框或文字控件中的內容。
-   - 可調用物件：Entry, Text。
 
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -377,16 +401,19 @@
 
 <br>
 
-9. `insert()`
+## 9. `insert()`
+
+1. 功能：在文本框或文字控件中插入內容。
+2. 可調用物件：Entry, Text。
+
+3. 調用方式。
 
     ```python
     # Entry 實例 entry
     entry.insert(0, 'Hello World')
     ```
-   - 功能：在文本框或文字控件中插入內容。
-   - 可調用物件：Entry, Text。
 
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -420,16 +447,19 @@
 
 <br>
 
-10. `configure()`
+## 10. `configure()`
 
-       - 功能：用於動態地改變控制元件的配置。
-       - 可調用物件：多數。
+1. 功能：用於動態地改變控制元件的配置。
+
+2. 可調用物件：多數。
+
+3. 調用方式。
 
     ```python
     # Button 實例 button
     button.configure(text='Click Me')
     ```
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -471,16 +501,19 @@
 
 <br>
 
-11. `bind()`
+## 11. `bind()`
 
-    - 功能：將事件綁定到函數或方法上。
-    - 可調用物件：全部。
+1. 功能：將事件綁定到函數或方法上。
+
+2. 可調用物件：全部。
+
+3. 調用方式。
 
     ```python
     # Entry 實例 entry
     entry.bind('<Return>', lambda e: print('Return key pressed'))
     ```
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -508,22 +541,23 @@
 
 <br>
 
+_以下是三種佈局，詳細請參考佈局管理器_
 
-## 三種佈局
+<br>
 
-_詳細請參考佈局管理器_
+## 12. `pack()`
 
-12. `pack()`
+1. 功能：使用包裝管理器來排列控制元件。
+2. 可調用物件：全部。
 
-       - 功能：使用包裝管理器來排列控制元件。
-       - 可調用物件：全部。
+3. 調用方式。
 
     ```python
     # Button 實例 button
     button.pack()
     ```
 
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -549,17 +583,19 @@ _詳細請參考佈局管理器_
 
 <br>
 
-13. `grid()`
+## 13. `grid()`
 
-    - 功能：使用網格管理器來排列控制元件。
-    - 可調用物件：全部。
+1. 功能：使用網格管理器來排列控制元件。
+2. 可調用物件：全部。
+
+3. 調用方式。
 
     ```python
     # Button 實例 button
     button.grid(row=0, column=0)
     ```
 
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -585,17 +621,19 @@ _詳細請參考佈局管理器_
 
 <br>
 
-14. `place()`
+## 14. `place()`
 
-    - 功能：使用放置管理器來排列控制元件，可以精確指定控制元件的位置和大小。
-    - 可調用物件：全部。
+1. 功能：使用放置管理器來排列控制元件，可以精確指定控制元件的位置和大小。
+2. 可調用物件：全部。
+
+3. 調用方式。
 
     ```python
     # Button 實例 button
     button.place(x=50, y=100)
     ```
 
-    _詳細範例_
+4. 詳細範例。
 
     ```python
     import tkinter as tk
