@@ -1,21 +1,30 @@
-# Tkinter
+# tk 與 ttk
 
-## 3_tk 與 ttk
+<br>
 
-### 特別說明
+## 特別說明
 
-1. 一般在腳本中看到的 `tk` 其實是 `tkinter` 自定義的縮寫
+1. 一般在腳本中看到的 `tk` 其實是 `tkinter` 自定義的縮寫。
 
-   ```
+   ```python
    import tkinter as tk
    ```
-2. `ttk` 是 Tk 8.5 之後加入的模塊（Module）
 
-   ```
+<br>
+
+2. `ttk` 是 Tk 8.5 之後加入的模組。
+
+   ```python
    import tkinter.ttk as ttk
    ```
-3. 簡單說，`tkinter` 是一個模組（Module），包含很多的 Class 如 `Tk`、`Label`、`Button` 等都是 `tkinter` 的 Class，而 `ttk` 則是 `tkinter` 的一個子模組（Submodule），對 `tkinter` 這個模組進行了優化。
-4. `ttk` 新增了6個控制元件：
+
+<br>
+
+3. 簡單說，`tkinter` 是一個模組，包含很多的 Class，如 `Tk`、`Label`、`Button` 等都是 `tkinter` 的 Class，而 `ttk` 則是 `tkinter` 的一個子模組（Submodule），這個子模組對 `tkinter` 進行了優化。
+
+<br>
+
+4. `ttk` 新增了6個控制元件。
 
    | 控件        | 名稱         | 說明                         |
    | ----------- | ------------ | ---------------------------- |
@@ -25,7 +34,11 @@
    | Separator   | 分隔線       |                              |
    | Sizegrip    | 變動視窗大小 |                              |
    | Treeview    | 多層次數據   |                              |
-5. 原本的控制元件中有 11 個在 `ttk` 中進行了擴展（優化）：
+
+
+<br>
+
+5. 原本的控制元件中有 11 個在 `ttk` 中進行了擴展（優化）。
 
    | NO | 控件        | 名稱     | 說明                                                     |
    | -- | ----------- | -------- | -------------------------------------------------------- |
@@ -41,6 +54,9 @@
    | 10 | Scale       | 滑動條   | 通過滑動選擇一個值                                       |
    | 11 | Scrollbar   | 滾動條   | 對支援的元件（文字域、畫布、清單框、文本框）提供滾動功能 |
 
+
+<br>
+
 ---
 
-END
+_END_
