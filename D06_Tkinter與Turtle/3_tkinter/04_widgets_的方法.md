@@ -154,8 +154,6 @@
     # Button 實例 button
     button.invoke()
     ```
-   - 
-   - 
 
     _詳細範例_
 
