@@ -185,7 +185,7 @@ _依照官網指引_
 1. 解除安裝。
 
     ```bash
-    apt-get purge nodejs
+    sudo apt-get purge nodejs
     ```
 
 2. 徹底刪除指向 NodeSource 存儲庫的信息以及存儲庫公鑰的文件。
