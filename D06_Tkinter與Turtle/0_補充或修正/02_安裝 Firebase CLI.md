@@ -155,7 +155,13 @@ _以下紀錄如何從官方文件中逐步找到安裝指南並完成安裝，�
 
 <br>
 
-3. 可依據建議進行更新。
+3. 這個步驟可能會很久，真的很久，要耐心等候，別以為是當機。
+
+    ![](images/img_20.png)
+
+<br>
+
+4. 可依據建議進行更新。
 
     ![](images/img_12.png)
 
@@ -169,6 +175,25 @@ _以下紀錄如何從官方文件中逐步找到安裝指南並完成安裝，�
     
     ![](images/img_13.png)
 
+
+<br>
+
+## 完整解除安裝
+
+_依照官網指引_
+
+1. 解除安裝
+
+    ```bash
+    apt-get purge nodejs
+    ```
+
+2. 刪除
+
+    ```bash
+    rm -r /etc/apt/sources.list.d/nodesource.list &&\
+    rm -r /etc/apt/keyrings/nodesource.gpg
+    ```
 
 <br>
 
