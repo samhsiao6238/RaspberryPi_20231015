@@ -191,8 +191,11 @@ _依照官網指引_
 2. 徹底刪除指向 NodeSource 存儲庫的信息以及存儲庫公鑰的文件。
 
     ```bash
-    rm -r /etc/apt/sources.list.d/nodesource.list &&\
-    rm -r /etc/apt/keyrings/nodesource.gpg
+    sodu rm -r /etc/apt/sources.list.d/nodesource.list
+    ```
+    以及
+    ```bash
+    sudo rm -r /etc/apt/keyrings/nodesource.gpg
     ```
 
 <br>
