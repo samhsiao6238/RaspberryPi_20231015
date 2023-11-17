@@ -182,13 +182,13 @@ _以下紀錄如何從官方文件中逐步找到安裝指南並完成安裝，�
 
 _依照官網指引_
 
-1. 解除安裝
+1. 解除安裝。
 
     ```bash
     apt-get purge nodejs
     ```
 
-2. 刪除
+2. 徹底刪除指向 NodeSource 存儲庫的信息以及存儲庫公鑰的文件。
 
     ```bash
     rm -r /etc/apt/sources.list.d/nodesource.list &&\
