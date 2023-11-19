@@ -1,0 +1,101 @@
+# 安裝 Mongodb Server
+
+
+<br>
+
+
+## 說明
+
+1. [倉庫網址](https://hub.docker.com/r/arm64v8/mongo/) 。
+
+<br>
+
+2. 下載
+
+    ```bash
+    sudo docker pull arm64v8/mongo:4.4.18
+    ``` 
+
+<br>
+
+3. 運行容器
+
+    ```bash
+    sudo docker run --name mongodb-arm64 -p 27017:27017 -d arm64v8/mongo:4.4.18
+    ```
+
+    ![](images/img_39.png)
+
+<br>
+
+4. 查看容器，因輸出結果比較寬，我將結果截圖為左右兩半。
+
+    ```bash
+    sudo docker ps -a
+    ```
+
+    ![](images/img_40.png)
+
+    ![](images/img_41.png)
+
+<br>
+
+5. 查看日誌。
+
+    ```bash
+    sudo docker logs mongodb-arm64
+    ```
+
+<br>
+
+6. 刪除容器。
+
+    ```bash
+    sudo docker rm mongodb-arm64
+    ```
+
+<br>
+
+7. 刪除映像檔案。
+
+    ```bash
+    sudo docker rmi arm64v8/mongo:4.4
+    ```
+
+<br>
+
+8. 啟動服務。
+
+    ```bash
+    sudo docker start mongodb-arm64
+    ```
+
+<br>
+
+9. 開機啟動服務。
+
+    ```bash
+    sudo docker update --restart always mongodb-arm64
+    ```
+
+<br>
+
+10. 確保 Docker 的服務在重啟之後會自動啟動。
+
+    ```bash
+    systemctl is-enabled docker
+    ```
+
+<br>
+
+11. 假如是 Disable，則執行以下指令來設置 Docker 為開機自動啟動。
+
+    ```bash
+    sudo systemctl enable docker
+    ```
+
+<br>
+
+---
+
+_END_
