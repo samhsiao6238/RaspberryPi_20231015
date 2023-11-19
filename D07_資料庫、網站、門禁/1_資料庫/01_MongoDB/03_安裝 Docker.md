@@ -110,6 +110,67 @@
 
 <br>
 
+## 啟動容器
+
+1. 指令。
+
+    ```bash
+    docker run --name mongodb-arm64 -p 27017:27017 --restart always -d arm64v8/mongo:4.4.18
+    ```
+<br>
+
+2. 說明
+
+   上述指令會建立一個名為 `mongodb-arm64` 的新容器、映射 27017 端口、設定為開機自動重啟，並使用 Docker 映像 `arm64v8/mongo:4.4.18` 來運行 MongoDB，並以 `always` 參數設定容器的重啟策略。
+
+<br>
+
+
+## 其他指令與說明
+
+1. 啟用 Docker 服務。
+
+    ```bash
+    sudo systemctl enable docker
+    ```
+
+<br>
+
+2. 設為開機啟動。
+
+    ```bash
+    sudo systemctl enable docker
+    ```
+
+<br>
+
+3. 停止 Docker 容器。
+
+    ```bash
+    docker stop mongodb-arm64
+    ```
+
+<br>
+
+4. 刪除 Docker 容器。
+
+    ```bash
+    docker rm mongodb-arm64
+    ```
+
+<br>
+
+5. 容器重啟策略的參數。
+
+    若要讓 Docker 容器在樹莓派啟動時自動運行，使用 docker run 命令中的 --restart 參數設定重啟策略，可選的重啟策略如下。
+
+    - `no`：預設值，不自動重新啟動容器。
+    - `on-failure`：當容器非正常退出時重啟。
+    - `unless-stopped`：除非容器被手動停止，否則始終重啟。
+    - `always`：設定容器始終在樹莓派重啟時自動運行。
+
+<br>
+
 ---
 
 _END_
