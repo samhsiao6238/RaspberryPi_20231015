@@ -14,21 +14,32 @@ _步驟很簡單，這裡簡單介紹_
    ```bash
    cd ~/Documents
    ```
+
+<br>
+
 2. 建立存放腳本的資料夾
 
    ```bash
    sudo mkdir NgrokApp && cd NgrokApp
    ```
+
+<br>
+
 3. 下載指令
 
    ```bash
    sudo wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
    ```
+
+<br>
+
 4. 解壓縮
 
    ```bash
    sudo unzip ngrok-stable-linux-arm.zip
    ```
+
+<br>
 
 5. 在終端機起動 Ngrok
    
@@ -39,6 +50,8 @@ _步驟很簡單，這裡簡單介紹_
     ```bash
     ./ngrok http 8080
     ```
+
+<br>
 
 6. 假如這時去訪問，會看到錯誤提示，因為尚無授權資訊。
    
@@ -90,15 +103,21 @@ _步驟很簡單，這裡簡單介紹_
 
     ![](images/img_34.png)
 
+<br>
+
 7. 啟動服務
    
    ```bash
    ./ngrok http 8080
    ```
 
+<br>
+
 8. 網頁顯示如下，點擊 `Visit Site` 。
    
    ![](images/img_96.png)
+
+<br>
 
 9. 就會看到目前樹莓派的 Nginx 服務器了。
     
