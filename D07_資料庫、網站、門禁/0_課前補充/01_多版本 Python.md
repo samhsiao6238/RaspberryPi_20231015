@@ -54,7 +54,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-## 安裝 
+## 安裝 pyenv
 
 1. 後續會以編譯的方式安裝 Python，而 Python 的某些標準函式庫需要這些庫的支援才能正常運作，所以先安裝以下套件，以下有些已經內建在新版作業系統中，重複執行並不衝突。
 
@@ -72,15 +72,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-3. 安裝指定版本
-
-    ```bash
-    pyenv install 3.10.13
-    ```
-
-<br>
-
-4. 編輯環境參數
+3. 編輯環境參數
 
     ```ini
     export PATH="$HOME/.pyenv/bin:$PATH"
@@ -92,7 +84,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-5. 重新載入設定
+4. 重新載入設定
 
     ```bash
     source ~/.bashrc
@@ -100,7 +92,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-6. 查詢版本
+5. 查詢 pyenv 版本
 
     ```bash
     pyenv --version
@@ -110,7 +102,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-## 安裝指定版本
+## 安裝指定版本 Python
 
 1. 進入 [Python 官網](https://www.python.org/)
 
@@ -118,7 +110,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 <br>
 
 
-2. 下載。
+2. 點擊下載進入下一個畫面。
 
     ![](images/img_07.png)
 
@@ -192,7 +184,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-5. 接下來就特別留意了，Python 看似安裝在了 `/home/sam6238/.pyenv/shims` 資料夾內，實際進入查看可發現以下檔案。
+5. 接下來就特別留意了，pyenv 看似將 Python 安裝在了 `/home/sam6238/.pyenv/shims` 資料夾內，實際進入查看可以發現，pyenv 是通過 shims 機制來管理不同版本的 Python，而非將 Python 安裝於此。
 
     ![](images/img_12.png)
 
@@ -233,6 +225,14 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
     Note: See 'pyenv help global' for tips on allowing both
         python2 and python3 to be found.
+    ```
+
+<br>
+
+7. 可以查看 pyenv 當前管理的 Python 版本。
+
+    ```python
+    pyenv versions
     ```
 
 <br>
