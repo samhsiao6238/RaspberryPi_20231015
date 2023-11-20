@@ -297,6 +297,15 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
     ![](images/img_15.png)
 
+<br>
+
+3. 目前安裝了哪些版本。
+
+    ```bash
+    pyenv versions
+    ```
+
+    ![](images/img_16.png)
 
 <br>
 
