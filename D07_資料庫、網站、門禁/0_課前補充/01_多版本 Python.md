@@ -309,6 +309,56 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
+## pyenv 的用法
+
+_刻意寫在了最後面_
+
+<br>
+
+1. 建立一個目錄
+
+    ```bash
+    mkdir envTest
+    ```
+
+<br>
+
+2. 設定當前目錄要使用的版本 
+
+    ```bash
+    pyenv local 3.12.0
+    ```
+
+<br>
+
+3. 會添加一個檔案 `.python-version`，使用 `ls -al` 觀察一下。
+
+    ![](images/img_17.png)
+
+<br>
+
+4. 這時候無需進入任何虛擬環境透過 `python --version` 查詢。
+
+    ![](images/img_18.png)
+
+<br>
+
+5. 手動編輯內容 `sudo nano .python-version` 。
+
+    ![](images/img_19.png)
+
+<br>
+
+6. 在查詢一次 `python --version` 。
+
+    ![](images/img_20.png)
+
+<br>
+
+7. 這實在這個資料夾內建立虛擬環境，就會是指定的 Python 版本，只是這個虛擬環境會在這個路徑之下。
+
+<br>
+
 ---
 
 _END：多玩幾次就熟悉了_
