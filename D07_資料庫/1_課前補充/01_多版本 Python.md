@@ -64,7 +64,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-2. 下載與執行
+2. 下載與執行 `pyenv` 安裝腳本。
 
     ```bash
     curl https://pyenv.run | bash
@@ -72,7 +72,15 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-3. 編輯環境參數
+3. 編輯環境參數。
+
+    ```bash
+    sudo nano ~./bashrc
+    ```
+
+<br>
+
+4. 添加以下內容。
 
     ```ini
     export PATH="$HOME/.pyenv/bin:$PATH"
