@@ -51,9 +51,7 @@ _Paste Image_
 
 <br>
 
-5. 完成以上設置，圖片複製之後，使用插件的預設組合鍵 `option+command+V` 貼上圖片， Windows 系統也是相同，僅快速鍵名稱不同。
-
-
+5. 完成以上設置，圖片複製之後，可使用插件的預設組合鍵貼上圖片，Mac 系統是 `option+command+V` ， Windows 系統是 `Alt+Windows+V` ，僅快速鍵名稱不同，而案件的位置是一樣的，也就是`option` 對應的是 `ALT`， `command` 對應的是 `Windows`。
 
 <br>
 
