@@ -92,7 +92,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-4. 重新載入設定
+4. 重新載入設定。
 
     ```bash
     source ~/.bashrc
@@ -100,7 +100,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-5. 查詢 pyenv 版本
+5. 查詢 pyenv 版本。
 
     ```bash
     pyenv --version
@@ -110,28 +110,28 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-## 安裝指定版本 Python
+## 安裝指定版本的 Python
 
-1. 進入 [Python 官網](https://www.python.org/)
+1. 進入 [Python 官網](https://www.python.org/) 。
 
 
 <br>
 
 
-2. 點擊下載進入下一個畫面。
+1. 點擊 `Downloads` 進入下一個畫面。
 
     ![](images/img_07.png)
 
 
 <br>
 
-3. 選擇查看有哪些版本。
+3. 點擊 `All releases` 查看有哪些版本。
 
     ![](images/img_08.png)
 
 <br>
 
-4. 這裡安裝 `3.10.13`，這需要相當時間。
+4. 這裡示範安裝 `3.10.13`，這需要相當時間。
 
     ```bash
     pyenv install 3.10.13
@@ -143,7 +143,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 ## 驗證安裝
 
-1. 查詢當前版本
+1. 查詢當前 Python 版本。
 
     ```bash
     python --version
@@ -153,7 +153,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-2. 查詢路徑
+2. 查詢當前運行的 Python 路徑，可發現 Python 現在已經由 `.pyenv` 進行管理了。
 
     ```bash
     which python
@@ -163,7 +163,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-3. 查詢有哪些版本
+3. 查詢 Python 存放在系統中的哪些目錄中。
 
     ```bash
     whereis python
