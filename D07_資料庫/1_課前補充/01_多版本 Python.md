@@ -253,7 +253,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-2. 再次查詢
+2. 再次查詢。
 
     ```bash
     /home/sam6238/.pyenv/versions/3.10.13/bin/python --version
@@ -261,7 +261,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-3. 回到 `~/Documents` 建立虛擬環境
+3. 確定路徑後，回到 `~/Documents` 或其他指定資料夾建立虛擬環境。
 
     ```bash
     /home/sam6238/.pyenv/versions/3.10.13/bin/python -m venv env3.10.13
@@ -269,7 +269,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-4. 編輯 `~/.bashrc`
+4. 編輯環境參數文件 `~/.bashrc` ，添加以下內容。
 
     ```txt
     source /home/sam6238/Documents/env3.10.13/bin/activate
@@ -277,7 +277,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-5. 啟動
+5. 載入更新後的環境設置。
 
     ```bash
     source ~/.bashrc
@@ -317,13 +317,13 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 <br>
 
-## pyenv 的用法
+## pyenv 的官方用法
 
 _刻意寫在了最後面_
 
 <br>
 
-1. 建立一個目錄
+1. 建立一個目錄。
 
     ```bash
     mkdir envTest
@@ -331,7 +331,7 @@ _刻意寫在了最後面_
 
 <br>
 
-2. 設定當前目錄要使用的版本 
+2. 透過 `pyenv` 的 `local` 參數設定當前目錄要使用的版本。
 
     ```bash
     pyenv local 3.12.0
@@ -339,31 +339,31 @@ _刻意寫在了最後面_
 
 <br>
 
-3. 會添加一個檔案 `.python-version`，使用 `ls -al` 觀察一下。
+3. 使用 `ls -al` 觀察一下，會看到目錄內添加了一個檔案 `.python-version`。
 
     ![](images/img_17.png)
 
 <br>
 
-4. 這時候無需進入任何虛擬環境透過 `python --version` 查詢。
+4. 這時候無需進入任何虛擬環境透過 `python --version` 查詢當前版本。
 
     ![](images/img_18.png)
 
 <br>
 
-5. 手動編輯內容 `sudo nano .python-version` 。
+5. 可手動編輯內容 `sudo nano .python-version` ，達成暴力更改當前版本的目的。
 
     ![](images/img_19.png)
 
 <br>
 
-6. 在查詢一次 `python --version` 。
+6. 在查詢一次 `python --version` ，版本確實就更改了。
 
     ![](images/img_20.png)
 
 <br>
 
-7. 這實在這個資料夾內建立虛擬環境，就會是指定的 Python 版本，只是這個虛擬環境會在這個路徑之下。
+7. 這時，只要在這個資料夾內建立虛擬環境，就會是指定的 Python 版本，只是這個虛擬環境會在這個路徑之下，雖然版本設定的部分變得很直觀，但虛擬環境的管理卻顯得混亂，我個人是比較建議將版本安裝與虛擬環境管理分開，僅透過 `pyenv` 進行多版本的安裝，虛擬環境管理還是比照原有模式。當然，這僅是個人建議，如何最順手都依主觀執行即可。
 
 <br>
 
