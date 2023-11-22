@@ -2,7 +2,7 @@
 
 _Paste Image_
 
-    ![](images/img_21.png)
+![](images/img_21.png)
 
 <br>
 
