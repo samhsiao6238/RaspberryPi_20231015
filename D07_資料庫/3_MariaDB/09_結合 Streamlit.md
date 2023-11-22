@@ -10,7 +10,7 @@
 
 <br>
 
-2. 程式碼
+2. 程式碼，使用 `streamlit run` 運行。
 
     ```python
     import streamlit as st
@@ -66,13 +66,13 @@
 
 <br>
 
-2. 成果圖
+2. 成果圖。
 
     ![](images/img_68.png)
 
 <br>
 
-3. 程式碼
+3. 程式碼，使用 `streamlit run` 運行。
 
     ```python
     import streamlit as st

@@ -14,7 +14,7 @@
 
 <br>
 
-3. 程式碼。 
+3. 程式碼，使用 `streamlit run` 運行。 
 
     ```python
     import streamlit as st
