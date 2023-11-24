@@ -1,4 +1,4 @@
-# 安裝 MySQL 客戶端
+# MySQL Shell
 
 _以下就 MacOS 與 Windows 系統分開說明_
 
