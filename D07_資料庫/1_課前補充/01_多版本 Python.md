@@ -75,7 +75,7 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 3. 編輯環境參數。
 
     ```bash
-    sudo nano ~./bashrc
+    sudo nano ~/.bashrc
     ```
 
 <br>
