@@ -83,10 +83,10 @@ _使用 Docker 在樹梅派架設 MongoDB Server 的前置作業_
 
 <br>
 
-10. 授權：將用戶添加到 docker 群組。
+10. 授權：將用戶添加到 docker 群組，請替換自己的帳號。
 
     ```bash
-    sudo usermod -aG docker sam6238
+    sudo usermod -aG docker <自己的樹莓派帳號>
     ```
 
 <br>
@@ -94,14 +94,14 @@ _使用 Docker 在樹梅派架設 MongoDB Server 的前置作業_
 11. 查詢用戶是否加入群組。
 
     ```bash
-    groups sam6238
+    groups <自己的樹莓派帳號>
     ```
 
     ![](images/img_38.png)
 
 <br>
 
-12. 重啟終端讓授權生效。
+12. 透過重啟終端或重新連線讓授權生效。
 
 <br>
 
@@ -119,9 +119,16 @@ _使用 Docker 在樹梅派架設 MongoDB Server 的前置作業_
     ```bash
     docker run --name mongodb-arm64 -p 27017:27017 --restart always -d arm64v8/mongo:4.4.18
     ```
+
 <br>
 
-2. 說明。
+2. 會顯示 `Unable to find image` ，然後進行 ` Pull` 下載並安裝。
+
+    ![](images/img_61.png)
+
+<br>
+
+3. 說明。
 
    上述指令會建立一個名為 `mongodb-arm64` 的新容器、映射 27017 端口、設定為開機自動重啟，並使用 Docker 映像 `arm64v8/mongo:4.4.18` 來運行 MongoDB，並以 `always` 參數設定容器的重啟策略。
 
@@ -130,10 +137,14 @@ _使用 Docker 在樹梅派架設 MongoDB Server 的前置作業_
 
 ## 其他指令與說明
 
+_僅說明 Docker 服務常用的指令，以上程序完成後不用做以下說明的指令_
+
+<br>
+
 1. 啟用 Docker 服務。
 
     ```bash
-    sudo systemctl enable docker
+    sudo systemctl start docker
     ```
 
 <br>
