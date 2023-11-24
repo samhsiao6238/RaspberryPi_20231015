@@ -6,7 +6,7 @@ _以下就 MacOS 與 Windows 系統分開說明_
 
 ## 說明
 
-1. 電腦若要遠程訪問 MySQL 服務器，需要在電腦上安裝 MySQL 客戶端。
+1. 電腦若要遠程訪問 MySQL 服務器，需要在電腦上安裝 MySQL 客戶端，除了 Workbench 這類型的圖形化介面工具外，也可以使命令列工具 MySQL Shell。
 
 <br>
 
