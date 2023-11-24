@@ -108,7 +108,7 @@ _以下就 MacOS 與 Windows 系統分開說明_
 
 <br>
 
-1. 可以在 `C:\Program Files` 找到 `Shell` ，將絕對路徑複製下來。
+8. 可以在 `C:\Program Files` 找到 `Shell` ，將絕對路徑複製下來。
 
    ```bash
    C:\Program Files\MySQL\MySQL Shell 8.0\bin
