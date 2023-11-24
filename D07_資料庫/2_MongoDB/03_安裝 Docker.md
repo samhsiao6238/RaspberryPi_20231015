@@ -1,10 +1,12 @@
-# 在樹梅派架設 MongoDB Server
+# Docker 安裝與設置
+
+_使用 Docker 在樹梅派架設 MongoDB Server 的前置作業_
 
 <br>
 
-## 先安裝並設置 Docker
+## 步驟
 
-1. 下載並安裝 Docker
+1. 下載並安裝 Docker。
 
     ```bash
     curl -sSL https://get.docker.com | sh
@@ -18,7 +20,7 @@
 
 <br>
 
-3. 切換到資源列表資料夾
+3. 切換到資源列表資料夾。
 
     ```bash
     cd /etc/apt/sources.list.d/
@@ -119,7 +121,7 @@
     ```
 <br>
 
-2. 說明
+2. 說明。
 
    上述指令會建立一個名為 `mongodb-arm64` 的新容器、映射 27017 端口、設定為開機自動重啟，並使用 Docker 映像 `arm64v8/mongo:4.4.18` 來運行 MongoDB，並以 `always` 參數設定容器的重啟策略。
 
