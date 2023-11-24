@@ -4,9 +4,14 @@ _圖形化介面的客戶端_
 
 <br>
 
-## 下載
+## 說明
 
-_在 [MySQL](https://dev.mysql.com/downloads/installer/) 官網下載，或在課程的  [Google 共享資料夾](https://drive.google.com/drive/folders/1mNUYleyox6JGOwGVHj_RCsyw2s64likf?usp=drive_link) 下載。_
+1. 電腦若要遠程訪問 MySQL 服務器，需要在電腦上安裝 MySQL 客戶端。
+
+<br>
+
+
+2. 在 [MySQL](https://dev.mysql.com/downloads/installer/) 官網下載，或在課程的  [Google 共享資料夾](https://drive.google.com/drive/folders/1mNUYleyox6JGOwGVHj_RCsyw2s64likf?usp=drive_link) 下載。
 
 <br>
 
