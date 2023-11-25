@@ -29,8 +29,8 @@
     # 嘗試建立資料庫連接
     try:
         conn = mariadb.connect(
-            user="sam6238",
-            password="sam112233",
+            user="xxxxxxx",
+            password="xxxxxxxxx",
             host="localhost",
             port=3306,
             database="mydatabase"
@@ -59,7 +59,7 @@
                 pitch=50
             )
 
-            # 創建 HexagonLayer 圖層，使用「次數」作為高度
+            # 創建六角圖層 HexagonLayer ，使用「次數」作為高度
             hexagon_layer = pdk.Layer(
                 'HexagonLayer',
                 data=df,
@@ -73,7 +73,7 @@
                 extruded=True,
             )
 
-            # 創建 ScatterplotLayer 圖層
+            # 創建散點圖層 ScatterplotLayer 
             scatter_layer = pdk.Layer(
                 'ScatterplotLayer',
                 data=df,
@@ -83,6 +83,7 @@
             )
 
             # 通過 pydeck 渲染地圖並顯示在 Streamlit 上
+            # 這裡加入了兩個圖層，也可以只用一個六角形圖層
             st.pydeck_chart(pdk.Deck(layers=[hexagon_layer, scatter_layer], initial_view_state=view_state))
         else:
             st.write("無可顯示的數據。")

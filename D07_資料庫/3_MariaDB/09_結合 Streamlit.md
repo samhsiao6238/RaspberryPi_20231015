@@ -10,9 +10,18 @@
 
 <br>
 
-2. 程式碼，使用 `streamlit run` 運行。
+2. 安裝套件。
+
+    ```bash
+    pip install streamlit
+    ```
+
+<br>
+
+3. 程式碼，使用 `streamlit run` 運行。
 
     ```python
+    # 導入庫
     import streamlit as st
     import pandas as pd
     import mariadb
