@@ -6,10 +6,10 @@ _這裡示範的是使用 pyenv 進行多版本安裝全記錄_
 
 ##  前置作業
 
-1. 進行更新
+1. 進行更新。
 
     ```bash
-    sudo apt-get update
+    sudo apt-get update && sudo apt-get upgrade -y
     ```
 
 <br>
