@@ -107,7 +107,7 @@ _基於前述的版本問題，系統顯示需要 MariaDB Connector/C 的版本�
 
 ## 透過腳本連線
 
-1. 先透過指令連線。
+1. 先在樹莓派上連線資料庫。
 
     ```bash
     sudo mysql -u root -p
@@ -125,6 +125,7 @@ _基於前述的版本問題，系統顯示需要 MariaDB Connector/C 的版本�
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL
     );
+
     ```
 
 <br>
@@ -153,15 +154,15 @@ _基於前述的版本問題，系統顯示需要 MariaDB Connector/C 的版本�
 
 <br>
 
-6. 使用 Python 撰寫腳本進行查詢。
+6. 撰寫 Python 腳本進行查詢。
 
     ```bash
     import mariadb
 
     # 數據庫連接配置
     config = {
-        'user': 'sam6238',
-        'password': 'sam112233',
+        'user': '資料庫使用者帳號',
+        'password': '上列帳號的密碼',
         'host': 'localhost',
         'database': 'mydatabase',
         'port': 3306
