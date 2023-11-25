@@ -1,11 +1,12 @@
 # 使用 mariadb 庫
 
+_基於前述的版本問題，系統顯示需要 MariaDB Connector/C 的版本至少為 `3.3.1` 或 `3.2.4`，以下嘗試安裝 `3.3.5` 進行排除。_
 
 <br>
 
 ## 安裝
 
-1. 先到 MariaDB Connector/C [下載頁面](https://mariadb.org/download/?o=true&p=connector-c&r=3.3.5&os=source&pkg=tar_gz&t=connector) 。
+1. 先到 MariaDB Connector/C [下載頁面](https://mariadb.org/download/?o=true&p=connector-c&r=3.3.5&os=source&pkg=tar_gz&t=connector) ，下載後可以查看 [官方文件](https://mariadb.com/kb/en/connectors/) 。
 
     ![](images/img_35.png)
 
@@ -52,7 +53,7 @@
 
 <br>
 
-7. 配置，告訴 CMake 在父目錄可以找到源代碼跟 `CMakeLists.txt`。
+7. 進行配置，使用 `..` 告訴 CMake 在上層目錄可以找到源代碼跟 `CMakeLists.txt`。
 
     ```bash
     sudo cmake ..
@@ -60,7 +61,7 @@
 
 <br>
 
-8. 編譯
+8. 編譯。
 
     ```bash
     sudo make
@@ -68,7 +69,7 @@
 
 <br>
 
-9. 安裝
+9. 安裝。
 
     ```bash
     sudo make install
@@ -76,7 +77,7 @@
 
 <br>
 
-10. 更新 Shared Library Cache
+10. 更新 Shared Library Cache。
 
     ```bash
     sudo ldconfig
@@ -84,7 +85,7 @@
 
 <br>
 
-11.  查詢版本
+11. 查詢版本。
 
     ```bash
     mariadb_config --version
@@ -94,7 +95,7 @@
 
 <br>
 
-12. 安裝 mariadb
+12. 安裝 mariadb。
 
     ```bash
     pip install mariadb
@@ -114,7 +115,7 @@
 
 <br>
 
-2. 創建一個數據庫＆表 
+2. 創建一個數據庫＆表。
 
     ```bash
     CREATE DATABASE mydatabase;
@@ -128,7 +129,7 @@
 
 <br>
 
-3. 添加數據
+3. 添加數據。
 
     ```bash
     INSERT INTO users (name, email) VALUES ('John Doe', 'johndoe@example.com');
@@ -136,7 +137,7 @@
 
 <br>
 
-4. 查詢資料
+4. 查詢資料。
 
     ```bash
     SELECT * FROM users;
@@ -152,7 +153,7 @@
 
 <br>
 
-6. 使用 Python 撰寫腳本進行查詢
+6. 使用 Python 撰寫腳本進行查詢。
 
     ```bash
     import mariadb
@@ -185,7 +186,7 @@
 
 <br>
 
-7. 結果
+7. 結果。
 
     ```bash
     ID: 1, Name: John Doe, Email: johndoe@example.com
