@@ -176,7 +176,19 @@ _後續將以這個套件為主，這裡直接安裝會出錯，因為少了一�
 
 <br>
 
-5. 範例
+5. 安裝過程會出現多次類似以下的錯誤與警告訊息，錯誤訊息顯示 MariaDB Connector/Python 需要 MariaDB Connector/C 的版本至少為 3.3.1 或 3.2.4，但是系統中安裝的版本是 3.1.21，這導致 pip 多次嘗試降級安裝舊版本的 MariaDB Python 庫失敗。
+
+    ![](images/img_92.png)
+
+<br>
+
+6. 最後 pip 成功安裝 mariadb 庫的 1.0.11 版本，可能是因為這個版本的 mariadb 庫與安裝在系統上的 MariaDB Connector/C 版本 3.1.21 相容。
+
+    ![](images/img_93.png)
+
+<br>
+
+7. 範例
 
     ```python
     import mariadb
