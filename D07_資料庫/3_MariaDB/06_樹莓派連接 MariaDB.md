@@ -99,7 +99,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
 4. 套件安裝
 
     ```bash
-    pip install mysql-connector-python    
+    pip install mysql-connector-python
     ```
 
 <br>
@@ -109,6 +109,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
     ```python
     import mysql.connector
 
+    # 資料庫配置，請輸入自己的設定資訊
     config = {
         'user': 'your_username',
         'password': 'your_password',
@@ -117,23 +118,49 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
         'port': 3306
     }
 
+    # 自定義資料表名稱
+    TABLE_NAME = 'your_table'
+
     conn = mysql.connector.connect(**config)
-
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM your_table")
 
+    # 檢查資料表是否存在
+    cursor.execute(f"SHOW TABLES LIKE '{TABLE_NAME}'")
+    result = cursor.fetchone()
+
+    if result:
+        print("Table already exists.")
+    else:
+        # 建立資料表
+        cursor.execute(f"""
+        CREATE TABLE {TABLE_NAME} (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            column1 VARCHAR(255),
+            column2 VARCHAR(255)
+        )
+        """)
+        print("Table created.")
+
+        # 向資料表插入一筆資料
+        cursor.execute(f"INSERT INTO {TABLE_NAME} (column1, column2) VALUES (%s, %s)", ('value1', 'value2'))
+        conn.commit()
+        print("Inserted one row into {TABLE_NAME}.")
+
+    # 檢索資料表的內容
+    cursor.execute(f"SELECT * FROM {TABLE_NAME}")
     for row in cursor:
         print(row)
 
     cursor.close()
-    conn.close()
+    conn.close()    
     ```
 
 
 <br>
+
 ## mariadb
 
-_後續將以這個套件為主_
+_後續將以這個套件為主，這裡直接安裝會出錯，因為少了一些依賴_
 
 <br>
 
