@@ -250,7 +250,7 @@
   | `yaml`      | YAML       |
   | `plaintext` | 純文本     |
 
-  [官方文檔](https://www.markdownguide.org/getting-started/)
+  [官方文件](https://www.markdownguide.org/getting-started/)
 
 <br>
 

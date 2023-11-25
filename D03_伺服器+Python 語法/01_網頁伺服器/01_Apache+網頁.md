@@ -241,7 +241,7 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
    sudo chown -R www-data:www-data  /home/sam6238/Documents/my_web
    ```
 
-3. 後續會添加超文本，所以可先授權自己擁有添加文檔的權限，沒授權的話將無法新增 `index.html`。
+3. 後續會添加超文本，所以可先授權自己擁有添加文件的權限，沒授權的話將無法新增 `index.html`。
 
    ```bash
    sudo chown -R <使用者名稱>:<使用者同名群組名稱> <Apache 超文本所在目錄>
