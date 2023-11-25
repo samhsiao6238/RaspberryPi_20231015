@@ -31,6 +31,8 @@ host = 'localhost'
 user = 'your_username'
 password = 'your_password'
 db_name = 'your_database'
+your_table = 'your_table'
+
 
 # 建立資料庫連接，但暫時不指定特定的資料庫
 conn = pymysql.connect(
@@ -51,9 +53,9 @@ try:
     if not result:
         # 如果資料庫不存在，則創建它
         cursor.execute(f"CREATE DATABASE {db_name}")
-        print(f"Database {db_name} created successfully.")
+        print(f"資料庫 {db_name} 建立成功。")
     else:
-        print(f"Database {db_name} already exists.")
+        print(f"資料庫 {db_name} 已經存在。")
 
     # 關閉游標
     cursor.close()
@@ -64,7 +66,7 @@ try:
 
     # 
     with conn.cursor() as cursor:
-        sql = "SELECT * FROM your_table"
+        sql = f"SELECT * FROM {your_table}"
         cursor.execute(sql)
         result = cursor.fetchall()
         for row in result:
@@ -73,7 +75,6 @@ try:
 finally:
     # 確保最後關閉連接
     conn.close()
-
 ```
 
 <br>
