@@ -188,7 +188,7 @@ _依照官網指引_
     sudo apt-get purge nodejs
     ```
 
-2. 徹底刪除指向 NodeSource 存儲庫的信息以及存儲庫公鑰的文件。
+2. 徹底刪除指向 NodeSource 儲存庫的信息以及儲存庫公鑰的文件。
 
     ```bash
     sudo rm -r /etc/apt/sources.list.d/nodesource.list

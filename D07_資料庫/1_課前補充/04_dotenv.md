@@ -64,7 +64,7 @@ _以下以資料庫連線為例_
 
 <br>
 
-1. 在 `.env` 文件中存儲資料庫連接的密碼和 API 密鑰。
+1. 在 `.env` 文件中儲存資料庫連接的密碼和 API 密鑰。
 
     ```txt
     DATABASE_PASSWORD=yourpassword

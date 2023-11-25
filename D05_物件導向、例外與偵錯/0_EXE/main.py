@@ -17,7 +17,7 @@ def main():
     scraper = MyScraper('https://www.cnyes.com/')
     titles = scraper.fetch_data()
     
-    # 判斷是否成功獲取到數據，如果有，則打印並存儲
+    # 判斷是否成功獲取到數據，如果有，則打印並儲存
     if titles:
         for idx, title in enumerate(titles):
             print(f"標題 {idx+1}：{title}")

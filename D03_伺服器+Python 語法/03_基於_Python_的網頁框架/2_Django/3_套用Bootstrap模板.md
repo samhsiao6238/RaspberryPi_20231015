@@ -97,7 +97,7 @@ _這是個不容易的轉換，但一次就可以上手_
     STATIC_URL = '/static/'  
     STATICFILES_DIRS = [
         # 添加此處，這會指定在 BASE_DIR 下的 'static' 文件夾
-        # 作為靜態文件的存儲位置
+        # 作為靜態文件的儲存位置
             BASE_DIR / 'myApp_01' / 'static'
     ]
     ```
