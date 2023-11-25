@@ -367,6 +367,31 @@ _刻意寫在了最後面_
 
 <br>
 
+## 其他指令
+
+_除了 `pyenv local` 外，還有其他指令進行設定和切換_
+
+<br>
+
+1. `pyenv global`：
+   - 用於設置系統全局的 Python 版本。
+   - 這個設置決定執行 Python 時的預設版本。
+
+2. `pyenv shell`：
+   - 在當前終端機視窗中設置臨時的 Python 版本。
+   - 這個設置不會影響其他終端機或目錄的設置，關閉後即失效。
+
+3. `pyenv versions`：
+   - 顯示所有已安裝的 Python 版本，並標示當前選擇的版本。
+
+4. `pyenv install`：
+   - 用於安裝新的 Python 版本。
+
+5. `pyenv uninstall`：
+   - 用於卸載已安裝的 Python 版本。
+
+<br>
+
 ---
 
 _END：多玩幾次就熟悉了_
