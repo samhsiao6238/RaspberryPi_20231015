@@ -23,59 +23,59 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
 
 5. 範例
 
-```python
-import pymysql
+    ```python
+    import pymysql
 
-# 資料庫連接資訊
-host = 'localhost'
-user = 'your_username'
-password = 'your_password'
-db_name = 'your_database'
-your_table = 'your_table'
+    # 資料庫連接資訊
+    host = 'localhost'
+    user = 'your_username'
+    password = 'your_password'
+    db_name = 'your_database'
+    your_table = 'your_table'
 
 
-# 建立資料庫連接，但暫時不指定特定的資料庫
-conn = pymysql.connect(
-    host=host, 
-    user=user, 
-    password=password, 
-    # 在 MySQL 中，utf8 是一種字元集，最多能夠編碼 3 個位元的 Unicode 字元
-    # utf8mb4 是 utf8 的超集，支持最多 4 個位元的 Unicode 字元。
-    # utf8mb4 能夠編碼所有當前的 Unicode 字元。
-    charset='utf8mb4'
-)
+    # 建立資料庫連接，但暫時不指定特定的資料庫
+    conn = pymysql.connect(
+        host=host, 
+        user=user, 
+        password=password, 
+        # 在 MySQL 中，utf8 是一種字元集，最多能夠編碼 3 個位元的 Unicode 字元
+        # utf8mb4 是 utf8 的超集，支持最多 4 個位元的 Unicode 字元。
+        # utf8mb4 能夠編碼所有當前的 Unicode 字元。
+        charset='utf8mb4'
+    )
 
-try:
-    cursor = conn.cursor()
-    # 檢查資料庫是否存在
-    cursor.execute(f"SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '{db_name}'")
-    result = cursor.fetchone()
-    if not result:
-        # 如果資料庫不存在，則創建它
-        cursor.execute(f"CREATE DATABASE {db_name}")
-        print(f"資料庫 {db_name} 建立成功。")
-    else:
-        print(f"資料庫 {db_name} 已經存在。")
+    try:
+        cursor = conn.cursor()
+        # 檢查資料庫是否存在
+        cursor.execute(f"SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '{db_name}'")
+        result = cursor.fetchone()
+        if not result:
+            # 如果資料庫不存在，則創建它
+            cursor.execute(f"CREATE DATABASE {db_name}")
+            print(f"資料庫 {db_name} 建立成功。")
+        else:
+            print(f"資料庫 {db_name} 已經存在。")
 
-    # 關閉游標
-    cursor.close()
+        # 關閉游標
+        cursor.close()
 
-    # 重新建立連接到新建或已存在的資料庫
-    conn.close()
-    conn = pymysql.connect(host=host, user=user, password=password, db=db_name, charset='utf8mb4')
+        # 重新建立連接到新建或已存在的資料庫
+        conn.close()
+        conn = pymysql.connect(host=host, user=user, password=password, db=db_name, charset='utf8mb4')
 
-    # 
-    with conn.cursor() as cursor:
-        sql = f"SELECT * FROM {your_table}"
-        cursor.execute(sql)
-        result = cursor.fetchall()
-        for row in result:
-            print(row)
+        # 
+        with conn.cursor() as cursor:
+            sql = f"SELECT * FROM {your_table}"
+            cursor.execute(sql)
+            result = cursor.fetchall()
+            for row in result:
+                print(row)
 
-finally:
-    # 確保最後關閉連接
-    conn.close()
-```
+    finally:
+        # 確保最後關閉連接
+        conn.close()
+    ```
 
 <br>
 
