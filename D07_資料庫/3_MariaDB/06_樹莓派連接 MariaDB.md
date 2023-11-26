@@ -28,22 +28,13 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
 
     # 資料庫連接資訊
     host = 'localhost'
-    user = 'your_username'
-    password = 'your_password'
-    db_name = 'your_database'
-    your_table = 'your_table'
-
+    user = '自己的帳號'
+    password = '自己的密碼'
+    db_name = 'database_01'
+    your_table = 'table_01'
 
     # 建立資料庫連接，但暫時不指定特定的資料庫
-    conn = pymysql.connect(
-        host=host, 
-        user=user, 
-        password=password, 
-        # 在 MySQL 中，utf8 是一種字元集，最多能夠編碼 3 個位元的 Unicode 字元
-        # utf8mb4 是 utf8 的超集，支持最多 4 個位元的 Unicode 字元。
-        # utf8mb4 能夠編碼所有當前的 Unicode 字元。
-        charset='utf8mb4'
-    )
+    conn = pymysql.connect(host=host, user=user, password=password, charset='utf8mb4')
 
     try:
         cursor = conn.cursor()
@@ -56,25 +47,38 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
             print(f"資料庫 {db_name} 建立成功。")
         else:
             print(f"資料庫 {db_name} 已經存在。")
-
-        # 關閉游標
+        
+        # 關閉游標和連接
         cursor.close()
+        conn.close()
 
         # 重新建立連接到新建或已存在的資料庫
-        conn.close()
         conn = pymysql.connect(host=host, user=user, password=password, db=db_name, charset='utf8mb4')
+        
+        cursor = conn.cursor()
+        # 檢查表是否存在
+        cursor.execute(f"SHOW TABLES LIKE '{your_table}'")
+        result = cursor.fetchone()
+        if not result:
+            # 如果表不存在，則創建它
+            # 這裡需要根據您的需求來定義表的結構
+            create_table_sql = f"CREATE TABLE {your_table} (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), age INT)"
+            cursor.execute(create_table_sql)
+            print(f"表 {your_table} 建立成功。")
+        else:
+            print(f"表 {your_table} 已經存在。")
 
-        # 
-        with conn.cursor() as cursor:
-            sql = f"SELECT * FROM {your_table}"
-            cursor.execute(sql)
-            result = cursor.fetchall()
-            for row in result:
-                print(row)
+        # 執行您原本的操作
+        sql = f"SELECT * FROM {your_table}"
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        for row in result:
+            print(row)
 
     finally:
         # 確保最後關閉連接
-        conn.close()
+        if conn:
+            conn.close()
     ```
 
 <br>
