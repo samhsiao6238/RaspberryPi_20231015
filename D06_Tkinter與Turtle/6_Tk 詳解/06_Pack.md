@@ -95,7 +95,7 @@ _說明以下六個項目_
     root = tk.Tk()
     root.title("布局範例")
 
-    # 為主窗口設置較大的初始尺寸
+    # 為主視窗設置較大的初始尺寸
     root.geometry("300x200")
 
     # 創建一個按鈕，並在水平方向填滿
@@ -281,7 +281,7 @@ _可嘗試取消註解觀察輸出或是變化_
     ```python
     import tkinter as tk
 
-    # 初始化 Tkinter 主窗口
+    # 初始化 Tkinter 主視窗
     root = tk.Tk()
     root.title("Tkinter pack 布局示範")
     root.geometry("300x200")
