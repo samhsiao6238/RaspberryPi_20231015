@@ -18,7 +18,7 @@ _K-近鄰演算，這個模型初次訓練成果不佳，基於模型太大不�
 
 <br>
 
-## 範例
+## 訓練模型
 
 1. 完整程式碼。
 
@@ -72,6 +72,78 @@ _K-近鄰演算，這個模型初次訓練成果不佳，基於模型太大不�
     acc = test_sum.mean()                           
     # 輸出準確率
     print(f'準確率為：{acc}')
+
+    ```
+
+<br>
+
+## 辨識字卡
+
+1. 完整程式碼。
+
+    ```python
+    import cv2
+    import numpy as np
+    import sys
+
+    # 載入先前訓練好的 KNN 模型
+    try:
+        knn = cv2.ml.KNearest_load("mnist_knn.xml")
+        print("模型載入成功。")
+    except Exception as e:
+        print("模型載入失敗：", e)
+        sys.exit(1)
+
+    # 啟用攝影鏡頭
+    cap = cv2.VideoCapture(0)
+    if not cap.isOpened():
+        print("無法開啟攝像頭")
+        sys.exit(1)
+
+    while True:
+        success, img = cap.read()
+        if not success:
+            print("無法取得影像")
+            break
+
+        img = cv2.resize(img, (450, 300))
+        x, y, w, h = 300, 150, 150, 150
+
+        img_num = img[y: y + h, x: x + w]
+        img_num = cv2.cvtColor(img_num, cv2.COLOR_BGR2GRAY)
+        _, img_num = cv2.threshold(img_num, 127, 255, cv2.THRESH_BINARY_INV)
+
+        kernel = np.ones((3, 3), np.uint8)
+        img_num = cv2.dilate(img_num, kernel, iterations=1)
+
+        display = cv2.resize(img_num, (w, h))
+        img[img.shape[0] - h: img.shape[0], 0:w] = \
+            cv2.cvtColor(display, cv2.COLOR_GRAY2BGR)
+
+        img_num = \
+            cv2.resize(img_num, (28, 28)).reshape(1, -1).astype('float32') / 255
+
+        ret, result, neighbours, dist = knn.findNearest(img_num, k=5)
+
+        text = f"Number: {result[0][0]}, Distance: {dist[0][0]}"
+        org = (10, 30)
+        fontFace = cv2.FONT_HERSHEY_SIMPLEX
+        fontScale = 0.7
+        color = (255, 255, 255)
+        thickness = 2
+        lineType = cv2.LINE_AA
+        cv2.putText(
+            img, text, org, fontFace, fontScale, color, thickness, lineType
+        )
+
+        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 3)
+        cv2.imshow("Minist KNN", img)
+
+        if cv2.waitKey(1) == ord("q"):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
 
     ```
 
