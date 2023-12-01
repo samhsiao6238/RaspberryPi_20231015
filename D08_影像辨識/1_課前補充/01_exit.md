@@ -147,8 +147,9 @@ _在筆記本中運行_
         elif _con == 2: 
             print("發生退出條件 2")
             sys.exit(2)
-        # 無例外
-        print("無例外發生")
+        else:
+            print("其他狀況")
+            sys.exit()
 
     try:
         perform_task(condition)
