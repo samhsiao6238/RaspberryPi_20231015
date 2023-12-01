@@ -129,24 +129,29 @@ _在筆記本中運行_
 
     ![](images/img_08.png)
 
+<br>
+
 6. 狀況六：透過 `.code` 取出 `SystemExit` 的在不同例外狀況下的回傳值，可手動調整 `condition` 的值進行觀察。
 
     ```python
     import sys
+    # 手動調整
 
-    def perform_task():
-        condition = 1
-        if condition == 1:
+    condition = 1
+
+    def perform_task(_con):
+        
+        if _con == 1:
             print("發生退出條件 1")
             sys.exit(1)
-        elif condition == 2: 
+        elif _con == 2: 
             print("發生退出條件 2")
             sys.exit(2)
         # 無例外
         print("無例外發生")
 
     try:
-        perform_task()
+        perform_task(condition)
     except SystemExit as e:
         if e.code == 1:
             print(f"捕捉例外：{e.code}")
