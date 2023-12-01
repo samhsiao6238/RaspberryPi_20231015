@@ -129,7 +129,7 @@ _在筆記本中運行_
 
     ![](images/img_08.png)
 
-6. 狀況六：可透過 `.code` 取出 `SystemExit` 的在不同例外狀況下的回傳值。
+6. 狀況六：透過 `.code` 取出 `SystemExit` 的在不同例外狀況下的回傳值，可手動調整 `condition` 的值進行觀察。
 
     ```python
     import sys
