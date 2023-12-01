@@ -29,6 +29,69 @@ _K-近鄰演算_
     ```python
     import cv2
     import numpy as np
+    # 載入資料集
+    from keras.datasets import mnist
+
+    # 載入 MNIST 數據集：包含手寫數字的訓練集和測試集
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()  
+
+    # 將訓練集的圖像數據 x_train 重塑為二維數組，方便 KNN 處理
+    x_train = x_train.reshape(x_train.shape[0], -1)  
+    # 將訓練集的圖像數據 x_train 轉換為 float32 型別並進行歸一化處理
+    x_train = x_train.astype('float32')/255
+    # 將訓練集的標籤 y_train 轉換為 float32 型別
+    y_train = y_train.astype(np.float32)
+
+
+    # 將測試集的圖像數據 x_test 重塑為二維數組
+    x_test = x_test.reshape(x_test.shape[0], -1)     
+    # 將測試集的圖像數據 x_test 轉換為 float32 型別並進行歸一化處理
+    x_test = x_test.astype('float32')/255
+    # 將測試集的標籤 y_test 轉換為 float32 型別
+    y_test = y_test.astype(np.float32)
+
+    # 使用 K-Nearest Neighbors (KNN) 建立模型
+    knn = cv2.ml.KNearest_create()                    
+    # 設定 KNN 模型的參數，默認鄰居數為 5
+    knn.setDefaultK(5)
+    # 設置為分類器模式                           
+    knn.setIsClassifier(True)
+
+    print('開始訓練')
+    # 使用訓練集訓練 KNN 模型
+    knn.train(x_train, cv2.ml.ROW_SAMPLE, y_train)  
+    # 使用 KNN 儲存訓練模型，OpenCV 支持 XML 或 YAML 格式
+    knn.save('mnist_knn.xml')                       
+
+    print('進行測試')
+    # 使用測試集的圖像數據 x_test 進行預測
+    test_pre = knn.predict(x_test)
+    # 獲取預測結果
+    test_ret = test_pre[1]
+    # 重塑預測結果為一維數組
+    test_ret = test_ret.reshape(-1,)
+    # 比較預測結果與真實標籤，計算正確的數量
+    test_sum = (test_ret == y_test)
+    # 得到準確率
+    acc = test_sum.mean()                           
+    # 輸出準確率
+    print(f'準確率為：{acc}')
+
+    ```
+
+<br>
+
+2. 顯示結果。
+
+    ![](images/img_02.png)
+
+<br>
+
+3. 優化：對腳本與模型稍作優化。
+
+    ```python
+    import cv2
+    import numpy as np
     from keras.datasets import mnist
 
     # 載入 MNIST 數據集
@@ -70,16 +133,16 @@ _K-近鄰演算_
 
     # 輸出準確率
     print(f'準確率: {accuracy * 100}%')
+
     ```
 
 <br>
 
-2. 顯示結果。
+4. 顯示結果：稍作提升，改善不大。
 
-    ![](images/img_02.png)
+    ![](images/img_03.png)
 
-3. 優化
-
+<br>
 
 ## 辨識字卡
 
