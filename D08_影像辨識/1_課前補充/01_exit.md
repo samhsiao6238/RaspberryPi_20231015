@@ -57,9 +57,114 @@ _Python 中的 `exit()` 和 `sys.exit()`_
 
 <br>
 
+## 實作
+
+_在筆記本中運行_
+
+<br>
+
+1. 狀況一：使用 `exit()` 直接退出，確實退出結束，卻可能引發核心崩潰。
+
+    ```python
+    if True:
+        print('退出結束')
+        exit()
+    else:
+        print('一般結束')
+    ```
+    ![](images/img_04.png)
+
+<br>
+
+2. 狀況二：改用 `sys.exit()` ，確實退出結束，傳出例外訊息 `SystemExit` 。
+
+    ```python
+    import sys
+    if True:
+        print('退出結束')
+        sys.exit()
+    else:
+        print('一般結束')
+    ```
+    ![](images/img_05.png)
+
+<br>
+
+3. 狀況三：`exit()` 未能捕捉到例外，可知核心在退出當下已經毀損。
+
+    ```python
+    if True:
+        print('退出結束')
+        try:
+            exit()
+        except SystemExit as e:
+            print('發生例外')
+    else:
+        print('一般結束')
+    ```
+
+    ![](images/img_06.png)
+
+<br>
+
+4. 狀況四：可捕捉 `sys.exit()` 的例外，但沒設定參數時無回傳值。
+
+    ```python
+    import sys
+    if True:
+        print('退出結束')
+        try:
+            sys.exit()
+        except SystemExit as e:
+            print(f'發生例外：{e}')
+    else:
+        print('一般結束')
+    ```
+
+    ![](images/img_07.png)
+
+<br>
+
+5. 狀況五：在 `sys.exit()` 傳入參數作為例外捕捉。
+
+    ![](images/img_08.png)
+
+6. 狀況六：可透過 `.code` 取出 `SystemExit` 的在不同例外狀況下的回傳值。
+
+    ```python
+    import sys
+
+    def perform_task():
+        condition = 1
+        if condition == 1:
+            print("發生退出條件 1")
+            sys.exit(1)
+        elif condition == 2: 
+            print("發生退出條件 2")
+            sys.exit(2)
+        # 無例外
+        print("無例外發生")
+
+    try:
+        perform_task()
+    except SystemExit as e:
+        if e.code == 1:
+            print(f"捕捉例外：{e.code}")
+        elif e.code == 2:
+            print(f"捕捉例外：{e.code}")
+        else:
+            print(f"其他例外：{e.code}")
+    finally:
+        print(f"結束")
+    ```
+    
+    ![](images/img_10.png)
+
+<br>
+
 ## 結論
 
-1. 在互動環境如筆記本中撰寫程序時，可直接使用 `exit()` 快速進行調試，而在正式的腳本或應用程序中，建議使用 `sys.exit()`，因為它提供了更多控制和可用於標準化程序退出方式的選項。
+1. 雖在互動環境如筆記本中撰寫程序時，可直接使用 `exit()` 快速進行調試，但退出時可能導致核心毀損而造成調適上的麻煩，至於正式的腳本或應用程序中，更要使用 `sys.exit()` 來避免應用崩潰，另外 `sys.exit()` 還提供了可控制退出邏輯參數。
 
 <br>
 
