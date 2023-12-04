@@ -24,7 +24,7 @@
 
 <br>
 
-4. 連線樹莓派，進入複製壓縮檔案的資料夾，我是使用 `Documents` ，進入後內進行解壓縮，需要一點時間。
+4. 連線樹莓派，進入複製壓縮檔案的資料夾，我是使用 `Documents` ，進入後進行解壓縮，需要一點時間。
 
     ```bash
     tar -zxvf processing-4.3-linux-arm64.tgz
@@ -34,7 +34,7 @@
 
 <br>
 
-5. 進入解壓縮後的資料夾。
+5. 進入解壓縮後所建立的的資料夾 `processing-4.3` 。
 
     ```bash
     cd processing-4.3
