@@ -119,6 +119,34 @@
 
 <br>
 
+## 加入環境參數
+
+1. 編輯設定檔案。
+
+    ```bash
+    sudo nano ~/.bashrc
+    ```
+
+<br>
+
+2. 添加以下內容。
+
+    ```ini
+    # 加入 Processing
+    export PROCESSING_HOME=/home/sam6238/Documents/processing-4.3
+    export PATH=$PATH:$PROCESSING_HOME
+    ```
+
+<br>
+
+3. 記得重新載入。
+
+    ```bash
+    source ~/.bashrc
+    ```
+
+<br>
+
 ---
 
 _END_
