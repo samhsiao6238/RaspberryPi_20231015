@@ -93,6 +93,32 @@
 
 <br>
 
+## 切換到 Python
+
+1. 啟動後預設是 `Java` 。
+
+    ![](images/img_09.png)
+
+<br>
+
+2. 展開 `Java` 可點擊 `Manage modes...` 。
+
+    ![](images/img_14.png)
+
+<br>
+
+3. 選取 `Python` 後進行 `Install` 。
+
+    ![](images/img_10.png)
+
+<br>
+
+4. 完成後關閉安裝視窗，便可建立或開啟 `Python` 的專案。
+
+    ![](images/img_11.png)
+
+<br>
+
 ---
 
 _END_
