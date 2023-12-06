@@ -75,7 +75,7 @@
 
 <br>
 
-8. 出現提示訊息說要載入 `apache2` ：設置還未完成，暫且不需要執行 `systemctl reload apache2` 。
+8. 出現提示訊息說要重新載入 `apache2`：不過我們的設置還未完成，所以暫且不用執行 `systemctl reload apache2` 無妨。
 
     ![](images/img_12.png)
 
@@ -91,7 +91,7 @@
 
 <br>
 
-10. 查詢 `nginx` 服務狀態：因為我們要使用的是 Apache。
+10. 查詢 `nginx` 服務狀態：因為我們要使用的是 Apache，避免服務在端口上產生衝突，所以會將 nginx 關閉，不過同學在前面的章節中應該知道如何管理讓它們共存，這裡僅是基於讓環境更單純作為考量，並非絕對程序。
 
     ```bash
     sudo systemctl status nginx
