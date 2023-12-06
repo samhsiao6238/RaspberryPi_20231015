@@ -45,7 +45,7 @@
 6. 執行安裝腳本。
 
     ```bash
-    ./install.sh
+    sudo ./install.sh
     ```
 
 <br>
