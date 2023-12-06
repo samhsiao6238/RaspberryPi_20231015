@@ -69,7 +69,7 @@
 9. 進行授權。
 
     ```bash
-    chmod +x processing
+    sudo chmod +x processing
     ```
 
 <br>
