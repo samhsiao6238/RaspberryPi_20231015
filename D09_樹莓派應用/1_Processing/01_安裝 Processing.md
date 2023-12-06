@@ -59,7 +59,7 @@
 8. 不過非常詭異，再次執行安裝腳本並沒任何錯誤提示，顯示完成。
 
     ```bash
-    ./install.sh
+    sudo ./install.sh
     ```
 
     ![](images/img_05.png)
