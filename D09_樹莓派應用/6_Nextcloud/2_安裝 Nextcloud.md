@@ -1,160 +1,8 @@
-# 安裝
+# 安裝 Nextcloud
 
 <br>
 
-## 安裝基本環境
-
-1. 更新
-
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-
-<br>
-
-2. 遇到提示移除不必要套件就跟著做。
-
-    ```bash
-    sudo apt autoremove
-    ```
-
-<br>
-
-3. 安裝多個依賴套件，主要用來搭建 LAMP(Linux, Apache, MySQL/MariaDB, PHP) 環境。
-
-    ```bash
-    sudo apt install apache2 mariadb-server php php-mysql php-gd php-curl php-xml php-zip php-intl php-mbstring php-json php-imagick libapache2-mod-php
-    ```
-
-<br>
-
-## 將相關套件設置為開啟啟動
-
-1. 開機啟動服務：`apache2` 。
-
-    ```bash
-    sudo systemctl enable apache2
-    ```
-
-<br>
-
-2. 開機啟動服務：`mariadb` 。
-
-    ```bash
-    sudo systemctl enable mariadb
-    ```
-
-<br>
-
-3. 立即啟動服務
-
-    ```bash
-    sudo systemctl start apache2 && sudo systemctl start mariadb
-    ```
-
-<br>
-
-4. 設定資料庫：這個步驟跟 `MySQL` 的章節是一樣的，這裡簡單帶過，以下五次 `NO` + 一次 `YES` 。
-
-    ```bash
-    sudo mysql_secure_installation
-    ```
-
-<br>
-
-5. 預設沒有密碼，直接 `ENTER` 即可。
-
-    ![](images/img_01.png)
-
-<br>
-
-6. NO
-
-    ![](images/img_02.png)
-
-<br>
-
-7. NO
-
-    ![](images/img_03.png)
-
-<br>
-
-8. NO
-
-    ![](images/img_04.png)
-
-<br>
-
-9. NO
-
-    ![](images/img_05.png)
-
-<br>
-
-10. NO
-
-    ![](images/img_06.png)
-
-<br>
-
-11. YES
-
-    ![](images/img_07.png)
-
-<br>
-
-12. 然後會啟動資料庫。
-
-    ![](images/img_08.png)
-
-<br>
-
-13. 登入資料庫(預設沒密碼)。
-
-    ```bash
-    sudo mysql -u root -p
-    ```
-
-    ![](images/img_09.png)
-
-<br>
-
-14. 建立資料庫。
-
-    ```bash
-    CREATE DATABASE nextcloud;
-    ```
-
-<br>
-
-15. 建立資料庫使用者帳號並賦予權限。
-
-    ```bash
-    GRANT ALL PRIVILEGES ON nextcloud.* TO 'sam6238'@'%' IDENTIFIED BY 'sam112233';
-    ```
-
-<br>
-
-16. 刷新權限。
-
-    ```bash
-    FLUSH PRIVILEGES;
-    ```
-
-<br>
-
-17. 退出資料庫系統。
-
-    ```bash
-    EXIT;
-    ```
-
-    ![](images/img_10.png)
-
-<br>
-
-## 安裝 Nextcloud
+## 步驟說明
 
 1. 切換到要安裝 Nextcloud 的資料夾。
 
@@ -368,7 +216,7 @@
 
 <br>
 
-5. 安裝兩個套件
+5. 安裝兩個套件。
 
     ```bash
     sudo apt install ca-certificates apt-transport-https
@@ -935,5 +783,3 @@ _示範安裝 `OCC Web`，OCC 是 Nextcloud 的命令列介面，用於執行各
 ---
 
 _END_
-
-
