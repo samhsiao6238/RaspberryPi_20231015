@@ -4,7 +4,7 @@
 
 ## 步驟說明
 
-1. 切換到要安裝 Nextcloud 的資料夾。
+1. 切換到要安裝 Nextcloud 的資料夾：這是樹莓派系統預設的 Web 服務器資料夾。
 
     ```bash
     cd /var/www/html
@@ -12,7 +12,7 @@
 
 <br>
 
-2. 下載 Nextcloud。
+2. 透過 `wget` 指令下載 Nextcloud 安裝檔案。
 
     ```bash
     sudo wget https://download.nextcloud.com/server/releases/latest.tar.bz2
@@ -22,7 +22,7 @@
 
 <br>
 
-3. 解壓縮，需要一點時間，畫面沒有變化，耐心等待。
+3. 透過 `tar` 指令進行解壓縮：ˋ這需要一點時間，過程中畫面沒有變化，請耐心等待。
     
     ```bash
     sudo tar -xjf latest.tar.bz2
@@ -32,7 +32,7 @@
 
 <br>
 
-3. 設定權限，需要一點時間。
+4. 設定權限：需要一點時間，這將設定 Nextcloud 目錄 `/var/www/html/nextcloud` 的所有權限，包含 `chown` 更改所有權、`chmod` 設置目錄與文件權限。
 
     ```bash
     sudo chown -R www-data:www-data /var/www/html/nextcloud && sudo find /var/www/html/nextcloud/ -type d -exec chmod 750 {} \; && sudo find /var/www/html/nextcloud/ -type f -exec chmod 640 {} \;
@@ -40,7 +40,7 @@
 
 <br>
 
-4. 建立 Nextcloud 設定檔 `nextcloud.conf` 。
+5. 建立 Nextcloud 設定檔 `nextcloud.conf`：。
 
     ```bash
     sudo nano /etc/apache2/sites-available/nextcloud.conf
@@ -48,7 +48,7 @@
 
 <br>
 
-5. 貼上以下內容，儲存退出。
+6. 貼上以下內容：儲存退出。
 
     ```ini
     Alias /nextcloud "/var/www/html/nextcloud"
@@ -67,7 +67,7 @@
 
 <br>
 
-6. 啟用站點。
+7. 啟用站點配置文件：告知 Apache 按照配置文件服務網站。
 
     ```bash
     sudo a2ensite nextcloud.conf
@@ -75,13 +75,13 @@
 
 <br>
 
-7. 出現提示訊息說要載入 `apache2` ，但現在還不需要啟動，所以不用執行 `systemctl reload apache2` 。
+8. 出現提示訊息說要載入 `apache2` ：設置還未完成，暫且不需要執行 `systemctl reload apache2` 。
 
     ![](images/img_12.png)
 
 <br>
 
-8. 啟動必要模組。
+9. 啟動必要模組：Nextcloud 運行所必要的模組。
 
     ```bash
     sudo a2enmod rewrite headers env dir mime
@@ -91,7 +91,7 @@
 
 <br>
 
-9. 查詢 `nginx` 服務狀態。
+10. 查詢 `nginx` 服務狀態：因為我們要使用的是 Apache。
 
     ```bash
     sudo systemctl status nginx
@@ -101,7 +101,7 @@
 
 <br>
 
-10. 假如 `nginx` 是啟用狀態，要先停用。
+11. 假如 `nginx` 服務的狀態是啟用中：透過以下指令進行停用。
 
     ```bash
     sudo systemctl stop nginx
@@ -109,7 +109,7 @@
 
 <br>
 
-11. 查詢 `apache2` 服務狀態，確認是 `active` 。
+12. 查詢 `apache2` 服務狀態：需要的狀態是 `active` 。
 
     ```bash
     sudo systemctl status apache2
@@ -119,7 +119,7 @@
 
 <br>
 
-12. 如需前一個步驟顯示尚未啟用 `apache2` ，則需立即啟用並設定為開機啟動。
+13. 如需前一個步驟顯示尚未啟用 `apache2` ：立即啟用 Apache 服務並設定為開機啟動。
 
     ```bash
     sudo systemctl start apache2 && sudo systemctl enable apache2
@@ -127,17 +127,7 @@
 
 <br>
 
-13. 執行以下指令確保模組已經啟用。
-
-    ```bash
-    sudo a2enmod rewrite
-    ```
-
-    ![](images/img_17.png)
-
-<br>
-
-14. 重啟 Apache
+14. 假如有修改設定文件：必須透過 `restart` 指令重啟 Apache 服務。
 
     ```bash
     sudo systemctl restart apache2
@@ -145,7 +135,7 @@
 
 <br>
 
-15. 安裝套件 `software-properties-common`。
+15. 安裝套件 `software-properties-common` ：這是管理軟件來源和 PPA 的工具，以下程序所需。
 
     ```bash
     sudo apt install -y software-properties-common
@@ -155,68 +145,7 @@
 
 <br>
 
-16. (跳過) 在系統中添加一個 `ondrej/php` 的個人軟體包存檔（Personal Package Archive，簡稱PPA），主要目的是獲得更新的PHP版本，添加這個PPA後就可安裝或更新到這個 PPA 提供的 PHP 版本。。
-
-    ```bash
-    sudo add-apt-repository ppa:ondrej/php
-    ```
-
-<br>
-
-17. (跳過) 會顯示提醒按下 `ENTER` 繼續。
-
-    ![](images/img_19.png)
-
-<br>
-
-18. (跳過) 出現關於棄用的警告，這在後續繼續安裝可能會出錯。
-
-    ![](images/img_20.png)
-
-<br>
-
-## 排除問題
-
-1. 執行更新指令，確實出現一些錯誤。
-
-    ```bsh
-    sudo apt update
-    ```
-
-    ![](images/img_22.png)
-
-<br>
-
-2. (跳過) 切換到套件列表管理目錄。
-
-    ```bash
-    cd /etc/apt/sources.list.d/
-    ```
-
-<br>
-
-3. (跳過) 查看有哪些列表，假如有切換目錄，僅需 `ls` 。
-
-    ```bash
-    ls
-    ```
-
-    ![](images/img_23.png)
-
-<br>
-
-4. (跳過) 編輯兩個列表，將導致錯誤的來源註解。
-
-    ```bash
-    sudo nano ondrej-ubuntu-php-noble.list
-    sudo nano ondrej-ubuntu-php-noble.list.save
-    ```
-
-    ![](images/img_24.png)
-
-<br>
-
-5. 安裝兩個套件。
+16. 安裝兩個套件： `certificates` 包含了一系列被信任的證書， `apt-transport-https` 讓 APT 可通過 HTTPS 協議訪問軟件倉庫。
 
     ```bash
     sudo apt install ca-certificates apt-transport-https
@@ -226,7 +155,7 @@
 
 <br>
 
-6. 下載公鑰。
+17. 下載公鑰：從指定的 URL 下載 GPG，並且儲存到系統中。
 
     ```bash
     wget -q https://packages.sury.org/php/apt.gpg -O- | sudo tee /etc/apt/trusted.gpg.d/php.gpg
@@ -234,13 +163,13 @@
 
 <br>
 
-7. 出現可怕的一堆亂碼。
+18. 出現可怕的一堆亂碼：會先嘗試檢驗這亂碼是否影響運行。
 
     ![](images/img_26.png)
 
 <br>
 
-8. 先用 gpg 命令來列出密鑰並驗證密鑰是否正確下載。
+19. 用 gpg 命令來列出密鑰：可查看密鑰是否正確下載達到驗證目的。
 
     ```bash
     sudo gpg --show-keys /etc/apt/trusted.gpg.d/php.gpg
@@ -248,13 +177,13 @@
 
 <br>
 
-9. 既然正確下載了，就不予理會了。
+20. 繼續進行安裝：既然檢查程序都正確，對前面顯示的亂碼不予理會。
 
     ![](images/img_27.png)
 
 <br>
 
-10. 添加資源列表。
+21. 手動添加資源列表。
 
     ```bash
     echo "deb https://packages.sury.org/php/ bullseye main" | sudo tee /etc/apt/sources.list.d/php.list
@@ -262,7 +191,7 @@
 
 <br>
 
-11. 進行更新。
+22. 進行更新。
 
     ```bash
     sudo apt update && sudo apt upgrade -y
@@ -383,6 +312,69 @@
     ```
 
 <br>
+
+## 排除問題
+
+16. (跳過) 在系統中添加一個 `ondrej/php` 的個人軟體包存檔（Personal Package Archive，簡稱PPA），主要目的是獲得更新的PHP版本，添加這個PPA後就可安裝或更新到這個 PPA 提供的 PHP 版本。。
+
+    ```bash
+    sudo add-apt-repository ppa:ondrej/php
+    ```
+
+<br>
+
+17. (跳過) 會顯示提醒按下 `ENTER` 繼續。
+
+    ![](images/img_19.png)
+
+<br>
+
+18. (跳過) 出現關於棄用的警告，這在後續繼續安裝可能會出錯。
+
+    ![](images/img_20.png)
+
+<br>
+
+1. 執行更新指令，確實出現一些錯誤。
+
+    ```bsh
+    sudo apt update
+    ```
+
+    ![](images/img_22.png)
+
+<br>
+
+2. (跳過) 切換到套件列表管理目錄。
+
+    ```bash
+    cd /etc/apt/sources.list.d/
+    ```
+
+<br>
+
+3. (跳過) 查看有哪些列表，假如有切換目錄，僅需 `ls` 。
+
+    ```bash
+    ls
+    ```
+
+    ![](images/img_23.png)
+
+<br>
+
+4. (跳過) 編輯兩個列表，將導致錯誤的來源註解。
+
+    ```bash
+    sudo nano ondrej-ubuntu-php-noble.list
+    sudo nano ondrej-ubuntu-php-noble.list.save
+    ```
+
+    ![](images/img_24.png)
+
+<br>
+
+
 
 ## 重新開機後
 
