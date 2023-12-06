@@ -119,7 +119,7 @@
 
 <br>
 
-13. 如需前一個步驟顯示尚未啟用 `apache2` ：立即啟用 Apache 服務並設定為開機啟動。
+13. 如果前一個步驟顯示尚未啟用 `apache2` ：立即啟用 Apache 服務並設定為開機啟動。
 
     ```bash
     sudo systemctl start apache2 && sudo systemctl enable apache2
