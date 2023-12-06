@@ -54,7 +54,7 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-7. 確認當前啟用的版本：這是服務器目前正在使用的 PHP 模組版本，可用於確保 Apache 使用的是與 `update-alternatives` 設置相符合的 PHP 版本。
+7. 確認當前啟用的版本：這是服務器目前正在使用的 PHP 模組版本，執行檢查以確保 Apache 使用的是與 `update-alternatives` 設置相符合的 PHP 版本。
 
     ```bash
     sudo apache2ctl -M | grep php
@@ -70,7 +70,7 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-9. 編輯個別網站配置文件：解決 `AH00558` 警告。
+9. 先解決 `AH00558` 警告：編輯個別網站配置文件。
 
     ```bash
     sudo nano /etc/apache2/sites-available/000-default.conf
@@ -78,7 +78,23 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-10. 在網站文件 `000-default.conf` 中添加 `ServerName` 設置。 
+10. 以下是 `000-default.conf` 文件預設的內容。
+
+    ```ini
+    <VirtualHost *:80>
+
+            ServerAdmin webmaster@localhost
+            DocumentRoot /var/www/html
+
+            ErrorLog ${APACHE_LOG_DIR}/error.log
+            CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    </VirtualHost>
+    ```
+
+<br>
+
+11. 編輯網站文件 `000-default.conf`：添加 `ServerName` 設置、修正端口、添加授權等，可直接替換為以下內容。 
 
     ```ini
     <VirtualHost *:8080>
@@ -103,7 +119,7 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-11. 安裝 PHP 8.1。
+12. 安裝 PHP 8.1。
 
     ```bash
     sudo apt install libapache2-mod-php8.1
@@ -111,7 +127,7 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-12. 假如要安裝 8.3 可執行以下指令，不過這裡不適配，指令僅供參考。
+13. 假如要安裝 8.3 可執行以下指令，不過這裡不適配，指令僅供參考。
 
     ```bash
     sudo apt install libapache2-mod-php8.3
@@ -119,7 +135,7 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-13. 切換版本：停用舊版 7.4、啟用新版 8.1，並且重啟服務。
+14. 切換版本：停用舊版 7.4、啟用新版 8.1，並且重啟服務。
 
     ```bash
     sudo a2dismod php7.4 && sudo a2enmod php8.1 && sudo systemctl restart apache2
@@ -127,7 +143,7 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-14. 未來依版本適配狀況調整：若要停用 8.1 改為 8.3 可使用以下指令，其他版本的切換亦同。
+15. 未來依版本適配狀況調整：若要停用 8.1 改為 8.3 可使用以下指令，其他版本的切換亦同。
 
     ```bash
     sudo a2dismod php8.1 && sudo a2enmod php8.3 && sudo systemctl restart apache2
@@ -135,7 +151,7 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-15. 再查看一次啟用的版本：確任已經完成切換。
+16. 再查看一次啟用的版本：確任已經完成切換。
 
     ```bash
     sudo apache2ctl -M | grep php
@@ -145,7 +161,7 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-16. 重新啟動。
+17. 重新啟動。
 
     ```bash
     sudo reboot
