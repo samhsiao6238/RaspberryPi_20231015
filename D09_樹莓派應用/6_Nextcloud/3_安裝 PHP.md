@@ -70,54 +70,41 @@ _務必完成前面的程序才能接續這個小節_
 
 <br>
 
-9. 先解決 `AH00558` 警告：編輯個別網站配置文件。
+9. 先解決 `AH00558` 警告：編輯全局網站配置文件 `apache2.conf`。
 
     ```bash
-    sudo nano /etc/apache2/sites-available/000-default.conf
+    sudo nano /etc/apache2/apache2.conf
     ```
 
 <br>
 
-10. 以下是 `000-default.conf` 文件預設的內容。
+10. 全局文件 `apache2.conf` 的內容很多：將 `ServerName` 放置在沒有被包覆的最外層區塊即可，我添加的位置如下，完成後儲存退出。
 
     ```ini
-    <VirtualHost *:80>
+    # 添加這一行
+    ServerName 192.168.1.134
 
-            ServerAdmin webmaster@localhost
-            DocumentRoot /var/www/html
-
-            ErrorLog ${APACHE_LOG_DIR}/error.log
-            CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-    </VirtualHost>
+    # 以下是原本的預設內容
+    <Directory />
+            Options FollowSymLinks
+            AllowOverride None
+            Require all denied
+    </Directory>
     ```
 
 <br>
 
-11. 編輯網站文件 `000-default.conf`：添加 `ServerName` 設置、修正端口、添加授權等，可直接替換為以下內容。 
+11. 重啟服務，並且再執行一次確認當前版本的指令：正常無警示。
 
-    ```ini
-    <VirtualHost *:8080>
-
-        ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/html/nextcloud
-
-        # 加入 ServerName 指令
-        ServerName 192.168.1.134
-
-        <Directory /var/www/html/nextcloud>
-            AllowOverride All
-            Require all granted
-        </Directory>
-
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-    </VirtualHost>
-
+    ```bash
+    sudo systemctl restart apache2 && sudo apache2ctl -M | grep php
     ```
+    
+    ![](images/img_64.png)
 
 <br>
+
+
 
 12. 安裝 PHP 8.1。
 

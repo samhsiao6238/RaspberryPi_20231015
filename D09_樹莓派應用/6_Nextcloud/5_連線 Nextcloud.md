@@ -1,10 +1,16 @@
 # 連線 Nextcloud
 
+_連線之前先完成管理文件修正_
+
 <br>
 
-## 重新開機後
+## 編輯個別網站管理文件
 
-1. 先透過終端機連線樹莓派。
+_前面在安裝 PHP 的步驟已經編輯過全局管理文件_
+
+<br>
+
+1. 連線樹莓派。
 
     ```bash
     ssh <帳號>@<樹莓派 IP>
@@ -12,7 +18,64 @@
 
 <br>
 
-2. 切換到 Nextcloud 的安裝目錄。
+2. 使用編輯器開啟個別網站文件 `000-default.conf`。 
+
+    ```bash
+    sudo nano /etc/apache2/sites-available/000-default.conf
+    ```
+
+<br>
+
+3. 原始內容如下。
+
+    ```ini
+    <VirtualHost *:80>
+
+            ServerAdmin webmaster@localhost
+            DocumentRoot /var/www/html
+
+            ErrorLog ${APACHE_LOG_DIR}/error.log
+            CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    </VirtualHost>
+    ```
+
+<br>
+
+4. 修改三處內容：修正端口、修改路徑、添加授權，可直接替換為以下內容。
+
+    ```ini
+    # 設置端口為 8080
+    <VirtualHost *:8080>
+
+        ServerAdmin webmaster@localhost
+        # 修改路徑
+        DocumentRoot /var/www/html/nextcloud
+        
+        # 加入授權
+        <Directory /var/www/html/nextcloud>
+            AllowOverride All
+            Require all granted
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    </VirtualHost>
+
+    ```
+
+<br>
+
+5. 編輯管理文件之後都要重啟服務。
+
+    ```bash
+    sudo systemctl restart apache2
+    ```
+
+<br>
+
+6. 切換到 Nextcloud 的安裝目錄。
 
     ```bash
     cd  /var/www/html
@@ -20,7 +83,7 @@
 
 <br>
 
-3. 授權：對使用者進行群組授權。
+7. 授權：對使用者進行群組授權。
 
     ```bash
     sudo chown -R sam6238:sam6238 /var/www/html/nextcloud
@@ -28,13 +91,13 @@
 
 <br>
 
-4. 這時候若進行訪問，會發現還是沒訪問權限。
+8. 這時候若進行訪問，會發現還是沒訪問權限。
 
     ![](images/img_34.png)
 
 <br>
 
-5. 透過以下指令確認 `.htaccess` 文件存在。
+9. 透過以下指令確認 `.htaccess` 文件存在。
 
     ```bash
     ls -la /var/www/html/nextcloud | grep .htaccess
@@ -44,7 +107,7 @@
 
 <br>
 
-6. 授權：確保 `.htaccess` 文件的權限為 `644` 。
+10. 授權：確保 `.htaccess` 文件的權限為 `644` 。
 
     ```bash
     sudo chmod 644 /var/www/html/nextcloud/.htaccess
@@ -52,7 +115,7 @@
 
 <br>
 
-7. 授權：確保目錄 `/var/www/html/nextcloud` 和其子目錄的權限至少為 `755` 。
+11. 授權：確保目錄 `/var/www/html/nextcloud` 和其子目錄的權限至少為 `755` 。
 
     ```bash
     sudo chmod -R 755 /var/www/html/nextcloud
@@ -60,7 +123,7 @@
 
 <br>
 
-8. 授權：確保 `www-data`（或 Web 伺服器的用戶）是 `/var/www/html/nextcloud` 和其子目錄的擁有者。
+12. 授權：確保 `www-data`（或 Web 伺服器的用戶）是 `/var/www/html/nextcloud` 和其子目錄的擁有者。
 
     ```bash
     sudo chown -R www-data:www-data /var/www/html/nextcloud
@@ -68,7 +131,7 @@
 
 <br>
 
-9. 訪問 `<樹莓派 IP>/nextcloud`，成功連線 `Nextcloud`。
+13. 訪問 `<樹莓派 IP>/nextcloud`，成功連線 `Nextcloud`。
 
     ![](images/img_36.png)
 
