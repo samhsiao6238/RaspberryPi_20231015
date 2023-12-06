@@ -52,10 +52,6 @@
 
 7. 完成安裝，會建立桌面捷徑。
 
-    ```bash
-    sudo ./install.sh
-    ```
-
     ![](images/img_05.png)
 
 <br>
