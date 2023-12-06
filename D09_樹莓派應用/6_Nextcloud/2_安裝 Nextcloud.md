@@ -22,7 +22,7 @@
 
 <br>
 
-3. 透過 `tar` 指令進行解壓縮：ˋ這需要一點時間，過程中畫面沒有變化，請耐心等待。
+3. 透過 `tar` 指令進行解壓縮：解壓縮需要一點時間，過程中畫面沒有變化，請耐心等待。
     
     ```bash
     sudo tar -xjf latest.tar.bz2
@@ -40,7 +40,7 @@
 
 <br>
 
-5. 建立 Nextcloud 設定檔 `nextcloud.conf`：。
+5. 建立 Nextcloud 設定檔 `nextcloud.conf`：這是自訂的文件，預設沒有這個檔案。
 
     ```bash
     sudo nano /etc/apache2/sites-available/nextcloud.conf
@@ -48,19 +48,19 @@
 
 <br>
 
-6. 貼上以下內容：儲存退出。
+6. 貼上以下內容：特別注意， Apache 配置文件並無縮排規定，以易讀為主即可，完成後儲存退出。
 
     ```ini
     Alias /nextcloud "/var/www/html/nextcloud"
 
     <Directory /var/www/html/nextcloud>
-    Require all granted
-    AllowOverride All
-    Options FollowSymLinks MultiViews
+        Require all granted
+        AllowOverride All
+        Options FollowSymLinks MultiViews
 
-    <IfModule mod_dav.c>
-        Dav off
-    </IfModule>
+        <IfModule mod_dav.c>
+            Dav off
+        </IfModule>
 
     </Directory>
     ```
