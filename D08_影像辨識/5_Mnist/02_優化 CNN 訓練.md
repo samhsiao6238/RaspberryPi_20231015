@@ -14,11 +14,11 @@ _基於前次範例的模型識別績效不佳，嘗試進行以下優化，更�
 
    原本的優化器是 `Adadelta`，這是一種基於梯度的優化方法，因為它會根據梯度的變化自動調整學習率，所以不需設定默認的學習率。
 
-   而 Adam 優化器是一種結合了Momentum (動量) 和 RMSprop (均方根傳播法，Root Mean Square Propagation) 的優化方法，它保持了梯度的方向和大小的一個滑動平均，使得優化過程更加平穩和快速。
+   而改用的 `Adam` 優化器是一種結合了Momentum (動量) 和 RMSprop (均方根傳播法，Root Mean Square Propagation) 的優化方法，它保持了梯度的方向和大小的一個滑動平均，使得優化過程更加平穩和快速。
 
 <br>
 
-1. 加入 EarlyStopping 回調監測驗證損失（validation loss），如果損失在一定的週期（epoch）內沒有改善，則訓練會提前停止，有助於在驗證損失不再改善時停止訓練，防止過擬合（overfitting）而失去泛化能力（Generalization Ability）。
+2. 加入 EarlyStopping 回調監測驗證損失（validation loss），如果損失在一定的週期（epoch）內沒有改善，則訓練會提前停止，有助於在驗證損失不再改善時停止訓練，防止過擬合（overfitting）而失去泛化能力（Generalization Ability）。
 
 <br>
 
@@ -30,7 +30,7 @@ _基於前次範例的模型識別績效不佳，嘗試進行以下優化，更�
 
 <br>
 
-2. 完整程式碼。
+2. 完整程式碼：在 Colab 上訓練模型的腳本。
 
    ```python
    # 導入所需函式庫
