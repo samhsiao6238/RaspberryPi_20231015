@@ -18,25 +18,25 @@
 
 ## 步驟
 
-1. 開啟 `命令選擇區`
+1. 開啟 `命令選擇區`。
 
    ![](images/img_33.png)
 
 </br>
 
-2. 輸入 `devcontainer` 並選擇添加容器
+2. 輸入 `devcontainer` 並選擇添加容器。
 
    ![](images/img_35.png)
 
 </br>
 
-3. 建立一個新的設定
+3. 建立一個新的設定。
 
    ![](images/img_36.png)
 
 </br>
 
-4. 輸入關鍵字 `python` 進行查詢並選擇
+4. 輸入關鍵字 `python` 進行查詢並選擇。
 
    ![](images/img_38.png)
 
@@ -54,13 +54,13 @@
 
 </br>
 
-7. 按下 `rebuild` 開始建立容器
+7. 按下 `rebuild` 開始建立容器。
 
    ![](images/img_41.png)
 
 </br>
 
-8. 完成時會添加一個資料夾 `.devcontainer` 以及一個設定檔案 `devcontainer.json`
+8. 完成時會添加一個資料夾 `.devcontainer` 以及一個設定檔案 `devcontainer.json`。
    
    ![](images/img_42.png)
 
@@ -68,7 +68,7 @@
 
 ## 檢查與觀察
 
-1. 在這個容器中執行指令查詢 Python 安裝版本
+1. 在這個容器中執行指令查詢 Python 安裝版本。
 
    ```bash
    python --version
@@ -95,19 +95,19 @@
 
 </br>
 
-3. 切記要先提交
+3. 切記要先提交。
 
    ![](images/img_45.png)
 
 </br>
 
-4. 點擊左下角連線訊息框
+4. 點擊左下角連線訊息框。
 
    ![](images/img_47.png)
 
 </br>
 
-5. 停止當前 Codespaces
+5. 停止當前 Codespaces。
 
    ![](images/img_46.png)
 
@@ -119,13 +119,13 @@
 
 </br>
 
-7. 重新建立 Codespaces，或是重建容器也可以
+7. 重新建立 Codespaces，或是重建容器也可以。
    
    ![](images/img_50.png)
 
 </br>
 
-_⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予理會_
+_⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予理會。_
 
 </br>
 
@@ -166,7 +166,7 @@ _⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予
 
 </br>
 
-2. 建立檔案之後會提示安裝延伸模組 `Docker`
+2. 建立檔案之後會提示安裝延伸模組 `Docker`。
 
    ![](images/img_53.png)
 
@@ -191,37 +191,37 @@ _⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予
 
 </br>
 
-4. 這次直接選擇 `Rebuild Container`
+4. 這次直接選擇 `Rebuild Container`。
 
    ![](images/img_55.png)
 
 </br>
 
-5. 套出警告，點擊重建即可
+5. 套出警告，點擊重建即可。
 
    ![](images/img_56.png)
 
 </br>
 
-6. 重建後會再次提示安裝插件
+6. 重建後會再次提示安裝插件。
 
    ![](images/img_57.png)
 
 </br>
 
-7. 透過指令 `groups` 查詢使用者
+7. 透過指令 `groups` 查詢使用者。
    
    ![](images/img_58.png)
 
 </br>
 
-8. 同樣也可以查詢 `git` 的版本
+8. 同樣也可以查詢 `git` 的版本。
 
    ![](images/img_59.png)
 
 </br>
 
-9. 當前所在路徑 `pwd`
+9. 當前所在路徑 `pwd`。
 
     ![](images/img_60.png)
 
