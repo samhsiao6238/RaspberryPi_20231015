@@ -170,6 +170,8 @@ _⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予
 
    ![](images/img_53.png)
 
+</br>
+
 3. 接著修改 `devcontainer.json` 中的 `image`，將原本所指向的映像改變為 `Dockerfile` 。
 
    ```json
