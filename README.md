@@ -1,3 +1,9 @@
+# 2024/05/07 公告
+
+_此版本已經停止更新，新版內容請查看 [Raspi_2024](https://github.com/samhsiao6238/RaspberryPi_20240629) 。_
+
+<br>
+
 # 樹莓派課程 2023
 
 [課程 Googoe Meet 連結](https://meet.google.com/dej-skyd-trv)
