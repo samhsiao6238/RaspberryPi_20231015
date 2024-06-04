@@ -6,7 +6,7 @@
 
 ## A. 安裝與檢查
 
-1. 更新套件索引＆升級套件
+1. 更新套件索引＆升級套件。
 
    ```bash
    sudo apt update && sudo apt upgrade -y
@@ -14,7 +14,7 @@
 
 <br>
 
-2. 安裝 apache2
+2. 安裝 `apache2`。
 
    ```bash
    sudo apt install apache2 -y
@@ -24,7 +24,7 @@
 
 <br>
 
-3. 透過指令查詢 apache2 安裝狀態
+3. 透過指令查詢 `apache2` 安裝狀態。
 
    - 使用 `dpkg -l` 命令列出與 `apache2` 相關的套件列表
 
@@ -36,7 +36,7 @@
 
 <br>
 
-4. 查詢 apache2 安裝的版本
+4. 查詢 `apache2` 安裝的版本。
 
    ```bash
    apache2 -v
@@ -46,7 +46,7 @@
 
 <br>
 
-5. 查詢 apache2 服務是否啟動
+5. 查詢 `apache2` 服務是否啟動。
 
    ```bash
    sudo systemctl status apache2
@@ -56,7 +56,7 @@
 
 <br>
 
-6. （若未啟動）立即啟動服務
+6. _若未啟動_，立即啟動服務。
 
    ```bash
    sudo systemctl start apache2
@@ -64,7 +64,7 @@
 
 <br>
 
-7. 設定為開機啟動
+7. 設定為開機啟動。
 
    ```bash
    sudo systemctl enable apache2
@@ -76,11 +76,11 @@
 
 ## B. 設定文件說明
 
-- Apache 的配置檔案有兩個
+_Apache 的配置檔案有兩個_
 
 <br>
 
-1. 全局配置設定檔路徑
+1. 全局配置設定檔路徑。
 
    ```bash
    /etc/apache2/apache2.conf
@@ -88,9 +88,7 @@
 
 <br>
 
-2. 個別配置設定檔路徑
-
-   - 用於定義單個網站或應用程式的設定，可以在此配置每個網站的文件根目錄、特定的伺服器名稱、伺服器別名、錯誤頁面等。
+2. 個別配置設定檔路徑：用於定義單個網站或應用程式的設定，可以在此配置每個網站的文件根目錄、特定的伺服器名稱、伺服器別名、錯誤頁面等。
 
    ```bash
    /etc/apache2/sites-available/000-default.conf
@@ -104,7 +102,7 @@ _因為使用終端機編輯器查看這類文件很吃力，以下設定權限�
 
 <br>
 
-1. 要使用 VSCode 直接編輯設定文件，必須先進行 `授權`
+1. 要使用 VSCode 直接編輯設定文件，必須先進行 `授權`。
 
     _全局_
    ```bash
@@ -264,7 +262,7 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
 
 ## F. 授權訪問文件
 
-1. 讓 Apache 用戶有權限訪問服務相關目錄
+1. 讓 `Apache` 用戶有權限訪問服務相關目錄。
 
    ```bash
    sudo chmod -R 755 <Apache 超文本所在目錄>
@@ -292,7 +290,21 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
 
 <br>
 
-3. 後續會添加超文本，所以可先授權自己擁有添加文件的權限，沒授權的話將無法新增 `index.html`。
+3. 因為 `DocumentRoot` 設置為 `<Apache 超文本所在目錄>`，那麼 `Apache` 需要對所在目錄的上層資料夾也具有執行權限方可進行訪問。
+
+   ```bash
+   sudo chmod +x /home
+   sudo chmod +x /home/<使用者名稱>
+   ```
+   
+   _如_
+   ```bash
+   sudo chmod +x /home
+   sudo chmod +x /home/sam6238
+   ```
+
+
+4. 後續會添加超文本，所以可先授權自己擁有添加文件的權限，沒授權的話將無法新增 `index.html`。
 
    ```bash
    sudo chown -R <使用者名稱>:<使用者同名群組名稱> <Apache 超文本所在目錄>
