@@ -22,9 +22,7 @@
 
 <br>
 
-3. 透過指令查詢 `apache2` 安裝狀態。
-
-   - 使用 `dpkg -l` 命令列出與 `apache2` 相關的套件列表
+3. 透過指令查詢 `apache2` 安裝狀態：使用 `dpkg -l` 命令列出與 `apache2` 相關的套件列表。
 
    ```bash
    dpkg -l | grep apache2
@@ -34,7 +32,7 @@
 
 <br>
 
-4. 查詢 `apache2` 安裝的版本。
+1. 查詢 `apache2` 安裝的版本。
 
    ```bash
    apache2 -v
@@ -74,7 +72,7 @@
 
 ## B. 設定文件說明
 
-_`Apache` 的配置文件有全局與個別配置文件。_
+_`Apache` 的配置分為 `全局` 與 `個別` 配置文件。_
 
 <br>
 
