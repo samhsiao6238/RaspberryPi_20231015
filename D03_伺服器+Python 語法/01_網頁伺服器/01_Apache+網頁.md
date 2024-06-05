@@ -32,7 +32,7 @@
 
 <br>
 
-1. 查詢 `apache2` 安裝的版本。
+4. 查詢 `apache2` 安裝的版本。
 
    ```bash
    apache2 -v
@@ -94,28 +94,33 @@ _`Apache` 的配置分為 `全局` 與 `個別` 配置文件。_
 
 ## C. 授權編輯設定文件
 
-_因為使用終端機編輯器查看這類文件很吃力，以下設定可授權透過 VSCode 進行編輯。_
+_使用終端機編輯器來查看這類文件很吃力，設定授權後便可透過 VSCode 進行編輯。_
 
 <br>
 
 1. 要使用 VSCode 直接編輯設定文件，必須先進行 `授權`。
 
-    _全局_
+   _全局文件_
+
    ```bash
    sudo chown $USER  /etc/apache2/apache2.conf
    ```
-    _個別_    
+
+   _個別文件_
+
    ```bash
    sudo chown $USER /etc/apache2/sites-available/000-default.conf
    ```
 
 <br>
 
-2. 補充說明，前項 `文件授權`，因為 VSCode 無法執行像 `sudo nano` 這樣的授權行為，所以必須修改檔案權限或是擁有者來賦予編輯的權限，在只有單人的開發環境中，使用授權或是變更擁有者的效果並無差異。
+2. 補充說明前項 `文件授權`，因為 VSCode 無法執行像 `sudo nano` 這樣的授權行為，所以必須修改檔案權限或是擁有者來賦予編輯的權限；另外，在只有單人的開發情境下，使用授權或是變更擁有者的效果並無差異。
 
 <br>
 
-3. 在 `多人共用` 的環境中，因為 `/etc` 文件屬於全域的設定檔案，將檔案 `擁有者` 改為特定人實屬不便，最直接的處置方式就是使用終端機以 `sudo nano` 進行編輯，另外可透過建立權限群組，如 ` apacheadmin`，然後透過將使用者加入群組來配置權限。
+_假如是多人共用一台設備_
+
+3. 在 `多人共用一台設備` 的情況中（不是 `共同開發`），因為 `/etc` 文件屬於全域的設定檔案，所以將文件 `擁有者` 改為特定人實屬不便，最直接的處置方式就是使用終端機以 `sudo nano` 進行編輯，另外可透過建立權限群組，如 `apacheadmin`，然後透過將使用者加入群組來配置權限，以下示範的是建立群組的方式。
 
    _建立群組並加入文件_
 
@@ -130,7 +135,7 @@ _因為使用終端機編輯器查看這類文件很吃力，以下設定可授�
    ```
 
    _將當前 user 或指定 user加入群組_
-   
+
    ```bash
    sudo adduser $USER apacheadmin
    ```
@@ -138,7 +143,7 @@ _因為使用終端機編輯器查看這類文件很吃力，以下設定可授�
 <br>
 
 4. 另外一種相對暴力的處理方式就是授權 `666` 甚至 `777` ，將 `讀、寫、執行` 都全部開放，實務上是不會這樣做的，但這裡可以簡單處理。
-   
+
    ```bash
    sudo chmod 666 /etc/apache2/apache2.conf /etc/apache2/sites-available/000-default.conf
    ```
@@ -185,7 +190,7 @@ _因為使用終端機編輯器查看這類文件很吃力，以下設定可授�
        Options Indexes FollowSymLinks
        AllowOverride None
        Require all granted
-   </Directory>      
+   </Directory>    
    ```
 
 <br>
@@ -196,7 +201,7 @@ _因為使用終端機編輯器查看這類文件很吃力，以下設定可授�
 
 <br>
 
-5. 修改 `個別` 網站配置
+5. 修改 `個別` 網站配置。
 
    ```bash
    sudo nano /etc/apache2/sites-available/000-default.conf
@@ -292,14 +297,13 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
    sudo chmod +x /home
    sudo chmod +x /home/<使用者名稱>
    ```
-   
+
    _如_
+
    ```bash
    sudo chmod +x /home
    sudo chmod +x /home/sam6238
    ```
-
-
 4. 後續會添加超文本，所以可先授權自己擁有添加文件的權限，沒授權的話將無法新增 `index.html`。
 
    ```bash
@@ -311,6 +315,7 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
    ```bash
    sudo chown -R sam6238:sam6238 /home/sam6238/Documents/my_web
    ```
+
    或
 
    ```bash
@@ -360,16 +365,17 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
 ## H. 其他問題排除
 
 1. 假使看到的是這個內容，表示文本路徑設置錯誤，所以訪問到預設內容。
-   
+
    ![](images/img_89.png)
 
 <br>
 
 2. 在進行任何更改之前，先確保 Apache 配置文件沒有 `語法錯誤`。
-   
+
    ```bash
    sudo apache2ctl configtest
    ```
+
    _正確的話會看到 `Syntax OK`_
 
    ![](images/img_90.png)
@@ -381,7 +387,7 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
 <br>
 
 3. 查看日誌可以看到詳細的錯誤與問題。
-   
+
    ```bash
    sudo tail -f /var/log/apache2/error.log
    ```
@@ -389,7 +395,7 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
 <br>
 
 4. 確認站台是否啟動 `active`
-   
+
    ```bash
    sudo systemctl status apache2
    ```
@@ -399,6 +405,6 @@ _因為我們將使用預設值，所以這裡不用做任何變動，理解即�
 
 <br>
 
-___
+---
 
 _END：以上建立自己的 Apache 站台_
