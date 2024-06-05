@@ -211,9 +211,25 @@ _啟動前檢查預設的 `80` 與 `443` 端口是否佔用_
 
 <br>
 
-15. 建立文本並編輯內容（略）。
+15. 建立超文本文件 `index.html` 並編輯內容，透過快速鍵 `!` 建立並簡單修改即可。
 
     ![](images/img_24.png)
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>這是 Nginx 站台</title>
+    </head>
+    <body>
+        <h1> 這是 Nginx 網站內容</h1>
+    </body>
+    </html>
+    ```
+
+<br>
 
 16. 重新啟動。
 
