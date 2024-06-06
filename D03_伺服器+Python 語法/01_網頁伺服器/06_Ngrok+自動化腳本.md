@@ -144,13 +144,13 @@ _使用 zenity 來搭建_
 
 10. 點擊 `Execute`。
 
-   ![](images/img_99.png)
+      ![](images/img_99.png)
 
 <br>
 
 11. 輸入指定的端口，接著去訪問網頁看看。
 
-   ![](images/img_100.png)
+      ![](images/img_100.png)
 
 <br>
 
