@@ -243,6 +243,37 @@ _添加輸入 Token 的對話框_
 
 <br>
 
+## 避免終端機自動關閉
+
+1. 在某些終端機的版本中，運行後會自動關閉，可在腳本最後添加 `read` 指令，如此腳本在運行完成後會等待用戶輸入，從而保持終端機開啟。
+
+   ```bash
+   #!/bin/bash
+   # 這個腳本會提示用戶輸入端口和Ngrok token，然後啟動ngrok
+
+   # 詢問用戶要用哪個端口
+   PORT=$(zenity --entry --title="Enter Port for ngrok" --text="Enter the port you want to use (Current Port):")
+
+   # 如果用戶按下取消或不輸入端口，則退出
+   if [ -z "$PORT" ]; then
+      exit 1
+   fi
+
+   # 詢問用戶的Ngrok token
+   TOKEN=$(zenity --entry --title="Enter Ngrok Token" --text="Enter your ngrok token (if you want to authenticate):")
+
+   # 如果用戶提供了token，使用它來認證
+   if [ ! -z "$TOKEN" ]; then
+      ./ngrok authtoken $TOKEN
+   fi
+
+   # 使用指定的端口啟動ngrok
+   ./ngrok http $PORT
+
+   # 保持開啟直到用戶動作
+   read
+   ```
+
 ___
 
 _END_
