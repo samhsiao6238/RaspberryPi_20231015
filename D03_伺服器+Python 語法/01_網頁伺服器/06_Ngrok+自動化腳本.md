@@ -43,7 +43,7 @@ _這個步驟在前面已經做過，可以跳過_
 4. 解壓縮。
 
    ```bash
-   sudo unzip ngrok-stable-linux-arm.zip
+   sudo unzip ngrok-v3-stable-linux-arm64.tgz
    ```
 
 <br>
