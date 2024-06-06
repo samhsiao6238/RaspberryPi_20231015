@@ -40,10 +40,10 @@ _這個步驟在前面已經做過，可以跳過_
 
 <br>
 
-4. 解壓縮。
+4. 解壓縮：若是 `.zip` 文件則將 `tar -xvzf` 改為 `unzip`。
 
    ```bash
-   sudo unzip ngrok-v3-stable-linux-arm64.tgz
+   sudo tar -xvzf ngrok-v3-stable-linux-arm64.tgz
    ```
 
 <br>
