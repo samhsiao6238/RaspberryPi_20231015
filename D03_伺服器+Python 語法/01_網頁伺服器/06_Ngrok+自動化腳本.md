@@ -16,22 +16,33 @@ _Ngrok 本身並不是一種 `伺服器服務`，而是一種 `通道服務`，�
 
 _這個步驟在前面已經做過，可以跳過_
 
-1. 在樹莓派中進入文件資料夾
+<br>
+
+1. 在樹莓派中進入文件資料夾。
 
    ```bash
    cd ~/Documents
    ```
-2. 建立存放腳本的資料夾
+
+<br>
+
+2. 建立存放腳本的資料夾。
 
    ```bash
    sudo mkdir NgrokApp && cd NgrokApp
    ```
-3. 下載指令
+
+<br>
+
+3. 下載指令。
 
    ```bash
    sudo wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
    ```
-4. 解壓縮
+
+<br>
+
+4. 解壓縮。
 
    ```bash
    sudo unzip ngrok-stable-linux-arm.zip
@@ -43,19 +54,25 @@ _這個步驟在前面已經做過，可以跳過_
 
 _使用 zenity 來搭建_
 
-1. 安裝套件
+<br>
+
+1. 安裝套件。
 
    ```bash
    sudo apt install zenity
    ```
 
-2. 在 `~/Documents/NgrokApp` 資料夾內建立腳本
+<br>
+
+2. 在 `~/Documents/NgrokApp` 資料夾內建立腳本。
 
    ```bash
    sudo nano start_ngrok.sh
    ```
 
-3. 編輯內容
+<br>
+
+3. 編輯內容。
 
    ```bash
    #!/bin/bash
@@ -73,54 +90,69 @@ _使用 zenity 來搭建_
    ./ngrok http $PORT
    ```
 
-4. 賦予腳本執行權限
+<br>
+
+4. 賦予腳本執行權限。
 
    ```bash
    sudo chmod +x start_ngrok.sh
    ```
 
-5. 進入桌面
+<br>
+
+5. 進入桌面。
 
    ```bash
    cd ~/Desktop
    ```
 
-6. 建立腳本
+<br>
 
-    ```bash
-    sudo nano start_ngrok.desktop
-    ```
+6. 建立腳本。
 
-7. 編輯內容
+   ```bash
+   sudo nano start_ngrok.desktop
+   ```
 
-    ```bash
-    [Desktop Entry]
-    Type=Application
-    Name=Start Ngrok
-    Comment=Start ngrok for HTTP 80
-    Exec=bash -c 'cd ~/Documents/NgrokApp && ./start_ngrok.sh'
-    Icon=terminal
-    Terminal=true
-    ```
+<br>
 
-8. 賦予權限
+7. 編輯內容。
 
-    ```bash
-    sudo chmod +x start_ngrok.desktop
-    ```
+   ```bash
+   [Desktop Entry]
+   Type=Application
+   Name=Start Ngrok
+   Comment=Start ngrok for HTTP 80
+   Exec=bash -c 'cd ~/Documents/NgrokApp && ./start_ngrok.sh'
+   Icon=terminal
+   Terminal=true
+   ```
 
-9. 在樹莓派桌面點擊運行
-    
-    ![](images/img_98.png)
+<br>
 
+8. 賦予權限。
 
-10. 點擊 `Execute`
-    
-    ![](images/img_99.png)
+   ```bash
+   sudo chmod +x start_ngrok.desktop
+   ```
+
+<br>
+
+9. 在樹莓派桌面點擊運行。
+
+   ![](images/img_98.png)
+
+<br>
+
+10. 點擊 `Execute`。
+
+   ![](images/img_99.png)
+
+<br>
 
 11. 輸入指定的端口，接著去訪問網頁看看。
-    
-    ![](images/img_100.png)
+
+   ![](images/img_100.png)
 
 <br>
 
@@ -128,68 +160,82 @@ _使用 zenity 來搭建_
 
 _添加輸入 Token 的對話框_
 
-1. 修改原本的腳本
+<br>
 
-    ```bash
-    sudo nano ~/Documents/NgrokApp/start_ngrok.sh
-    ```
+1. 修改原本的腳本。
+
+   ```bash
+   sudo nano ~/Documents/NgrokApp/start_ngrok.sh
+   ```
    _技巧提示：在編輯器中以 CTRL+K 可以快速刪除一整行_
 
 <br>
 
-2.  編輯內容
+2. 編輯內容。
 
-    ```bash
-    #!/bin/bash
-    # 這個腳本會提示用戶輸入端口和Ngrok token，然後啟動ngrok
+   ```bash
+   #!/bin/bash
+   # 這個腳本會提示用戶輸入端口和Ngrok token，然後啟動ngrok
 
-    # 詢問用戶要用哪個端口
-    PORT=$(zenity --entry --title="Enter Port for ngrok" --text="Enter the port you want to use (Current Port):")
+   # 詢問用戶要用哪個端口
+   PORT=$(zenity --entry --title="Enter Port for ngrok" --text="Enter the port you want to use (Current Port):")
 
-    # 如果用戶按下取消或不輸入端口，則退出
-    if [ -z "$PORT" ]; then
-        exit 1
-    fi
+   # 如果用戶按下取消或不輸入端口，則退出
+   if [ -z "$PORT" ]; then
+      exit 1
+   fi
 
-    # 詢問用戶的Ngrok token
-    TOKEN=$(zenity --entry --title="Enter Ngrok Token" --text="Enter your ngrok token (if you want to authenticate):")
+   # 詢問用戶的Ngrok token
+   TOKEN=$(zenity --entry --title="Enter Ngrok Token" --text="Enter your ngrok token (if you want to authenticate):")
 
-    # 如果用戶提供了token，使用它來認證
-    if [ ! -z "$TOKEN" ]; then
-        ./ngrok authtoken $TOKEN
-    fi
+   # 如果用戶提供了token，使用它來認證
+   if [ ! -z "$TOKEN" ]; then
+      ./ngrok authtoken $TOKEN
+   fi
 
-    # 使用指定的端口啟動ngrok
-    ./ngrok http $PORT
-    ```
+   # 使用指定的端口啟動ngrok
+   ./ngrok http $PORT
+   ```
 
 <br>
 
-3. 雙擊啟動桌面腳本
+3. 雙擊啟動桌面腳本。
 
    ![img](images/img_35.png)
 
-4. 點擊 `執行`
+<br>
+
+4. 點擊 `執行`。
 
    ![img](images/img_36.png)
 
-5. 輸入端口
+<br>
+
+5. 輸入端口。
 
    ![img](images/img_37.png)
+
+<br>
 
 6. 可輸入 `Authtoken` ，假如已經存過可以按下 `ENTER` 以預設值運行，假如要切換帳號就要輸入該帳號的 `Authtoken` 。
 
    ![img](images/img_38.png)
 
-7. 複製這個網址即可
+<br>
+
+7. 複製這個網址即可。
 
    ![img](images/img_39.png)
 
-8. 在任意瀏覽器瀏覽，點擊 `Visit Site`
+<br>
+
+8. 在任意瀏覽器瀏覽，點擊 `Visit Site`。
 
    ![img](images/img_40.png)
 
-9. 就會看到在指定端口的網站，比如說是 `80`，等價於終端機執行以下指令
+<br>
+
+9. 就會看到在指定端口的網站，比如說是 `80`，等價於終端機執行以下指令。
    
    ```bash
    ./ngrok http <端口號>
