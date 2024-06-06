@@ -137,6 +137,73 @@ _步驟很簡單，這裡簡單介紹_
 
 <br>
 
+## 將 Ngrok 移動到系統 PATH 中
+
+1. 切換到當前所在的路徑中。
+
+    ```bash
+    ls ~/Documents/NgrokApp/ngrok
+    ```
+
+<br>
+
+2. 確保具有可執行權限。
+
+    ```bash
+    sudo chmod +x ~/Documents/NgrokApp/ngrok
+    ```
+
+<br>
+
+3. 將文件移動到系統的 PATH 中。
+
+    ```bash
+    sudo mv ~/Documents/NgrokApp/ngrok /usr/local/bin/ngrok
+    ```
+
+<br>
+
+4. 確保 `/usr/local/bin` 已經在 PATH 環境變量中。
+
+    ```bash
+    echo $PATH
+    ```
+
+<br>
+
+5. 如果 `/usr/local/bin` 不在 PATH 中，請添加到配置文件 `.bashrc`。
+
+    ```bash
+    echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
+    source ~/.bashrc
+    ```
+
+<br>
+
+6. 檢查是否設置完成。
+
+    ```bash
+    ngrok --version
+    ```
+
+<br>
+
+7. 添加憑證。
+
+    ```bash
+    ngrok config add-authtoken <輸入自己的憑證>
+    ```
+
+<br>
+
+8. 啟動服務。
+
+    ```bash
+    ./ngrok http 8080
+    ```
+
+<br>
+
 ___
 
 _END_
