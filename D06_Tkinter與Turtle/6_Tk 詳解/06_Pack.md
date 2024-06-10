@@ -218,7 +218,7 @@ _說明以下五個函數_
 - 範例：
 
     ```python
-    label = tk.Label(root, text="示例標籤")
+    label = tk.Label(root, text="範例標籤")
     label.pack()
 
     # 後續更新配置
