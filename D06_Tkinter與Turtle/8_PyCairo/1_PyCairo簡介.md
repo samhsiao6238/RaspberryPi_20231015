@@ -4,7 +4,7 @@
 
 ## 說明
 
-1. PyCairo 模塊用於創建 2D 圖形，它是 Cairo 圖形庫的 Python 綁定，允許用戶通過簡單的 Python 接口進行繪圖。
+1. PyCairo 模組用於創建 2D 圖形，它是 Cairo 圖形庫的 Python 綁定，允許用戶通過簡單的 Python 接口進行繪圖。
 
 <br>
 

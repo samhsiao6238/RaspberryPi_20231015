@@ -13,7 +13,7 @@
 | * | Docker              | 讓開發者能在VSCode中輕鬆管理Docker容器，建立、啟動、停止容器等。         |
 | * | Markdown All in One | 提供全面的 Markdown 支援，如預覽、快速輸入、TOC 生成等。                 |
 | * | Remote - SSH        | 允許開發者直接透過 SSH 連接遠程主機，並在遠程主機上進行開發。            |
-| * | Path Intellisense   | 自動完成文件路徑，非常適合那些需要引用多文件或模塊的開發項目。           |
+| * | Path Intellisense   | 自動完成文件路徑，非常適合那些需要引用多文件或模組的開發項目。           |
 | * | REST Client         | 允許您在 VSCode 中直接發送HTTP請求，取代 Postman 等工具。                |
 
 ---

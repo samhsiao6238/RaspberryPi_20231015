@@ -14,7 +14,7 @@
 
 <br>
 
-3. 具體說這個錯誤是在訪問 `lib` 模塊中的 `X509_V_FLAG_CB_ISSUER_CHECK` 屬性時引發的，但是該屬性不存在。
+3. 具體說這個錯誤是在訪問 `lib` 模組中的 `X509_V_FLAG_CB_ISSUER_CHECK` 屬性時引發的，但是該屬性不存在。
 
 <br>
 
