@@ -5,15 +5,19 @@
 ## 1. `select()`
 
 1. 功能：選取或取消選擇控制元件。
+
 2. 可調用物件：Checkbutton, Radiobutton。
+
 3. 調用方式。
 
     ```python
     # Checkbutton 實例 checkbutton
     checkbutton.select()
     ```
-    
-4. 詳細範例
+
+<br>
+
+4. 詳細範例。
 
     ```python
     import tkinter as tk
@@ -52,13 +56,17 @@
 ## 2. `deselect()`
 
 1. 功能：取消選取已選取的控制元件。
+
 2. 可調用物件：Checkbutton, Radiobutton。
+
 3. 調用方式。
 
     ```python
     # Checkbutton 實例 checkbutton
     checkbutton.deselect()
     ```
+
+<br>
 
 4. 詳細範例。
 
@@ -99,6 +107,7 @@
 ## 3. `flash()`
 
 1. 功能：使按鈕快速變化其正常和活動狀態。
+
 2. 可調用物件：Button。
 
 3. 調用方式。
@@ -107,6 +116,8 @@
     # Button 實例 button
     button.flash()
     ```
+
+<br>
 
 4. 詳細範例。
 
@@ -146,6 +157,7 @@
 ## 4. `invoke()`
 
 1. 功能：手動觸發控制元件的命令。
+
 2. 可調用物件：Button, Menu。
 
 3. 調用方式。
@@ -191,8 +203,11 @@
     # 主循環
     root.mainloop()
     ```
+
     - 第一個按鈕 button 綁定了 button_clicked 函數，在按鈕被點擊時會觸發所綁定的函數。
+
     - 第二個按鈕 invoke_button 則使用 trigger_button_click 函數，該函數呼叫 button.invoke()，這會模擬第一個按鈕被點擊的行為。
+
     - 這種模式常用於程式測試或者在某些特定情況下需要程式自動觸發按鈕事件的場景。
 
 <br>
@@ -200,6 +215,7 @@
 ## 5. `toggle()`
 
 1. 功能：切換控制元件的狀態。
+
 2. 可調用物件：Checkbutton。
 
 3. 調用方式。
@@ -209,6 +225,7 @@
     checkbutton.toggle()
     ```
 
+<br>
 
 4. 詳細範例。
 
@@ -250,6 +267,7 @@
 ## 6. `get()`
 
 1. 功能：獲取控制元件的當前值。
+
 2. 可調用物件：Entry, Spinbox。
 
 3. 調用方式。
@@ -259,6 +277,7 @@
     value = entry.get()
     ```
 
+<br>
 
 4. 詳細範例。
 
@@ -296,13 +315,17 @@
 ## 7. `set()`
 
 1. 功能：設置控制元件的值。
+
 2. 可調用物件：StringVar, IntVar。
+
 3. 調用方式。
 
     ```python
     # StringVar 實例 string_var
     string_var.set('Hello World')
     ```
+
+<br>
 
 4. 詳細範例。
 
@@ -357,13 +380,17 @@
 ## 8. `delete()`
 
 1. 功能：刪除文本框或文字控件中的內容。
+
 2. 可調用物件：Entry, Text。
+
 3. 調用方式。
 
     ```python
     # Entry 實例 entry
     entry.delete(0, 'end')
     ```
+
+<br>
 
 4. 詳細範例。
 
@@ -402,6 +429,7 @@
 ## 9. `insert()`
 
 1. 功能：在文本框或文字控件中插入內容。
+
 2. 可調用物件：Entry, Text。
 
 3. 調用方式。
@@ -410,6 +438,8 @@
     # Entry 實例 entry
     entry.insert(0, 'Hello World')
     ```
+
+<br>
 
 4. 詳細範例。
 
@@ -457,6 +487,9 @@
     # Button 實例 button
     button.configure(text='Click Me')
     ```
+
+<br>
+
 4. 詳細範例。
 
     ```python
@@ -511,6 +544,9 @@
     # Entry 實例 entry
     entry.bind('<Return>', lambda e: print('Return key pressed'))
     ```
+
+<br>
+
 4. 詳細範例。
 
     ```python
@@ -546,6 +582,7 @@ _以下是三種佈局，詳細請參考佈局管理器_
 ## 12. `pack()`
 
 1. 功能：使用包裝管理器來排列控制元件。
+
 2. 可調用物件：全部。
 
 3. 調用方式。
@@ -554,6 +591,8 @@ _以下是三種佈局，詳細請參考佈局管理器_
     # Button 實例 button
     button.pack()
     ```
+
+<br>
 
 4. 詳細範例。
 
@@ -584,6 +623,7 @@ _以下是三種佈局，詳細請參考佈局管理器_
 ## 13. `grid()`
 
 1. 功能：使用網格管理器來排列控制元件。
+
 2. 可調用物件：全部。
 
 3. 調用方式。
@@ -592,6 +632,8 @@ _以下是三種佈局，詳細請參考佈局管理器_
     # Button 實例 button
     button.grid(row=0, column=0)
     ```
+
+<br>
 
 4. 詳細範例。
 
@@ -622,6 +664,7 @@ _以下是三種佈局，詳細請參考佈局管理器_
 ## 14. `place()`
 
 1. 功能：使用放置管理器來排列控制元件，可以精確指定控制元件的位置和大小。
+
 2. 可調用物件：全部。
 
 3. 調用方式。
@@ -630,6 +673,8 @@ _以下是三種佈局，詳細請參考佈局管理器_
     # Button 實例 button
     button.place(x=50, y=100)
     ```
+
+<br>
 
 4. 詳細範例。
 
@@ -658,6 +703,6 @@ _以下是三種佈局，詳細請參考佈局管理器_
 
 <br>
 
----
+___
 
 _END_
