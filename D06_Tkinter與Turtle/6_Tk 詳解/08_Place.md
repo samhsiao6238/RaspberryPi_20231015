@@ -14,11 +14,18 @@ _Place 佈局管理器_
 
 _說明以下各項目_
 
+<br>
+
 1. anchor
+
 2. x、y
+
 3. relx、rely
+
 4. width、height
+
 5. relwidth、relheight
+
 6. bordermode
 
 <br>
@@ -26,8 +33,10 @@ _說明以下各項目_
 ### 1. anchor
 
 1. 說明：設置控制元件在其父控制元件中的對齊方式。
+
 2. 取值：N、E、S、W、NW、NE、SW、SE、CENTER。
-3. 範例：
+
+3. 範例。
 
     ```python
     widget.place(anchor="nw")
@@ -38,7 +47,8 @@ _說明以下各項目_
 ### 2. x、y
 
 1. 說明：設置控制元件左上角的絕對座標（像素為單位）。
-2. 範例：
+
+2. 範例。
 
     ```python
     widget.place(x=50, y=100)
@@ -49,7 +59,8 @@ _說明以下各項目_
 ### 3. relx、rely
 
 1. 說明：設置控制元件相對於父容器的位置。
-2. 範例：
+
+2. 範例。
 
     ```python
     widget.place(relx=0.5, rely=0.5)
@@ -60,7 +71,8 @@ _說明以下各項目_
 ### 4. width、height
 
 1. 說明：設置控制元件的寬度和高度。
-2. 範例：
+
+2. 範例。
 
     ```python
     widget.place(width=100, height=50)
@@ -71,7 +83,8 @@ _說明以下各項目_
 ### 5. relwidth、relheight
 
 1. 說明：設置控制元件相對於父容器的寬度和高度。
-2. 範例：
+
+2. 範例。
 
     ```python
     widget.place(relwidth=0.5, relheight=0.3)
@@ -82,8 +95,10 @@ _說明以下各項目_
 ### 6. bordermode
 
 1. 說明：設置控制元件大小和位置是相對於內部還是包括邊框。
+
 2. 取值：INSIDE、OUTSIDE。
-3. 範例：
+
+3. 範例。
 
     ```python
     widget.place(bordermode="outside")
@@ -95,9 +110,14 @@ _說明以下各項目_
 
 _說明以下函數_
 
+<br>
+
 1. place_slaves()
+
     - 返回本組件的所有子組件物件列表。
-    - 範例：
+
+    - 範例。
+
         ```python
         slaves = root.place_slaves()
         print("使用 place 的子組件:", slaves)
@@ -106,8 +126,11 @@ _說明以下函數_
 <br>
 
 2. place_configure(option=value)
+
     - 為 place 佈局管理器設置屬性。
-    - 範例：
+
+    - 範例。
+
         ```python
         widget.place_configure(x=100, y=50)
         ```
@@ -115,8 +138,11 @@ _說明以下函數_
 <br>
 
 3. place_info()
+
     - 返回 place 提供的選項所對應的值。
-    - 範例：
+
+    - 範例。
+
         ```python
         info = widget.place_info()
         print("Widget place 信息:", info)
@@ -125,14 +151,17 @@ _說明以下函數_
 <br>
 
 4. place_forget()
+
     - 將使用 place 佈局的控制元件隱藏。
-    - 範例：
+
+    - 範例。
+
         ```python
         widget.place_forget()
         ```
 
 <br>
 
----
+___
 
 _END_
