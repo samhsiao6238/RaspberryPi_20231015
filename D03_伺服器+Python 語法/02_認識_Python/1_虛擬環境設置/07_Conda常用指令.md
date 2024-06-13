@@ -91,7 +91,7 @@
     conda update conda
     ```
 
-2. 查找可用的套件版本
+2. 搜尋可用的套件版本
 
     ```bash
     conda search [套件名稱]
