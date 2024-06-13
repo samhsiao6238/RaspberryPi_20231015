@@ -1,12 +1,12 @@
 # 簡易線圖
 
-</br>
+<br>
 
 ## 成果
 
 ![](images/img_04.png)
 
-</br>
+<br>
 
 ## 腳本
 
@@ -22,7 +22,7 @@ st.pyplot(fig)
 st.write('這是一個使用 Matplotlib 在 Streamlit 上繪製的線圖。')
 ```
 
-</br>
+<br>
 
 ## Secrets
 
@@ -30,6 +30,6 @@ st.write('這是一個使用 Matplotlib 在 Streamlit 上繪製的線圖。')
 無
 ```
 
-</br>
+<br>
 
 _END_

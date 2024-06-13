@@ -7,7 +7,7 @@ _這部分在說明 Firebase 資料庫時再回來實作_
   
   ![](images/img_53.png)
 
-</br>
+<br>
 
 ## 設定 Firebase
 1. 安裝套件
@@ -16,7 +16,7 @@ _這部分在說明 Firebase 資料庫時再回來實作_
     pip install firebase_admin
     ```
 
-</br>
+<br>
 
 ## 步驟說明 
 
@@ -73,7 +73,7 @@ _這部分在說明 Firebase 資料庫時再回來實作_
 
     ![](images/img_61.png)
 
-</br>
+<br>
 
 ---
 

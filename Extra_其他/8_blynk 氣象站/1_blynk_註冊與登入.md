@@ -5,7 +5,7 @@
 - [blynk 官網](https://blynk.io/)
 - 使用 blynk 服務建立樹莓派、
 
-</br>
+<br>
 
 ## 註冊
 
@@ -18,7 +18,7 @@
 
    ![](images/img_02.png)
 
-</br>
+<br>
 
 ## 登入
 
@@ -29,7 +29,7 @@
 
    ![](images/img_04.png)
 
-</br>
+<br>
 
 ---
 

@@ -1,7 +1,7 @@
 # 連動 Line Notify 與 GitHub 倉庫
 - 即時發送事件通知
 
-</br>
+<br>
 
 1. 進入[官網](https://notify-bot.line.me/zh_TW/)。
 
@@ -57,7 +57,7 @@
 
     ![](images/img_13.png)
 
-</br>
+<br>
 
 ---
 

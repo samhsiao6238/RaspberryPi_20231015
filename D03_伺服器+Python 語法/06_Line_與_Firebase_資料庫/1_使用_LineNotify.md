@@ -2,7 +2,7 @@
 
 - 樹莓派啟動時發送 LineNotify 通知
 
-</br>
+<br>
 
 ## A. 建立 LINE Notify 的 Token
 
@@ -24,7 +24,7 @@
 
      ![](images/img_28.png)
 
-</br>
+<br>
 
 ## B. 撰寫腳本
 
@@ -115,7 +115,7 @@
      ![](images/img_27.png)
 
 
-</br>
+<br>
 
 ## C. 設置系統服務
 
@@ -218,7 +218,7 @@
     sudo journalctl -u line_notify.service -n 50 -f
     ```
 
-</br>
+<br>
 
 ---
 

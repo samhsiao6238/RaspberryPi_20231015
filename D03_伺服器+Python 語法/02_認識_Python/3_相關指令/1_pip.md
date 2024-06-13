@@ -10,7 +10,7 @@ _pip_
    sudo apt-get install python3-pip
    ```
 
-</br>
+<br>
 
 2. 使用 pip 安裝套件，版本可省略。
 
@@ -18,14 +18,14 @@ _pip_
    pip install <套件名稱>==<版本>
    ```
 
-</br>
+<br>
 
 3. 升級套件
    ```bash
    pip install upgrade <套件名稱>
    ```
 
-</br>
+<br>
 
 4. 顯示 pip 已安裝套件
    _簡單顯示_
@@ -42,7 +42,7 @@ _pip_
 
    ![](images/img_34.png)
 
-</br>
+<br>
 
 5. 尋找 pip 套件安裝的路徑
 
@@ -52,7 +52,7 @@ _pip_
 
    ![](images/img_01.png)
 
-</br>
+<br>
 
 6. 查詢過時套件
 
@@ -64,7 +64,7 @@ _pip_
 
    ![](images/img_35.png)
 
-</br>
+<br>
 
 7. 安裝套件時，不要安裝依賴項目
 
@@ -74,7 +74,7 @@ _pip_
    pip install <package-name> --no-deps
    ```
 
-</br>
+<br>
 
 8. 依據套件管理文件安裝套件
 
@@ -82,7 +82,7 @@ _pip_
    pip install -r requirements.txt
    ```
 
-</br>
+<br>
 
 9. 依據當前開發環境的套件生成套件管理文件
 
@@ -90,7 +90,7 @@ _pip_
    pip freeze > requirements.txt
    ```
 
-</br>
+<br>
 
 10. 使用本地套件文件進行套件安裝
 
@@ -98,7 +98,7 @@ _pip_
     pip install ./<本地套件>/
     ```
 
-</br>
+<br>
 
 ---
 

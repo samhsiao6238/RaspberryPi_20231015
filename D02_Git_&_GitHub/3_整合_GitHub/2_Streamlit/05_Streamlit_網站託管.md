@@ -2,55 +2,55 @@
 
 _在官網服務器部署網站_
 
-</br>
+<br>
 
 # 註冊
 
 1. 進入[官網](https://streamlit.io/)，點擊 `Sign in`。
 
-</br>
+<br>
 
 2. 建議連結 GitHub，點擊 `Connect GitHub account`。
 
    ![](images/img_37.png)
 
-</br>
+<br>
 
 3. 點擊授權 `Authorize streamlit`。
 
    ![](images/img_16.png)
 
-</br>
+<br>
 
 4. 填寫基本資料。
 
    ![](images/img_38.png)
 
-</br>
+<br>
 
 5. 接受。
 
    ![](images/img_39.png)
 
-</br>
+<br>
 
 6. 假如初次登入還沒任何專案。
 
    ![](images/img_40.png)
 
-</br>
+<br>
 
 7. 假如已經建立的 Streamlit 應用清單。
 
    ![](images/img_17.png)
 
-</br>
+<br>
 
 8. 可以添加新的 app，這裡先不用，之後再回來添加。
 
    ![](images/img_18.png)
 
-</br>
+<br>
 
 ## 編輯網站基本結構
 
@@ -62,7 +62,7 @@ _在官網服務器部署網站_
 
    ![](images/img_19.png)
 
-</br>
+<br>
 
 2. 建立 README.md。
 
@@ -72,37 +72,37 @@ _在官網服務器部署網站_
 
    ![](images/img_20.png)
 
-</br>
+<br>
 
 ## 將資料夾發佈到 GitHub
 
 _若在 Codespace 上開發可以省略這個步驟_
 
-</br>
+<br>
 
 1. 原始碼控制。
 
    ![](images/img_21.png)
 
-</br>
+<br>
 
 2. 發佈至 GitHub。
 
    ![](images/img_22.png)
 
-</br>
+<br>
 
 3. 選取。
 
    ![](images/img_23.png)
 
-</br>
+<br>
 
 4. 勾選。
 
    ![](images/img_24.png)
 
-</br>
+<br>
 
 ## 編輯網站內容
 
@@ -138,7 +138,7 @@ _若在 Codespace 上開發可以省略這個步驟_
    numpy
    ```
 
-</br>
+<br>
 
 ## 設定 Streamlit 服務器
 
@@ -204,7 +204,7 @@ _回到官網_
 
    ![](images/img_31.png)
 
-</br>
+<br>
 
 ## 進階設定與部署
 
@@ -212,25 +212,25 @@ _回到官網_
 
    ![](images/img_32.png)
 
-</br>
+<br>
 
 2. 完成後進行部署。
 
    ![](images/img_33.png)
 
-</br>
+<br>
 
 3. 瀏覽器會顯示烘烤的示意圖。
 
    ![](images/img_34.png)
 
-</br>
+<br>
 
 4. 完成後即可以指派的網址進行訪問。
 
    ![](images/img_35.png)
 
-</br>
+<br>
 
 ## 特別注意
 
@@ -246,7 +246,7 @@ _回到官網_
 
    ![](images/img_47.png) 
 
-</br>
+<br>
 
 ___
 

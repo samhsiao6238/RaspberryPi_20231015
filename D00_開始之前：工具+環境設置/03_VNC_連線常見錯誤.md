@@ -34,7 +34,7 @@
     sudo reboot now
     ```
 
-</br>
+<br>
 
 ---
 

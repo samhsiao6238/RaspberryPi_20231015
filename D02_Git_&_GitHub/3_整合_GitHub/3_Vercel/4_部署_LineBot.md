@@ -3,7 +3,7 @@ _實作：這部分主要是在介紹 Vercel 與 GitHub 整合_
 # 在 Vercel 部署 LineBot
 
 
-</br>
+<br>
 
 ## A. 在樹莓派上
 
@@ -140,7 +140,7 @@ _實作：這部分主要是在介紹 Vercel 與 GitHub 整合_
 
     ![](images/img_54.png)
 
-</br>
+<br>
 
 ## B. 前往 Line Developers
 
@@ -148,11 +148,11 @@ _實作：這部分主要是在介紹 Vercel 與 GitHub 整合_
 
     ![](images/img_55.png)
 
-</br>
+<br>
 
 _省略一部分的說明，這裡的操作很簡單，有必要再補充_
 
-</br>
+<br>
 
 2. 建立新的 channel
 
@@ -206,7 +206,7 @@ _省略一部分的說明，這裡的操作很簡單，有必要再補充_
 
     ![](images/img_68.png)
 
-</br>
+<br>
 
 ## C. 前往 Vercel 主控台
 
@@ -219,7 +219,7 @@ _省略一部分的說明，這裡的操作很簡單，有必要再補充_
 
     ![](images/img_70.png)   
 
-</br>
+<br>
 
 ## D. 前往 Line Developers
 
@@ -255,11 +255,11 @@ _省略一部分的說明，這裡的操作很簡單，有必要再補充_
 
     ![](images/img_80.png)
 
-</br>
+<br>
 
 _🔺 以上完成第一階段的 Line Developers 設定_
 
-</br>
+<br>
 
 ## E. 進入 Vercel
 
@@ -283,7 +283,7 @@ _🔺 以上完成第一階段的 Line Developers 設定_
    
    ![](images/img_85.png)
 
-</br>
+<br>
 
 ## F. 進入 VSCode
 
@@ -313,7 +313,7 @@ _🔺 以上完成第一階段的 Line Developers 設定_
 
    ![](images/img_91.png)
 
-</br>
+<br>
 
 ## H. 驗證結果
 
@@ -329,13 +329,13 @@ _🔺 以上完成第一階段的 Line Developers 設定_
 
    ![](images/img_94.png)
 
-</br>
+<br>
 
 ## I. 其他補充
 
     _介紹完伺服器後，再使用 `Ngrok` 將 LineBot 部署在樹莓派上_
 
-</br>
+<br>
 
 ---
 

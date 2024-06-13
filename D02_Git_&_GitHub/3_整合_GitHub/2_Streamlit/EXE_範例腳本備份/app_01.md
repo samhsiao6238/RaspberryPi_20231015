@@ -2,13 +2,13 @@
 - 文字輸入框
 - Slider
 
-</br>
+<br>
 
 ## 成果
 
 ![](images/img_01.png)
 
-</br>
+<br>
 
 ## 腳本
 ```python
@@ -24,6 +24,6 @@ number = st.slider('選擇一個數字', min_value=1, max_value=100)
 st.write('您選擇的數字是：', number)
 ```
 
-</br>
+<br>
 
 _END_

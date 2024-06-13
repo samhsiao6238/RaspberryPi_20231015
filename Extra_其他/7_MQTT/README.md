@@ -1,13 +1,13 @@
 
 # MQTT
 
-</br>
+<br>
 
 ## 簡介
 
 MQTT ` - Message Queuing Telemetry Transport ` 是一種輕量級的 ` 消息通訊協定 `，專為低帶寬、高延遲或不穩定的網路連接而設計，它使用 ` publish / subscribe ` 模式來傳送訊息，非常適合於遠端位置的設備和小型移動設備之間的通訊。
 
-</br>
+<br>
 
 ## 基本成員
 - Broker 與 Client
@@ -16,7 +16,7 @@ MQTT ` - Message Queuing Telemetry Transport ` 是一種輕量級的 ` 消息通
 
 2. Client: MQTT 的用戶端，可以是發布者或訂閱者，發布者發送消息，而訂閱者接收消息。
 
-</br>
+<br>
 
 ## 特點
 
@@ -26,7 +26,7 @@ MQTT ` - Message Queuing Telemetry Transport ` 是一種輕量級的 ` 消息通
 
 3.__品質等級__ ：`MQTT` 支援多種 ` 消息交付的品質等級 ` ，包括 _最多交付一次_、_至少交付一次_ 和 _只交付一次_ 。
 
-</br>
+<br>
 
 ## 常用函式庫
 

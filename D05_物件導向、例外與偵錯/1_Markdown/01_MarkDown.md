@@ -225,7 +225,7 @@
 - 實際可用的語言標識取決於您使用的 Markdown 渲染器和它所依賴的語法高亮庫。
 - 常見的渲染器如 GitHub Flavored Markdown（GFM）依賴於 Pygments 或 highlight.js 等語法高亮庫。
 
-</br>
+<br>
 
 - *常見的語言標識及其對應的中文名稱*
 

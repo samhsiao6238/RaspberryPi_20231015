@@ -3,7 +3,7 @@
 ## 參考
 [HiveMQ 官網](https://www.hivemq.com/)
 
-</br>
+<br>
 
 ## 下載應用
 [下載](https://www.hivemq.com/downloads/hivemq/)
@@ -23,7 +23,7 @@ unzip <檔案路徑>
 cd hivemq-4.18.0
 ```
 
-</br>
+<br>
 
 ## 啟動 HiveMQ 服務
 
@@ -44,7 +44,7 @@ sudo apt install openjdk-11-jdk
 透過腳本方式啟動的 HiveMQ 服務，在關閉終端或重啟樹莓派後會停止運行。
 如果想讓 HiveMQ 作為一個系統服務在後台運行，需要建立一個 systemd 服務檔案來管理 HiveMQ。
 
-</br>
+<br>
 
 ## 建立系統服務
 sudo nano /etc/systemd/system/hivemq.service
@@ -86,7 +86,7 @@ pip install paho-mqtt
 如果沒有安裝 pip
 sudo apt-get install python3-pip
 
-</br>
+<br>
 
 ## 實作練習
 ### 範例 1
@@ -111,7 +111,7 @@ client.connect("192.168.1.135", 1883, 60)
 client.loop_forever()
 ```
 
-</br>
+<br>
 
 ### 範例 2
 以下時做一個發布以及訂閱的互動式專案
@@ -135,7 +135,7 @@ while True:
     time.sleep(5)  
 ```
 
-</br>
+<br>
 
 ### 範例 3
 ```python
@@ -163,7 +163,7 @@ client.connect("192.168.1.135", 1883, 60)
 client.loop_forever()
 ```
 
-</br>
+<br>
 
 ### 範例測試
 

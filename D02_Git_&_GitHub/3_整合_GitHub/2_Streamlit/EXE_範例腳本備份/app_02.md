@@ -1,11 +1,11 @@
 # 官網範例
 
-</br>
+<br>
 
 ## 成果
 ![](images/img_02.png)
 
-</br>
+<br>
 
 ## 腳本
 ```python
@@ -18,6 +18,6 @@ chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 st.bar_chart(chart_data)
 ```
 
-</br>
+<br>
 
 _END_

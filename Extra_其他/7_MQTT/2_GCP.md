@@ -8,7 +8,7 @@
 ![](images/img_11.png)
 
 
-</br>
+<br>
 
 ## 樹莓派建置工作環境
 
@@ -18,7 +18,7 @@
 pip install google-cloud-pubsub psutil
 ```
 
-</br>
+<br>
 
 ## 註冊並登入
 
@@ -98,15 +98,15 @@ pip install google-cloud-pubsub psutil
 ---
 
 *待續*
-</br>
+<br>
 
 ## 本地發佈
 
-</br>
+<br>
 
 ## 透過 GCP 查看訂閱
 
-</br>
+<br>
 
 ## 本地監聽訂閱
 

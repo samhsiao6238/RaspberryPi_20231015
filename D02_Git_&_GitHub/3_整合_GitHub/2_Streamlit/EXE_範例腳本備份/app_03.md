@@ -1,12 +1,12 @@
 # 讀取 Secrets
 
-</br>
+<br>
 
 ## 成果
 
 ![](images/img_03.png)
 
-</br>
+<br>
 
 ## 腳本
 
@@ -24,7 +24,7 @@ st.write("從項目清單取出指定的第二個物件:", st.secrets["secrets"]
 st.write("這部分是觀察 os 設定值與 st 設定值是否一致", os.environ["db_username"] == st.secrets["db_username"])
 ```
 
-</br>
+<br>
 
 ## Secrets
 
@@ -36,6 +36,6 @@ db_password = 'PASSWORD'
 items = ["項目 1", "項目 2", "項目 3"]
 ```
 
-</br>
+<br>
 
 _END_

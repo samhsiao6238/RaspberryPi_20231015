@@ -6,7 +6,7 @@
 
 - 利用 Jupyter Notebook 魔法命令達成目的
 
-</br>
+<br>
 
 ## 魔法命令
 
@@ -18,14 +18,14 @@
 
    - `!` ：允許直接在 Jupyter Notebook 中運行 shell 命令。
 
-</br>
+<br>
 
 2. 儲存為檔案。
    
    ```bash
    %%writefile temp_app.py
    ```
-</br>
+<br>
 
 3. 然後再另一個儲存格執行單行魔法指令。
 
