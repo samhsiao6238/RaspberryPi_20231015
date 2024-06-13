@@ -132,9 +132,9 @@ _以下就 MacOS 與 Windows 系統分開說明_
 
 11. 完成後，開啟終端機進行連線測試，預設通訊埠 `3306` 不用更改。
 
-```bash
-   mysqlsh --sql -u <使用者帳號> -h <主機名稱> -P 3306
-```
+   ```bash
+      mysqlsh --sql -u <使用者帳號> -h <主機名稱> -P 3306
+   ```
 
    ![](images/img_89.png)
 
@@ -142,9 +142,9 @@ _以下就 MacOS 與 Windows 系統分開說明_
 
 12. 顯示資料庫，記得結尾要加上分號 `;` 。
 
-```bash
-   show databases;
-```
+   ```bash
+      show databases;
+   ```
 
    ![](images/img_90.png)
 
@@ -152,14 +152,14 @@ _以下就 MacOS 與 Windows 系統分開說明_
 
 13. 顯示資料表 mysql.user。
 
-```bash
-   select User, Host from mysql.user;
-```
+   ```bash
+      select User, Host from mysql.user;
+   ```
 
    ![](images/img_91.png)
 
 <br>
 
----
+___
 
 _END_

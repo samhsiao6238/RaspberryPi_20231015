@@ -11,9 +11,12 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
 ## pymysql
 
 1. 開發與維護：Oracle（MySQL 的擁有者和開發者）官方。
+
 2. 實現方式：可以使用純 Python 實現，也可以使用 C 擴展。
+
 3. 特色：主要針對 MySQL 通用庫，效能佳。
-4. 套件安裝
+
+4. 套件安裝。
 
     ```bash
     pip install pymysql
@@ -21,7 +24,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
 
 <br>
 
-5. 範例
+5. 範例。
 
     ```python
     import pymysql
@@ -98,8 +101,11 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
 ## mysql-connector-python
 
 1. 開發與維護：由社區維護的獨立項目。
+
 2. 實現方式：完全用 Python 寫的，使得更易於安裝和分發。
+
 3. 特色：是個通用庫，並與多個版本 Python 兼容。
+
 4. 套件安裝
 
     ```bash
@@ -108,7 +114,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
 
 <br>
 
-5. 範例
+5. 範例。
 
     ```python
     import mysql.connector
@@ -169,9 +175,12 @@ _後續將以這個套件為主，這裡直接安裝會出錯，因為少了一�
 <br>
 
 1. 開發與維護：MariaDB 官方推薦的 Python 連接器。
+
 2. 實現方式：使用了 C 擴展。
+
 3. 特色：專注於 MariaDB，效能佳。
-4. 套件安裝
+
+4. 套件安裝。
 
     ```bash
     sudo apt-get install libmariadb-dev
@@ -192,7 +201,7 @@ _後續將以這個套件為主，這裡直接安裝會出錯，因為少了一�
 
 <br>
 
-7. 範例
+7. 範例。
 
     ```python
     import mariadb
@@ -219,9 +228,8 @@ _後續將以這個套件為主，這裡直接安裝會出錯，因為少了一�
     conn.close()
     ```
 
-
 <br>
 
----
+___
 
 _END_

@@ -195,7 +195,7 @@ _基於前述的版本問題，系統顯示需要 MariaDB Connector/C 的版本�
 
 <br>
 
----
+___
 
 _END_
 
