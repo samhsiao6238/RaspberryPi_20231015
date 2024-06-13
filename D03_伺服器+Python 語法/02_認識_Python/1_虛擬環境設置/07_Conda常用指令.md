@@ -22,7 +22,7 @@
 
 ## 虛擬環境管理
 
-1. 創建虛擬環境
+1. 建立虛擬環境
 
     ```bash
     conda create --name [環境名稱] python=[版本]

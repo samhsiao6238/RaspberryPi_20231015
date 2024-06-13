@@ -99,7 +99,7 @@
     cap = cv2.VideoCapture(0)
     success, image = cap.read()
 
-    # 創建一個與攝像頭圖像大小相同的全黑畫布
+    # 建立一個與攝像頭圖像大小相同的全黑畫布
     h, w, c = image.shape
     canvas = np.zeros((h, w, c), dtype=np.uint8)
 

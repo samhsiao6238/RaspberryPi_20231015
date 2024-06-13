@@ -27,7 +27,7 @@
     root = tk.Tk()
     root.title("基本模板")
 
-    # 創建一個 Checkbutton
+    # 建立一個 Checkbutton
     checkbutton = tk.Checkbutton(
         root, 
         text="選項"
@@ -39,7 +39,7 @@
         # 調用 Checkbutton 的 select() 方法
         checkbutton.select()
 
-    # 創建一個按鈕來觸發 Checkbutton 的 select() 方法
+    # 建立一個按鈕來觸發 Checkbutton 的 select() 方法
     select_button = ttk.Button(
         root, 
         text="選取 Checkbutton", 
@@ -78,7 +78,7 @@
     root = tk.Tk()
     root.title("基本模板")
 
-    # 創建一個 Checkbutton
+    # 建立一個 Checkbutton
     checkbutton = tk.Checkbutton(
         root, 
         text="選項"
@@ -90,7 +90,7 @@
         # 調用 Checkbutton 的 deselect() 方法
         checkbutton.deselect()
 
-    # 創建一個按鈕來觸發 Checkbutton 的 deselect() 方法
+    # 建立一個按鈕來觸發 Checkbutton 的 deselect() 方法
     deselect_button = ttk.Button(
         root, 
         text="取消選取 Checkbutton", 
@@ -140,7 +140,7 @@
         # 調用 Button 的 flash() 方法
         button.flash()
 
-    # 創建一個按鈕來觸發 Button 的 flash() 方法
+    # 建立一個按鈕來觸發 Button 的 flash() 方法
     flash_button = tk.Button(
         root, 
         text="觸發閃爍", 
@@ -176,7 +176,7 @@
     root = tk.Tk()
     root.title("示範 invoke 方法")
 
-    # 創建一個按鈕，當被點擊時會顯示一條訊息
+    # 建立一個按鈕，當被點擊時會顯示一條訊息
     def button_clicked():
         print("按鈕被點擊了！")
 
@@ -192,7 +192,7 @@
         # 使用 invoke 方法手動觸發 button 的點擊事件
         button.invoke()
 
-    # 創建另一個按鈕，用於觸發第一個按鈕的點擊事件
+    # 建立另一個按鈕，用於觸發第一個按鈕的點擊事件
     invoke_button = tk.Button(
         root,
         text="觸發第一個按鈕的點擊",
@@ -236,7 +236,7 @@
     root = tk.Tk()
     root.title("示範 toggle 方法")
 
-    # 創建一個 Checkbutton
+    # 建立一個 Checkbutton
     check_var = tk.BooleanVar()  # Checkbutton 的變量
     checkbutton = tk.Checkbutton(
         root, 
@@ -250,7 +250,7 @@
         # 調用 Checkbutton 的 toggle() 方法來切換其狀態
         checkbutton.toggle()
 
-    # 創建一個按鈕來觸發 Checkbutton 的 toggle() 方法
+    # 建立一個按鈕來觸發 Checkbutton 的 toggle() 方法
     toggle_button = tk.Button(
         root, 
         text="切換 Checkbutton 狀態", 
@@ -288,7 +288,7 @@
     root = tk.Tk()
     root.title("示範 get 方法")
 
-    # 創建一個 Entry
+    # 建立一個 Entry
     entry = tk.Entry(root)
     entry.pack()
 
@@ -298,7 +298,7 @@
         content = entry.get()
         print("Entry 中的內容:", content)
 
-    # 創建一個按鈕來顯示 Entry 中的內容
+    # 建立一個按鈕來顯示 Entry 中的內容
     show_button = tk.Button(
         root, 
         text="顯示 Entry 內容", 
@@ -337,10 +337,10 @@
     root = tk.Tk()
     root.title("示範 set 方法")
 
-    # 創建一個 StringVar 變量
+    # 建立一個 StringVar 變量
     text_var = tk.StringVar()
 
-    # 創建一個 Label，並將其 text 屬性與 StringVar 變量綁定
+    # 建立一個 Label，並將其 text 屬性與 StringVar 變量綁定
     label = tk.Label(
         root, 
         textvariable=text_var
@@ -363,7 +363,7 @@
         # 使用 set() 方法更新 StringVar 變量的值
         text_var.set(selected_text)
 
-    # 創建一個按鈕來更新 Label 中的文字
+    # 建立一個按鈕來更新 Label 中的文字
     update_button = tk.Button(
         root, 
         text="更新文字", 
@@ -401,7 +401,7 @@
     root = tk.Tk()
     root.title("示範 delete 方法")
 
-    # 創建一個 Entry
+    # 建立一個 Entry
     entry = tk.Entry(root)
     entry.pack()
 
@@ -412,7 +412,7 @@
         # '0' 表示從文本的開始，'end' 表示到文本的結尾
         entry.delete(0, 'end')
 
-    # 創建一個按鈕來刪除 Entry 中的內容
+    # 建立一個按鈕來刪除 Entry 中的內容
     delete_button = tk.Button(
         root, 
         text="清空 Entry 內容", 
@@ -450,7 +450,7 @@
     root = tk.Tk()
     root.title("示範 insert 方法")
 
-    # 創建一個 Entry
+    # 建立一個 Entry
     entry = tk.Entry(root)
     entry.pack()
 
@@ -461,7 +461,7 @@
         # 第二個參數是要插入的文本
         entry.insert(0, "你好，Tkinter！")
 
-    # 創建一個按鈕來插入文本到 Entry 中
+    # 建立一個按鈕來插入文本到 Entry 中
     insert_button = tk.Button(
         root, 
         text="插入文本到 Entry", 
@@ -500,7 +500,7 @@
     root = tk.Tk()
     root.title("示範 configure 方法")
 
-    # 創建一個 Label
+    # 建立一個 Label
     label = tk.Label(root, text="這是一個 Label")
     label.pack()
 
@@ -518,7 +518,7 @@
         # 使用 configure() 方法更新 Label 的背景顏色
         label.configure(text="文本已改變", bg=selected_color)
 
-    # 創建一個按鈕來更改 Label 的屬性
+    # 建立一個按鈕來更改 Label 的屬性
     change_button = tk.Button(
         root, 
         text="更改 Label 屬性", 
@@ -556,7 +556,7 @@
     root = tk.Tk()
     root.title("示範 bind 方法")
 
-    # 創建一個 Entry
+    # 建立一個 Entry
     entry = tk.Entry(root)
     entry.pack()
 
@@ -603,7 +603,7 @@ _以下是三種佈局，詳細請參考佈局管理器_
     root = tk.Tk()
     root.title("示範 pack 方法")
 
-    # 創建多個 Label，並使用 pack() 來排列
+    # 建立多個 Label，並使用 pack() 來排列
     label1 = tk.Label(root, text="第一個 Label", bg="yellow")
     label2 = tk.Label(root, text="第二個 Label", bg="green")
     label3 = tk.Label(root, text="第三個 Label", bg="blue")
@@ -644,7 +644,7 @@ _以下是三種佈局，詳細請參考佈局管理器_
     root = tk.Tk()
     root.title("示範 grid 方法")
 
-    # 創建多個 Label，並使用 grid() 來排列
+    # 建立多個 Label，並使用 grid() 來排列
     label1 = tk.Label(root, text="第一行，第一列", bg="yellow")
     label2 = tk.Label(root, text="第一行，第二列", bg="green")
     label3 = tk.Label(root, text="第二行，第一列", bg="blue")
@@ -685,7 +685,7 @@ _以下是三種佈局，詳細請參考佈局管理器_
     root = tk.Tk()
     root.title("示範 place 方法")
 
-    # 創建多個 Label，並使用 place() 來定位
+    # 建立多個 Label，並使用 place() 來定位
     label1 = tk.Label(root, text="A", bg="yellow")
     label2 = tk.Label(root, text="B", bg="green")
     label3 = tk.Label(root, text="C", bg="blue")

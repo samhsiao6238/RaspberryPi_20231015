@@ -93,12 +93,12 @@
    # 導入函數
    import tkinter as tk
 
-   # 創建主視窗
+   # 建立主視窗
    root = tk.Tk()
    # 建立 Title
    root.title('Tkinter Frame 範例')
 
-   # 創建 Frame 作為根容器
+   # 建立 Frame 作為根容器
    frame = tk.Frame(
       root, 
       bg='red', 
@@ -112,7 +112,7 @@
    # 切記一定要設置佈局，這裡是使用 pack() 不矩，並設置 Frame 四周有增加空間
    frame.pack(padx=10, pady=10)  
 
-   # 在 Frame 內創建一個標籤
+   # 在 Frame 內建立一個標籤
    label = tk.Label(
       frame, 
       text='Hello, Tkinter!', 
@@ -121,7 +121,7 @@
    # 切記要佈局
    label.pack()
 
-   # 在 Frame 內創建一個按鈕
+   # 在 Frame 內建立一個按鈕
    button = tk.Button(
       frame, 
       text='Click Me', 

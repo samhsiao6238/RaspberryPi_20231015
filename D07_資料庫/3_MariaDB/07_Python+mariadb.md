@@ -115,7 +115,7 @@ _基於前述的版本問題，系統顯示需要 MariaDB Connector/C 的版本�
 
 <br>
 
-2. 創建一個數據庫＆表。
+2. 建立一個數據庫＆表。
 
     ```bash
     CREATE DATABASE mydatabase;

@@ -113,7 +113,7 @@ _每個人操作 GPT 的結果可能都不同，同學僅需參考步驟，完�
     train_labels = to_categorical(train_labels)
     test_labels = to_categorical(test_labels)
 
-    # 創建模型
+    # 建立模型
     model = Sequential([
     Flatten(input_shape=(28, 28)),
     Dense(512, activation='relu'),

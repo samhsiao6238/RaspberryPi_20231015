@@ -135,11 +135,11 @@ _說明以下六個項目_
     # 為主視窗設置較大的初始尺寸
     root.geometry("300x200")
 
-    # 創建一個按鈕，並在水平方向填滿
+    # 建立一個按鈕，並在水平方向填滿
     button = tk.Button(root, text="按鈕")
     button.pack(fill=tk.X)
 
-    # 創建一個標籤，背景為綠色，在水平和垂直方向都填滿並擴展
+    # 建立一個標籤，背景為綠色，在水平和垂直方向都填滿並擴展
     label = tk.Label(root, text="標籤", bg="green")
     label.pack(
         fill=tk.BOTH, 
@@ -180,7 +180,7 @@ _說明以下六個項目_
 
 4. 具體舉例
 
-    - 在這個範例中，每個新建的按鈕都被放置在前一個按鈕的右側，從而創建了一個水平排列的按鈕序列。
+    - 在這個範例中，每個新建的按鈕都被放置在前一個按鈕的右側，從而建立了一個水平排列的按鈕序列。
 
     ```python
     for text in ["按鈕1", "按鈕2", "按鈕3"]:
@@ -340,7 +340,7 @@ _可嘗試取消註解觀察輸出或是變化_
     root.title("Tkinter pack 布局示範")
     root.geometry("300x200")
 
-    # 創建一個按鈕，並設置 pack 參數
+    # 建立一個按鈕，並設置 pack 參數
     button = tk.Button(root, text="按鈕")
     button.pack(
         side=tk.TOP, 
@@ -350,7 +350,7 @@ _可嘗試取消註解觀察輸出或是變化_
         pady=5
     )
 
-    # 創建一個標籤，並設置 pack 參數
+    # 建立一個標籤，並設置 pack 參數
     label = tk.Label(root, text="標籤", bg="green")
     label.pack(
         side=tk.BOTTOM, 

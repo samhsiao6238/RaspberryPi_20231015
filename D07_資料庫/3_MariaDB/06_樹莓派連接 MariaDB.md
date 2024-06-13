@@ -42,7 +42,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
         cursor.execute(f"SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '{db_name}'")
         result = cursor.fetchone()
         if not result:
-            # 如果資料庫不存在，則創建它
+            # 如果資料庫不存在，則建立它
             cursor.execute(f"CREATE DATABASE {db_name}")
             print(f"資料庫 {db_name} 建立成功。")
         else:
@@ -60,7 +60,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個資料庫可�
         cursor.execute(f"SHOW TABLES LIKE '{your_table}'")
         result = cursor.fetchone()
         if not result:
-            # 如果表不存在，則創建它
+            # 如果表不存在，則建立它
             # 這裡需要根據您的需求來定義表的結構
             create_table_sql = f"CREATE TABLE {your_table} (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), age INT)"
             cursor.execute(create_table_sql)

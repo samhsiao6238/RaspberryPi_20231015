@@ -74,7 +74,7 @@
    ```
    
 
-8. 創建一個新的 Python 腳本，例如 `send_line_notify.py`
+8. 建立一個新的 Python 腳本，例如 `send_line_notify.py`
 
    ```bash
    sudo nano send_line_notify.py
@@ -124,7 +124,7 @@
    ```bash
    cd /etc/systemd/system/
    ```
-2. 創建一個新的 systemd 服務檔案，例如 `line_notify.service`，
+2. 建立一個新的 systemd 服務檔案，例如 `line_notify.service`，
 
    ```bash
    sudo touch line_notify.service

@@ -7,7 +7,7 @@ _一個在 venv 尚未出現之前常用的虛擬環境建立工具_
 
 ## 與 `venv` 的差異
 
-_`venv` 和 `virtualenv` 都是 Python 的虛擬環境管理工具，讓開發者可以為不同的專案創建獨立的 Python 環境。_
+_`venv` 和 `virtualenv` 都是 Python 的虛擬環境管理工具，讓開發者可以為不同的專案建立獨立的 Python 環境。_
 
 <br>
 
@@ -20,8 +20,8 @@ _`venv` 和 `virtualenv` 都是 Python 的虛擬環境管理工具，讓開發�
    - `virtualenv` 具有更多高階功能，例如跨平台支持、支持 Python 2 以及更多的自訂選項。
 
 3. 依賴:
-   - `venv` 使用系統的 Python 來創建虛擬環境，並且需要系統的 `pip` 。
-   - `virtualenv` 因為有一個參數 `--download`，可所以以在系統沒有安裝 Python 或 `pip` 的情況下創建虛擬環境。
+   - `venv` 使用系統的 Python 來建立虛擬環境，並且需要系統的 `pip` 。
+   - `virtualenv` 因為有一個參數 `--download`，可所以以在系統沒有安裝 Python 或 `pip` 的情況下建立虛擬環境。
 
 4. 安全性:
    - `venv` 不提供 `--no-site-packages` 選項，這個參數是用來可確保虛擬環境將 `不使用系統的任何包` 。
@@ -37,13 +37,13 @@ _`venv` 和 `virtualenv` 都是 Python 的虛擬環境管理工具，讓開發�
     pip install virtualenv
     ```
 
-2. 創建虛擬環境
+2. 建立虛擬環境
 
     ```bash
     virtualenv [環境名稱]
     ```
 
-    _如想創建一個名為 `myenv` 的環境_
+    _如想建立一個名為 `myenv` 的環境_
 
     ```bash
     virtualenv myenv

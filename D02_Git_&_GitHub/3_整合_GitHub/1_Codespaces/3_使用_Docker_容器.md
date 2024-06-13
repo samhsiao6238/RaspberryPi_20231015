@@ -149,7 +149,7 @@ _⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予
 
 ## 進階設定 Dockerfile
 
-1. 先在 `.devcontainer` 目錄中創建一個 `Dockerfile`，這可達成在想要的映像上安裝其他工具。
+1. 先在 `.devcontainer` 目錄中建立一個 `Dockerfile`，這可達成在想要的映像上安裝其他工具。
 
    ```ini
    # 使用指定映像

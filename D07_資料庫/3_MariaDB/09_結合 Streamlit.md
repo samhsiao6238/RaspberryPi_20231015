@@ -126,7 +126,7 @@
                 pitch=0
             )
 
-            # 創建地圖圖層
+            # 建立地圖圖層
             layer = pdk.Layer(
                 'ScatterplotLayer',
                 data=df,

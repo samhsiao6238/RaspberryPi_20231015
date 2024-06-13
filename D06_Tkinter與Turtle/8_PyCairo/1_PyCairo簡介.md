@@ -4,7 +4,7 @@
 
 ## 說明
 
-1. PyCairo 模組用於創建 2D 圖形，它是 Cairo 圖形庫的 Python 綁定，允許用戶通過簡單的 Python 接口進行繪圖。
+1. PyCairo 模組用於建立 2D 圖形，它是 Cairo 圖形庫的 Python 綁定，允許用戶通過簡單的 Python 接口進行繪圖。
 
 <br>
 
@@ -31,7 +31,7 @@
 
 ## 基礎
 
-_創建簡單的圖形_
+_建立簡單的圖形_
 
 <br>
 
@@ -59,9 +59,9 @@ _創建簡單的圖形_
     ```python
     import cairo
 
-    # 創建一個 Surface，指定大小和格式
+    # 建立一個 Surface，指定大小和格式
     with cairo.ImageSurface(cairo.FORMAT_ARGB32, 280, 80) as surface:
-        # 創建 Context
+        # 建立 Context
         context = cairo.Context(surface)
         
         # 設定繪圖顏色
@@ -137,12 +137,12 @@ _創建簡單的圖形_
     # 圖片的寬度和高度
     width, height = 640, 240
 
-    # 創建一個 Cairo 圖像表面（surface）
+    # 建立一個 Cairo 圖像表面（surface）
     surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
     # 使用表面建立一個 Cairo 上下文（context）
     ctx = cairo.Context(surface)
 
-    # 為天空創建一個漸變矩形
+    # 為天空建立一個漸變矩形
     pat = cairo.LinearGradient(0.0, 0.0, 0.0, 0.75 * height)
     # 白色起始點
     pat.add_color_stop_rgba(0, 1.0, 1.0, 1.0, 1) 
@@ -154,7 +154,7 @@ _創建簡單的圖形_
     # 填充矩形
     ctx.fill() 
 
-    # 為地面創建一個漸變矩形
+    # 為地面建立一個漸變矩形
     pat = cairo.LinearGradient(0.0, 0.75 * height, 0.0, 1.0 * height)
     # 綠色起始點
     pat.add_color_stop_rgba(0, 0.0, 1.0, 0.0, 1) 
@@ -166,7 +166,7 @@ _創建簡單的圖形_
     # 填充矩形
     ctx.fill() 
 
-    # 創建一個隨機數生成器，範圍在 0 到 1 之間
+    # 建立一個隨機數生成器，範圍在 0 到 1 之間
     rnd = random.Random()
 
     # 生成一些隨機樹木

@@ -59,7 +59,7 @@
                 pitch=50
             )
 
-            # 創建六角圖層 HexagonLayer ，使用「次數」作為高度
+            # 建立六角圖層 HexagonLayer ，使用「次數」作為高度
             hexagon_layer = pdk.Layer(
                 'HexagonLayer',
                 data=df,
@@ -73,7 +73,7 @@
                 extruded=True,
             )
 
-            # 創建散點圖層 ScatterplotLayer 
+            # 建立散點圖層 ScatterplotLayer 
             scatter_layer = pdk.Layer(
                 'ScatterplotLayer',
                 data=df,

@@ -39,7 +39,7 @@ _實作：這部分主要是在介紹 Vercel 與 GitHub 整合_
     # 從環境變數中獲取 LineBot 的設置
     line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
     line_handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET"))
-    # 創建 Flask 應用
+    # 建立 Flask 應用
     app = Flask(__name__)  
     # 定義根路由
     @app.route('/')  

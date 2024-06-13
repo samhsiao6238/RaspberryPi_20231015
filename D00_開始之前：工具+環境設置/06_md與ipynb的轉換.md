@@ -42,7 +42,7 @@ _在 VSCode 中設定快捷鍵執行特定指令，病使用 `tasks.json` 和 `k
 
 <br>
 
-#### 創建任務
+#### 建立任務
 
 1. 打開命令面板， `Ctrl+Shift+P` 或 `Cmd+Shift+P` 在Mac上。
 2. 輸入 `Tasks: Configure Task` 並選擇 `Create tasks.json file from template` 。
@@ -79,7 +79,7 @@ _在 VSCode 中設定快捷鍵執行特定指令，病使用 `tasks.json` 和 `k
 
     ![](images/img_14.png)
 
-    - 這將創建一個任務，當運行時會將當前打開的檔案（認為是Markdown檔案）轉換為Jupyter Notebook。
+    - 這將建立一個任務，當運行時會將當前打開的檔案（認為是Markdown檔案）轉換為Jupyter Notebook。
 
 <br>
 
@@ -102,7 +102,7 @@ _在 VSCode 中設定快捷鍵執行特定指令，病使用 `tasks.json` 和 `k
 
     ![](images/img_16.png)
 
-    - 這將為剛剛創建的任務設定一個快捷鍵。
+    - 這將為剛剛建立的任務設定一個快捷鍵。
 
 
 4. 在 VSCode 中打開一個 Markdown 檔案並使用設定的快捷鍵時，它會自動轉換為 Jupyter Notebook。
