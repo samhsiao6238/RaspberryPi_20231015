@@ -1,10 +1,10 @@
 # 開發階段的簡易運行
 
-- 在開發階段可直接在 Jupyter Notebook 中運行 Streamlit 專案
+1. 在開發階段可直接在 Jupyter Notebook 中運行 Streamlit 專案。
 
-- 省去測試階段在終端機運行的麻煩
+2. 省去測試階段在終端機運行的麻煩。
 
-- 利用 Jupyter Notebook 魔法命令達成目的
+3. 利用 Jupyter Notebook 魔法命令達成目的。
 
 <br>
 
@@ -38,7 +38,7 @@
 ## 範例
 
 1. 第一個儲存格。
-   
+
    ```python
    %%writefile temp_app.py
    import streamlit as st
@@ -55,7 +55,7 @@
 <br>
 
 2. 第二個儲存格。
-   
+
    ```python
    !streamlit run temp_app.py
    ```
@@ -63,7 +63,7 @@
 <br>
 
 3. 運行結果。
-   
+
    ![](images/img_12.png)
 
 <br>
