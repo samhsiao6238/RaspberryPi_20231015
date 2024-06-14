@@ -115,7 +115,7 @@ _基於前述的版本問題，系統顯示需要 MariaDB Connector/C 的版本�
 
 <br>
 
-2. 建立一個數據庫＆表。
+2. 建立一個資料庫＆表。
 
     ```bash
     CREATE DATABASE mydatabase;
@@ -159,7 +159,7 @@ _基於前述的版本問題，系統顯示需要 MariaDB Connector/C 的版本�
     ```bash
     import mariadb
 
-    # 數據庫連接配置
+    # 資料庫連接配置
     config = {
         'user': '資料庫使用者帳號',
         'password': '上列帳號的密碼',

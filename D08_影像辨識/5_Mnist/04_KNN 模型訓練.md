@@ -56,7 +56,7 @@ _第一版_
 
     # 使用 K-Nearest Neighbors (KNN) 建立模型
     knn = cv2.ml.KNearest_create()                    
-    # 設定 KNN 模型的參數，默認鄰居數為 5
+    # 設定 KNN 模型的參數，預設鄰居數為 5
     knn.setDefaultK(5)
     # 設置為分類器模式                           
     knn.setIsClassifier(True)
