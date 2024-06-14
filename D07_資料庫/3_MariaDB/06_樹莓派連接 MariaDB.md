@@ -10,11 +10,11 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
 
 ## pymysql
 
-1. 開發與維護：Oracle（MySQL 的擁有者和開發者）官方。
+1. 開發與維護：由 Python 社區維護的一個獨立項目。
 
-2. 實現方式：可以使用純 Python 實現，也可以使用 C 擴展。
+2. 實現方式：使用純 Python 實現的。
 
-3. 特色：主要針對 MySQL 通用庫，效能佳。
+3. 特色：主要用於 MySQL 和 MariaDB，能夠與多個 Python 版本兼容。效能不如使用 C 擴展的套件，但適合需要跨平台的應用。
 
 4. 套件安裝。
 
@@ -37,7 +37,12 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
     your_table = 'table_01'
 
     # 建立資料庫連接，但暫時不指定特定的資料庫
-    conn = pymysql.connect(host=host, user=user, password=password, charset='utf8mb4')
+    conn = pymysql.connect(
+        host=host,
+        user=user,
+        password=password,
+        charset='utf8mb4'
+    )
 
     try:
         cursor = conn.cursor()
@@ -100,11 +105,11 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
 
 ## mysql-connector-python
 
-1. 開發與維護：由社區維護的獨立項目。
+1. 開發與維護：由 Oracle 官方提供的項目。
 
 2. 實現方式：完全用 Python 寫的，使得更易於安裝和分發。
 
-3. 特色：是個通用庫，並與多個版本 Python 兼容。
+3. 特色：官方提供的 MySQL 連接器，與 MySQL 和 MariaDB 完全兼容，支持多個 Python 版本。
 
 4. 套件安裝
 
@@ -176,7 +181,7 @@ _後續將以這個套件為主，這裡直接安裝會出錯，因為少了一�
 
 1. 開發與維護：MariaDB 官方推薦的 Python 連接器。
 
-2. 實現方式：使用了 C 擴展。
+2. 實現方式：使用了 C 擴展來實現更高效的資料庫操作。
 
 3. 特色：專注於 MariaDB，效能佳。
 
