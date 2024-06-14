@@ -6,7 +6,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
 
 ## 簡介
 
-1. `MariaDB` 是一個 `開源的` 關係型資料庫管理系統，由 `MySQL` 的原始開發者創建，以保持 MySQL 的開源性並進一步發展。
+1. `MariaDB` 是一個 `開源的` 關係型資料庫管理系統，由 `MySQL` 的原始開發者建立，以保持 MySQL 的開源性並進一步發展。
 
 <br>
 
@@ -63,7 +63,9 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
     try:
         cursor = conn.cursor()
         # 檢查資料庫是否存在
-        cursor.execute(f"SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '{db_name}'")
+        cursor.execute(
+            f"SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '{db_name}'"
+        )
         result = cursor.fetchone()
         if not result:
             # 如果資料庫不存在，則建立它
@@ -77,7 +79,13 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
         conn.close()
 
         # 重新建立連接到新建或已存在的資料庫
-        conn = pymysql.connect(host=host, user=user, password=password, db=db_name, charset='utf8mb4')
+        conn = pymysql.connect(
+            host=host,
+            user=user,
+            password=password,
+            db=db_name,
+            charset='utf8mb4'
+        )
         
         cursor = conn.cursor()
         # 檢查表是否存在
@@ -179,7 +187,10 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
         print("Table created.")
 
         # 向資料表插入一筆資料
-        cursor.execute(f"INSERT INTO {TABLE_NAME} (column1, column2) VALUES (%s, %s)", ('value1', 'value2'))
+        cursor.execute(
+            f"INSERT INTO {TABLE_NAME} (column1, column2) VALUES (%s, %s)",
+            ('value1', 'value2')
+        )
         conn.commit()
         print("Inserted one row into {TABLE_NAME}.")
 
@@ -221,7 +232,7 @@ _後續將以這個套件為主，這裡直接安裝會出錯，因為少了一�
 
 <br>
 
-5. 範例。
+5. 範例：請替換其中的 `your_username`、`your_password`、`your_database`，當資料庫不存在的時候，會自動建立。
 
     ```python
     import mariadb
@@ -234,11 +245,30 @@ _後續將以這個套件為主，這裡直接安裝會出錯，因為少了一�
         'port': 3306
     }
 
-    # 連接資料庫
+    # 連接 MariaDB 伺服器
     conn = mariadb.connect(**config)
     cursor = conn.cursor()
 
-    # 查詢
+    # 檢查資料庫是否存在，若不存在則建立
+    cursor.execute(
+        "CREATE DATABASE IF NOT EXISTS my_database"
+    )
+
+    # 選擇資料庫
+    conn.database = 'my_database'
+
+    # 建立測試表格（如果還不存在）
+    cursor.execute(
+        "CREATE TABLE IF NOT EXISTS your_table (id INT PRIMARY KEY, name VARCHAR(255))"
+    )
+
+    # 插入測試數據（如果需要）
+    cursor.execute(
+        "INSERT INTO your_table (id, name) VALUES (1, 'test_name')"
+    )
+    conn.commit()
+
+    # 查詢數據
     cursor.execute("SELECT * FROM your_table")
     for row in cursor:
         print(row)
