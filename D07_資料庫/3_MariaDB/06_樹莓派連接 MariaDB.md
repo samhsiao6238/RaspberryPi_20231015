@@ -18,7 +18,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
 
 <br>
 
-## pymysql
+## 📌 pymysql
 
 1. 開發與維護：由 `Python 社區` 開發和維護的一個獨立項目。
 
@@ -119,7 +119,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
 
 <br>
 
-## mysql-connector-python
+## 📌 mysql-connector-python
 
 1. 開發與維護：由 `Oracle 官方` 提供的項目，文檔齊全、功能完備，且具備良好的支持保障。
 
@@ -194,7 +194,7 @@ _在樹莓派上使用 Python 連接 MariaDB 做應用，有多個套件可以�
 
 <br>
 
-## mariadb
+## 📌 mariadb
 
 _後續將以這個套件為主，這裡直接安裝會出錯，因為少了一些依賴_
 
