@@ -6,7 +6,6 @@
 
 _詳連線錯誤簡易排除_
 
-
 <br>
 
 ## 遠端主機驗證已經改變
@@ -15,16 +14,19 @@ _詳連線錯誤簡易排除_
 
    ![](images/img_05.png)
 
+<br>
+
 2. 編輯檔案
 
    ```bash
    /Users/samhsiao/.ssh/known_hosts
    ```
 
+<br>
+
 3. 將連線主機的舊紀錄刪除。
 
    ![](images/img_08.png)
-
 
 <br>
 
