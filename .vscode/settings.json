@@ -22,5 +22,12 @@
     ],
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // 全局縮排設置
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    // 專門為 Markdown 文件設置縮排
+    "[markdown]": {
+        "editor.tabSize": 4
     }
 }
