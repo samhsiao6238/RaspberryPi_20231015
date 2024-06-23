@@ -22,6 +22,7 @@
 
 _錯誤可能來自幾個原因_
 
+<br>
 
 1. pyOpenSSL 版本不兼容：可能安裝了一個不兼容的 pyOpenSSL 版本。
 
@@ -33,20 +34,19 @@ _錯誤可能來自幾個原因_
 
 3. pip 或 Python 版本過舊：使用的 pip 或 Python 版本可能過舊，無法正確地安裝或運行需要的庫。
 
-
 <br>
 
-### 解決方法
+## 解決方法
 
-1. 更新 pip 和 Python
+1. 更新 pip 和 Python。
 
    ```bash
-   python3 -m pip install --upgrade pip
+   python -m pip install --upgrade pip
    ```
 
 <br>
 
-2. 更新 pyOpenSSL 和相關庫
+2. 更新 pyOpenSSL 和相關庫。
    
    ```bash
    pip install --upgrade pyOpenSSL
@@ -54,15 +54,11 @@ _錯誤可能來自幾個原因_
 
 <br>
 
-3. 檢查 OpenSSL 版本
-   
-   _假如更新後還是錯誤，可再進一步檢查系統中安裝的 OpenSSL 版本與 pyOpenSSL 是否兼容。_
+3. 檢查 OpenSSL 版本：假如更新後還是錯誤，可再進一步檢查系統中安裝的 OpenSSL 版本與 pyOpenSSL 是否兼容。
 
 <br>
 
-4. 使用虛擬環境：
-
-    _假如以上程序都未能解決，只好建立新的虛擬環境來開發_
+4. 使用虛擬環境：假如以上程序都未能解決，只好建立新的虛擬環境來開發。
 
 <br>
 
