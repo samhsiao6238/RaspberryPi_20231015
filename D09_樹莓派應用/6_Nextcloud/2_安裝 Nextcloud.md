@@ -135,7 +135,7 @@
 
 <br>
 
-15. 安裝套件 `software-properties-common` ：這是管理軟件來源和 PPA 的工具，以下程序所需。
+15. 安裝套件 `software-properties-common` ：這是管理軟體來源和 PPA 的工具，以下程序所需。
 
     ```bash
     sudo apt install -y software-properties-common
@@ -145,7 +145,7 @@
 
 <br>
 
-16. 安裝兩個套件： `certificates` 包含了一系列被信任的證書， `apt-transport-https` 讓 APT 可通過 HTTPS 協議訪問軟件倉庫。
+16. 安裝兩個套件： `certificates` 包含了一系列被信任的證書， `apt-transport-https` 讓 APT 可通過 HTTPS 協議訪問軟體倉庫。
 
     ```bash
     sudo apt install ca-certificates apt-transport-https

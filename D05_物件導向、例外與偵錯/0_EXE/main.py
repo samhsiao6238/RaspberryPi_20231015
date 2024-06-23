@@ -17,14 +17,14 @@ def main():
     scraper = MyScraper('https://www.cnyes.com/')
     titles = scraper.fetch_data()
     
-    # 判斷是否成功獲取到數據，如果有，則打印並儲存
+    # 判斷是否成功取得到數據，如果有，則列印並儲存
     if titles:
         for idx, title in enumerate(titles):
             print(f"標題 {idx+1}：{title}")
         # 儲存標題到Firebase
         save_data_to_firebase('news_titles', {'titles': titles})
     else:
-        print("無法獲取網頁數據")
+        print("無法取得網頁數據")
 
 if __name__ == '__main__':
     main()

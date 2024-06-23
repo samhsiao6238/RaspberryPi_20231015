@@ -16,9 +16,9 @@ class WebScraper:
 class MyScraper(WebScraper):
     # 覆寫fetch_data方法
     def fetch_data(self):
-        # 發送HTTP請求獲取網頁內容
+        # 發送HTTP請求取得網頁內容
         response = requests.get(self.url)
-        # 如果HTTP響應狀態碼為200，表示成功獲取網頁
+        # 如果HTTP響應狀態碼為200，表示成功取得網頁
         if response.status_code == 200:
             # 解析HTML內容
             tree = html.fromstring(response.content)
@@ -32,7 +32,7 @@ class MyScraper(WebScraper):
                 title_element = tree.xpath(xpath_expression)
                 # 檢查是否有找到標題元素
                 if title_element:
-                    # 獲取標題文本
+                    # 取得標題文本
                     full_title = title_element[0].text_content().strip()
                     # 透過空格分割標題文本，以移除日期部分
                     title_parts = full_title.split(' ', 1)
@@ -51,7 +51,7 @@ class MyScraper(WebScraper):
             # 返回所有抓取到的標題
             return titles
         else:
-            # 如果網頁無法成功獲取，返回None
+            # 如果網頁無法成功取得，返回None
             return None
 
 if __name__ == '__main__':
@@ -59,10 +59,10 @@ if __name__ == '__main__':
     scraper = MyScraper('https://www.cnyes.com/')
     # 調用fetch_data方法抓取數據
     titles = scraper.fetch_data()
-    # 如果成功獲取到標題，則打印出來
+    # 如果成功取得到標題，則列印出來
     if titles:
         for idx, title in enumerate(titles):
             print(f"標題 {idx+1}：{title}")
     else:
-        print("無法獲取網頁數據")
+        print("無法取得網頁數據")
 

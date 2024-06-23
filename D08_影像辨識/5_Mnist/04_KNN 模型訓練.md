@@ -70,7 +70,7 @@ _第一版_
     print('進行測試')
     # 使用測試集的圖像數據 x_test 進行預測
     test_pre = knn.predict(x_test)
-    # 獲取預測結果
+    # 取得預測結果
     test_ret = test_pre[1]
     # 重塑預測結果為一維數組
     test_ret = test_ret.reshape(-1,)

@@ -266,7 +266,7 @@
 
 ## 6. `get()`
 
-1. 功能：獲取控制元件的當前值。
+1. 功能：取得控制元件的當前值。
 
 2. 可調用物件：Entry, Spinbox。
 
@@ -294,7 +294,7 @@
 
     # 按鈕點擊事件處理函數
     def show_entry_content():
-        # 使用 get() 方法獲取 Entry 控制元件的當前值
+        # 使用 get() 方法取得 Entry 控制元件的當前值
         content = entry.get()
         print("Entry 中的內容:", content)
 

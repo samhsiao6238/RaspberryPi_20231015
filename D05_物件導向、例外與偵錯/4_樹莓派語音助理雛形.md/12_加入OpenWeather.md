@@ -41,7 +41,7 @@ _課後概念性參考，故腳本未做優化_
    city = input("請輸入城市名稱: ")
    # 組合URL以進行API請求
    url = BASE_URL + "appid=" + API_KEY + "&q=" + city + "&lang=zh_tw" + "&units=metric"
-   # 發送請求並獲取響應
+   # 發送請求並取得響應
    response = requests.get(url)
    # 將響應轉化為JSON格式
    data = response.json()
@@ -61,7 +61,7 @@ _課後概念性參考，故腳本未做優化_
        print(f"風速: {wind['speed']} m/s")
    else:
        # 輸出錯誤資訊
-       print("錯誤：無法獲取天氣資訊。")
+       print("錯誤：無法取得天氣資訊。")
    ```
 
 <br>
@@ -120,7 +120,7 @@ _課後概念性參考，故腳本未做優化_
            return f"{city}的天氣狀況為{description}，目前溫度為{main['temp']}度。"
        else:
            print(city)
-           return "抱歉，我無法獲取天氣資訊。"
+           return "抱歉，我無法取得天氣資訊。"
 
    # 初始化 Dialogflow
    session_client = dialogflow.SessionsClient()
@@ -178,7 +178,7 @@ _課後概念性參考，故腳本未做優化_
        response = client.recognize(config=config, audio=audio)
        return response.results[0].alternatives[0].transcript
 
-   # 從Dialogflow獲取回應，如果是天氣意圖則調用天氣API
+   # 從Dialogflow取得回應，如果是天氣意圖則調用天氣API
    def get_response(text):
        text_input = dialogflow.TextInput(text=text, language_code="zh-TW")
        query_input = dialogflow.QueryInput(text=text_input)
@@ -193,7 +193,7 @@ _課後概念性參考，故腳本未做優化_
                city = parameters["geo-city"]
                # 如果城市名稱在映射中，直接使用映射名稱
                city_english_name = city_name_mapping.get(city, city)
-               # 調用天氣 API 獲取天氣訊息
+               # 調用天氣 API 取得天氣訊息
                return get_weather(city_english_name)
            else:
                # 如果沒有提取到城市名稱，則返回預設回覆
@@ -215,8 +215,8 @@ _課後概念性參考，故腳本未做優化_
                print(f"辨識結果: {text}")
                # 確保有轉錄內容
                if text.strip() != "":  
-                   print("正在獲取 Dialogflow 回應...")
-                   # 獲取回應
+                   print("正在取得 Dialogflow 回應...")
+                   # 取得回應
                    response = get_response(text)  
                    print(f"Dialogflow 回應: {response}")
                    # 使用 espeak 進行語音輸出

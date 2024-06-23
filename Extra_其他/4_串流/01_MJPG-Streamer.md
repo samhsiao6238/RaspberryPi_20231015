@@ -20,7 +20,7 @@
 
 2. 安裝依賴
 
-- CMake：用來控制軟件編譯過程的工具。
+- CMake：用來控制軟體編譯過程的工具。
 
   ```bash
   sudo apt install cmake

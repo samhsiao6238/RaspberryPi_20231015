@@ -253,7 +253,7 @@ _說明以下五個函數_
     label2 = tk.Label(root, text="標籤2")
     label2.pack()
 
-    # 獲取使用 pack 佈局的子組件
+    # 取得使用 pack 佈局的子組件
     slaves = root.pack_slaves()
     print("使用 pack 的子組件:", slaves)
     ```
@@ -362,7 +362,7 @@ _可嘗試取消註解觀察輸出或是變化_
 
     # 以下演示 pack 的函數使用
 
-    # 使用 pack_slaves() 函數獲取所有 pack 子組件
+    # 使用 pack_slaves() 函數取得所有 pack 子組件
     # print("使用 pack 的子組件:", root.pack_slaves())
 
     # 使用 configure() 函數更新 button 的背景顏色
@@ -371,7 +371,7 @@ _可嘗試取消註解觀察輸出或是變化_
     # 使用 pack_propagate() 函數設置是否讓父容器大小隨子組件變化
     # root.pack_propagate(False)
 
-    # # 使用 pack_info() 函數獲取 button 的 pack 配置信息
+    # # 使用 pack_info() 函數取得 button 的 pack 配置信息
     # print("Button pack 配置信息:", button.pack_info())
 
     # # 使用 pack_forget() 函數暫時隱藏 label

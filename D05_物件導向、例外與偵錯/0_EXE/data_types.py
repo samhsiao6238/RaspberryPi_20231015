@@ -19,4 +19,4 @@ def list_operations():
 # 字典操作
 def dictionary_operations():
     my_dict = {'name': 'Alice', 'age': 25}
-    print(my_dict['name'])  # 獲取元素
+    print(my_dict['name'])  # 取得元素

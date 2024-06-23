@@ -114,13 +114,13 @@
         # 轉換圖像顏色空間從 BGR 到 RGB
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-        # 處理圖像並獲取手部標記
+        # 處理圖像並取得手部標記
         results = hands.process(image_rgb)
 
         # 如果檢測到手部
         if results.multi_hand_landmarks:
             for hand_landmarks in results.multi_hand_landmarks:
-                # 獲取食指指尖的坐標
+                # 取得食指指尖的坐標
                 finger_tip = hand_landmarks.landmark[
                     mp_hands.HandLandmark.INDEX_FINGER_TIP
                 ]

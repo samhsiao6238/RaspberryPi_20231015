@@ -43,10 +43,10 @@
         st.error(f"Error connecting to MariaDB: {e}")
         sys.exit(1)
 
-    # 獲取 cursor 對象
+    # 取得 cursor 對象
     cur = conn.cursor()
 
-    # 執行查詢以獲取座標數據
+    # 執行查詢以取得座標數據
     try:
         cur.execute("SELECT 起點, 終點, 次數, ST_X(座標) as longitude, ST_Y(座標) as latitude FROM tb_UB_2;")
         
@@ -106,7 +106,7 @@
         st.error(f"Error connecting to MariaDB: {e}")
         sys.exit(1)
 
-    # 獲取 cursor 對象
+    # 取得 cursor 對象
     cur = conn.cursor()
 
     # 執行查詢以取得坐標數據

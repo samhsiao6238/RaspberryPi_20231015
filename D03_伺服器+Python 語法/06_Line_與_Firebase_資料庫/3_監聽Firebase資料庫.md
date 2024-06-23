@@ -36,7 +36,7 @@ _Firebase Realtime Database_
 
    def listener(event):
        # 監聽到變動的時候在這裡執行邏輯
-       # 暫且打印更新的資料
+       # 暫且列印更新的資料
        print('Listener: {}, {}'.format(event.path, event.data))
 
    if __name__ == '__main__':

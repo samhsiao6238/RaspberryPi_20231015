@@ -69,9 +69,9 @@ def debug_info(_message=''):
     if IS_DEBUG:
         global count
         count += 1
-        # 獲取當前的堆棧
+        # 取得當前的堆棧
         current_frame = inspect.currentframe()
-        # 獲取調用debug_info的函數的堆棧
+        # 取得調用debug_info的函數的堆棧
         outer_frame = inspect.getouterframes(current_frame, 2)
         # outer_frame的第一個元素是當前debug_info的堆棧，第二個元素是調用debug_info的函數的堆棧
         func_name = outer_frame[1][3]
@@ -85,7 +85,7 @@ def initialize_firebase():
     try:
         firebase_admin.get_app()
     except ValueError as e:
-        # 根據是否在 Streamlit 服務器上運行，用不同方式獲取 Firebase 憑證
+        # 根據是否在 Streamlit 服務器上運行，用不同方式取得 Firebase 憑證
         # (1) 判斷是否在服務器上
         if Constants.STREAMLIT_PUBLIC_PATH in os.environ:
             # 如果在 Streamlit 服務器上運行，從環境變量讀取憑證
@@ -97,7 +97,7 @@ def initialize_firebase():
                     cred_info = json.loads(firebase_cred)
                     cred = credentials.Certificate(cred_info)
                 except json.JSONDecodeError:
-                    # 假如這樣獲取失敗，還有另一個環境變數儲存了文字憑證
+                    # 假如這樣取得失敗，還有另一個環境變數儲存了文字憑證
                     try:
                         # 讀取 json
                         cred = credentials.Certificate(json.loads(st.secrets[Constants.ST_FIREBASE_CONFIG_STR]))
@@ -270,7 +270,7 @@ def main():
     st.session_state[Constants.PH_BTN_VALIDATE_CHECKIN] = st.empty()  # 添加到 session_state
 
     if not st.session_state.validated:
-        # 使用text_input來獲取驗證碼，並存入session_state
+        # 使用text_input來取得驗證碼，並存入session_state
         st.session_state[Constants.INPUT_PASSWORD] = st.session_state[Constants.PH_PASSWORD].text_input("請輸入驗證碼：", value=st.session_state.get(Constants.INPUT_PASSWORD, ""), type='password')
 
         if st.session_state[Constants.PH_BTN_VALIDATE_CHECKIN].button("驗證"):
