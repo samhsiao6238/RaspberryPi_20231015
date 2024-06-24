@@ -10,6 +10,8 @@
    systemctl status avahi-daemon
    ```
 
+   ![](images/img_21.png)
+
 <br>
 
 # mDNS
