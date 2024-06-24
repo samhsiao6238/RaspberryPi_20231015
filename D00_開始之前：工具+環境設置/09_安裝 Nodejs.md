@@ -1,14 +1,16 @@
 # 安裝新版 Nodejs
 
+_[簡中官網](https://nodejs.org/zh-cn)，右上方可切換語言_
+
 <br>
 
-## 新版
+## 
 
 _20240624 更新_
 
 <br>
 
-1. 參考 [官網](https://deb.nodesource.com/) 提供的安裝指令。
+1. 參考 [NodeSource](https://deb.nodesource.com/) 提供的安裝指令，NodeSource 並不是 [Node.js 官網](https://nodejs.org/en)，而是專門為基於 `Debian` 的 `Linux` 發行版如 `Ubuntu`提供 `Node.js` 安裝包的平台。
 
     ```bash
     # 安裝 nvm（Node Version Manager）
@@ -25,7 +27,7 @@ _20240624 更新_
 
 ## 舊版
 
-1. 這是 `官網` 之前提供的安裝指令。
+1. 這是 `NodeSource` 之前提供的安裝指令。
 
     ```bash
     sudo apt-get update && sudo apt-get install -y ca-certificates curl gnupg
