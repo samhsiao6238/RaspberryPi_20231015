@@ -61,7 +61,7 @@ _這是一個相對複雜的操作，以下只列舉幾種狀況_
 
 <br>
 
-6. 允許一個目錄下的所有命令，如下設置表示 user 可以使用 sudo 執行 /usr/bin/ 目錄下的所有命令。。
+6. 允許一個目錄下的所有命令，如下設置表示 user 可以使用 sudo 執行 /usr/bin/ 目錄下的所有命令。
 
     ```bash
     user ALL=(ALL) /usr/bin/
@@ -79,23 +79,31 @@ _這是一個相對複雜的操作，以下只列舉幾種狀況_
 
 ## 開始實作
 
+_編輯全局設定文件 `/etc/sudoers`，用於配置整個系統範圍內的 sudo 權限_
+
 <br>
 
-1. 編輯設定檔案。
+1. 使用以下指令切換到指定路徑，並使用 `visudo` 編輯全局設定檔案 `/etc/sudoers`，這個文件內有系統建立的設定文本。
 
     ```bash
-    sudo visudo
+    cd /etc/sudoers.d && sudo visudo
     ```
 
 <br>
 
-2. 可看到預設權限設置如下。
+2. 滑動到最下方，可看到預設權限設置如下，分別對於 root 用戶及 sudo 群組進行最大授權。
 
-    ![img](images/img_808.png)
+    ```bash
+    # 允許 `root 用戶` 在任何主機上以任何用戶身份運行任何命令
+    root    ALL=(ALL:ALL) ALL
+
+    # 允許 `sudo 群組` 在任何主機上以任何用戶身份運行任何命令。
+    %sudo   ALL=(ALL:ALL) ALL
+    ```
 
 <br>
 
-3. 加入免密碼 `NOPASSWD`：`sudo` 群組的所有使用者可以在所有主機上，以所有使用者身份執行所有命令且無需密碼。
+3. 加入免密碼 `NOPASSWD` 的參數，設置後表示 `sudo 群組的成員`、`可在任何主機上`、`以任何用戶身份`、`執行任何命令且無需輸入密碼`。
 
     ```bash
     %sudo   ALL=(ALL:ALL) NOPASSWD:ALL
@@ -103,7 +111,7 @@ _這是一個相對複雜的操作，以下只列舉幾種狀況_
 
 <br>
 
-4. 檢查語法是否正確。
+4. 自動檢查語法是否正確。
 
     ```bash
     sudo visudo -c
@@ -113,7 +121,7 @@ _這是一個相對複雜的操作，以下只列舉幾種狀況_
 
 <br>
 
-5. 這個編輯會自帶檢查，假設將參數 `NOPASSWD` 誤植為 `NOPASSWORD` ，系統會在儲存後提出警告。
+5. 這個編輯會自帶檢查，以下示範將參數 `NOPASSWD` 誤植為 `NOPASSWORD` ，系統會在儲存後提出警告。
 
     ![](images/img_810.png)
 
@@ -125,24 +133,44 @@ _這是一個相對複雜的操作，以下只列舉幾種狀況_
 
 <br>
 
-## 還有另一個設定檔案 `sudoers.d`
+7. 使用以下命令來驗證新的設定是否生效。
 
-1. 在前項說明的設定檔最後一行內容。
+    ```bash
+    sudo -l
+    ```
+
+    ![](images/img_808.png)
+
+<br>
+
+## 更安全的做法
+
+_編輯資料夾 `sudoers.d` 內用戶或群組的個別設定文件_
+
+<br>
+
+1. 在前項設定文件的最後一行可看到以下設定 `@includedir /etc/sudoers.d`，表示全局設定文件 `sudoers` 會在最後載入個別設定文件夾中的所有設定檔。
 
     ![](images/img_812.png)
 
 <br>
 
-2. 會發現裡面有三項設定。
+2. 使用 `ls` 進行查詢會發現裡面有五個設定文件，舊版中是三個。
+
+    ```bash
+    ls -al /etc/sudoers.d/
+    ```
 
     ![](images/img_813.png)
 
 <br>
 
-3. 可透過 `cat` 語法逐一查看內容。
+3. 透過 `cat` 語法逐一查看內容。
 
     ```bash
     sudo cat /etc/sudoers.d/010_at-export
+    sudo cat /etc/sudoers.d/010_dpkg-threads
+    sudo cat /etc/sudoers.d/010_global-tty
     sudo cat /etc/sudoers.d/010_pi-nopasswd
     sudo cat /etc/sudoers.d/010_proxy
     ```
