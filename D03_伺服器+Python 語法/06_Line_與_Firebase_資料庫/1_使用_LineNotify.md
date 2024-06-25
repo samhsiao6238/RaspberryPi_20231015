@@ -14,6 +14,8 @@ _樹莓派啟動時發送 LineNotify 通知_
 
    ![](images/img_21.png)
 
+<br>
+
 3. 發行一個新的 token。
 
    ![](images/img_22.png)
