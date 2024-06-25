@@ -4,7 +4,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-## A. 建立 LINE Notify 的 Token
+## 建立 LINE Notify Token
 
 1. 前往 [LINE Notify](https://notify-bot.line.me/en/) 並點擊右上方的登入 `Log in` 完成登入。
 
@@ -42,7 +42,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-## B. 撰寫腳本
+## 安裝套件
 
 1. 這個腳本所使用的都是預設套件，所以無須安裝。
 
@@ -170,7 +170,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-## C. 設置為系統服務
+## 設置系統服務
 
 1. 當前還在腳本所在資料夾，先查詢並複製絕對路徑。
 
