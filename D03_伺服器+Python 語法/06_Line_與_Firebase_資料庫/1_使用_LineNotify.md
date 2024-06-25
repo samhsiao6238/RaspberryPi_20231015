@@ -227,25 +227,39 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-6. 啟動並啟用系統服務。
+6. 立即啟動服務，啟動後會發送通知。
 
    ```bash
    sudo systemctl start line_notify.service
-   sudo systemctl enable line_notify.service
    ```
 
 <br>
 
-7. 假如修改設定檔案，要重新加載配置。
+7. 設置為開機自動啟用。
 
    ```bash
+   sudo systemctl enable line_notify.service
+   ```
+
+   _輸出_
+
+   ```bash
+   Created symlink /etc/systemd/system/multi-user.target.wants/line_notify.service → /etc/systemd/system/line_notify.service.
+   ```
+<br>
+
+8. 假如有修改設定檔案，要重新加載配置並重新啟動。
+
+   ```bash
+   # 重新加載
    sudo systemctl daemon-reload
+   # 重新啟動
    sudo systemctl restart line_notify.service
    ```
 
 <br>
 
-8. 查看服務狀態。
+9. 查看服務狀態，特別注意，這個服務是一個一次性運行的腳本，所以腳本執行後服務就會停止，所以查詢後看到 `inactive` 正是預期中的。
 
    ```bash
    sudo systemctl status line_notify.service
@@ -253,19 +267,11 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-9. 完成以上步驟後重新開機。
-
-   ```bash
-   sudo reboot now
-   ```
-
-<br>
-
 10. 賦予服務執行腳本的權限。
 
       ```bash
-      sudo chmod +x /home/sam6238/Documents/send_line_notify.py
-      sudo chmod 600 /home/sam6238/Documents/.env
+      chmod +x ~/Documents/exTurnOn/send_line_notify.py
+      chmod 600 ~/Documents/exTurnOn/.env
       ```
 
 <br>
@@ -273,29 +279,43 @@ _樹莓派啟動時發送 LineNotify 通知_
 11. 確保文件擁有者。
 
       ```bash
-      sudo chown sam6238:sam6238 /home/sam6238/Documents/send_line_notify.py
-      sudo chown sam6238:sam6238 /home/sam6238/Documents/.env
+      chown sam6238:sam6238 ~/Documents/exTurnOn/send_line_notify.py
+      chown sam6238:sam6238 ~/Documents/exTurnOn/.env
       ```
 
 <br>
 
-12. 查看日誌。
+12. 完成以上步驟後重新開機，因為腳本設置了等候 10 秒才運行腳本，所以開機完成後還要等一下才會收到通知。
 
       ```bash
-      sudo journalctl -u line_notify.service
+      sudo reboot now
       ```
-      
-      _或僅查看最新的_
-      
-      ```bash
-      sudo journalctl -u line_notify.service -n 50
-      ```
-      
-      _或動態查看_
-      
-      ```bash
-      sudo journalctl -u line_notify.service -n 50 -f
-      ```
+
+<br>
+
+## 查看日誌
+
+1. 若服務出現錯誤，可透過日誌查看與 `line_notify.service` 相關的所有日誌。
+
+   ```bash
+   journalctl -u line_notify.service
+   ```
+
+<br>
+
+2. 僅查看相關的最近 `50` 條日誌記錄。
+
+   ```bash
+   journalctl -u line_notify.service -n 50
+   ```
+
+<br>
+
+3. 實時查看與 `line_notify.service` 相關的最近 `50` 條日誌記錄，並持續跟蹤新的日誌輸出，也就是實時監控服務的運行情況。
+
+   ```bash
+   journalctl -u line_notify.service -n 50 -f
+   ```
 
 <br>
 
