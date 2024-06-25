@@ -16,7 +16,7 @@ _即時發送事件通知_
 
 <br>
 
-3. 注意一下，這時的網址是在 `notify-bot.line.me` 之內，而非 `GitHub`。這不同於 `IFTTT` 是轉入 `IFTTT` 完成設定。
+3. 注意一下，這時的網址是在 `notify-bot.line.me` 之內，而非 `GitHub`。這與另一個服務 `IFTTT` 的設置不同， `IFTTT` 是轉入該服務的平台中進行後續步驟的設定。
 
    ![](images/img_14.png)
 
@@ -64,19 +64,25 @@ _即時發送事件通知_
 
 <br>
 
-11. 把 Line Notify 加入群組，尚未加入的話，舉凡在群組內的成員都會收到 Line Notidfy 通知要將 Line Notify 加入群組。
+11. 在該通知尚未加入所選群組之前，舉凡在群組內的成員都會收到需將該通知加入群組的訊息。
+
+      ![](images/img_40.png)
+
+<br>
+
+12. 進入 `Line App` 把 `Line Notify` 加入群組中。
 
       ![](images/img_08.png)
 
 <br>
 
-12. 邀請加入。
+13. 邀請加入。
 
       ![](images/img_12.png)
 
 <br>
 
-13. 同步 Repo 時觸發。
+14. 同步 Github Repo 時發送通知到群組中。
 
       ![](images/img_13.png)
 
