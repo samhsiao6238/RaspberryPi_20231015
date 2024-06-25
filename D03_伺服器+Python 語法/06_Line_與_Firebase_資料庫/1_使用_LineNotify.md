@@ -137,13 +137,15 @@ _樹莓派啟動時發送 LineNotify 通知_
       send_line_notify("\n 樹莓派已開機")
    ```
 
+<br>
+
 10. 在終端機內執行一下測試收到通知。
 
-   ```bash
-   /usr/bin/python /home/sam6238/Documents/send_line_notify.py
-   ```
+      ```bash
+      /usr/bin/python /home/sam6238/Documents/send_line_notify.py
+      ```
 
-   ![](images/img_27.png)
+      ![](images/img_27.png)
 
 
 <br>
@@ -227,47 +229,51 @@ _樹莓派啟動時發送 LineNotify 通知_
    sudo systemctl status line_notify.service
    ```
 
+<br>
+
 9. 完成以上步驟後重新開機。
 
    ```bash
    sudo reboot now
    ```
 
+<br>
+
 10. 賦予服務執行腳本的權限。
 
-   ```bash
-   sudo chmod +x /home/sam6238/Documents/send_line_notify.py
-   sudo chmod 600 /home/sam6238/Documents/.env
-   ```
+      ```bash
+      sudo chmod +x /home/sam6238/Documents/send_line_notify.py
+      sudo chmod 600 /home/sam6238/Documents/.env
+      ```
 
 <br>
 
 11. 確保文件擁有者。
 
-   ```bash
-   sudo chown sam6238:sam6238 /home/sam6238/Documents/send_line_notify.py
-   sudo chown sam6238:sam6238 /home/sam6238/Documents/.env
-   ```
+      ```bash
+      sudo chown sam6238:sam6238 /home/sam6238/Documents/send_line_notify.py
+      sudo chown sam6238:sam6238 /home/sam6238/Documents/.env
+      ```
 
 <br>
 
 12. 查看日誌。
 
-   ```bash
-   sudo journalctl -u line_notify.service
-   ```
-   
-   _或僅查看最新的_
-   
-   ```bash
-   sudo journalctl -u line_notify.service -n 50
-   ```
-   
-   _或動態查看_
-   
-   ```bash
-   sudo journalctl -u line_notify.service -n 50 -f
-   ```
+      ```bash
+      sudo journalctl -u line_notify.service
+      ```
+      
+      _或僅查看最新的_
+      
+      ```bash
+      sudo journalctl -u line_notify.service -n 50
+      ```
+      
+      _或動態查看_
+      
+      ```bash
+      sudo journalctl -u line_notify.service -n 50 -f
+      ```
 
 <br>
 
