@@ -17,7 +17,7 @@ pip install azure-iot-device
 
 ## 發佈到 Azure IoT Core
 
-1. 在 IoT Hub 中建立一個新的裝置並取得裝置的連接字符串
+1. 在 IoT Hub 中建立一個新的裝置並取得裝置的連接字串
    
    ![](images/img_31.png)
 
