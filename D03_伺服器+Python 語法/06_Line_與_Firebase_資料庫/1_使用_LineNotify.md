@@ -6,51 +6,65 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 ## A. 建立 LINE Notify 的 Token
 
-1. 前往 [LINE Notify](https://notify-bot.line.me/en/) 並點擊右上方的登入 `Log in`。
+1. 前往 [LINE Notify](https://notify-bot.line.me/en/) 並點擊右上方的登入 `Log in` 完成登入。
+
+   ![](images/img_37.png)
 
 <br>
 
-2. 點擊 `My page`。
+2. 登入後，點擊自己的別名展開選單，並點擊點擊 `個人頁面 My page`。
 
    ![](images/img_21.png)
 
 <br>
 
-3. 發行一個新的 token。
+3. 滑動到底部，點擊 `發行權杖` 以建立新的 token。
 
    ![](images/img_22.png)
 
 <br>
 
-4. 為 Token 命名選擇一個目標群組。
+4. 為 Token `命名`，並點擊選擇一個 `目標群組`，然後點擊 `發行`。
 
    ![](images/img_24.png)
 
 <br>
 
-5. 複製權杖。
+5. 複製權杖，特別注意，這個權杖之後將無法查詢，務必保存好。
 
    ![](images/img_28.png)
 
 <br>
 
+6. 建立完成可看到這個權杖就在最上方。
+
+   ![](images/img_38.png)
+
+<br>
+
 ## B. 撰寫腳本
 
-1. 安裝套件。
+1. 這個腳本所使用的都是預設套件，所以無須安裝。
 
    ```bash
-   pip install requests python-dotenv
+   requests python-dotenv
    ```
 
 <br>
 
-2. 安裝時若出現警告。
+2. 若未設置虛擬環境，安裝時需加入參數 `--break-system-packages`，但會得到無需重複安裝的提示。
+
+   ```bash
+   pip install requests python-dotenv --break-system-packages
+   ```
 
    ![](images/img_29.png)
 
 <br>
 
-3. 編輯環境參數；特別注意，對 `.bashrc` 文件進行編輯時無需使用 `sudo`，因為這是在家目錄下的配置文件，而每個用戶都對自己的 `.bashrc` 文件本就擁有寫入權限。同理，若以 `sudo` 對 `.bashrc` 進行編輯，這代表將以 `根用戶` 的身份進行編輯，並使文件的所有權轉移到根用戶，導致之後普通用戶無法再正常訪問或修改該文件，也就是用戶無法訪問自己的 `.bashrc` 文件。
+## 設定環境變數
+
+1. 編輯環境設定文件；特別注意，對 `.bashrc` 文件進行編輯時無需使用 `sudo`，因為這是在家目錄下的配置文件，而每個用戶都對自己的 `.bashrc` 文件本就擁有寫入權限。同理，若以 `sudo` 對 `.bashrc` 進行編輯，這代表將以 `根用戶` 的身份進行編輯，並使文件的所有權轉移到根用戶，導致之後普通用戶無法再正常訪問或修改該文件，也就是用戶無法訪問自己的 `.bashrc` 文件。
 
    ```bash
    nano ~/.bashrc
@@ -58,7 +72,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-4. 延續前一點說明，如果不慎使用 `sudo` 編輯 `.bashrc` 文件，可使用以下命令來恢復文件的所有權。
+2. 延續前一點說明，如果不慎使用 `sudo` 編輯 `.bashrc` 文件，可使用以下命令來恢復文件的所有權。
 
    ```bash
    sudo chown <使用者名稱>:<使用者名稱> ~/.bashrc
@@ -66,7 +80,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-5. 在最後加入一行。
+3. 在最後加入一行加入以下設定；這是在全局設定下運行 Python 所需的環境變數。
 
    ```bash
    # 加入環境參數
@@ -75,7 +89,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-6. 儲存後要記得重新載入。
+4. 儲存後重新載入讓設定生效。
 
    ```bash
    source ~/.bashrc
@@ -83,21 +97,25 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-7. 若在虛擬環境下執行安裝的時候務必加上 `python -m` 指定使用解釋器。
+## 建立專案
+
+1. 進入家目錄的 `Documents` 建立並進專案資料夾，這裡使用的是 `exTurnOn`。
 
    ```bash
-   python -m pip install requests python-dotenv
+   cd ~/Documents && mkdir exTurnOn && cd exTurnOn
    ```
 
 <br>
 
-8. 建立 `.env` 環境參數，字串部分有無引號皆可。
+2. 建立並編輯 `.env` 文件用以處理敏感資訊，這裡示範先建立、再編輯。
 
    ```bash
-   nano .env
+   touch .env && nano .env
    ```
 
-   _貼上_
+<br>
+
+3. 編輯 `.env`，將權杖寫入。
 
    ```bash
    _TOKEN=<替換自己的 LineNotify 權杖>
@@ -105,12 +123,15 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-9. 建立一個新的 Python 腳本，例如 `send_line_notify.py`。
+4. 建立一個新的 Python 腳本，例如 `send_line_notify.py`，這裡與前面的指令略有不同，可知直接 `nano` 也是可以的。
 
    ```bash
-   sudo nano send_line_notify.py
+   nano send_line_notify.py
    ```
-   貼上
+
+<br>
+
+5. 在腳本中貼上以下代碼。
 
    ```python
    import requests
