@@ -152,7 +152,7 @@ _樹莓派啟動時發送 LineNotify 通知_
       }
       data = {"message": message}
       response = requests.post(LINE_ENDPOINT, headers=headers, data=data)
-   return response.status_code
+      return response.status_code
 
    if __name__ == "__main__":
       send_line_notify("\n 樹莓派已開機")
@@ -160,20 +160,29 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-10. 在終端機內執行一下測試收到通知。
+6. 在終端機內執行一下測試收到通知。
 
-      ```bash
-      /usr/bin/python /home/sam6238/Documents/send_line_notify.py
-      ```
+   ```bash
+   /usr/bin/python ~/Documents/exTurnOn/send_line_notify.py
+   ```
 
-      ![](images/img_27.png)
-
+   ![](images/img_27.png)
 
 <br>
 
-## C. 設置系統服務
+## C. 設置為系統服務
 
-1. 切換路徑。
+1. 當前還在腳本所在資料夾，先查詢並複製絕對路徑。
+
+   ```bash
+   pwd
+   ```
+
+   ![](images/img_39.png)
+
+<br>
+
+2. 切換路徑到系統服務資料夾。
 
    ```bash
    cd /etc/systemd/system/
@@ -181,7 +190,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-2. 建立一個新的 systemd 服務檔案，例如 `line_notify.service`。
+3. 建立一個新的 `systemd` 服務檔案，例如 `line_notify.service`；特別注意，在這裡就必須使用 `sudo`。
 
    ```bash
    sudo touch line_notify.service
@@ -189,7 +198,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-3. 編輯服務檔案。
+4. 編輯服務檔案。
 
    ```bash
    sudo nano line_notify.service
@@ -197,15 +206,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 <br>
 
-4. 先去腳本所在資料夾查詢絕對路徑。
-
-   ```bash
-   pwd
-   ```
-
-<br>
-
-5. 內容如下：務必記住替換自己的路徑、帳號。
+5. 貼上以下文本，_務必記住_ 替換自己的路徑 `ExecStart`、帳號 `User`。
 
    ```ini
    [Unit]
@@ -216,7 +217,7 @@ _樹莓派啟動時發送 LineNotify 通知_
    [Service]
    Type=oneshot
    ExecStartPre=/bin/sleep 10
-   ExecStart=/usr/bin/python /home/sam6238/Documents/send_line_notify.py
+   ExecStart=/usr/bin/python /home/sam6238/Documents/exTurnOn/send_line_notify.py
    User=sam6238
    TimeoutStartSec=0
 
