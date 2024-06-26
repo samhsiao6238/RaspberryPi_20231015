@@ -88,7 +88,7 @@ def initialize_firebase():
         # 根據是否在 Streamlit 服務器上運行，用不同方式取得 Firebase 憑證
         # (1) 判斷是否在服務器上
         if Constants.STREAMLIT_PUBLIC_PATH in os.environ:
-            # 如果在 Streamlit 服務器上運行，從環境變量讀取憑證
+            # 如果在 Streamlit 服務器上運行，從環境變數讀取憑證
             # firebase_cred = os.environ.get(Constants.ST_FIREBASE_CRED)
             firebase_cred = st.secrets[Constants.ST_FIREBASE_CRED]
             # 如果有這個環境變數
@@ -105,7 +105,7 @@ def initialize_firebase():
                         st.error(f'兩種方式皆無法解析服務器上的憑證：{e}')
                         return False
             else:
-                st.error('未設置 FIREBASE_CRED 環境變量')
+                st.error('未設置 FIREBASE_CRED 環境變數')
                 return False
         else:
             try:

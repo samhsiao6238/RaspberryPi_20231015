@@ -4,7 +4,7 @@
 
 ## 說明
 
-1. `dotenv` 是一個 Python 庫，用於將 `.env` 文件中的變量加載到環境變量中。
+1. `dotenv` 是一個 Python 庫，用於將 `.env` 文件中的變數加載到環境變數中。
    
 <br>
 
@@ -26,7 +26,7 @@
 
 <br>
 
-3. 在 `.env` 文件中添加環境變量：以 `KEY=VALUE` 的格式添加到 `.env` 文件中。
+3. 在 `.env` 文件中添加環境變數：以 `KEY=VALUE` 的格式添加到 `.env` 文件中。
 
    ```
    DATABASE_PASSWORD=yourpassword

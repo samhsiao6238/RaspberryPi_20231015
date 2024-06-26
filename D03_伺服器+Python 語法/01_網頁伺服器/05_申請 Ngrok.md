@@ -163,7 +163,7 @@ _步驟很簡單，這裡簡單介紹_
 
 <br>
 
-4. 確保 `/usr/local/bin` 已經在 PATH 環境變量中。
+4. 確保 `/usr/local/bin` 已經在 PATH 環境變數中。
 
     ```bash
     echo $PATH

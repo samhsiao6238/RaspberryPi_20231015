@@ -237,7 +237,7 @@
     root.title("示範 toggle 方法")
 
     # 建立一個 Checkbutton
-    check_var = tk.BooleanVar()  # Checkbutton 的變量
+    check_var = tk.BooleanVar()  # Checkbutton 的變數
     checkbutton = tk.Checkbutton(
         root, 
         text="選項", 
@@ -337,10 +337,10 @@
     root = tk.Tk()
     root.title("示範 set 方法")
 
-    # 建立一個 StringVar 變量
+    # 建立一個 StringVar 變數
     text_var = tk.StringVar()
 
-    # 建立一個 Label，並將其 text 屬性與 StringVar 變量綁定
+    # 建立一個 Label，並將其 text 屬性與 StringVar 變數綁定
     label = tk.Label(
         root, 
         textvariable=text_var
@@ -360,7 +360,7 @@
     def update_text():
         # 從 texts 列表中隨機選取一個文本
         selected_text = random.choice(texts)
-        # 使用 set() 方法更新 StringVar 變量的值
+        # 使用 set() 方法更新 StringVar 變數的值
         text_var.set(selected_text)
 
     # 建立一個按鈕來更新 Label 中的文字
