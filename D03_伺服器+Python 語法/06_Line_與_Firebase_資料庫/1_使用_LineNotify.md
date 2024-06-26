@@ -2,6 +2,8 @@
 
 _樹莓派啟動時發送 LineNotify 通知_
 
+<img src="images/img_41.png" width=500px />
+
 <br>
 
 ## 建立 LINE Notify Token
@@ -20,7 +22,8 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 3. 滑動到底部，點擊 `發行權杖` 以建立新的 token。
 
-   ![](images/img_22.png)
+   
+   <img src="images/img_22.png" width=500px />
 
 <br>
 
@@ -38,7 +41,7 @@ _樹莓派啟動時發送 LineNotify 通知_
 
 6. 建立完成可看到這個權杖就在最上方。
 
-   ![](images/img_38.png)
+   <img src="images/img_38.png" width=500px />
 
 <br>
 
