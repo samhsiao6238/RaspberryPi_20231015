@@ -45,7 +45,7 @@ _新版作業系統 Bookworm 適用的設定方式_
 
 <br>
 
-1. 查看當前運行中的 `連線種類`，結果顯示包含有線與無線網路。
+1. 查看當前運行中的 `連線種類`，結果顯示包含有線與無線網路，其中 `preconfigured` 是預設 WIFI 的系統別名。
 
     ```bash
     nmcli device status
@@ -55,7 +55,7 @@ _新版作業系統 Bookworm 適用的設定方式_
 
 <br>
 
-2. 查看樹莓派可連線的 WIFI 及當前連線的 WIFI。
+2. 查看樹莓派可連線的 WIFI，其中 `當前連線` 會加註星號 `*`。
 
     ```bash
     nmcli device wifi list
@@ -78,7 +78,7 @@ _新版作業系統 Bookworm 適用的設定方式_
 
 <br>
 
-3. 可添加多個 WIFI 設定，這個指令的顯示的排序不同代表優先級別；特別說明，其中 `preconfigured` 就是燒錄光碟時設定的 WIFI 的別名。
+3. 查看連線資訊可看到多個 WIFI 已被設定；特別注意，這個結果顯示的排序不代表優先級別；另外，`preconfigured` 就是燒錄光碟時設定的 WIFI，`preconfigured` 是樹莓派預設的別名。
 
     ```bash
     nmcli connection show
@@ -88,7 +88,7 @@ _新版作業系統 Bookworm 適用的設定方式_
 
 <br>
 
-4. 但最後設定的會優先連線。
+4. 最後被設定的 WIFI 會優先連線。
 
     ```bash
     nmcli device wifi list
