@@ -33,7 +33,17 @@ _適用舊版 Bullseye 以前系統，新版的網絡管理已改用 `NetworkMan
 
 ## 查看並建立連線
 
-1. 查看樹莓派可連線的 WIFI 及當前連線的 WIFI。
+1. 查看當前運行中的 `連線種類`，結果顯示包含有線與無線網路。
+
+    ```bash
+    nmcli device status
+    ```
+
+    ![](images/img_133.png)
+
+<br>
+
+2. 查看樹莓派可連線的 WIFI 及當前連線的 WIFI。
 
     ```bash
     nmcli device wifi list
@@ -56,7 +66,7 @@ _適用舊版 Bullseye 以前系統，新版的網絡管理已改用 `NetworkMan
 
 <br>
 
-3. 可添加多個 WIFI 設定。
+3. 可添加多個 WIFI 設定，這個指令的顯示的排序不同代表優先級別；特別說明，其中 `preconfigured` 就是燒錄光碟時設定的 WIFI 的別名。
 
     ```bash
     nmcli connection show
@@ -73,6 +83,24 @@ _適用舊版 Bullseye 以前系統，新版的網絡管理已改用 `NetworkMan
     ```
 
     ![](images/img_132.png)
+
+<br>
+
+5. 設定優先權，值越大，優先級越高。
+
+    ```bash
+    sudo nmcli connection modify <SSID 名稱> connection.autoconnect-priority <優先級別>
+    ```
+
+<br>
+
+6. 若要查看優先級別，必須透過 `show` 指令指定 `SSID` 來查看指定參數的設定值。
+
+    ```bash
+    nmcli connection show <SSID 名稱>
+    ```
+
+    ![](images/img_134.png)
 
 <br>
 
