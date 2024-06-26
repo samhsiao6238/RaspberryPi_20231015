@@ -56,6 +56,26 @@ _適用舊版 Bullseye 以前系統，新版的網絡管理已改用 `NetworkMan
 
 <br>
 
+3. 可添加多個 WIFI 設定。
+
+    ```bash
+    nmcli connection show
+    ```
+
+    ![](images/img_131.png)
+
+<br>
+
+4. 但最後設定的會優先連線。
+
+    ```bash
+    nmcli device wifi list
+    ```
+
+    ![](images/img_132.png)
+
+<br>
+
 ___
 
 _END_
