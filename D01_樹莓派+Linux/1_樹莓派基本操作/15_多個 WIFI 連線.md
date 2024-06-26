@@ -1,6 +1,6 @@
 # 多個 WIFI 連線
 
-_適用舊版 Bullseye 以前系統，新版的網絡管理已改用 `NetworkManager`_
+_適用舊版 Bullseye 以前系統，新版的網絡管理已改用 `NetworkManager`，特別說明，雖然依舊可以在 `wpa_supplicant.conf` 文件中進行設定，但為了避免不必要的衝突，建議不要這樣做。_
 
 <br>
 
