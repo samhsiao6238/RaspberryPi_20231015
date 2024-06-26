@@ -88,7 +88,7 @@ _新版作業系統 Bookworm 適用的設定方式_
 
 <br>
 
-4. 最後被設定的 WIFI 會優先連線。
+4. 最後被設定的 WIFI 會自動成為當前連線，但並不會改變其優先等級，若要修改等級必須使用指定參數 `autoconnect-priority`。
 
     ```bash
     nmcli device wifi list
@@ -98,7 +98,7 @@ _新版作業系統 Bookworm 適用的設定方式_
 
 <br>
 
-5. 設定優先權，值越大，優先級越高。
+5. 設定優先權，值越大、優先級越高。
 
     ```bash
     sudo nmcli connection modify <SSID 名稱> connection.autoconnect-priority <優先級別>
