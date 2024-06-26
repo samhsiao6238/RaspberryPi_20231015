@@ -16,7 +16,7 @@ _[參考](https://blog.csdn.net/Dorian15/article/details/128321804)_
 
 ## 排除步驟
 
-_特別說明，新版作業系統的設定文件已經變更，這適用於 `Bulleye` 之前的版本。_
+_特別說明，新版作業系統的設定文件已經變更，這適用於 `Bullseye` 之前的版本。_
 
 <br>
 
