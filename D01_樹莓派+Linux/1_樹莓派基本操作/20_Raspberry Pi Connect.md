@@ -1,6 +1,8 @@
 # Raspberry Pi Connect 
 
-_使用 WebRTC 技術來建立安全的點對點連接_
+_這是官方在 2024/05/07 發佈的測試版功能，使用 WebRTC 技術來建立安全的點對點連接_
+
+![](images/img_147.png)
 
 <br>
 
