@@ -1,53 +1,103 @@
 # Raspberry Pi Connect 
 
-## 準備條件
+_使用 WebRTC 技術來建立安全的點對點連接_
 
-# 硬體需求
+<br>
 
-1. Raspberry Pi 5
-2. Raspberry Pi 4
-3. Raspberry Pi 400
+## 硬體需求
+
+1. Raspberry Pi 5。
+
+<br>
+
+2. Raspberry Pi 4。
+
+<br>
+
+3. Raspberry Pi 400。
+
+<br>
 
 ## 軟體需求
 
-1. 64位元版本的 Raspberry Pi OS Bookworm
+1. 64位元版本的 Raspberry Pi OS Bookworm。
 
-2. 使用 Wayland 窗口服務器
+<br>
+
+2. 使用 Wayland 窗口服務器。
+
+<br>
 
 ## 安裝步驟
 
-1. 更新系統
+1. 更新系統。
 
     ```bash
     sudo apt update -y && sudo apt upgrade -y
     ```
 
-2. 安裝 Raspberry Pi Connect
+<br>
+
+2. 安裝 Raspberry Pi Connect。
 
     ```bash
     sudo apt install rpi-connect
     ```
 
-3. 重啟 Raspberry Pi
+<br>
+
+3. 重啟 Raspberry Pi。
 
     ```bash
     sudo reboot
     ```
 
-4. 登錄 Raspberry Pi Connect：重啟後，你會在屏幕右上角的系統托盤中看到一個新的圖標。點擊此圖標並選擇“Sign in”開始使用。
+<br>
+
+4. 重啟後透過 VNC 連線桌面，會在右上角看到一個新的圖標，點擊此圖標並選擇 `Sign in`。
+
+    ![](images/img_141.png)
+
+<br>
+
+5. 初次使用先建立帳號。
+
+    ![](images/img_142.png)
+
+<br>
+
+6. 需要驗證郵件。
+
+    ![](images/img_143.png)
+
+<br>
+
+7. 完成後重新登入，並對設備命名。
+
+    ![](images/img_144.png)
+
+<br>
 
 ## 設置完成後的操作
 
-1. 查看連接狀態：
-   當你使用網頁瀏覽器連接到 Raspberry Pi 時，系統會使用 WebRTC 技術來建立安全的點對點連接。你可以懸停在瀏覽器中的鎖定圖標上，以查看連接是否被中繼。
+_可在任意設備中的瀏覽器進行兩種連線方式_
 
-2. 網絡連接的處理：
-   - 點對點連接：一般情況下，建立連接後，無需通過伺服器進行流量傳輸。
-   - 中繼連接：如果無法建立直接連接，流量會通過位於英國的 TURN 伺服器進行中繼。
+1. 使用網頁瀏覽器訪問 [Raspberry Pi Connect](https://connect.raspberrypi.com/)，登入後系統會看到可連線設備及連線方式。
 
-## 注意事項
+    ![](images/img_145.png)
 
-- Beta 限制：目前，Raspberry Pi Connect 處於 Beta 階段，可能會遇到一些限制或不完美的地方。
-- 反饋：你可以在 Raspberry Pi Connect 部分的論壇中提供反饋和意見。
+<br>
 
-通過以上步驟，你可以輕鬆設置並使用 Raspberry Pi Connect，實現遠程桌面訪問你的 Raspberry Pi。
+2. 點擊右側 `Connect via` 展開選單。
+
+    ![](images/img_146.png)
+
+<br>
+
+3. 依據官網說明，這個網路連線在一般情況下會是 `點對點` 的連接，建立連接後，無需通過伺服器進行流量傳輸；如果無法建立直接連接，流量會通過位於英國的 TURN 伺服器進行中繼。
+
+<br>
+
+___
+
+_END_
