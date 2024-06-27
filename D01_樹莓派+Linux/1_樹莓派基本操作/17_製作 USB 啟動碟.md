@@ -65,7 +65,7 @@ _安裝分配分區圖形化界面工具 GParted_
 1. 按標準程序，在安裝工具之前先更新運作中的樹莓派系統。
 
     ```bash
-    sudo apt update -y && sudo apt full-upgrade -y
+    sudo apt update && sudo apt full-upgrade -y
     ```
 
 <br>

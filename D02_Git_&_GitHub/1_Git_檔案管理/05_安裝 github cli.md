@@ -122,7 +122,7 @@ _以上完成安裝_
 7. 再次進行更新後安裝。
 
     ```bash
-    sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
+    sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
     ```
 
 <br>
@@ -258,7 +258,7 @@ _安裝好之後可透過指令進行登入，切記要進入樹莓派運行以�
 2. 嘗試更新。
 
     ```bash
-    sudo apt update -y && sudo apt upgrade gh -y
+    sudo apt update && sudo apt upgrade gh -y
     ```
 
 <br>

@@ -35,7 +35,7 @@ _這是官方在 2024/05/07 發佈的測試版功能，使用 WebRTC 技術來�
 1. 更新系統。
 
     ```bash
-    sudo apt update -y && sudo apt upgrade -y
+    sudo apt update && sudo apt upgrade -y
     ```
 
 <br>
