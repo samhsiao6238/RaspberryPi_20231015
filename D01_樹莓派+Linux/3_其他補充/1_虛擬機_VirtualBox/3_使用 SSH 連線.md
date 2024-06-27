@@ -82,33 +82,33 @@
 
 10. 在本地電腦查詢，會看到虛擬機的網路卡以及 IP `192.168.242.1`。
 
-   ```bash
-   ipconfig
-   ```
+      ```bash
+      ipconfig
+      ```
 
-   ![](images/img_12.png)
+      ![](images/img_12.png)
 
 <br>
 
 11. 進入 VirtualBox 應用，在虛擬機上點擊 `設定`。
 
-   ![](images/img_13.png)
+      ![](images/img_13.png)
 
 <br>
 
 12. 依序點選 `網路` -> `進階` -> `連接埠轉送`。
 
-   ![](images/img_14.png)
+      ![](images/img_14.png)
 
 <br>
 
 13. 建立規則，右側 `+` 添加規則，`主機 IP` 輸入 `本機上虛擬網卡的 IP`，`客體 IP` 輸入 `樹梅派上查詢的 IP`；若要檢查是否成功設定，可先重新啟動後透過 SSH 指令檢查。
 
-   ![](images/img_15.png)
+      ![](images/img_15.png)
 
-   _放大看清楚_
+      _放大看清楚_
 
-   ![](images/img_16.png)
+      ![](images/img_16.png)
 
 <br>
 
