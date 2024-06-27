@@ -10,7 +10,7 @@ _尚未完成_
 
 <br>
 
-2. `autoboot.txt` 除了可指定樹莓派的引導分區，還可與 `tryboot` 功能結合，實現 A/B 引導，這對於系統更新非常有用。
+2. `autoboot.txt` 除了可指定樹莓派的引導分區，還可與 `tryboot` 功能結合，實現 A/B 引導，A/B 機制允許樹莓派在多個引導分區之間切換，這對實現系統更新和回滾非常有用；特別注意，在樹莓派上作為引導分區的格式必須需是 FAT32 格式（vfat）。
 
 <br>
 
@@ -24,7 +24,7 @@ _尚未完成_
 
 ## 文件配置
 
-1. 查詢掛載路徑，可知引導分區是 `/dev/sda1`，掛載在 `/boot/firmware`，這個資料夾用來存放引導所需文件，包括 `config.txt`、`cmdline.txt` 等。
+1. 查詢掛載路徑，可知引導分區是 `/dev/sda1`，掛載在 `/boot/firmware`，這個資料夾用來存放引導所需文件，包括 `config.txt`、`cmdline.txt` 等（很多）。
 
     ```bash
     df -h
@@ -50,7 +50,7 @@ _尚未完成_
 
 <br>
 
-4. 編輯 `autoboot.txt` 文件，當 `tryboot_a_b` 設置為 `1` 時表示啟動 A/B 機制；設定 `boot_partition` 默認引導分區為 `1`，表示系統預設從分區 `1` 引導；`tryboot` 分區為 `2`，表示進行 `tryboot` 模式啟動時，系統會將從分區 `2` 引導。
+4. 編輯 `autoboot.txt` 文件，當 `tryboot_a_b` 設置為 `1` 時表示啟動 A/B 機制；設定 `boot_partition` 默認引導分區為 `1`，表示系統預設從分區 `1` 引導；`tryboot` 分區為 `3`，表示進行 `tryboot` 模式啟動時，系統會將從分區 `3` 引導，至於分區 `2` 則是系統文件分區；特別注意，由這個文件結構可知，當前樹莓派雖支援 A/B 機制，但必須在單一磁碟中的分區建立。
 
     ```bash
     [all]
@@ -58,7 +58,7 @@ _尚未完成_
     boot_partition=1
 
     [tryboot]
-    boot_partition=2
+    boot_partition=3
     ```
 
 <br>
