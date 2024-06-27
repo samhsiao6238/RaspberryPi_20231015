@@ -146,6 +146,7 @@ _因為尚未設置 Git 用戶名和郵箱地址的情況下嘗試進行 Git 操
 ![](images/img_69.png)
 
 2. 接著又會出現 `repository already exists` 的提示
+![](images/img_70.png)
 ___
 
 _END：以上成功在 GitHub 上建立新的 Repo_
