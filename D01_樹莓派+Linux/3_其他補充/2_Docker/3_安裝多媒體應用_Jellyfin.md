@@ -1,21 +1,23 @@
 # 安裝 Jellyfin
 
-1. 拉取鏡像
+1. 拉取鏡像。
 
    ```bash
    sudo docker pull jellyfin/jellyfin
    ```
-   
+
    ![](images/img_01.png)
 
 <br>
 
-2. 查詢用戶身份資訊
+2. 查詢用戶身份資訊。
 
    ```bash
    id <使用者帳號>
    ```
-   如
+
+   _如_
+
    ```bash
    id sam6238
    ```
@@ -36,7 +38,7 @@
 
 <br>
 
-3. 建立鏡像使用的目錄
+4. 建立鏡像使用的目錄。
 
    ```bash
    sudo mkdir /home/sam6238/jellyfin_config
@@ -46,7 +48,9 @@
    sudo mkdir /home/sam6238/media
    ```
 
-4. 授權
+<br>
+
+5. 授權。
 
    ```bash
    sudo chmod 755 /home/sam6238/jellyfin_config
@@ -55,8 +59,9 @@
    sudo chmod 755 /home/sam6238/media
    ```
 
+<br>
 
-5. 建立容器
+6. 建立容器。
 
    ```bash
     sudo docker run -d \
@@ -71,9 +76,9 @@
     jellyfin/jellyfin
    ```
 
+<br>
 
-
-6. 訪問
+7. 訪問。
 
    ```bash
    <樹莓派 IP>:8096
@@ -87,6 +92,6 @@
 
 <br>
 
----
+___
 
 _END：以上簡單示範安裝倉庫_
