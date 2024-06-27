@@ -24,40 +24,52 @@ _git 與 GitHub CLI 有何不同 ❓_
 
 ## 安裝步驟
 
-1. 訪問 [GitHub CLI 官網](https://cli.github.com/)。
+1. 訪問 [GitHub CLI 官網](https://cli.github.com/)，點擊 `Manual`。
+
+    ![](images/img_71.png)
 
 <br>
 
-2. 點擊 `Manual` 並進入 `Installation` 下的 `README`。
+2. 並進入 `Installation` 下的 `README`。
+
+    ![](images/img_72.png)
 
 <br>
 
-3. 在 `Linux & BSD` 部分，選擇 `Linux & BSD installation`。
+3. 在 `Linux & BSD` 部分，選擇 [Linux & BSD installation](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)。
+
+    ![](images/img_73.png)
 
 <br>
 
-4. 複製提供的安裝指令 `如下` 。
+4. 複製提供的安裝指令。
+
+    ![](images/img_74.png)
 
 <br>
 
-## 安裝與確認指令
+5. 在樹莓派終端機中運行指令。
 
-1. 在樹莓派終端機中，執行以下指令。
+    ![](images/img_75.png)
 
-    ```bash
-    type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
-    curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-    && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-    && sudo apt update \
-    && sudo apt install gh -y
-    ```
+<br>
 
-2. 安裝完成後，檢查版本。
+6. 安裝完成後，檢查版本。
 
     ```bash
     gh --version
     ```
+
+    _結果_
+
+    ```bash
+    gh version 2.52.0 (2024-06-24)
+    https://github.com/cli/cli/releases/tag/v2.52.0
+    ```
+
+<br>
+
+_以上完成安裝_
 
 <br>
 
@@ -69,7 +81,7 @@ _git 與 GitHub CLI 有何不同 ❓_
 
 <br>
 
-2. 查看 sources.list.d 目錄下所有文件。
+2. 查看 `sources.list.d` 目錄下所有文件。
 
     ```bash
     ls /etc/apt/sources.list.d/
@@ -77,13 +89,13 @@ _git 與 GitHub CLI 有何不同 ❓_
 
 <br>
 
-2. 會出現幾個檔案。
+3. 會出現幾個檔案。
 
     ![](images/img_51.png)
 
 <br>
 
-3. 逐一查看內容。
+4. 逐一查看內容。
 
     ```bash
     cat /etc/apt/sources.list.d/<文件名>
@@ -93,7 +105,7 @@ _git 與 GitHub CLI 有何不同 ❓_
 
 <br>
 
-4. 對有疑問的儲存庫進行編輯。
+5. 對有疑問的儲存庫進行編輯。
 
     ```bash
     sudo nano /etc/apt/sources.list.d/<疑似錯誤的儲存庫>
@@ -101,21 +113,25 @@ _git 與 GitHub CLI 有何不同 ❓_
 
 <br>
 
-5. 將引發錯誤的儲存庫標註排除。
+6. 將引發錯誤的儲存庫標註排除。
 
    ![](images/img_53.png)
 
 <br>
 
-6. 再次進行更新後安裝。
+7. 再次進行更新後安裝。
 
     ```bash
-    sudo apt update
+    sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
     ```
 
 <br>
 
 ## 使用 VSCode 對以上問題進行修正
+
+_使用 VSCode 可能會遇到權限問題，以下一併處理_
+
+<br>
 
 1. 切換到指定資料夾。
 
@@ -167,7 +183,7 @@ _git 與 GitHub CLI 有何不同 ❓_
 
 ## 登入
 
-_安裝好之後可透過指令進行登入_
+_安裝好之後可透過指令進行登入，切記要進入樹莓派運行以下操作_
 
 <br>
 
@@ -179,7 +195,7 @@ _安裝好之後可透過指令進行登入_
 
 <br>
 
-2. 選擇 `GitHub.com`.
+2. 選擇 `GitHub.com`。
 
     ![](images/img_54.png)
 
@@ -197,7 +213,7 @@ _安裝好之後可透過指令進行登入_
 
 <br>
 
-5. 透過瀏覽器。
+5. 透過瀏覽器 `Login with a web browser`。
 
     ![](images/img_57.png)
 
@@ -224,6 +240,32 @@ _安裝好之後可透過指令進行登入_
 9.  完成手機驗證後完成登入 GitHub CLI。
 
     ![](images/img_61.png)
+
+<br>
+
+## 特別說明
+
+1. 終端機中顯示 `涉及 Wayland 框架和頁面加載指標` 的錯誤，但這並不影響登入，可另外開啟一個終端機，並運行以下指令查詢登入狀態。
+
+    ```bash
+    gh auth status
+    ```
+
+    ![](images/img_76.png)
+
+<br>
+
+2. 嘗試更新。
+
+    ```bash
+    sudo apt update -y && sudo apt upgrade gh -y
+    ```
+
+<br>
+
+3. 再次運行登入指令，同樣可順利完成並且不會出現錯誤訊息。
+
+    ![](images/img_77.png)
 
 <br>
 
