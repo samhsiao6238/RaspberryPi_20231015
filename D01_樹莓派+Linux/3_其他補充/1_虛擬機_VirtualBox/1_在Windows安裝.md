@@ -68,13 +68,13 @@
 
 10. 是否安裝 `GRUB boot loader` 選擇 **YES**。
 
-   ![Alt text](images/img_49.png)
+      !](images/img_49.png)
 
 <br>
 
 11. 使用預設路徑並等待安裝完成。
 
-   ![Alt text](images/img_50.png)
+      ![](images/img_50.png)
 
 <br>
 
@@ -86,7 +86,7 @@
 
 1. 建議選擇 `Use English language` 作為語言，但因為勾選可能會增加當機的風險，可以先不要勾。
 
-   ![Alt text](images/img_51.png)
+   ![](images/img_51.png)
 
 <br>
 
@@ -112,7 +112,7 @@
 
 7. 完成重啟後，基本的安裝步驟即完成。
 
-   ![Alt text](images/img_52.png)
+   ![](images/img_52.png)
 
    _註：虛擬機先完成安裝，其餘在其他小節補充。_
 
