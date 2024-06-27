@@ -5,7 +5,7 @@
 1. 更新系統。
 
    ```bash
-   sudo apt update && sudo apt upgrade -y
+   sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
    ```
 
 <br>
@@ -46,7 +46,7 @@
    sudo sh get-docker.sh
    ```
    
-   _會通知等待 20 秒_   
+   _若通知等待 20 秒是一種保護機制_   
    
    ![](images/img_08.png)
 
@@ -54,17 +54,17 @@
 
 5. 執行腳本時會出現警告。
 
-- 警告若使用特權訪問 Docker daemon 上的遠程 API，等同在主機上的 root 訪問。
+   - 警告若使用特權訪問 Docker daemon 上的遠程 API，等同在主機上的 root 訪問。
 
-- 也就是說若能夠訪問 Docker API，如同以最高權限在主機上做任何事情。
+   - 也就是說若能夠訪問 Docker API，如同以最高權限在主機上做任何事情。
 
-- 這裡只是基本教學所以了解一下即可。
+   - 這裡只是基本教學所以了解一下即可。
 
    ![](images/img_09.png)
 
 <br>
 
-6. 添加用戶到 Docker 群組（可避免每次使用 Docker 都需要使用 sudo）。
+6. 將當前用戶加入 Docker 群組，如此可擁有群組權限；若未加入，每次使用 Docker 指令都需要使用 `sudo`。
 
    ```bash
    sudo usermod -aG docker $USER
@@ -80,7 +80,9 @@
 
 <br>
 
-8. 驗證 Docker 安裝。
+## 驗證
+
+1. 驗證 Docker 安裝。
 
    ```bash
    docker run hello-world
@@ -92,7 +94,7 @@
 
 <br>
 
-9. 檢查安裝的 Docker 版本。
+1. 檢查安裝的 Docker 版本。
 
    ```bash
    docker --version
