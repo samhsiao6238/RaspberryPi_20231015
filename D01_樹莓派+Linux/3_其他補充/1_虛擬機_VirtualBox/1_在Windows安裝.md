@@ -6,7 +6,7 @@
 
 1. 前往 [VirtualBox 官網](https://www.virtualbox.org/wiki/Downloads) 進行下載。
 
-   ![VB圖標](images/image_21.png)
+   ![VB圖標](images/img_41.png)
 
 <br>
 
@@ -18,15 +18,15 @@
 
 1. **新增**虛擬機台並自訂名稱。
 
-   ![新增](images/image_22.png)
+   ![新增](images/img_42.png)
 
-   ![第一步](images/image_23.png)
+   ![第一步](images/img_43.png)
 
 <br>
 
 2. 勾選 **略過** 無人值守。
 
-   ![無人值守](images/image_24.png)
+   ![無人值守](images/img_44.png)
 
 <br>
 
@@ -36,7 +36,7 @@
 
 4. 配置硬體: **8G 記憶體 + 4 核心**，硬碟配置為 **30G**。
 
-   ![硬體配置](images/image_25.png)
+   ![硬體配置](images/img_45.png)
 
 <br>
 
@@ -50,31 +50,31 @@
 
 7. 選取 **全部磁碟**。
 
-   ![全部磁碟](images/image_26.png)
+   ![全部磁碟](images/img_46.png)
 
 <br>
 
 8. 並將所有資料存放在同一磁區。
 
-   ![同一磁區](images/image_27.png)
+   ![同一磁區](images/img_47.png)
 
 <br>
 
 9. 最終確認，必須選擇 **YES** 才能完成安裝。
 
-   ![Alt text](images/image_28.png)
+   ![Alt text](images/img_48.png)
 
 <br>
 
 10. 是否安裝 `GRUB boot loader` 選擇 **YES**。
 
-   ![Alt text](images/image_29.png)
+   ![Alt text](images/img_49.png)
 
 <br>
 
 11. 使用預設路徑並等待安裝完成。
 
-   ![Alt text](images/image_30.png)
+   ![Alt text](images/img_50.png)
 
 <br>
 
@@ -86,7 +86,7 @@
 
 1. 建議選擇 `Use English language` 作為語言，但因為勾選可能會增加當機的風險，可以先不要勾。
 
-   ![Alt text](images/image_31.png)
+   ![Alt text](images/img_51.png)
 
 <br>
 
@@ -112,7 +112,7 @@
 
 7. 完成重啟後，基本的安裝步驟即完成。
 
-   ![Alt text](images/image_32.png)
+   ![Alt text](images/img_52.png)
 
    _註：虛擬機先完成安裝，其餘在其他小節補充。_
 
