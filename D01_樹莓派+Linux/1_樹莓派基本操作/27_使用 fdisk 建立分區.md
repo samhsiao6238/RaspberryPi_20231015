@@ -50,7 +50,7 @@ _尚未完成_
 
 <br>
 
-4. 編輯 `autoboot.txt` 文件，當 `tryboot_a_b` 設置為 `1` 時表示啟動 A/B 機制；設定 `boot_partition` 默認引導分區為 `1`，表示系統預設從分區 `1` 引導；`tryboot` 分區為 `3`，表示進行 `tryboot` 模式啟動時，系統會將從分區 `3` 引導，至於分區 `2` 則是系統文件分區；特別注意，由這個文件結構可知，當前樹莓派雖支援 A/B 機制，但必須在單一磁碟中的分區建立。
+4. 查看 `autoboot.txt` 文件內容，當 `tryboot_a_b` 設置為 `1` 時表示啟動 A/B 機制；設定 `boot_partition` 默認引導分區為 `1`，表示系統預設從分區 `1` 引導；`tryboot` 用於在進行 `tryboot` 模式啟動時，系統會將從指定分區進行引導，由於當前分區 `2` 是系統文件分區，而分區 `3` 是 `ext4` 格式也不適用作為引導分區，所以在建立 A/B 機制之前，必須轉換分區 `3` 的格式，或是另外建立一個引導分區 `4`；特別注意，由這個文件結構可知，當前樹莓派雖支援 A/B 機制，但必須在單一磁碟中的分區建立，因為設定文件並無法指定磁碟。
 
     ```bash
     [all]
@@ -58,10 +58,162 @@ _尚未完成_
     boot_partition=1
 
     [tryboot]
-    boot_partition=3
+    boot_partition=<設定為另一個引導分區>
     ```
 
 <br>
+
+## 添加引導分區
+
+1. 新增一個分區作為引導分區，容量比照官方預設的 500 MB 即可。
+
+    ![](images/img_148.png)
+
+<br>
+
+2. 打勾進行套用後查看。
+
+    ![](images/img_149.png)
+
+<br>
+
+3. 創建新的掛載目錄。
+
+    ```bash
+    sudo mkdir /media/sam6238/boot_2
+    ```
+
+<br>
+
+4. 掛載新的分區。
+
+    ```bash
+    sudo mount /dev/sda4 /media/sam6238/boot_2
+    ```
+
+<br>
+
+5. 編輯 /etc/fstab 文件，以便在重啟後自動掛載新的分區。
+
+    ```bash
+    sudo nano /etc/fstab
+    ```
+
+<br>
+
+6. 添加以下行。
+
+    ```bash
+    PARTUUID=343dcec1-04  /media/sam6238/boot_2   vfat   defaults          0       2
+    ```
+
+<br>
+
+7. 在新的掛載點中創建並編輯 autoboot.txt 文件。
+
+    ```bash
+    sudo nano /media/sam6238/boot_2/autoboot.txt
+    ```
+
+<br>
+
+8. 添加以下內容。
+
+    ```bash
+    [all]
+    tryboot_a_b=1
+    boot_partition=1
+
+    [tryboot]
+    boot_partition=4
+    ```
+
+<br>
+
+9. 編輯原本引導分區中的 autoboot.txt 文件。
+
+    ```bash
+    sudo nano /boot/firmware/autoboot.txt
+    ```
+
+<br>
+
+10. 確保內容如下。
+
+    ```bash
+    [all]
+    tryboot_a_b=1
+    boot_partition=1
+
+    [tryboot]
+    boot_partition=4
+    ```
+
+<br>
+
+11. 卸載新分區。
+
+    ```bash
+    sudo umount /media/sam6238/boot_2
+    ```
+
+<br>
+
+12. 重啟，讓設定生效。
+
+    ```bash
+    sudo reboot now
+    ```
+
+<br>
+
+13. 觀察。
+
+    ```bash
+    lsblk
+    ```
+
+<br>
+
+14. 確認 sda4 分區上已經有必要的引導文件，這些文件應該與 sda1 上的文件相同。
+
+    ```bash
+    sudo cp -r /boot/firmware/* /media/sam6238/boot_2/
+    ```
+
+<br>
+
+15. 重啟到 tryboot 模式。
+
+    ```bash
+    sudo reboot "0 tryboot"
+    ```
+
+<br>
+
+## 驗證
+
+1. 這個文件包含了當前啟動時的引導參數，其中會有指向根文件系統的參數。
+
+    ```bash
+    cat /proc/cmdline
+    ```
+    _root= 參數會顯示當前引導使用的分區，以下僅保留主要訊息_
+    ```bash
+    reboot=w
+    root=PARTUUID=343dcec1-02
+    rootfstype=ext4
+    ```
+
+2. 輸出中會顯示當前根文件系統所在的磁碟分區。
+
+    ```bash
+    cat /proc/mounts | grep ' / '
+    ```
+    _結果_
+    ```bash
+    /dev/sda2 / ext4 rw,noatime 0 0
+    ```
 
 ## 設置 `boot_partition` 和 `tryboot`
 
