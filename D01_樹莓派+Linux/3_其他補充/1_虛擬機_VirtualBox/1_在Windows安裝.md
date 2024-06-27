@@ -68,7 +68,7 @@
 
 10. 是否安裝 `GRUB boot loader` 選擇 **YES**。
 
-      !](images/img_49.png)
+      ![](images/img_49.png)
 
 <br>
 
