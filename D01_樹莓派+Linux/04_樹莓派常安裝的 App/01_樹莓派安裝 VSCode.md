@@ -47,7 +47,7 @@ _與樹莓派實機安裝 VSCode 程序相同_
 1. 進入下載。
 
     ```bash
-    cd Downloads
+    cd ~/Downloads
     ```
 
 <br>
@@ -58,9 +58,16 @@ _與樹莓派實機安裝 VSCode 程序相同_
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
+    _可能出現警告_
+
+    ```bash
+    Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+    OK
+    ```
+
 <br>
 
-3. 出現警告，可以改用以下指令，原本的指令還是可以運行。
+3. 若出現警告，可以改用以下指令，原本的指令還是可以運行。
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc -o microsoft.asc
@@ -90,7 +97,7 @@ _與樹莓派實機安裝 VSCode 程序相同_
 
 <br>
 
-7. 再次連線，成功。
+7. 若是因為使用虛擬機操作，在 VSCode 中無法連線樹莓派而進行安裝的狀況，這時再次連線就能成功。
 
     ![](images/img_29.png)
 
