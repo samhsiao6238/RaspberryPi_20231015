@@ -1,6 +1,6 @@
 # 多個 WIFI 連線
 
-_新版的網絡管理已改用 `NetworkManager`，雖仍可在 `wpa_supplicant.conf` 文件中進行設定，但為了避免可能的設定衝突，建議不要這樣做。_
+_新版的網路管理已改用 `NetworkManager`，雖仍可在 `wpa_supplicant.conf` 文件中進行設定，但為了避免可能的設定衝突，建議不要這樣做。_
 
 <br>
 
