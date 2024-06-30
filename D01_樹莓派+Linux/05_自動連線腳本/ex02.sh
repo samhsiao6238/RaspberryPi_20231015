@@ -1,7 +1,12 @@
 #!/bin/bash
 
+# 加載 .env 文件中的環境變量
+if [ -f .env ]; then
+    export $(cat .env | xargs)
+fi
+
 # LineNotify Token
-TOKEN="WemrA5mtsqcBcvTEG59tXmVGVTDj8wifXH51GzjWXx8"
+# TOKEN=""
 
 # 發送通知的函數
 send_line_notify() {
