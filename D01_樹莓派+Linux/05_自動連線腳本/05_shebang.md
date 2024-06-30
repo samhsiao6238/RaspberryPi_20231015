@@ -10,7 +10,7 @@ _使用 `#!/bin/bash` 是指定腳本由哪個解釋器來執行，這個特殊�
 
 <br>
 
-2. 可移植性：雖然大多數 Unix/Linux 系統默認的 shell 是 Bash，但並不是所有的系統都如此。指定 `#!/bin/bash` 可以確保腳本在任何 Unix/Linux 系統上都能使用 Bash 來運行，這提高了腳本的可移植性。
+2. 可移植性：雖然大多數 Unix/Linux 系統預設的 shell 是 Bash，但並不是所有的系統都如此。指定 `#!/bin/bash` 可以確保腳本在任何 Unix/Linux 系統上都能使用 Bash 來運行，這提高了腳本的可移植性。
 
 <br>
 
