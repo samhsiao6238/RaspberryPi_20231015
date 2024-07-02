@@ -1,11 +1,8 @@
-_上課講述_
-
 # Snippets
 
 _自訂快速鍵，這裡以 Flask 網站為例_
 
 _特別補充，因為 `!` 在 `Python` 中是一個運算子，所以無法像 `HTML` 文件使用它作為啟動前綴，所以 `Python` 的部分我都使用 `Fast`_
-
 
 <br>
 
@@ -18,20 +15,20 @@ _特別補充，因為 `!` 在 `Python` 中是一個運算子，所以無法像 
 <br>
 
 2. 輸入關鍵字搜尋 `Snippets`
-   
-   ![](images/img_02.png)
+
+    ![](images/img_02.png)
 
 <br>
 
 3. 選取 `新增全域程式碼片段檔案`
-   
-   ![](images/img_03.png)
+
+    ![](images/img_03.png)
 
 <br>
 
 4. 輸入`檔案名稱`如 `FastStresamlit`，會開啟一個全名為 `FastStresamlit.code-snippets` 的檔案
-   
-   ![](images/img_04.png)
+
+    ![](images/img_04.png)
 
 <br>
 
@@ -39,10 +36,12 @@ _特別補充，因為 `!` 在 `Python` 中是一個運算子，所以無法像 
 
     _特別注意，若路徑有空格，要添加 `\` 來表示這是一個空格_
     
+
     _作為一個文件時，路徑如下_
     ```txt
     /Users/samhsiao/Library/Application\ Support/Code/User/snippets
     ```
+
     _作為一個指令時，要加入轉義符號_
     ```bash
     cd /Users/samhsiao/Library/Application\ Support/Code/User/snippets
@@ -65,7 +64,9 @@ _這是比較進階的技巧_
     ```bash
     mkdir <自訂資料夾> && cd <自訂資料夾>
     ```
-    如
+
+    _如_
+
     ```bash
     mkdir tosnippets && cd tosnippets
     ```
@@ -204,13 +205,13 @@ _這是比較進階的技巧_
 <br>
 
 10. 終端機會輸出訊息。
-    
+
     ![](images/img_06.png)
 
 <br>
 
 11. 資料夾內會建立幾個新的文件與文件夾。
-    
+
     ![](images/img_07.png)
 
 <br>
@@ -256,8 +257,8 @@ _這是比較進階的技巧_
 ## 測試
 
 1. 開啟任意 `.py` 檔案，輸入快速鍵關鍵字 `!Fast` 即可出現選單
-   
-   ![](images/img_08.png)
+
+    ![](images/img_08.png)
 
 <br>
 
@@ -270,11 +271,11 @@ _這是比較進階的技巧_
 <br>
 
 3. 確實建立了一個 Tkinter 視窗應用。
-   
-   ![](images/img_09.png)
+
+    ![](images/img_09.png)
 
 <br>
 
----
+___
 
 _END_
