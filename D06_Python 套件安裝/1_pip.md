@@ -4,7 +4,7 @@ _pip_
 
 <br>
 
-1. 安裝 pip
+1. 安裝 pip。
 
    ```bash
    sudo apt-get install python3-pip
@@ -20,14 +20,16 @@ _pip_
 
 <br>
 
-3. 升級套件
+3. 升級套件。
+
    ```bash
    pip install upgrade <套件名稱>
    ```
 
 <br>
 
-4. 顯示 pip 已安裝套件
+4. 顯示 pip 已安裝套件。
+
    _簡單顯示_
 
    ```bash
@@ -44,7 +46,7 @@ _pip_
 
 <br>
 
-5. 尋找 pip 套件安裝的路徑
+5. 尋找 pip 套件安裝的路徑。
 
    ```bash
    pip show <套件名稱> | grep Location
@@ -54,7 +56,7 @@ _pip_
 
 <br>
 
-6. 查詢過時套件
+6. 查詢過時套件。
 
    _已安裝但不是最新版本的套件，可依此進行 `upgrade` 指令_
 
@@ -66,7 +68,7 @@ _pip_
 
 <br>
 
-7. 安裝套件時，不要安裝依賴項目
+7. 安裝套件時，不要安裝依賴項目。
 
    _多專案共用開發環境時可這樣操作避免版本衝突，然後再手動安裝_
 
@@ -76,7 +78,7 @@ _pip_
 
 <br>
 
-8. 依據套件管理文件安裝套件
+8. 依據套件管理文件安裝套件。
 
    ```bash
    pip install -r requirements.txt
@@ -84,7 +86,7 @@ _pip_
 
 <br>
 
-9. 依據當前開發環境的套件生成套件管理文件
+9. 依據當前開發環境的套件生成套件管理文件。
 
    ```bash
    pip freeze > requirements.txt
@@ -92,14 +94,14 @@ _pip_
 
 <br>
 
-10. 使用本地套件文件進行套件安裝
+10. 使用本地套件文件進行套件安裝。
 
-    ```bash
-    pip install ./<本地套件>/
-    ```
+   ```bash
+   pip install ./<本地套件>/
+   ```
 
 <br>
 
----
+___
 
 _END：依狀況發生填入_
