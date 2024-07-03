@@ -4,13 +4,15 @@
 
 ## 說明
 
-
 1. 在 Codespaces 中並不需要安裝 `Dev Containers` 插件，因為 Codespaces 本質上就是基於容器技術的，在 Codespaces 中開啟一個專案，會自動建立一個遠端的開發環境，這個環境就是一個容器。
 
-    ![](images/img_43.png)
+   ![](images/img_43.png)
 
+<br>
 
 2. 雖然不用手動建立容器，但 `devcontainer.json` 在 Codespaces 中還是有用途的，當打開一個儲存庫，Codespaces 會先檢查該儲存庫中是否存在 `.devcontainer/devcontainer.json` 文件，如果存在就會使用該文件中的配置來建立和啟動容器。
+
+<br>
 
 3. 基於以上這樣的機制，在 GitHub Codespaces 中使用 `devcontainer.json` 便可使雲端與本地的開發環境一致，同樣的，協作者只要遵循 `devcontainer.json` 配置，就會得到相同的開發環境。
 
@@ -43,14 +45,14 @@
 <br>
 
 5. 選擇預設的 `3.11-bullseye`，從名稱可以看出這個版本是基於 Debian 的 `bullseye` 建立的。
-   
+
    ![](images/img_39.png)
 
 <br>
 
 6. 預設的功能可以先跳過，按下 `確定`。
 
-    ![](images/img_40.png)
+   ![](images/img_40.png)
 
 <br>
 
@@ -61,7 +63,7 @@
 <br>
 
 8. 完成時會添加一個資料夾 `.devcontainer` 以及一個設定檔案 `devcontainer.json`。
-   
+
    ![](images/img_42.png)
 
 <br>
@@ -73,7 +75,8 @@
    ```bash
    python --version
    ```
-   結果是 `3.11`
+
+   _結果是 `3.11`_
 
    ![](images/img_44.png)
 
@@ -112,7 +115,7 @@
    ![](images/img_46.png)
 
 <br>
-   
+
 6. 刪除 Codespace，直接重建也是可以，這裡刪除主要是用來觀察整個容器的設置。
 
    ![](images/img_48.png)
@@ -120,7 +123,7 @@
 <br>
 
 7. 重新建立 Codespaces，或是重建容器也可以。
-   
+
    ![](images/img_50.png)
 
 <br>
@@ -135,7 +138,7 @@ _⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予
 
 <br>
 
-### 補充說明
+## 補充說明
 
 1. 使用指定的 Docker 映像，特別是官方的基礎映像時，通常預設會以 `root` 使用者運行，除非映像本身有明確的指示，或建立映像時在 Dockerfile 或 devcontainer.json 中指定了使用者。
 
@@ -212,7 +215,7 @@ _⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予
 <br>
 
 7. 透過指令 `groups` 查詢使用者。
-   
+
    ![](images/img_58.png)
 
 <br>
@@ -225,24 +228,24 @@ _⚠️ 啟動後會因為容器特性出現一些警告或提示，暫時不予
 
 9. 當前所在路徑 `pwd`。
 
-    ![](images/img_60.png)
+   ![](images/img_60.png)
 
 <br>
 
-### 補充說明
+## 補充說明
 
 1. 在用戶資訊部分所顯示的 `codespaces-b55d3d` 是目前所在的 Codespaces 環境識別符號。
 
    ![](images/img_62.png)
 
 <br>
-   
+
 2. 進入這個容器時所安裝的 Docker 插件是用來解釋、運行這個容器，而不是在這個容器之內，所以在這裡查詢指令 `docker ps` 的結果是找不到指令的，必須在容器內再安裝 Docker 才可以識別，但這是無意義的。
 
-    ![](images/img_64.png)
+   ![](images/img_64.png)
 
 <br>
 
----
+___
 
 _END_
