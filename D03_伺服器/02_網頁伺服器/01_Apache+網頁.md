@@ -146,19 +146,25 @@ _使用終端機編輯器來查看這類文件很吃力，設定授權後便可�
 
 1. 在 `多人共用一台設備` 的情況中（不是 `共同開發`），因為 `/etc` 文件屬於全域的設定檔案，所以將文件 `擁有者` 改為特定人實屬不便，最直接的處置方式就是使用終端機以 `sudo nano` 進行編輯，另外可透過建立權限群組，如 `apacheadmin`，然後透過將使用者加入群組來配置權限，以下示範的是建立群組的方式。
 
-   _建立群組並加入文件_
+<br>
+
+2. 建立群組並加入文件。
 
    ```bash
    sudo chgrp apacheadmin /etc/apache2/apache2.conf /etc/apache2/sites-available/000-default.conf
    ```
 
-   _修改群組權限_
+<br>
+
+3. 修改群組權限。
 
    ```bash
    sudo chmod 660 /etc/apache2/apache2.conf /etc/apache2/sites-available/000-default.conf
    ```
 
-   _將當前 user 或指定 user加入群組_
+<br>
+
+4. 將當前 user 或指定 user加入群組。
 
    ```bash
    sudo adduser $USER apacheadmin
@@ -166,7 +172,7 @@ _使用終端機編輯器來查看這類文件很吃力，設定授權後便可�
 
 <br>
 
-2. 另外一種相對暴力的處理方式就是授權 `666` 甚至 `777` ，將 `讀、寫、執行` 都全部開放，實務上是不會這樣做的，但這裡可以簡單處理。
+5. 另外一種相對暴力的處理方式就是授權 `666` 甚至 `777` ，將 `讀、寫、執行` 都全部開放，實務上是不會這樣做的，但這裡可以簡單處理。
 
    ```bash
    sudo chmod 666 /etc/apache2/apache2.conf /etc/apache2/sites-available/000-default.conf
