@@ -1,16 +1,20 @@
 # DNS
 
-_avahi-daemon_
+_樹莓派使用 avahi-daemon 的 mDNS 解析主機名稱_
 
 <br>
 
 # 說明
 
-1. `avahi` 是一個實現 `mDNS/DNS-SD（Multicast DNS/DNS Service Discovery）` 的服務，在許多 Linux 系統上已預設安裝，包含了樹莓派系統；`mDNS` 就是 `多播DNS`，用於在沒有傳統 DNS 服務器的本地網路中進行主機名解析；`DNS-SD` 就是 DNS Service Discovery，顧名思義就是在本地網路中 `發現服務`，如印表機、文件共享服務等。
+1. `avahi` 是一個實現 `mDNS/DNS-SD（Multicast DNS/DNS Service Discovery）` 的服務，在許多 Linux 系統上已預設安裝，包含了樹莓派系統。
 
 <br>
 
-2. 樹莓派預設安裝了 `avahi-daemon` 服務，可透過指令查看。
+2. `mDNS` 就是 `多播 DNS`，用於在沒有傳統 DNS 服務器的本地網路中進行主機名解析；`DNS-SD` 就是 DNS Service Discovery，顧名思義就是在本地網路中 `發現服務`，如印表機、文件共享服務等。
+
+<br>
+
+3. 樹莓派預設安裝了 `avahi-daemon` 服務，可透過指令查看。
 
    ```bash
    systemctl status avahi-daemon
@@ -60,6 +64,14 @@ _avahi-daemon_
 
    ```bash
    sudo systemctl enable avahi-daemon
+   ```
+
+<br>
+
+5. 查看日誌。
+
+   ```bash
+   journalctl -u avahi-daemon
    ```
 
 <br>
