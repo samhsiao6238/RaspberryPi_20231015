@@ -6,7 +6,7 @@ _這是在 Firebase 主控台建立的 Google Cloud 專案，可在 [GC](https:/
 
 ## 完成展示
 
-    ![](images/img_34.png)
+![](images/img_34.png)
 
 <br>
 
