@@ -12,37 +12,37 @@ _這是在 Firebase 主控台建立的 Google Cloud 專案，可在 [GC](https:/
 
 ## 步驟
 
-1. 登入 Firebase，點擊進入 `主控台 Console`
+1. 登入 Firebase，點擊進入 `主控台 Console`。
 
     ![](images/img_37.png)   
 
 <br>
 
-2. 建立專案
+2. 建立專案。
 
     ![](images/img_01.png)
 
 <br>
 
-3. 輸入任意名稱、接受條款後繼續
+3. 輸入任意名稱、接受條款後繼續。
 
     ![](images/img_02.png)
 
 <br>
 
-4. 是否使用分析功能皆可，然後建立專案
+4. 是否使用分析功能皆可，然後建立專案。
 
     ![](images/img_03.png)
 
 <br>
 
-5. 完成後繼續
+5. 完成後繼續。
 
     ![](images/img_04.png)
 
 <br>
 
-6. 專案的主控台中很多應用，這裡先從 `網頁應用` 開始
+6. 專案的主控台中很多應用，這裡先從 `網頁應用` 開始。
 
     ![](images/img_05.png)
 
@@ -70,13 +70,13 @@ _這是在 Firebase 主控台建立的 Google Cloud 專案，可在 [GC](https:/
 
 <br>
 
-10. 這時便會看到有了一個應用
+10. 這時便會看到有了一個應用。
 
     ![](images/img_09.png)
 
 <br>
 
-11. 點擊專案設定
+11. 點擊專案設定。
 
     ![](images/img_10.png)
 
@@ -100,37 +100,37 @@ _這是在 Firebase 主控台建立的 Google Cloud 專案，可在 [GC](https:/
 
 <br>
 
-15. 在左側建構中選取 Realtime Database
+15. 在左側建構中選取 Realtime Database。
 
     ![](images/img_14.png)
 
 <br>
 
-16. 選取過的服務會自動添加到捷徑中
+16. 選取過的服務會自動添加到捷徑中。
 
     ![](images/img_15.png)
 
 <br>
 
-17. 選擇建立資料庫
+17. 選擇建立資料庫。
 
     ![](images/img_16.png)
 
 <br>
 
-18. 選擇區域，美國新加坡皆可，然後下一步
+18. 選擇區域，美國新加坡皆可，然後下一步。
 
     ![](images/img_17.png)
 
 <br>
 
-19. 以鎖定模式啟動，之後還會再設定修正，選擇啟用
+19. 以鎖定模式啟動，之後還會再設定修正，選擇啟用。
 
     ![](images/img_18.png)
 
 <br>
 
-20. 切換到規則頁籤，修改兩個權限設定值為 `true`，然後點擊 `發布`
+20. 切換到規則頁籤，修改兩個權限設定值為 `true`，然後點擊 `發布`。
 
     ![](images/img_19.png)
 
