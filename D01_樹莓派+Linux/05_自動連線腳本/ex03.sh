@@ -14,7 +14,7 @@ send_line_notify() {
     curl -X POST -H "Authorization: Bearer $TOKEN" -F "message=$message" https://notify-api.line.me/api/notify
 }
 
-# 等待網絡接口初始化
+# 等待網路接口初始化
 sleep 20
 
 # 初始化通知訊息變量
@@ -25,7 +25,7 @@ notification_message=$(cat << EOF
 EOF
 )
 
-# 檢查網絡接口狀態
+# 檢查網路接口狀態
 eth0_status=$(nmcli device status | grep -E "^eth0\s" | awk '{print $3}')
 wlan0_status=$(nmcli device status | grep -E "^wlan0\s" | awk '{print $3}')
 
@@ -44,11 +44,11 @@ if [ -n "$current_eth_connection" ]; then
     sudo nmcli connection delete "$current_eth_connection"
 fi
 
-# 檢查並連接到教室網絡
+# 檢查並連接到教室網路
 if ping -c 1 -W 1 172.16.4.1 &> /dev/null; then
     notification_message+=$(cat << EOF
 
-偵測到教室網絡，
+偵測到教室網路，
 
 EOF
 )
@@ -62,11 +62,11 @@ EOF
 EOF
 )
 
-# 檢查並連接到家庭有線網絡
+# 檢查並連接到家庭有線網路
 elif ping -c 1 -W 1 192.168.1.1 &> /dev/null && [ "$eth0_status" = "已連線" ]; then
     notification_message+=$(cat << EOF
 
-偵測到的家庭有線網絡，
+偵測到的家庭有線網路，
 
 EOF
 )
@@ -80,11 +80,11 @@ EOF
 EOF
 )
 
-# 檢查並連接到家庭無線網絡
+# 檢查並連接到家庭無線網路
 elif ping -c 1 -W 1 192.168.1.1 &> /dev/null && [ "$wlan0_status" = "已連線" ]; then
     notification_message+=$(cat << EOF
 
-偵測到的家庭無線網絡，
+偵測到的家庭無線網路，
 
 EOF
 )

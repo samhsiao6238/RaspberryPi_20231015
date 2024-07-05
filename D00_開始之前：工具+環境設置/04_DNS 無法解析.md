@@ -28,13 +28,23 @@
     nslookup raspi-2024-ssd
     ```
 
-    _結果：該主機名稱在 DNS 伺服器中無法解析_
+    _若無法解析：該主機名稱在 DNS 伺服器中無法解析_
 
     ```bash
     Server:		8.8.8.8
     Address:	8.8.8.8#53
 
     ** server can't find raspi-2024-ssd: NXDOMAIN
+    ```
+
+    _正常解析_
+
+    ```bash
+    Server:		192.168.1.1
+    Address:	192.168.1.1#53
+
+    Name:	raspi-2024-ssd
+    Address: 192.168.1.149
     ```
 
 <br>
@@ -45,7 +55,7 @@
     dig raspi-2024-ssd
     ```
 
-    _結果：該主機名在 DNS 伺服器中無法解析_
+    _無法解析：該主機名在 DNS 伺服器中無法解析_
 
     ```bash
     ; <<>> DiG 9.10.6 <<>> raspi-2024-ssd
@@ -68,6 +78,29 @@
     ;; MSG SIZE  rcvd: 118
     ```
 
+    _正常解析_
+
+    ```bash
+    ; <<>> DiG 9.10.6 <<>> raspi-2024-ssd
+    ;; global options: +cmd
+    ;; Got answer:
+    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 17254
+    ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+    ;; OPT PSEUDOSECTION:
+    ; EDNS: version: 0, flags:; udp: 4096
+    ;; QUESTION SECTION:
+    ;raspi-2024-ssd.			IN	A
+
+    ;; ANSWER SECTION:
+    raspi-2024-ssd.		0	IN	A	192.168.1.149
+
+    ;; Query time: 1 msec
+    ;; SERVER: 192.168.1.1#53(192.168.1.1)
+    ;; WHEN: Sat Jul 06 06:07:48 CST 2024
+    ;; MSG SIZE  rcvd: 59
+    ```
+
 <br>
 
 ## 查看當前設備的 DNS 設定
@@ -82,7 +115,7 @@ _可跳到第 `5` 點先進行排除_
     cat /etc/resolv.conf
     ```
 
-    _顯示_
+    _例如_
 
     ```bash
     nameserver 192.168.1.1
