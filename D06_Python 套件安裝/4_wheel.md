@@ -12,7 +12,7 @@
 
 <br>
 
-2. 創建一個 `setup.py` 文件，並包含基本的打包資訊。
+2. 建立一個 `setup.py` 文件，並包含基本的打包資訊。
 
     ```python
     from setuptools import setup, find_packages

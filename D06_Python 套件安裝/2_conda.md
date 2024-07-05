@@ -12,7 +12,7 @@
 
 ## 相關操作
 
-1. 使用 Conda 創建新環境。
+1. 使用 Conda 建立新環境。
 
     ```bash
     conda create --name <環境名稱> python=<版本>
