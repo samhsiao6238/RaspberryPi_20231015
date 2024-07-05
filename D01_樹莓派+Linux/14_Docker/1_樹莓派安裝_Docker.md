@@ -124,9 +124,11 @@
 
 2. 也可以使用。
 
-```bash
-sudo service docker start
-```
+   ```bash
+   sudo service docker start
+   ```
+
+<br>
 
 3. 查詢當前 Docker 版本。
 
