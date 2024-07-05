@@ -116,6 +116,14 @@
 
 <br>
 
+4. 若出現依賴庫的版本衝突，可依據官網提供的方式，運行以下指令刪除所有衝突的套件。
+
+   ```bash
+   for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+   ```
+
+<br>
+
 ## 驗證安裝
 
 1. 驗證之前先啟動 Docker 服務；特別注意，安裝 Docker 後會自動建立成為系統服務，這裡之所以進行手動啟動，是因為在初次安裝 Docker 後，以手動啟動服務可以用來驗證 Docker 是否正確安裝和配置，確保其能夠正常運行。
@@ -207,6 +215,32 @@ _若要更新 Docker Engine 也是運行這個卸載程序後重新安裝_
 ## 注意事項
 
 1. 樹莓派使用的是 ARM 架構 的處理器，而大部分的 Docker 映像是為 x86 架構 的處理器設計的，所以在選擇 Docker 映像時，必須確保它支援 ARM 架構。
+
+<br>
+
+2. 官網另外提供了使用 apt 儲存庫安裝的說明，但指令較為複雜，參考即可。
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get install ca-certificates curl
+   sudo install -m 0755 -d /etc/apt/keyrings
+   sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+   sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+   echo \
+   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   sudo apt-get update
+   ```
+
+<br>
+
+3. 若使用 apt 儲存庫安裝 Docker，則需要手動安裝 Docker 套件。
+
+   ```bash
+   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   ```
 
 <br>
 
