@@ -2,6 +2,18 @@
 
 <br>
 
+## 說明
+
+1. [Docker 官網](https://www.docker.com/)。
+
+<br>
+
+2. [官方安裝說明](https://docs.docker.com/engine/install/raspberry-pi-os/)。
+
+<br>
+
+## 步驟
+
 1. 更新系統。
 
    ```bash
