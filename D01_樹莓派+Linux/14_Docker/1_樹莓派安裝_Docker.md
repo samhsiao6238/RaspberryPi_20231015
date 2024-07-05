@@ -50,6 +50,30 @@
 
 <br>
 
+5. 將當前用戶加入 Docker 群組，如此可擁有群組權限；若未加入，每次使用 Docker 指令都需要使用 `sudo`。
+
+   ```bash
+   sudo usermod -aG docker $USER
+   ```
+
+<br>
+
+6. 因為變更了使用者的群組，這等效於授權行為所以要刷新授權，可登出並重新登入樹莓派來實現；若不嫌麻煩重啟也是可以。
+
+   ```bash
+   exit
+   ```
+
+<br>
+
+7. 另外，刷新授權也可以透過啟動 shell，這會要求輸入密碼；或嘗試關閉並重啟新的終端機。
+
+   ```bash
+   su - $USER
+   ```
+
+<br>
+
 ## curl 指令與參數說明
 
 1. curl：命令行工具，用於從 URL 取得或發送數據。
@@ -76,22 +100,6 @@
 
 <br>
 
-7. 將當前用戶加入 Docker 群組，如此可擁有群組權限；若未加入，每次使用 Docker 指令都需要使用 `sudo`。
-
-   ```bash
-   sudo usermod -aG docker $USER
-   ```
-
-<br>
-
-8. 重新啟動樹莓派或登出再登入。
-
-   ```bash
-   sudo reboot now
-   ```
-
-<br>
-
 ## 關於警告
 
 1. 警告若使用特權訪問 Docker daemon 上的遠程 API，等同在主機上的 root 訪問。
@@ -110,7 +118,15 @@
 
 ## 驗證安裝
 
-1. 驗證 Docker 安裝。
+1. 驗證之前先啟動 Docker 服務；特別注意，安裝 Docker 後會自動建立成為系統服務，這裡之所以進行手動啟動，是因為在初次安裝 Docker 後，以手動啟動服務可以用來驗證 Docker 是否正確安裝和配置，確保其能夠正常運行。
+
+   ```bash
+   sudo service docker start
+   ```
+
+<br>
+
+2. 驗證 Docker 安裝；這個指令會從 Docker Hub 下載一個名為 hello-world 的測試鏡像。
 
    ```bash
    docker run hello-world
@@ -119,14 +135,6 @@
    _第一次執行會通知並下拉_
    
    ![](images/img_10.png)
-
-<br>
-
-2. 也可以使用。
-
-   ```bash
-   sudo service docker start
-   ```
 
 <br>
 
@@ -171,6 +179,28 @@
 <br>
 
 8. `docker rmi`：刪除 Docker 映像，使用映像ID或名稱來刪除指定的Docker映像。
+
+<br>
+
+## 卸載 Docker Engine
+
+_若要更新 Docker Engine 也是運行這個卸載程序後重新安裝_
+
+<br>
+
+1. 卸載 Docker Engine、CLI、containerd 和 Docker Compose 套件。
+
+   ```bash
+   sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
+   ```
+
+<br>
+
+2. 刪除所有映像、容器和卷。
+
+   ```bash
+   sudo rm -rf /var/lib/docker /var/lib/containerd
+   ```
 
 <br>
 
