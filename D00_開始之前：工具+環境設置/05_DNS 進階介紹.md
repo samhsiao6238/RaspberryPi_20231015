@@ -6,7 +6,7 @@ _樹莓派使用 avahi-daemon 的 mDNS 解析主機名稱_
 
 # 說明
 
-1. `avahi` 是一個實現 `mDNS/DNS-SD（Multicast DNS/DNS Service Discovery）` 的服務，在許多 Linux 系統上已預設安裝，包含了樹莓派系統。
+1. `avahi` 是一個實現 `mDNS` 和 `DNS-SD`（Multicast DNS 和 DNS Service Discovery）` 的服務，在許多 Linux 系統上已預設安裝，包含了樹莓派系統。
 
 <br>
 
@@ -21,6 +21,10 @@ _樹莓派使用 avahi-daemon 的 mDNS 解析主機名稱_
    ```
 
    ![](images/img_21.png)
+
+<br>
+
+4. 樹莓派支援 mDNS 解析，可以在主機名稱後面加上 `.local`，這樣在本地網路中訪問樹莓派時可自動解析並連接。
 
 <br>
 
