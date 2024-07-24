@@ -1,7 +1,8 @@
 {
     "cSpell.enableFiletypes": [
         "!markdown",
-        "!python"
+        "!python",
+        "!yaml"
     ],
     // 設定貼上相片的預設路徑
     "pasteImage.path": "${currentFileDir}/images/",
