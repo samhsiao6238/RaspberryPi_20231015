@@ -10,7 +10,7 @@ _運行 Minikube_
 
 <br>
 
-1. 樹莓派 A 啟動 Minikube。
+1. 樹莓派 A 啟動 Minikube；使用參數 `--driver=none` 會直接在本地機器樹莓派 A 上運行，而不使用虛擬機；若要使用虛擬網卡可用參數 `--driver=docker`。
 
     ```bash
     minikube start --driver=docker
@@ -185,6 +185,26 @@ _樹莓派 A 上的證書文件_
     ```bash
     NAME       STATUS   ROLES           AGE     VERSION
     minikube   Ready    control-plane   3h45m   v1.30.0
+    ```
+
+<br>
+
+## 其他指令
+
+1. 停止並刪除 Minikube 服務。
+
+    ```bash
+    minikube stop && minikube delete
+    ```
+
+    ![](images/img_20.png)
+
+<br>
+
+2. 重新啟動 Minikube 服務。
+
+    ```bash
+    minikube start --driver=docker
     ```
 
 <br>
