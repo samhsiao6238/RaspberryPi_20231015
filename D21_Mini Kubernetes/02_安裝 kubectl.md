@@ -10,7 +10,15 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-1. 下載最新版本。
+1. 先切換到下載路徑中。
+
+    ```bash
+    cd ~/Downloads
+    ```
+
+<br>
+
+2. 下載最新版本。
 
     ```bash
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/arm64/kubectl"
@@ -18,7 +26,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-2. 下載 kubectl 校驗和檔案。
+3. 下載的是 kubectl 的 SHA-256 校驗和文件，用於驗證 kubectl 二進制文件的完整性。
 
     ```bash
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/arm64/kubectl.sha256"
@@ -26,7 +34,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-3. 根據校驗和檔案驗證 kubectl 二進位檔案。
+4. 根據校驗和檔案驗證 kubectl 二進位檔案。
 
     ```bash
     echo "$(cat kubectl.sha256)  kubectl" | shasum -a 256 --check
@@ -40,7 +48,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-4. 使 kubectl 二進位檔案可執行。
+5. 使 kubectl 二進位檔案可執行。
 
     ```bash
     chmod +x ./kubectl
@@ -48,7 +56,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-5. 將 kubectl 二進位檔案移到系統上的檔案位置PATH。
+6. 將 kubectl 二進位檔案移到系統上的檔案位置 `/usr/local/bin/kubectl`。
 
     ```bash
     sudo mv ./kubectl /usr/local/bin/kubectl && sudo chown root: /usr/local/bin/kubectl
@@ -56,7 +64,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-6. 測試以確保安裝的版本是最新的。
+7. 測試以確保安裝的版本是最新的。
 
     ```bash
     kubectl version --client
@@ -71,7 +79,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-7. 安裝並驗證 kubectl 後，刪除校驗和檔案。
+8. 安裝並驗證 kubectl 後，刪除校驗和檔案。
 
     ```bash
     rm kubectl.sha256
@@ -79,27 +87,17 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-## 樹莓派使用 Homebrew 安裝 kubectl
-
-1. 運行安裝命令。
-
-    ```bash
-    brew install kubectl
-    ```
-
-<br>
-
-2. 測試以確保您安裝的版本是最新的。
-
-    ```bash
-    kubectl version --client
-    ```
-
-<br>
-
 ## 樹莓派安裝 kubectl
 
-1. 下載最新版本。
+1. 先切換到下載路徑中。
+
+    ```bash
+    cd ~/Downloads
+    ```
+
+<br>
+
+2. 下載最新版本。
 
     ```bash
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
@@ -107,7 +105,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-2. 驗證二進位
+3. 下載驗證文件。
 
     ```bash
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl.sha256"
@@ -115,7 +113,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-3. 根據校驗和檔案驗證 kubectl 二進位檔案。
+4. 根據校驗和檔案驗證 kubectl 二進位檔案。
 
     ```bash
     echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
@@ -123,7 +121,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-4. 安裝 kubectl。
+5. 安裝 kubectl。
 
     ```bash
     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
@@ -131,7 +129,7 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 
 <br>
 
-5. 測試。
+6. 測試。
 
     ```bash
     kubectl version --client
