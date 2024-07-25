@@ -164,7 +164,15 @@ _從樹莓派將配置文件複製到本機電腦上_
 
 <br>
 
-4. 在 MacOS 設置 Minikube 環境變數。
+4. 在本機電腦確認複製確實完成。
+
+    ```bash
+    ls ~/.kube/config
+    ```
+
+<br>
+
+5. 在 MacOS 設置 Minikube 環境變數。
 
     ```bash
     export KUBECONFIG=~/.kube/config
