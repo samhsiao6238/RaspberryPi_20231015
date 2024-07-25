@@ -108,6 +108,12 @@ _MiniKube 是一個用於本地 Kubernetes 集群的工具，它適合在開發�
 
 <br>
 
+## 新增橋接 IP
+
+1. 安裝了 Minikube 之後會添加一個橋接 IP `192.168.49.1/24`，這是 Minikube 建立的虛擬網路，用於管理 Kubernetes 集群內的 Pod 和服務之間的通信；Minikube 使用這個網絡來分配 Kubernetes 集群內部的 IP 地址，確保 Pod 和服務之間的通信不受外部網絡影響；使用 `kubectl` 指令時，Kubeconfig 文件中的 server 會指向這個網絡的 IP 地址，通常是 Minikube 容器的 IP，例如 `192.168.49.2`。
+
+2. 安裝了 Docker 之後會添加一個橋接 IP `172.17.0.1/16`，這是 Docker 預設建立的橋接網路，用於管理 Docker 容器之間的通信。
+
 ___
 
 _END_

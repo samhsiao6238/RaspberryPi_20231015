@@ -79,6 +79,16 @@ _樹莓派 A 上的證書文件_
 
 <br>
 
+4. 使用以下指令確定複製完成。
+
+    ```bash
+    ls ~/.minikube/profiles/minikube/client.crt
+    ls ~/.minikube/profiles/minikube/client.key
+    ls ~/.minikube/ca.crt
+    ```
+
+<br>
+
 ## 複製 Minikube 配置文件到 MacOS
 
 1. 確認在樹莓派 A 上已經啟動並運行了 Minikube。
