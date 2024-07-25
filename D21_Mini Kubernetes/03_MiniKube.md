@@ -71,10 +71,10 @@ _MiniKube 是一個用於本地 Kubernetes 集群的工具，它適合在開發�
 
 <br>
 
-9. 使用 Docker 作為驅動器啟動 MiniKube。
+9. 使用 Docker 作為驅動器啟動 MiniKube；無參數時效果與參數 `--driver=docker` 相同，都會在容器中啟動。
 
     ```bash
-    minikube start --driver=docker
+    minikube start
     ```
 
     ![](images/img_21.png)
