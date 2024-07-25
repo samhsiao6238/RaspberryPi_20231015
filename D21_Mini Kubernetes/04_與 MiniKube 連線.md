@@ -248,7 +248,7 @@ _開啟通道也稱為 `SSH 端口轉發`，其工作原理是通過 `SSH 通道
 
 ## 繼續連線
 
-1. 在 MacOS 運行指令切換連線。
+1. 在 MacOS 運行指定連線文件的指令 `kubectl config`，並透過參數 `use-context` 指定使用的連線名稱為 `minikube`。
 
     ```bash
     kubectl config use-context minikube
@@ -262,7 +262,13 @@ _開啟通道也稱為 `SSH 端口轉發`，其工作原理是通過 `SSH 通道
 
 <br>
 
-2. 連線測試；確認連接是否成功，以下訊息表示 Minikube 集群已經成功運行，節點 `minikube` 處於 Ready 狀態，並且運行了 3 小時 45 分鐘，Kubernetes 的版本是 `v1.30.0`；確認了 Minikube 安裝和配置是正確的，並且節點已經準備好接收和運行工作負載。
+2. 延續上一點，這個連線名稱是定義在設定文件 `~/.kube/config` 中的。
+
+    ![](images/img_25.png)
+
+<br>
+
+3. 連線測試；確認連接是否成功，以下訊息表示 Minikube 集群已經成功運行，節點 `minikube` 處於 Ready 狀態，並且運行了 3 小時 45 分鐘，Kubernetes 的版本是 `v1.30.0`；確認了 Minikube 安裝和配置是正確的，並且節點已經準備好接收和運行工作負載。
 
     ```bash
     kubectl get nodes
