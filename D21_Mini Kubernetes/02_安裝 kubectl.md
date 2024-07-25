@@ -70,12 +70,9 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
     kubectl version --client
     ```
 
-    _輸出_
+    _輸出顯示當前版本_
 
-    ```bash
-    Client Version: v1.30.3
-    Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
-    ```
+    ![](images/img_23.png)
 
 <br>
 
@@ -88,6 +85,10 @@ _兩種安裝方式，這是第一種，簡單一點可以使用 Homebrew_
 <br>
 
 ## 樹莓派安裝 kubectl
+
+_在兩台樹莓派也都安裝 kubectl_
+
+<br>
 
 1. 先切換到下載路徑中。
 
