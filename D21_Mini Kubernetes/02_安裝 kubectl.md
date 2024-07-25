@@ -98,7 +98,7 @@ _在兩台樹莓派也都安裝 kubectl_
 
 <br>
 
-2. 下載最新版本。
+2. 下載最新版本；與 MacOS 下載的不同，這裡下載的是 Linux 系統使用的版本。
 
     ```bash
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
@@ -120,6 +120,10 @@ _在兩台樹莓派也都安裝 kubectl_
     echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
     ```
 
+    _通過驗證一樣會顯示 OK_
+
+    ![](images/img_24.png)
+
 <br>
 
 5. 安裝 kubectl。
@@ -130,7 +134,7 @@ _在兩台樹莓派也都安裝 kubectl_
 
 <br>
 
-6. 測試。
+6. 測試安裝是否成功。
 
     ```bash
     kubectl version --client
