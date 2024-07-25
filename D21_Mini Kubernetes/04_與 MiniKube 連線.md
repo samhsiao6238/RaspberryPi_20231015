@@ -152,6 +152,8 @@ _從樹莓派將配置文件複製到本機電腦上_
     mkdir -p ~/.kube
     ```
 
+<br>
+
 3. 在 MacOS 上運行以下指令從樹莓派 A 複製 Minikube 的 kubeconfig 文件到 MacOS。
 
     ```bash
