@@ -89,7 +89,7 @@ _樹莓派 A 上的證書文件_
 
 <br>
 
-## 複製 Minikube 配置文件到 MacOS
+## 查看 Minikube 狀態與 IP
 
 1. 確認在樹莓派 A 上已經啟動並運行了 Minikube。
 
@@ -124,13 +124,21 @@ _樹莓派 A 上的證書文件_
 
 <br>
 
-3. 試圖從 MacOS 連線 Minikube 的 IP 地址，尚未設定前，按理是無法連線到容器的。
+3. 這是 Kubernetes 集群內的 Pod 和服務之間通信的網段，若試圖從 MacOS 連線這個 IP 地址是無法連線的。
 
     ```bash
     ping 192.168.49.2
     ```
 
-4. 在樹莓派 A 檢查設定文件確實存在。
+<br>
+
+## 複製 Minikube 配置文件到 MacOS
+
+_從樹莓派將配置文件複製到本機電腦上_
+
+<br>
+
+1. 在樹莓派 A 檢查所需的設定文件已經存在。
 
     ```bash
     ls ~/.kube/config
@@ -138,13 +146,13 @@ _樹莓派 A 上的證書文件_
 
 <br>
 
-5. 在本地電腦 MacOS 上建立目標目錄。
+2. 在本地電腦 MacOS 上建立目標目錄。
 
     ```bash
     mkdir -p ~/.kube
     ```
 
-6. 在 MacOS 上運行以下指令從樹莓派 A 複製 Minikube 的 kubeconfig 文件到 MacOS。
+3. 在 MacOS 上運行以下指令從樹莓派 A 複製 Minikube 的 kubeconfig 文件到 MacOS。
 
     ```bash
     scp ssd:~/.kube/config ~/.kube/config
@@ -154,7 +162,7 @@ _樹莓派 A 上的證書文件_
 
 <br>
 
-7. 在 MacOS 設置 Minikube 環境變數。
+4. 在 MacOS 設置 Minikube 環境變數。
 
     ```bash
     export KUBECONFIG=~/.kube/config
