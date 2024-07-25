@@ -134,7 +134,15 @@ _在兩台樹莓派也都安裝 kubectl_
 
 <br>
 
-6. 測試安裝是否成功。
+6. 刪除臨時文件。
+
+    ```bash
+    rm kubectl.sha256 kubectl
+    ```
+
+<br>
+
+7. 測試安裝是否成功。
 
     ```bash
     kubectl version --client
