@@ -44,7 +44,11 @@ _MiniKube 是一個用於本地 Kubernetes 集群的工具，它適合在開發�
     sudo usermod -aG docker $USER
     ```
 
-6. 可退出終端機重新登入讓授權生效。
+<br>
+
+6. 特別注意，完成安裝 Docker 後，要退出終端機或重啟對話重新登入讓群組授權生效，否則在後續的步驟會出現錯誤。
+
+    ![](images/img_45.png)
 
 <br>
 
