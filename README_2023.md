@@ -2,11 +2,19 @@
 
 [課程 Googoe Meet 連結]()
 
+<br>
+
 [課程白板 Miro 連結]()
+
+<br>
 
 [官方課綱連結]()
 
+<br>
+
 ![課綱截圖](image/README/課綱截圖.png)
+
+<br>
 
 **小柱 Sam**
 
@@ -18,5 +26,9 @@
 
 [**課程 GitHub**](https://github.com/samhsiao6238/RaspberryPi_20231015.git)
 
-*小柱*
-*中柱*
+
+<br>
+
+___
+
+_END_
