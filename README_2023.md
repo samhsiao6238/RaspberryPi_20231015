@@ -2,12 +2,6 @@
 
 [課程 Googoe Meet 連結]()
 
-教室代碼
-
-```bash
-dej-skyd-trv
-```
-
 [課程白板 Miro 連結]()
 
 [官方課綱連結]()
