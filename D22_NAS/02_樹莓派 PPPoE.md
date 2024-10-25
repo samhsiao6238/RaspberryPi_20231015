@@ -29,16 +29,49 @@ _以下以中華電信為例_
 
 <br>
 
-3. 在設定過程中，當 `pppoeconf` 檢測到 PPPoE 伺服器後，會要求輸入 PPPoE 帳號和密碼。
+3. 選擇 `Yes`，讓系統自動調整配置，這些設定讓 PPPoE 連線運行得更加順暢。
 
-    ```bash
-    帳號：xxxxxxxx@ip.hinet.net
-    密碼：
-    ```
+    ![](images/img_01.png)
 
 <br>
 
-4. 設定過程都接受 `pppoeconf` 工具的預設值。
+4. 需要輸入 PPPoE 登錄的用戶名，前綴就是 HN 後的那一串數字，符號 `@` 後的尾綴必須先加上 `ip`，整體表達如下。
+
+    ```bash
+    xxxxxxxx@ip.hinet.net
+    ```
+
+    ![](images/img_02.png)
+
+<br>
+
+5. 選擇 `YES`；系統詢問是否要將中華電信提供的 `DNS` 伺服器自動添加到 `/etc/resolv.conf` 文件中，以便用於域名解析。
+
+    ![](images/img_03.png)
+
+<br>
+
+6. `pppoeconf` 工具建議將 `MSS（最大段長度）` 限制為 `1452` 字節，這是一個常見的設置，特別是在使用 PPPoE 連線時，由於 PPPoE 封包的開銷會減少可用的 `MTU（最大傳輸單元）`，`MSS` 通常需要調整以確保穩定的網路連接；選擇 `YES` 即可。
+
+    ![](images/img_04.png)
+
+<br>
+
+7. 系統詢問是否要在開機時自動啟動 PPPoE 連線，選擇 `Yes`。
+
+    ![](images/img_05.png)
+
+<br>
+
+8. 系統詢問是否現在立即啟動 PPPoE 連線，選擇 `Yes`。
+
+    ![](images/img_06.png)
+
+<br>
+
+9. 連線已經啟動成功。
+
+    ![](images/img_07.png)
 
 <br>
 
@@ -56,6 +89,24 @@ _以下以中華電信為例_
 
     ```bash
     ifconfig ppp0
+    ```
+
+<br>
+
+## 查詢
+
+1. 使用 plog 來檢查 PPPoE 連線的狀態，並查看相關日誌。
+
+    ```bash
+    plog
+    ```
+
+<br>
+
+2. 檢查 PPPoE 網路介面的詳細資訊，確認 PPPoE 連線是否成功並檢查分配的 IP 地址。
+
+    ```bash
+    ip addr show ppp0
     ```
 
 <br>
