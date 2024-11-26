@@ -24,13 +24,7 @@
                 "isDefault": true
             },
             "problemMatcher": []
-        },
-		{
-            "label": "Convert to Markdown",
-            "type": "shell",
-            "command": "/Volumes/SSD_01/00_課程講義專用/AWS_2024/convert_to_md.sh",
-            "args": ["${file}"],
-            "problemMatcher": []
         }
+		
 	]
 }
