@@ -1,4 +1,9 @@
 {
+    "cSpell.ignorePaths": [
+        "**/node_modules/**",  // 忽略 node_modules
+        "**/dist/**",          // 忽略 dist 資料夾
+        "**/**"          // 忽略壓縮檔案
+    ],
     "cSpell.enableFiletypes": [
         "!markdown",
         "!python"
@@ -8,7 +13,8 @@
         // 可將特殊命名字串加入
         "myfunction", "mysource", "mytarget", "dateutil",
         "boto3", "gettz", "timestr", "zipf", "ipynb",
-        "arcname", "botocore", "voclab", "elif", "TMQTT"
+        "arcname", "botocore", "voclab", "elif", "TMQTT",
+        "miservice", "aiohttp", "aiofiles", "venv"
     ],
     // 設定貼上相片的預設路徑
     "pasteImage.path": "${currentFileDir}/images/",
