@@ -120,7 +120,7 @@ async def main():
         print(f"掃描到 {len(devices)} 個設備。")
         write_to_excel(devices)
     else:
-        print("未掃描到任何設備，請檢查賬戶或網絡設置。")
+        print("未掃描到任何設備，請檢查帳戶或網絡設置。")
 
 if __name__ == "__main__":
     # 確保環境變數已設置

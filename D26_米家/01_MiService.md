@@ -21,7 +21,7 @@ _虛擬環境與套件_
 2. 安裝 `miservice` 所有可能需要的套件。
 
     ```bash
-    pip install -q aiohttp aiofiles requests pandas
+    pip install -q aiohttp aiofiles requests pandas python-dotenv openpyxl
     ```
 
 <br>
@@ -54,6 +54,6 @@ _虛擬環境與套件_
 
 <br>
 
-## 啟用筆記本
+___
 
-1. 
+_未完_
