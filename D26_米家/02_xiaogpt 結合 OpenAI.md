@@ -10,9 +10,9 @@ _使用套件 `xiaogpt`，參考 [網路資源](https://github.com/yihong0618/xi
 
 ```bash
 pip install -U --force-reinstall xiaogpt
+pip install aiohttp aiofiles miservice
 pip install pandas openpyxl
 pip install nest_asyncio
-
 ```
 
 2. 建立環境變數。

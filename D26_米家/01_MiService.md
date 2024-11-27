@@ -1,6 +1,6 @@
 # 米家
 
-_暫時先記錄在這裡，之後再看看如何正確分類_
+_使用 [MiService](https://github.com/Yonsm/MiService)，暫時先記錄在這裡，之後再看看如何正確分類_
 
 <br>
 
@@ -21,7 +21,7 @@ _虛擬環境與套件_
 2. 安裝 `miservice` 所有可能需要的套件。
 
     ```bash
-    pip install aiohttp aiofiles requests
+    pip install -q aiohttp aiofiles requests pandas
     ```
 
 <br>
@@ -39,6 +39,17 @@ _虛擬環境與套件_
     ```bash
     export MI_USER=<自己的米家帳號>
     export MI_PASS=<自己米家帳號的密碼>
+    ```
+
+<br>
+
+5. 若使用 `.env`。
+
+    ```json
+    MI_USER=
+    MI_PASS=
+    MI_DID=
+    OPENAI_API_KEY=
     ```
 
 <br>
