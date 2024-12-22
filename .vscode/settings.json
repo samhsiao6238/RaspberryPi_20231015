@@ -1,9 +1,4 @@
 {
-    "cSpell.ignorePaths": [
-        "**/node_modules/**",  // 忽略 node_modules
-        "**/dist/**",          // 忽略 dist 資料夾
-        "**/**"          // 忽略壓縮檔案
-    ],
     "cSpell.enableFiletypes": [
         "!markdown",
         "!python"
@@ -13,8 +8,7 @@
         // 可將特殊命名字串加入
         "myfunction", "mysource", "mytarget", "dateutil",
         "boto3", "gettz", "timestr", "zipf", "ipynb",
-        "arcname", "botocore", "voclab", "elif", "TMQTT",
-        "miservice", "aiohttp", "aiofiles", "venv"
+        "arcname", "botocore", "voclab", "elif", "TMQTT"
     ],
     // 設定貼上相片的預設路徑
     "pasteImage.path": "${currentFileDir}/images/",
@@ -45,4 +39,16 @@
     },
     // 設定 Python language server 為 Microsoft 的 Pylance
     "python.languageServer": "Pylance",
+    "indentRainbow.colors": [
+        "rgba(255,69,0,0.1)",  // 第一層
+        "rgba(255,140,0,0.1)", // 第二層
+        "rgba(34,139,34,0.1)", // 第三層
+        "rgba(0,0,255,0.1)"    // 第四層
+    ],
+    // 當縮排不一致時顯示的錯誤顏色
+    "indentRainbow.errorColor": "rgba(128,32,32,0.8)",
+    // 忽略特定警告
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    }
 }

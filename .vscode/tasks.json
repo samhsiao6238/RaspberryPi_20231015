@@ -1,36 +1,52 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		{
-			"type": "java (build)",
-			"paths": [
-				"${workspace}"
-			],
-			"isFullBuild": true,
-			"group": "build",
-			"problemMatcher": [],
-			"label": "java (build): Build Workspace",
-			"detail": "$(tools) Build all the Java projects in workspace."
-		},
-		{
+        {
+            "type": "java (build)",
+            "paths": [
+                "${workspace}"
+            ],
+            "isFullBuild": true,
+            "group": "build",
+            "problemMatcher": [],
+            "label": "java (build): Build Workspace",
+            "detail": "$(tools) Build all the Java projects in workspace."
+        },
+        {
             "label": "Commit with DateTime",
             "type": "shell",
-            // 僅提交
-            // "command": "git add . && git commit -m \"Commit on $(date '+%Y-%m-%d %H:%M:%S')\"",
-            // 提交並變更
             "command": "git add . && git commit -m \"Commit on $(date '+%Y-%m-%d %H:%M:%S')\" && git push",
-			"group": {
+            "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "problemMatcher": []
         },
-		{
+        {
             "label": "Convert to Markdown",
             "type": "shell",
             "command": "/Volumes/SSD_01/00_課程講義專用/AWS_2024/convert_to_md.sh",
-            "args": ["${file}"],
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Replace Strings",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                ".script/replace_script.py"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "problemMatcher": []
         }
-	]
+    ]
 }
